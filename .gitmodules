@@ -1,0 +1,15 @@
+[submodule "fonts"]
+	path = fonts
+	url = git://github.com/shgysk8zer0/fonts.git
+[submodule "img/octicons"]
+	path = img/octicons
+	url = git://github.com/primer/octicons.git
+[submodule "js/std-js"]
+	path = js/std-js
+	url = git://github.com/shgysk8zer0/std-js.git
+[submodule "css/normalize"]
+	path = css/normalize
+	url = git://github.com/necolas/normalize.css.git
+[submodule "img/logos"]
+	path = img/logos
+	url = git://github.com/shgysk8zer0/logos.git

@@ -1,0 +1,44 @@
+{
+  "name": "about",
+  "version": "1.0.0",
+  "description": "Project for creating simple about pages.",
+  "main": "index.html",
+  "scripts": {
+    "test": "eslint",
+    "build:css": "postcss css/styles/index.css -o css/styles/index.min.css -u postcss-import postcss-cssnext cssnano -m",
+    "build:js": "webpack",
+    "build:icons": "svg-sprite-generate -c img/icons.csv -o img/icons.svg",
+	"build:all": "npm run build:icons && npm run build:css && npm run build:js",
+	"build": "npm run build:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shgysk8zer0/about.git"
+  },
+  "author": "Chris Zuber <shgysk8zer0@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/shgysk8zer0/about/issues"
+  },
+  "homepage": "https://github.com/shgysk8zer0/about#readme",
+  "devDependencies": {
+    "eslint": "^4.2.0",
+    "eslint-plugin-async-await": "0.0.0",
+    "eslint-plugin-babel": "^4.1.1"
+  },
+  "dependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "cssnano": "^3.10.0",
+    "postcss": "^6.0.8",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^10.0.0",
+    "postcss-url": "^7.1.0",
+    "svg-sprite-generator": "0.0.7",
+    "webpack": "^3.3.0"
+  }
+}
