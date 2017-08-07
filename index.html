@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemtype="http://schema.org/WebSite" itemscope="">
 	<head>
-		<title>Chris Zuber | About</title>
+		<title itemprop="headline">Chris Zuber | About</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="referrer" content="origin-when-cross-origin"/>
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Chris Zuber"/>
+		<meta itemprop="description" content="" />
+		<meta itemprop="keywords" content="" />
 		<script type="module" src="./js/index.js" async=""></script>
 		<script type="application/javascript" src="./js/index.min.js" asyc="" nomodule=""></script>
+		<link rel="canonical" href="https://about.chriszuber.com/"/>
 		<link rel="stylesheet" href="./css/styles/index.css" name="style" media="screen" />
 		<link rel="icon" href="./img/favicon.svg" type="image/svg+xml" name="icon" sizes="any" />
-		<link rel="prefect" href="./img/icons.svg" as="img" type="image/svg+xml" name="icons" />
-		<link rel+"manifest" href="./manifest.webapp" />
+		<link rel="prefetch" href="./img/icons.svg" as="img" type="image/svg+xml" name="icons" />
+		<link rel="publisher" href="https://plus.google.com/+Chriszuber_dot_com">
+		<link rel="author" href="htps://plus.google.com/+ChrisZuber" />
+		<link rel="manifest" href="./manifest.webapp" />
 	</head>
 	<body>
 		<header id="about" class="bg-fixed">
-				<div itemtype="http://schema.org/Person" itemscope="" class="flex column wrap">
+				<div itemtype="http://schema.org/Person" itemprop="author" itemscope="" class="flex column wrap">
 					<figure itemprop="image" itemtype="http://schema.org/ImageObject">
 						<img
 							srcset="
@@ -88,11 +98,11 @@
 			</a>
 			<hr />
 			<div class="license">
-				<!-- <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><svg width="88" height="31"><use xlink:href="./img/icons.svg#creative-commons" /></svg></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. -->
 				<a rel="license" itemprop="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><svg width="88" height="31"><use xlink:href="./img/icons.svg#creative-commons" /></svg></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Portfolio</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/shgysk8zer0/about" property="cc:attributionName" rel="cc:attributionURL">Chris Zuber</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 			</div>
+			<p>&copy;<time itemprop="copyrightYear">2017</time>
 		</footer>
-		<template id="person-template">
+		<!-- <template id="person-template">
 			<div itemtype="http://schema.org/Person" class="flex column wrap">
 				<figure itemprop="image" itemtype="http://schema.org/ImageObject">
 					<img href="" itemprop="contentUrl" />
@@ -122,6 +132,6 @@
 					</a>
 				</div>
 			</div>
-		</tempalte>
+		</tempalte> -->
 	</body>
 </html>
