@@ -1,0 +1,34 @@
+body > nav {
+	top: 0;
+	z-index: 10;
+	color: whitesmoke;
+	font-family: Acme;
+	font-size: 1.5rem;
+	background-image: linear-gradient(#444, #222);
+	border-radius: 0 0 1rem 1rem;
+	box-shadow: 0 0.3rem 0.3rem #111;
+	grid-area: nav;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+body > nav a {
+	flex: 1 0 auto;
+	height: 100%;
+	text-align: center;
+	background-image: linear-gradient(#444, #222);
+}
+body > nav a:first-child {
+	border-radius: 0 0 0 1rem;
+}
+body > nav a:last-child {
+	border-radius: 0 0 1rem 0;
+}
+body > nav a:not(:last-child) {
+	border-right: 2px solid lightgray;
+}
+
+body > nav a:hover {
+	background-image: linear-gradient(#222, #444);
+}

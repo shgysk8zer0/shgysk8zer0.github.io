@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Chris Zuber | About</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<script type="module" src="./js/index.js" async=""></script>
+		<script type="application/javascript" src="./js/index.min.js" asyc="" nomodule=""></script>
+		<link rel="stylesheet" href="./css/styles/index.css" name="style" media="screen" />
+		<link rel="icon" href="./img/favicon.svg" type="image/svg+xml" name="icon" sizes="any" />
+		<link rel="prefect" href="./img/icons.svg" as="img" type="image/svg+xml" name="icons" />
+	</head>
+	<body>
+		<header id="about" class="bg-fixed">
+				<div itemtype="http://schema.org/Person" itemscope="" class="flex column wrap">
+					<figure itemprop="image" itemtype="http://schema.org/ImageObject">
+						<img
+							srcset="
+								https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=512 512w,
+								https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=400 400w,
+								https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=300 300w,
+								https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=256 256w,
+								https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=180 180w,
+								https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=128 128w,
+								https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=64 64w"
+							sizes="(orientation: portrait) 45vw, 20vw"
+							src="https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=256"
+							alt="Gravatar" class="round shadow" itemprop="url" />
+					</figure>
+					<hr>
+					<h1>
+						<span itemprop="givenName">Chris</span>
+						<span itemprop="familyName">Zuber</span>
+					</h1>
+					<h2 itemprop="jobTitle">Full Stack Web Developer</h2>
+					<hr>
+					<h4>
+						<address itemprop="homeLocation" itemtype="http://schema.org/PostalAddress" itemscope="">
+							<span itemprop="addressLocality">Mount Vernon</span>,
+							<span itemprop="addressRegion">Washington</span>
+						</address>
+					</h4>
+					<div class="flex row container">
+						<a href="tel:+1-661-619-6712" itemprop="telephone" content="+1-661-619-6712">
+							<svg width="64" height="64" class="currentColor"><use xlink:href="./img/icons.svg#call-start"></use></svg>
+						</a>
+						<a href="mailto:chris@chriszuber.com" itemprop="email" content="chris@chriszuber.com">
+							<svg width="64" height="64" class="currentColor"><use xlink:href="./img/icons.svg#mail-send"></use></svg>
+						</a>
+						<a href="geo:48.420778,-122.326916;u=0">
+							<svg width="64" height="64" class="currentColor"><use xlink:href="./img/icons.svg#location"></use></svg>
+						</a>
+					</div>
+				</div>
+			</header>
+		<nav class="sticky">
+			<a href="#top">
+				<svg width="32" height="32" class="currentColor"><use xlink:href="./img/icons.svg#favicon" /></svg>
+			</a>
+			<a href="#about">About</a>
+			<a href="#portfolio">Portfolio</a>
+			<a href="#contact">Contact</a>
+		</nav>
+		<main id="portfolio"></main>
+		<footer id="contact">
+			<a href="https://twitter.com/shgysk8zer0" title="Twitter" target="_blank" rel="noopener">
+				<svg width="64" height="64"><use xlink:href="./img/icons.svg#twitter" /></svg>
+			</a>
+			<a href="https://www.linkedin.com/in/chris-zuber-455346141/" title="LinkedIn" target="_blank" rel="noopener">
+				<svg width="64" height="64"><use xlink:href="./img/icons.svg#linkedin" /></svg>
+			</a>
+			<a href="https://plus.google.com/+ChrisZuber" title="Google+" target="_blank" rel="noopener">
+				<svg width="64" height="64"><use xlink:href="./img/icons.svg#google+" /></svg>
+			</a>
+			<a href="https://reddit.com/user/shgysk8zer0" title="Reddit" target="_blank" rel="noopener">
+				<svg width="64" height="64"><use xlink:href="./img/icons.svg#reddit" /></svg>
+			</a>
+			<hr />
+			<a href="https://github.com/shgysk8zer0" title="My GitHub Profile" target="_blank" rel="noopener">
+				<svg width="64" height="64"><use xlink:href="./img/icons.svg#mark-github" /></svg>
+			</a>
+			<a href="https://github.com/shgysk8zer0/about" title="The GitHub Repository for this Page" target="_blank" rel="noopener">
+				<svg width="64" height="64"><use xlink:href="./img/icons.svg#repo" /></svg>
+			</a>
+			<a href="https://github.com/shgysk8zer0/about/issues" title="Open issues for the repository on Github" target="_blank" rel="noopener">
+				<svg width="64" height="64"><use xlink:href="./img/icons.svg#issue-opened" /></svg>
+			</a>
+		</footer>
+		<template id="person-template">
+			<div itemtype="http://schema.org/Person" class="flex column wrap">
+				<figure itemprop="image" itemtype="http://schema.org/ImageObject">
+					<img href="" itemprop="contentUrl" />
+				</figure>
+				<hr>
+				<h1>
+					<span itemprop="givenName"></span>
+					<span itemprop="familyName"></span>
+				</h1>
+				<h2 itemprop="jobTitle"></h2>
+				<hr>
+				<h4>
+					<address itemprop="homeLocation" itemtype="http://schema.org/PostalAddress" itemscope="">
+						<span itemprop="addressLocality"></span>,
+						<span itemprop="addressRegion"></span>
+					</address>
+				</h4>
+				<div class="flex row container">
+					<a href="" itemprop="telephone" content="">
+						<svg width="64" height="64" class="currentColor"><use xlink:href="./img/icons.svg#call-start"></use></svg>
+					</a>
+					<a href="" itemprop="email" content="">
+						<svg width="64" height="64" class="currentColor"><use xlink:href="./img/icons.svg#mail-send"></use></svg>
+					</a>
+					<a href="">
+						<svg width="64" height="64" class="currentColor"><use xlink:href="./img/icons.svg#location"></use></svg>
+					</a>
+				</div>
+			</div>
+		</tempalte>
+	</body>
+</html>

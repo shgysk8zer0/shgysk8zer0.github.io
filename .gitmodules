@@ -13,3 +13,15 @@
 [submodule "img/logos"]
 	path = img/logos
 	url = git://github.com/shgysk8zer0/logos.git
+[submodule "css/core-css"]
+	path = css/core-css
+	url = git://github.com/shgysk8zer0/core-css.git
+[submodule "img/svg-icons"]
+	path = img/svg-icons
+	url = git://github.com/shgysk8zer0/svg-icons.git
+[submodule "img/cursors"]
+	path = img/cursors
+	url = git://github.com/shgysk8zer0/cursors.git
+[submodule "img/adwaita-icons"]
+	path = img/adwaita-icons
+	url = git://github.com/shgysk8zer0/adwaita-icons.git

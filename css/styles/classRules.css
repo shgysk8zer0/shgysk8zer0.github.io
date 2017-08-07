@@ -1,0 +1,49 @@
+.card {
+	transform-style: preserve-3d;
+	perspective: 100vmin;
+	position: relative;
+}
+.card > * {
+	backface-visibility: hidden;
+	transition: transform 600ms;
+	background: white;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	overflow-y: auto;
+	box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+.card:hover .card-back {
+	transform: none;
+}
+.card:hover .card-front {
+	transform: rotateY(-180deg);
+}
+.card-back {
+	transform: rotateY(180deg);
+}
+
+.grayscale {
+	filter: grayscale(1);
+}
+.flex .center {
+	align-self: center;
+}
+.shadow {
+	box-shadow: 0.3rem 0.3rem 0.3rem #111;
+}
+.round {
+	border-radius: 50%;
+}
+.container.flex.row {
+	justify-content: space-evenly;
+}
+.bg-fixed {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}

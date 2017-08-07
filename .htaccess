@@ -1,26 +1,5 @@
-Options -Indexes +SymLinksIfOwnerMatch
+Options -Indexes +SymLinks
 
-#<IfModule php5_module>
-#	DirectoryIndex index.php
-#	php_value auto_prepend_file ./autoloader.php
-#	php_flag display_startup_errors on
-#	php_flag display_errors on
-#	php_flag html_errors on
-#	php_flag log_errors on
-#	<IfModule env_module>
-#		SetEnv MIN_PHP_VERSION 5.5
-#		SetEnv CONFIG_DIR config
-#		SetEnv COMPONENTS_DIR components
-#		SetEnv AUTOLOAD_DIR classes
-#		SetEnv AUTOLOAD_EXTS .php
-#		SetEnv AUTOLOAD_FUNC spl_autoload
-#		SetEnv AUTOLOAD_SCRIPT ./autoloader.php
-#	</IfModule>
-#</IfModule>
-#<IfModule !php5_module>
-#	DirectoryIndex index.html
-#</IfModule>
-#Configure PHP's autoloader and set include_path, min PHP version
 <IfModule headers_module>
 	Header set X-Frame-Options "SAMEORIGIN"
 	Header set X-Content-Type-Options nosniff

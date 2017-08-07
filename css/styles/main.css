@@ -1,0 +1,10 @@
+body > main {
+	padding: 1rem;
+	background-color: #fafafa;
+	grid-area: main;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-gap: 0.7em;
+	border-right: 2px outset #222;
+	overflow: hidden;
+}
