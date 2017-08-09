@@ -5,7 +5,7 @@ module.exports = {
     entry: './js/index.js',
     output: {
         path: __dirname,
-        filename: 'js/index.min.js'
+        filename: './js/index.min.js'
     },
     module: {
         loaders: [
@@ -13,7 +13,6 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 options: {
-                    presets: ['latest'],
                     plugins: ['transform-runtime']
                 }
             }
@@ -21,8 +20,8 @@ module.exports = {
     },
     plugins: [
         // Avoid publishing files when compilation fails
-        new webpack.NoErrorsPlugin(),
-		new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}})
+        new webpack.NoEmitOnErrorsPlugin(),
+		// new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}})
     ],
     stats: {
         // Nice colored output

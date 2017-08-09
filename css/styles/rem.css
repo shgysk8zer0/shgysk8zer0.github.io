@@ -5,11 +5,11 @@
 }
 @media screen and (max-width:999px) and (min-width:500px) {
 	:root {
-		font-size: 2vmax;
+		font-size: 1.5vmax;
 	}
 }
 @media screen and (max-width: 499px) {
 	:root {
-		font-size: 3vmax;
+		font-size: 2.3vmax;
 	}
 }

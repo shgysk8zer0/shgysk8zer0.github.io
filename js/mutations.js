@@ -1,6 +1,6 @@
 import * as handlers from './std-js/dataHandlers.js';
 import {$} from './std-js/functions.js';
-import SchemaTemplate from './std-js/SchemaTemplate.js';
+// import SchemaTemplate from './std-js/SchemaTemplate.js';
 
 function lazyLoad(entries, observer) {
 	entries.filter(entry => entry.isIntersecting).forEach(async (entry) => {
@@ -117,49 +117,49 @@ export function init(base = document.body) {
 	$('[data-close]', base).click(handlers.close);
 	$('[data-remove]', base).click(handlers.remove);
 	$('[data-toggle-hidden]', base).click(handlers.toggleHidden);
-	$('[data-schema-content]', base).each(importSchema);
+	// $('[data-schema-content]', base).each(importSchema);
 	$('[data-social-share]', base).click(handlers.socialShare);
 	$('[data-fullscreen]', base).click(handlers.fullscreen);
 	$('[data-scroll-to]', base).click(handlers.scrollTo);
 	$('[data-load-from]', base).each(node => observer.observe(node));
 }
 
-function invalidForm(invalid) {
-	console.log(invalid);
-	invalid.target.closest('dialog').animate([
-		{transform: 'none'},
-		{transform: 'translate(-1rem, 0.2rem)'},
-		{transform: 'none'},
-		{transform: 'translate(1rem, -0.2rem)'}
-	], {
-		duration: 60,
-		iterations: 5,
-		direction: 'alternate'
-	});
-}
+// function invalidForm(invalid) {
+// 	console.log(invalid);
+// 	invalid.target.closest('dialog').animate([
+// 		{transform: 'none'},
+// 		{transform: 'translate(-1rem, 0.2rem)'},
+// 		{transform: 'none'},
+// 		{transform: 'translate(1rem, -0.2rem)'}
+// 	], {
+// 		duration: 60,
+// 		iterations: 5,
+// 		direction: 'alternate'
+// 	});
+// }
 
 /**
  * Expects node to have a data-schema-content attribute containing a URL with
  * a hash / anchor of the <template> ID for template to populate and append
  */
-function importSchema(node) {
-	const url = new URL(node.dataset.schemaContent, location.origin);
-	const template = new SchemaTemplate(url.hash.substring(1));
-	const headers = new Headers();
-	headers.set('Accept', 'application/json');
-	url.hash = '';
-
-	fetch(url, {
-		headers,
-		method: 'Get'
-	}).then(resp => {
-		if (resp.ok) {
-			return resp.json();
-		} else {
-			throw new Error(`${resp.url} [${resp.status} ${resp.statusText}]`);
-		}
-	}).then(json => {
-		template.data = json;
-		template.appendTo(node);
-	}).catch(console.error);
-}
+// function importSchema(node) {
+// 	const url = new URL(node.dataset.schemaContent, location.origin);
+// 	const template = new SchemaTemplate(url.hash.substring(1));
+// 	const headers = new Headers();
+// 	headers.set('Accept', 'application/json');
+// 	url.hash = '';
+//
+// 	fetch(url, {
+// 		headers,
+// 		method: 'Get'
+// 	}).then(resp => {
+// 		if (resp.ok) {
+// 			return resp.json();
+// 		} else {
+// 			throw new Error(`${resp.url} [${resp.status} ${resp.statusText}]`);
+// 		}
+// 	}).then(json => {
+// 		template.data = json;
+// 		template.appendTo(node);
+// 	}).catch(console.error);
+// }

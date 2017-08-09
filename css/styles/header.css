@@ -12,9 +12,6 @@ body > header > [itemtype="http://schema.org/Person"] {
 	height: 100%;
 	justify-content: center;
 }
-[itemtype="http://schema.org/Person"] img[alt="Gravatar"] {
-	margin-bottom: 3rem;
-}
 @media screen and (min-width: 1201px) {
 	body > header {
 		background-image: var(--mountains-full);
@@ -33,5 +30,10 @@ body > header > [itemtype="http://schema.org/Person"] {
 @media screen and (max-width: 420px) {
 	body > header {
 		background-image: var(--mountains-s);
+	}
+}
+@media (orientation: landscape) {
+	header {
+		font-size: 0.7rem;
 	}
 }
