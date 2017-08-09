@@ -12,3 +12,6 @@ footer svg {
 footer svg:hover {
 	transform: rotate(360deg) scale(1.7);
 }
+a {
+	display: inline-block;
+}
