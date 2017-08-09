@@ -33,3 +33,7 @@ hr {
 	max-width: calc(100vw - 100px);
 	width: 100%;
 }
+svg {
+	max-width: 4em;
+	max-height: 4em;
+}
