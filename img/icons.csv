@@ -13,3 +13,9 @@ call-start,img/adwaita-icons/actions/call-start.svg
 send-to,img/adwaita-icons/actions/send-to.svg
 mail-send,img/adwaita-icons/actions/mail-send.svg
 favicon,img/favicon.svg
+git,img/logos/git.svg
+html5,img/logos/html5.svg
+css3,img/logos/css3.svg
+javascript,img/logos/javascript.svg
+mysql,img/logos/MySQL.svg
+postresql,img/logos/postresql.svg

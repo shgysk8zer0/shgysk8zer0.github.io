@@ -5,7 +5,8 @@ $(self).ready(async () => {
 	Mutations.init();
 	$(document.body).watch(Mutations.events, Mutations.options, Mutations.filter);
 
-}, {once: true}).load(() => $('main').intersect((entries, observer) => {
+}, {once: true});
+$(self).load(() => $('main').intersect((entries, observer) => {
 	entries.forEach(entry => {
 		if (entry.isIntersecting) {
 			observer.unobserve(entry.target);

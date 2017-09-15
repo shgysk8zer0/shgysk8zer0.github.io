@@ -5,10 +5,11 @@ body {
 	display: grid;
 	grid-template-rows: calc(100vh - var(--nav-height)) var(--nav-height) minmax(100vh, max-content) auto;
 	grid-template-columns:1fr 8fr 2fr;
+	background: blue;
 	grid-template-areas:
 		'header header header'
 		'nav nav nav'
-		'. main sidebar'
+		'main main sidebar'
 		'footer footer footer';
 }
 @media (max-width: 600px) {
