@@ -90,7 +90,7 @@ export const events = {
 	},
 	childList: function() {
 		$(this.addedNodes).each(node => {
-			if (node.nodeType === 1) {
+			if (node.nodeType === Node.ELEMENT_NODE) {
 				init(node);
 			}
 		});
