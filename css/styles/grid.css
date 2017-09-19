@@ -3,7 +3,7 @@ body {
 	margin: 0;
 	min-height: 100vh;
 	display: grid;
-	grid-template-rows: calc(100vh - var(--nav-height)) var(--nav-height) minmax(100vh, max-content) auto;
+	grid-template-rows: calc(100vh - var(--nav-height)) var(--nav-height) auto auto;
 	grid-template-columns:1fr 8fr 2fr;
 	background: blue;
 	grid-template-areas:
