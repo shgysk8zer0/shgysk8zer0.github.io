@@ -1,0 +1,31 @@
+[
+    {
+        "@type": "SoftwareApplication",
+        "@context": "http://schema.org",
+        "name": "Awesome RSS",
+        "image": "https:\/\/github.com\/shgysk8zer0\/awesome-rss\/raw\/master\/screenshot.png",
+        "url": "https:\/\/addons.mozilla.org\/en-US\/firefox\/addon\/awesome-rss\/",
+        "description": "Puts and RSS/Atom subscribe button back in the URL bar"
+    }, {
+        "@type": "SoftwareApplication",
+        "@context": "http://schema.org",
+        "name": "Super User Blog",
+        "image": "img\/logos\/super-user.svg",
+        "url": "https:\/\/chriszuber.com\/",
+        "description": "Blogging with HTML5 & JavaScript"
+    }, {
+        "@type": "SoftwareApplication",
+        "@context": "http://schema.org",
+        "name": "std-js",
+        "image": "img\/logos\/javascript.svg",
+        "url": "https:\/\/github.com\/shgysk8zer0\/std-js\/",
+        "description": "A JavaScript library for making front-end development sane!"
+    }, {
+        "@type": "SoftwareApplication",
+        "@context": "http://schema.org",
+        "name": "HTML5 WYSIWYG-Editor",
+        "image": "https:\/\/wysiwyg.chriszuber.com\/images\/screenshot.png",
+        "url": "https:\/\/wysiwyg.chriszuber.com\/",
+        "description": "A JavaScript library for making front-end development sane!"
+    }
+]
