@@ -8,10 +8,10 @@
 	--visited-color: #551A8B;
 	--border-color: #2D2D2D;
 	/*========== Set background images, etc here ==========*/
-	--mountains-full : url("/img/sunset-mountains.jpg");
-	--mountains-l: url("/img/sunset-mountains-1200.jpg");
-	--mountains-m: url("/img/sunset-mountains-800.jpg");
-	--mountains-s: url("/img/sunset-mountains-420.jpg");
+	--mountains-full : url("../../img/anderson.jpg");
+	--mountains-l: url("../../img/anderson-1200.jpg");
+	--mountains-m: url("../../img/anderson-800.jpg");
+	--mountains-s: url("../../img/anderson-420.jpg");
 	/* --main-bg: url(../../img/backgrounds/dark_abstract.svgz); */
 	--glass-grad: linear-gradient(to top left, rgba(80, 80, 80, 0.7), rgba(140, 140, 140, 0.9), rgba(40, 40, 40, 0.7));
 	--shadow: rgba(20, 20, 20, 0.9);
