@@ -53,6 +53,7 @@ AddDefaultCharset utf-8
 	# http://tools.ietf.org/html/rfc4329#section-7.2
 	AddType application/javascript						.js .es6 .jsonp
 	AddType application/json							.json
+	AddType application/manifest+json                                       .webapp
 
 	# Video
 	AddType video/mp4									.mp4 .m4v .f4v .f4p
