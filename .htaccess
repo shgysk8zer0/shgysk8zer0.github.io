@@ -125,7 +125,7 @@ AddDefaultCharset utf-8
 		application/rss+xml \
 		application/vnd.ms-fontobject \
 		application/x-font-ttf \
-		application/application/manifest+json \
+		application/manifest+json \
 		application/xhtml+xml \
 		application/xml \
 		font/opentype \
