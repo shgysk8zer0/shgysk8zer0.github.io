@@ -1,5 +1,3 @@
-Options -Indexes +SymLinks
-
 <IfModule headers_module>
 	Header set X-Frame-Options "SAMEORIGIN"
 	Header set X-Content-Type-Options nosniff
@@ -140,7 +138,7 @@ AddDefaultCharset utf-8
 </IfModule>
 
 # ------------------------------------------------------------------------------
-# | Content transformations													|
+# | Content transformations                                                    |
 # ------------------------------------------------------------------------------
 
 # Prevent some of the mobile network providers from modifying the content of
@@ -148,7 +146,7 @@ AddDefaultCharset utf-8
 
 
 # ------------------------------------------------------------------------------
-# | ETag removal																|
+# | ETag removal                                                               |
 # ------------------------------------------------------------------------------
 # Since we're sending far-future expires headers (see below), ETags can
 # be removed: http://developer.yahoo.com/performance/rules.html#etags.
@@ -160,7 +158,7 @@ AddDefaultCharset utf-8
 FileETag None
 
 # ------------------------------------------------------------------------------
-# | Expires headers (for better cache control)								 |
+# | Expires headers (for better cache control)                                 |
 # ------------------------------------------------------------------------------
 
 # The following expires headers are set pretty far in the future. If you don't
