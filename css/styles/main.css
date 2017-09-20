@@ -5,7 +5,7 @@ body > main {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	grid-gap: 0.7em;
-	border-right: 2px outset #222;
+	overflow: visible;
 	overflow: hidden;
 }
 main > section {

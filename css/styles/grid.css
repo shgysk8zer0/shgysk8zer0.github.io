@@ -4,13 +4,12 @@ body {
 	min-height: 100vh;
 	display: grid;
 	grid-template-rows: calc(100vh - var(--nav-height)) var(--nav-height) auto auto;
-	grid-template-columns:1fr 8fr 2fr;
-	background: blue;
+	grid-template-columns:1fr 8fr 2fr 1fr;
 	grid-template-areas:
-		'header header header'
-		'nav nav nav'
-		'main main sidebar'
-		'footer footer footer';
+		'header header header header'
+		'nav nav nav nav'
+		'. main main .'
+		'footer footer footer footer';
 }
 @media (max-width: 600px) {
 	body {

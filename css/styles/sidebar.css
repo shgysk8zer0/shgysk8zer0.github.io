@@ -1,4 +1,5 @@
 body > aside {
 	grid-area: sidebar;
 	background-color: lightgray;
+	border-left: 2px outset #222;
 }
