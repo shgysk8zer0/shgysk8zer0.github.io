@@ -6,7 +6,7 @@
   "scripts": {
     "git:fetch": "git fetch --prune --tags",
     "git:submodules": "git submodule update --init --recursive",
-    "test": "eslint",
+    "test": "eslint .",
 	"build": "npm run build:all",
     "build:css": "postcss css/styles/index.css -o css/styles/index.min.css -u postcss-import postcss-cssnext cssnano -m",
     "build:js": "rollup -c",
