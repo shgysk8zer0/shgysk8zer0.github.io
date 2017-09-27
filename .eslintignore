@@ -1,6 +1,5 @@
 /node_modules/
-rollup.config.js
-webpack.config.js
+*.config.js
 *.min.js
 /img/
 /css/
