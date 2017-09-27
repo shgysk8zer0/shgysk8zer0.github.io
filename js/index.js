@@ -3,6 +3,7 @@ import * as Mutations from './mutations.js';
 
 $(self).ready(async () => {
 	Mutations.init();
+	document.body.classList.replace('no-js', 'js');
 	$(document.body).watch(Mutations.events, Mutations.options, Mutations.filter);
 	const resp = await fetch(new URL('portfolio.json', location.href));
 	if (resp.ok) {
