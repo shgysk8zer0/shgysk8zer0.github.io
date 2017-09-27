@@ -4,6 +4,7 @@
 @import url("../normalize/normalize.css");
 @import url("../core-css/class_rules.css");
 @import url("./vars.css");
+@import url("../core-css/fonts.css");
 @import url("./grid.css");
 @import url("./icons.css");
 @import url("./header.css");
