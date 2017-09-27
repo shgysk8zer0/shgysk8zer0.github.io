@@ -27,9 +27,7 @@
   "devDependencies": {
     "eslint": "^4.2.0",
     "eslint-plugin-async-await": "0.0.0",
-    "eslint-plugin-babel": "^4.1.1"
-  },
-  "dependencies": {
+    "eslint-plugin-babel": "^4.1.1",
     "cssnano": "^3.10.0",
     "postcss": "^6.0.8",
     "postcss-cssnext": "^3.0.2",
