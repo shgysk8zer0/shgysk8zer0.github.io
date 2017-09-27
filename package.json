@@ -30,6 +30,7 @@
     "eslint-plugin-async-await": "0.0.0",
     "eslint-plugin-babel": "^4.1.1",
     "postcss": "^6.0.12",
+    "postcss-cli": "^4.1.1",
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "^11.0.0",
     "postcss-url": "^7.1.2",
