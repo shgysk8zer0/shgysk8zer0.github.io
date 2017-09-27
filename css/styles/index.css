@@ -4,7 +4,6 @@
 @import url("../normalize/normalize.css");
 @import url("../core-css/class_rules.css");
 @import url("./vars.css");
-@import url("./classRules.css");
 @import url("./grid.css");
 @import url("./icons.css");
 @import url("./header.css");
@@ -36,4 +35,7 @@ hr {
 svg {
 	max-width: 4em;
 	max-height: 4em;
+}
+.container.flex.row {
+	justify-content: space-evenly;
 }
