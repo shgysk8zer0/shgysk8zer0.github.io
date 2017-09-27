@@ -1,0 +1,7 @@
+/img/
+/js/
+/fonts/
+/css/core-css/
+/css/normalize/
+*.min*
+*.map

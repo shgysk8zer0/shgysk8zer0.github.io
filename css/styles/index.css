@@ -10,33 +10,39 @@
 @import url("./header.css");
 @import url("./nav.css");
 @import url("./main.css");
-/* @import url("./sidebar.css"); */
 @import url("./footer.css");
 @import url("./dialog.css");
+
 * {
 	box-sizing: border-box;
 	max-width: 100%;
 }
+
 body {
 	scroll-behavior: smooth;
 	cursor: var(--default-cursor);
 	font-family: var(--main-font);
 }
+
 a {
 	color: inherit;
 	text-decoration: none;
 }
+
 [data-show], [data-show-modal], [data-close], [data-remove], [data-social-share] {
 	cursor: pointer;
 }
+
 hr {
 	max-width: calc(100vw - 100px);
 	width: 100%;
 }
+
 svg {
 	max-width: 4em;
 	max-height: 4em;
 }
+
 .container.flex.row {
 	justify-content: space-evenly;
 }

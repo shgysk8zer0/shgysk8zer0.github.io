@@ -6,7 +6,11 @@
   "scripts": {
     "git:fetch": "git fetch --prune --tags",
     "git:submodules": "git submodule update --init --recursive",
-    "test": "eslint .",
+    "lint": "npm run lint:all",
+    "lint:all": "npm run lint:js && npm run lint:css",
+    "lint:js": "eslint .",
+    "lint:css": "stylelint 'css/**/*.css'",
+    "test": "npm run lint",
     "build": "npm run build:all",
     "build:css": "postcss css/styles/index.css -o css/styles/index.min.css -u postcss-import postcss-cssnext cssnano -m",
     "build:js": "rollup -c",
@@ -35,6 +39,9 @@
     "postcss-import": "^11.0.0",
     "postcss-url": "^7.1.2",
     "rollup": "^0.50.0",
+    "stylelint": "^8.1.1",
+    "stylelint-config-recommended": "^1.0.0",
+    "stylelint-config-standard": "^17.0.0",
     "svg-sprite-generator": "0.0.7"
   }
 }

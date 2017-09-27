@@ -1,6 +1,7 @@
 header {
 	font-family: var(--header-font);
 }
+
 body > header {
 	grid-area: header;
 	background-image: var(--mountains-l);
@@ -9,30 +10,36 @@ body > header {
 	height: calc(100vh - var(--nav-height));
 	text-shadow: 0.4em 0.4em 0.4em black;
 }
+
 body > header > [itemtype="http://schema.org/Person"] {
 	height: 100%;
 	justify-content: center;
 }
+
 @media screen and (min-width: 1201px) {
 	body > header {
 		background-image: var(--mountains-full);
 	}
 }
+
 @media screen and (min-width: 801px) and (max-width: 1200px) {
 	body > header {
 		background-image: var(--mountains-l);
 	}
 }
+
 @media screen and (min-width: 421px) and (max-width: 800px) {
 	body > header {
 		background-image: var(--mountains-m);
 	}
 }
+
 @media screen and (max-width: 420px) {
 	body > header {
 		background-image: var(--mountains-s);
 	}
 }
+
 @media (orientation: landscape) {
 	header {
 		font-size: 0.7rem;

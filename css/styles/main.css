@@ -7,14 +7,17 @@ body > main {
 	overflow: visible;
 	overflow: hidden;
 }
+
 main > section {
 	transform-origin: top;
 	transition: all 600ms;
 	padding: 0.7em;
 }
+
 main > section:hover {
 	transform: scale(1.2);
 }
+
 h3 {
 	text-align: center;
 }

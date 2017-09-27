@@ -7,6 +7,7 @@ dialog[open] {
 	padding: 0;
 	max-height: 30rem;
 }
+
 dialog > header {
 	background-image: linear-gradient(#f2f2f2, #e9e9e9);
 	padding: 0.3em;
@@ -16,9 +17,11 @@ dialog > header {
 	position: sticky;
 	top: 0;
 }
+
 dialog > header [data-close] {
 	justify-self: flex-end;
 }
+
 dialog > *:not(header) {
 	margin: 0.8em;
 }

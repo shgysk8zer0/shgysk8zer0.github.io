@@ -12,18 +12,22 @@ body > nav {
 	flex-direction: row;
 	justify-content: space-evenly;
 }
+
 body > nav a {
 	flex: 1 0 auto;
 	text-align: center;
 	line-height: var(--nav-height);
 	background-image: linear-gradient(#444, #222);
 }
+
 body > nav a:first-child {
 	border-radius: 0 0 0 1rem;
 }
+
 body > nav a:last-child {
 	border-radius: 0 0 1rem 0;
 }
+
 body > nav a:not(:last-child) {
 	border-right: 2px solid lightgray;
 }
