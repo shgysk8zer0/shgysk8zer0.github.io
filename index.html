@@ -14,17 +14,17 @@
 		<meta itemprop="thumbnailUrl" content="./img/screenshot.jpg" />
 		<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 		<script type="module" src="./js/index.js" async=""></script>
-		<script type="application/javascript" src="./js/index.min.js" asyc="" nomodule=""></script>
+		<script type="application/javascript" src="./js/index.js" asyc="" nomodule=""></script>
 		<link rel="canonical" href="https://about.chriszuber.com/"/>
-		<link rel="stylesheet" href="./css/styles/index.min.css" name="style" media="screen" />
+		<link rel="stylesheet" href="./css/styles/index.css" name="style" media="screen" />
 		<link rel="icon" href="./img/favicon.svg" type="image/svg+xml" name="icon" sizes="any" />
 		<link rel="preload" href="./img/icons.svg" as="image" type="image/svg+xml" name="icons" />
 		<link rel="publisher" href="https://plus.google.com/+Chriszuber_dot_com" />
 		<link rel="author" href="htps://plus.google.com/+ChrisZuber" />
 		<link rel="manifest" href="./manifest.webapp" />
 	</head>
-	<body class="no-js grid">
-		<header id="about" class="bg-fixed" role="banner">
+	<body class="no-js grid border-box scroll-smooth background-primary">
+		<header id="about" class="background-fixed background-no-repeat background-cover color-alt optimize-speed" role="banner">
 				<div itemtype="http://schema.org/Person" itemprop="about" itemscope="" class="flex column wrap">
 					<figure itemprop="image" itemtype="http://schema.org/ImageObject">
 						<img
@@ -38,14 +38,14 @@
 								https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=64 64w"
 							sizes="(orientation: portrait) 45vw, 20vw"
 							src="https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=256"
-							alt="Gravatar" class="round shadow" itemprop="url" />
+							alt="Gravatar" class="round shadow-dark" itemprop="url" />
 					</figure>
 					<hr />
-					<h1>
+					<h1 class="capitalize">
 						<span itemprop="givenName">Chris</span>
 						<span itemprop="familyName">Zuber</span>
 					</h1>
-					<h2 itemprop="jobTitle">Full Stack Web Developer</h2>
+					<h2 itemprop="jobTitle" class="capitalize">Full Stack Web Developer</h2>
 					<hr />
 					<h4>
 						<address itemprop="homeLocation" itemtype="http://schema.org/PostalAddress" itemscope="">
@@ -53,51 +53,73 @@
 							<span itemprop="addressRegion">Washington</span>
 						</address>
 					</h4>
-					<div class="flex row container">
+					<div class="flex row container bigger">
 						<a href="tel:+1-661-619-6712" itemprop="telephone" content="+1-661-619-6712">
-							<svg width="64" height="64" class="current-color"><use xlink:href="./img/icons.svg#call-start" /></svg>
+							<svg class="current-color icon">
+								<use xlink:href="./img/icons.svg#call-start" />
+							</svg>
 						</a>
 						<a href="mailto:chris@chriszuber.com" itemprop="email" content="chris@chriszuber.com">
-							<svg width="64" height="64" class="current-color"><use xlink:href="./img/icons.svg#mail-send" /></svg>
+							<svg class="current-color icon">
+								<use xlink:href="./img/icons.svg#mail-send" />
+							</svg>
 						</a>
 						<a href="geo:48.420778,-122.326916;u=0">
-							<svg width="64" height="64" class="current-color"><use xlink:href="./img/icons.svg#location" /></svg>
+							<svg class="current-color icon">
+								<use xlink:href="./img/icons.svg#location" />
+							</svg>
 						</a>
 					</div>
 				</div>
 			</header>
-		<nav class="sticky" role="navigation">
+		<nav class="sticky color-alt flex row title-font center no-text-decoration" role="navigation">
 			<a href="#top">
-				<svg width="32" height="32" class="current-color"><use xlink:href="./img/icons.svg#favicon" /></svg>
+				<svg class="current-color icon">
+					<use xlink:href="./img/icons.svg#favicon" />
+				</svg>
 			</a>
 			<a href="#about">About</a>
 			<a href="#portfolio">Portfolio</a>
 			<a href="#contact">Contact</a>
 		</nav>
-		<main id="portfolio" class="grid" role="main"></main>
+		<main id="portfolio" class="grid color-default font-article overflow-visible" role="main"></main>
 		<aside role="complementary"></aside>
-		<footer id="contact" role="contentinfo">
+		<footer id="contact" class="color-alt no-text-decoration optimize-speed" role="contentinfo">
 			<a href="https://twitter.com/shgysk8zer0" title="Twitter" target="_blank" rel="noopener external">
-				<svg width="64" height="64"><use xlink:href="./img/icons.svg#twitter" /></svg>
+				<svg class="icon big">
+					<use xlink:href="./img/icons.svg#twitter" />
+				</svg>
 			</a>
 			<a href="https://www.linkedin.com/in/chris-zuber-455346141/" title="LinkedIn" target="_blank" rel="noopener external">
-				<svg width="64" height="64"><use xlink:href="./img/icons.svg#linkedin" /></svg>
+				<svg class="icon big">
+					<use xlink:href="./img/icons.svg#linkedin" />
+				</svg>
 			</a>
 			<a href="https://plus.google.com/+ChrisZuber" title="Google+" target="_blank" rel="noopener external">
-				<svg width="64" height="64"><use xlink:href="./img/icons.svg#google+" /></svg>
+				<svg class="icon big">
+					<use xlink:href="./img/icons.svg#google+" />
+				</svg>
 			</a>
 			<a href="https://reddit.com/user/shgysk8zer0" title="Reddit" target="_blank" rel="noopener external">
-				<svg width="64" height="64"><use xlink:href="./img/icons.svg#reddit" /></svg>
+				<svg class="icon big">
+					<use xlink:href="./img/icons.svg#reddit" />
+				</svg>
 			</a>
 			<hr />
 			<a href="https://github.com/shgysk8zer0" title="My GitHub Profile" target="_blank" rel="noopener external">
-				<svg width="64" height="64"><use xlink:href="./img/icons.svg#mark-github" /></svg>
+				<svg class="icon big">
+					<use xlink:href="./img/icons.svg#mark-github" />
+				</svg>
 			</a>
 			<a href="https://github.com/shgysk8zer0/about" title="The GitHub Repository for this Page" target="_blank" rel="noopener external">
-				<svg width="64" height="64"><use xlink:href="./img/icons.svg#repo" /></svg>
+				<svg class="icon big">
+					<use xlink:href="./img/icons.svg#repo" />
+				</svg>
 			</a>
 			<a href="https://github.com/shgysk8zer0/about/issues" title="Open issues for the repository on Github" target="_blank" rel="noopener external">
-				<svg width="64" height="64"><use xlink:href="./img/icons.svg#issue-opened" /></svg>
+				<svg class="icon big">
+					<use xlink:href="./img/icons.svg#issue-opened" />
+				</svg>
 			</a>
 			<hr />
 			<div class="license">
@@ -106,8 +128,8 @@
 			<p>©<time itemprop="copyrightYear">2017</time></p>
 		</footer>
 		<template id="project-template">
-			<section class="card shadow" itemtype="http://schema.org/SoftwareApplication">
-				<a href="" itemprop="url" target="_blank">
+			<section class="card shadow optimize-legibility" itemtype="http://schema.org/SoftwareApplication">
+				<a href="" itemprop="url" target="_blank" class="no-text-decoration">
 					<h3 itemprop="name"></h3>
 					<img src="" itemprop="image" />
 					<blockquote itemprop="description"></blockquote>

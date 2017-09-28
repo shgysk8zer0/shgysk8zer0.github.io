@@ -1,23 +1,18 @@
 body > nav {
 	top: 0;
 	z-index: 10;
-	color: whitesmoke;
-	font-family: Acme;
 	font-size: 1.5rem;
 	background-image: linear-gradient(#444, #222);
 	border-radius: 0 0 1rem 1rem;
 	box-shadow: 0 0.3rem 0.3rem #111;
 	grid-area: nav;
-	display: flex;
-	flex-direction: row;
 	justify-content: space-evenly;
 }
 
 body > nav a {
 	flex: 1 0 auto;
-	text-align: center;
 	line-height: var(--nav-height);
-	background-image: linear-gradient(#444, #222);
+	background-image: inherit;
 }
 
 body > nav a:first-child {

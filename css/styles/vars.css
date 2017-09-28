@@ -1,9 +1,9 @@
 :root {
 
 	/*================= Set color vars here =================*/
-	--default-color: #FCFCFC;
-	--alt-color: #292929;
-	--primary-color: #ED1818;
+	--default-color: #010101;
+	--alt-color: whitesmoke;
+	--primary-color: #FAFAFA;
 	--highlight-color: #811717;
 	--link-color: #2B75BA;
 	--visited-color: #551A8B;
@@ -14,34 +14,12 @@
 	--mountains-l: url("../../img/anderson-1200.jpg");
 	--mountains-m: url("../../img/anderson-800.jpg");
 	--mountains-s: url("../../img/anderson-420.jpg");
-
-	/* --main-bg: url(../../img/backgrounds/dark_abstract.svgz); */
-	--glass-grad: linear-gradient(to top left, rgba(80, 80, 80, 0.7), rgba(140, 140, 140, 0.9), rgba(40, 40, 40, 0.7));
-	--shadow: rgba(20, 20, 20, 0.9);
-	--tint-glass: linear-gradient(rgba(40, 40, 40, 0.8), rgba(80, 80, 80, 0.7));
-	--progress-grad: linear-gradient(var(--highlight-color), var(--primary-color), var(--highlight-color));
 	--nav-height: 2.5rem;
 
 	/*==================== Set fonts here ====================*/
 	--main-font: 'Roboto';
+	--title-font: 'Acme';
 	--header-font: 'Alice';
 	--article-font: 'Ubuntu';
 	--article-header-font: var(--header-font);
-	--icon-font: 'Web Symbols';
-
-	/*================ Set various icons here ================*/
-	--link-icon: '  K';
-	--tag-icon: '  , ';
-	--new-tab-icon: '  D';
-	--download-icon: '  A';
-	--next-icon: ')';
-	--prev-icon: '(';
-	--unchecked-icon: '  \\';
-	--checked-icon: '  .';
-	--dropdown-open-icon: '[ ';
-	--dropdown-closed-icon: '] ';
-	--close-icon: '\'';
-	--search-icon: 'L';
-	--attachmnent-icon: 'A';
-	--fullscreen-icon: '%';
 }

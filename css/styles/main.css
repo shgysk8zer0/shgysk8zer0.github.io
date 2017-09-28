@@ -1,6 +1,5 @@
 body > main {
 	padding: 1rem;
-	background-color: #fafafa;
 	grid-area: main;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	grid-gap: 0.7em;

@@ -3,7 +3,3 @@ body >footer {
 	padding: 1em;
 	background-image: linear-gradient(#484848, #454545 40%, #262626);
 }
-
-body > footer a {
-	text-decoration: none;
-}
