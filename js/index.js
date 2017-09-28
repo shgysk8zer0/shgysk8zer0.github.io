@@ -1,5 +1,8 @@
 import {$} from './std-js/functions.js';
 import * as Mutations from './mutations.js';
+import deprefix from './std-js/deprefixer.js';
+
+deprefix();
 
 $(self).ready(async () => {
 	Mutations.init();
