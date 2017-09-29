@@ -27,5 +27,11 @@
         "image": "https:\/\/wysiwyg.chriszuber.com\/images\/screenshot.png",
         "url": "https:\/\/wysiwyg.chriszuber.com\/",
         "description": "An all HTML, CSS, & JavaScript HTML5 WYSIWYG Editor"
+    }, {
+    	"@type": "SoftwareApplication",
+	"name": "FreeCodeCamp Twitch JSON API",
+	"image": "https://i.imgur.com/j8gd6rW.png",
+	"url": "https://codepen.io/shgysk8zer0/full/yzbmdy/",
+	"description": "FreeCodeCamp: Use the Twitchtv JSON API"
     }
 ]
