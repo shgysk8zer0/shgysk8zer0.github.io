@@ -29,9 +29,15 @@
         "description": "An all HTML, CSS, & JavaScript HTML5 WYSIWYG Editor"
     }, {
     	"@type": "SoftwareApplication",
-	"name": "FreeCodeCamp Twitch JSON API",
-	"image": "https://i.imgur.com/j8gd6rW.png",
-	"url": "https://codepen.io/shgysk8zer0/full/yzbmdy/",
-	"description": "FreeCodeCamp: Use the Twitchtv JSON API"
+	    "name": "FreeCodeCamp Twitch JSON API",
+	    "image": "https://i.imgur.com/j8gd6rW.png",
+	    "url": "https://codepen.io/shgysk8zer0/full/yzbmdy/",
+	    "description": "FreeCodeCamp: Use the Twitchtv JSON API"
+    }, {
+        "@type": "SoftwareApplication",
+        "name": "FreeCodeCamp Weather",
+        "url": "https://codepen.io/shgysk8zer0/full/gGRdJz/",
+        "image": "https://i.imgur.com/YGnqUPp.png",
+        "description": "FreeCodeCamp: Show the Local Weather"
     }
 ]
