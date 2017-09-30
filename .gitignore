@@ -2,11 +2,8 @@
 *.patch
 /node_modules/
 /npm-debug.log
-/img/icons.svg
 /*.html
 !/index.html
-*.min*
-*.map
 
 #################
 ## Eclipse

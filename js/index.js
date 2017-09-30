@@ -5,6 +5,7 @@ import deprefix from './std-js/deprefixer.js';
 deprefix();
 
 $(self).ready(async () => {
+	window.addEventListener('scroll', console.info);
 	Mutations.init();
 	document.body.classList.replace('no-js', 'js');
 	$(document.body).watch(Mutations.events, Mutations.options, Mutations.filter);
