@@ -1,15 +1,10 @@
-header svg {
-	transition: all 600ms ease-in-out;
-	transform-origin: bottom center;
-}
-
 header svg:hover {
 	transform: scale(1.3) rotateY(360deg);
 	filter: drop-shadow(0.8em 0.8em 0.3em #000c);
 }
 
 footer svg {
-	transition: transform 600ms cubic-bezier(.68,-0.55,.27,1.55);
+	transition-timing-function: cubic-bezier(.68,-0.55,.27,1.55);
 }
 
 footer svg:hover {

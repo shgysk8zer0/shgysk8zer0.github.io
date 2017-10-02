@@ -23,9 +23,9 @@
 		<link rel="author" href="htps://plus.google.com/+ChrisZuber" />
 		<link rel="manifest" href="./manifest.webapp" />
 	</head>
-	<body class="no-js grid border-box scroll-smooth background-primary cursor-default font-main">
-		<header id="about" class="background-fixed background-no-repeat background-cover color-alt optimize-speed preserve-3d perspective" role="banner">
-				<div itemtype="http://schema.org/Person" itemprop="about" itemscope="" class="flex column wrap">
+	<body class="no-js grid border-box scroll-smooth background-primary cursor-default font-main" id="top">
+		<header id="about" class="center background-fixed background-no-repeat background-cover color-alt optimize-speed" role="banner">
+				<div itemtype="http://schema.org/Person" itemprop="about" itemscope="" class="flex column wrap transform-origin-bottom transition-ease-in-out">
 					<figure itemprop="image" itemtype="http://schema.org/ImageObject">
 						<img
 							srcset="
@@ -38,7 +38,7 @@
 								https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=64 64w"
 							sizes="(orientation: portrait) 45vw, 20vw"
 							src="https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=256"
-							alt="Gravatar" class="round shadow-dark" itemprop="url" />
+							alt="Gravatar" class="round shadow-dark cursor-pointer" itemprop="url" data-show-modal="#about-dialog" />
 					</figure>
 					<hr />
 					<h1 class="capitalize">
@@ -55,36 +55,36 @@
 					</h4>
 					<div class="flex row container bigger">
 						<a href="tel:+1-661-619-6712" itemprop="telephone" content="+1-661-619-6712">
-							<svg class="current-color icon">
+							<svg class="current-color icon transition-transform">
 								<use xlink:href="./img/icons.svg#call-start" />
 							</svg>
 						</a>
 						<a href="mailto:chris@chriszuber.com" itemprop="email" content="chris@chriszuber.com">
-							<svg class="current-color icon">
+							<svg class="current-color icon transition-transform">
 								<use xlink:href="./img/icons.svg#mail-send" />
 							</svg>
 						</a>
 						<a href="geo:48.420778,-122.326916;u=0">
-							<svg class="current-color icon">
+							<svg class="current-color icon transition-transform">
 								<use xlink:href="./img/icons.svg#location" />
 							</svg>
 						</a>
 					</div>
 				</div>
 			</header>
-		<nav class="sticky top color-alt flex row title-font center no-text-decoration z-3" role="navigation">
+		<nav class="sticky top shadow-dark color-alt flex row title-font center no-text-decoration z-3" role="navigation">
 			<a href="#top">
 				<svg class="current-color icon">
 					<use xlink:href="./img/icons.svg#favicon" />
 				</svg>
 			</a>
-			<a href="#about">About</a>
+			<span data-show-modal="#about-dialog" class="cursor-pointer">About</span>
 			<a href="#portfolio">Portfolio</a>
 			<a href="#contact">Contact</a>
 		</nav>
-		<main id="portfolio" class="grid color-default font-article overflow-visible" role="main"></main>
+		<main id="portfolio" class="grid color-default font-article overflow-visible animation-ease-in animation-fill-both" role="main"></main>
 		<aside role="complementary"></aside>
-		<footer id="contact" class="color-alt no-text-decoration optimize-speed" role="contentinfo">
+		<footer id="contact" class="color-alt no-text-decoration optimize-speed transition-transform" role="contentinfo">
 			<a href="https://twitter.com/shgysk8zer0" title="Twitter" target="_blank" rel="noopener external">
 				<svg class="icon big">
 					<use xlink:href="./img/icons.svg#twitter" />
@@ -127,8 +127,48 @@
 			</div>
 			<p>©<time itemprop="copyrightYear">2017</time></p>
 		</footer>
+		<dialog id="about-dialog" class="fixed z-4">
+			<header class="sticky top">
+				<button data-close="#about-dialog">X</button>
+			</header>
+			<figure itemprop="image" itemtype="http://schema.org/ImageObject" class="center">
+				<img
+					srcset="
+						https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=512 512w,
+						https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=400 400w,
+						https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=300 300w,
+						https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=256 256w,
+						https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=180 180w,
+						https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=128 128w,
+						https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=64 64w"
+					sizes="(orientation: portrait) 13vw, 10vw"
+					src="https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=256"
+					alt="Gravatar" class="round shadow-dark" itemprop="url" />
+					<blockquote>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+							do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							Ut enim ad minim veniam, quis nostrud exercitation ullamco
+							laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+							irure dolor in reprehenderit in voluptate velit esse cillum
+							dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia deserunt
+							mollit anim id est laborum.
+						</p>
+						<cite>Chris Zuber</cite>
+					</blockquote>
+			</figure>
+			<div class="skills center animation-fill-forwards animation-stagger animation-alternate animation-ease-in-out animation-infinite">
+				<img src="/img/logos/html5.svg" width="48" height="48" alt="HTML5" class="bounce" />
+				<img src="/img/logos/css3.svg" width="48" height="48" alt="CSS3" class="bounce" />
+				<img src="/img/logos/javascript.svg" width="48" height="48" alt="javascript" class="bounce" />
+				<img src="/img/logos/svg.svg" width="48" height="48" alt="SVG" class="bounce" />
+				<img src="/img/logos/PHP.svg" width="48" height="48" alt="PHP" class="bounce" />
+				<img src="/img/logos/MySQL.svg" width="48" height="48" alt="MySQL" class="bounce" />
+			</div>
+		</dialog>
 		<template id="project-template">
-			<section class="card shadow optimize-legibility" itemtype="http://schema.org/SoftwareApplication">
+			<section class="card shadow optimize-legibility fade-in" itemtype="http://schema.org/SoftwareApplication">
 				<a href="" itemprop="url" target="_blank" class="no-text-decoration">
 					<h3 itemprop="name"></h3>
 					<img src="" itemprop="image" />

@@ -5,7 +5,6 @@ header {
 body > header {
 	grid-area: header;
 	background-image: var(--mountains-l);
-	text-align: center;
 	height: calc(100vh - var(--nav-height));
 	text-shadow: 0.4em 0.4em 0.4em black;
 }

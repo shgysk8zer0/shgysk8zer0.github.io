@@ -6,8 +6,6 @@ body > main {
 }
 
 main > section {
-	transform-origin: top;
-	transition: all 600ms;
 	padding: 0.7em;
 }
 
