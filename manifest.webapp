@@ -17,15 +17,15 @@
 		"sizes": "16x16",
 		"type": "image/png"
 	}, {
-		"src": "img/icons-48.svg",
+		"src": "img/icon-48.svg",
 		"sizes": "48x48",
 		"type": "image/png"
 	}, {
-		"src": "img/icons-60.svg",
+		"src": "img/icon-60.svg",
 		"sizes": "60x60",
 		"type": "image/png"
 	}, {
-		"src": "img/icons-128.svg",
+		"src": "img/icon-128.svg",
 		"sizes": "128x128",
 		"type": "image/png"
 	}],

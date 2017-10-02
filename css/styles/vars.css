@@ -10,10 +10,10 @@
 	--border-color: #2D2D2D;
 
 	/*========== Set background images, etc here ==========*/
-	--mountains-full : url("../../img/anderson.jpg");
-	--mountains-l: url("../../img/anderson-1200.jpg");
-	--mountains-m: url("../../img/anderson-800.jpg");
-	--mountains-s: url("../../img/anderson-420.jpg");
+	--mountains-full : url("../../img/background.jpg");
+	--mountains-l: url("../../img/background-1200.jpg");
+	--mountains-m: url("../../img/background-800.jpg");
+	--mountains-s: url("../../img/background-420.jpg");
 	--nav-height: 2.5rem;
 
 	/*==================== Set fonts here ====================*/
