@@ -22,4 +22,6 @@
 	--header-font: 'Alice';
 	--article-font: 'Ubuntu';
 	--article-header-font: var(--header-font);
+
+	--animation-stagger: 150ms;
 }

@@ -1,6 +1,7 @@
 import {$} from './std-js/functions.js';
 import * as Mutations from './std-js/mutations.js';
 import deprefix from './std-js/deprefixer.js';
+import './shims.js';
 
 deprefix();
 

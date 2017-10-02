@@ -16,9 +16,6 @@
 [submodule "css/core-css"]
 	path = css/core-css
 	url = https://github.com/shgysk8zer0/core-css.git
-[submodule "img/svg-icons"]
-	path = img/svg-icons
-	url = https://github.com/shgysk8zer0/svg-icons.git
 [submodule "img/adwaita-icons"]
 	path = img/adwaita-icons
 	url = https://github.com/shgysk8zer0/adwaita-icons.git

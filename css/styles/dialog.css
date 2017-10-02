@@ -1,3 +1,7 @@
+dialog {
+	animation-play-state: paused;
+}
+
 dialog[open] {
 	background: white;
 	overflow-y: auto;
@@ -6,6 +10,15 @@ dialog[open] {
 	box-shadow: 0 6px 60px rgba(0,0,0,.8);
 	padding: 0;
 	max-height: 30rem;
+	width: 60vw;
+	top: 50%;
+	transform: translateY(-50%);
+	transform-origin: bottom right;
+	animation: fade-in 400ms ease-in;
+}
+
+dialog[open] + .backdrop {
+	animation: fade-in 400ms ease-in;
 }
 
 dialog > header {
