@@ -30,15 +30,15 @@
 		"type": "image/png"
 	}],
 	"screenshots": [{
-		"src": "/img/screenshot.jpg",
+		"src": "/img/screenshots.jpg",
 		"sizes": "1908x1064",
 		"type": "image/jpeg"
 	}, {
-		"src": "/img/screenshot-640.jpg",
+		"src": "/img/screenshots-640.jpg",
 		"sizes": "640x357",
 		"type": "image/jpeg"
 	}, {
-		"src": "/img/screenshot-320.jpg",
+		"src": "/img/screenshots-320.jpg",
 		"sizes": "320x178",
 		"type": "image/jpeg"
 	}],
