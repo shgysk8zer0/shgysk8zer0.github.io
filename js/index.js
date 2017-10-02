@@ -29,4 +29,4 @@ async function readyHandler() {
 	}
 }
 
-$(self).ready(async () => readyHandler, {once: true});
+$(self).ready(readyHandler, {once: true});
