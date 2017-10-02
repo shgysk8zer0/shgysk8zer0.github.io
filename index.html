@@ -16,15 +16,15 @@
 		<script type="module" src="./js/index.js" async=""></script>
 		<script type="application/javascript" src="./js/index.js" asyc="" nomodule=""></script>
 		<link rel="canonical" href="https://about.chriszuber.com/"/>
-		<link rel="stylesheet" href="./css/styles/index.min.css" name="style" media="screen" />
+		<link rel="stylesheet" href="./css/styles/index.css" name="style" media="screen" />
 		<link rel="icon" href="./img/favicon.svg" type="image/svg+xml" name="icon" sizes="any" />
 		<link rel="preload" href="./img/icons.svg" as="image" type="image/svg+xml" name="icons" />
 		<link rel="publisher" href="https://plus.google.com/+Chriszuber_dot_com" />
 		<link rel="author" href="htps://plus.google.com/+ChrisZuber" />
 		<link rel="manifest" href="./manifest.webapp" />
 	</head>
-	<body class="no-js grid border-box scroll-smooth background-primary">
-		<header id="about" class="background-fixed background-no-repeat background-cover color-alt optimize-speed" role="banner">
+	<body class="no-js grid border-box scroll-smooth background-primary cursor-default font-main">
+		<header id="about" class="background-fixed background-no-repeat background-cover color-alt optimize-speed preserve-3d perspective" role="banner">
 				<div itemtype="http://schema.org/Person" itemprop="about" itemscope="" class="flex column wrap">
 					<figure itemprop="image" itemtype="http://schema.org/ImageObject">
 						<img
@@ -72,7 +72,7 @@
 					</div>
 				</div>
 			</header>
-		<nav class="sticky color-alt flex row title-font center no-text-decoration" role="navigation">
+		<nav class="sticky top color-alt flex row title-font center no-text-decoration z-3" role="navigation">
 			<a href="#top">
 				<svg class="current-color icon">
 					<use xlink:href="./img/icons.svg#favicon" />
@@ -132,7 +132,8 @@
 				<a href="" itemprop="url" target="_blank" class="no-text-decoration">
 					<h3 itemprop="name"></h3>
 					<img src="" itemprop="image" />
-					<blockquote itemprop="description"></blockquote>
+					<hr />
+					<i itemprop="description"></i>
 				</a>
 			</section>
 		</template>

@@ -1,14 +1,15 @@
 import {$} from './std-js/functions.js';
-import * as Mutations from './mutations.js';
+import * as Mutations from './std-js/mutations.js';
 import deprefix from './std-js/deprefixer.js';
 
 deprefix();
 
-$(self).ready(async () => {
-	window.addEventListener('scroll', console.info);
+async function readyHandler() {
 	Mutations.init();
 	document.body.classList.replace('no-js', 'js');
+	document.body.classList.toggle('offline', ! navigator.onLine);
 	$(document.body).watch(Mutations.events, Mutations.options, Mutations.filter);
+
 	const resp = await fetch(new URL('portfolio.json', location.href));
 	if (resp.ok) {
 		const main = document.querySelector('main');
@@ -26,26 +27,6 @@ $(self).ready(async () => {
 	} else {
 		throw new Error(`${resp.url} [${resp.status} ${resp.statusText}]`);
 	}
+}
 
-}, {once: true});
-$(self).load(() => $('main').intersect((entries, observer) => {
-	entries.forEach(entry => {
-		if (entry.isIntersecting) {
-			observer.unobserve(entry.target);
-			$('section', entry.target).each((node, i) => {
-				node.animate([
-					{
-						transform: 'translate(50vw, 100vh) scale(0) rotate(180deg)',
-						boxShadow: '3rem 3rem 3rem black'
-					},
-					null
-				], {
-					duration: 800,
-					delay: i * 300,
-					fill: 'backwards'
-				});
-				node.hidden = false;
-			});
-		}
-	});
-}), {once: true});
+$(self).ready(async () => readyHandler, {once: true});
