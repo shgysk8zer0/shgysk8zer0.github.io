@@ -12,7 +12,7 @@
     "lint:css": "stylelint 'css/**/*.css'",
     "test": "npm run lint",
     "build": "npm run build:all",
-    "build:css": "postcss css/styles/index.css -o css/styles/index.min.css",
+    "build:css": "postcss css/styles/index.css -o css/styles/index.min.css -c",
     "build:js": "rollup -c",
     "build:icons": "svg-sprite-generate -c img/icons.csv -o img/icons.svg",
     "build:all": "npm run build:icons && npm run build:css && npm run build:js",
