@@ -5,8 +5,8 @@
 	--alt-color: whitesmoke;
 	--primary-color: #FAFAFA;
 	--highlight-color: #811717;
-	--link-color: #2B75BA;
-	--visited-color: #551A8B;
+	--link-color: inherit;
+	--visited-color: inherit;
 	--border-color: #2D2D2D;
 
 	/*========== Set background images, etc here ==========*/
