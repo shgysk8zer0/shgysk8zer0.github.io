@@ -1,11 +1,11 @@
 if (document.createElement('dialog') instanceof HTMLUnknownElement && !HTMLElement.prototype.hasOwnProperty('open')) {
 	HTMLElement.prototype.show = function() {
 		this.open = true;
-	}
+	};
 
 	HTMLElement.prototype.close = function() {
 		this.open = false;
-	}
+	};
 
 	Object.defineProperty(HTMLElement.prototype, 'open', {
 		set: function(open) {
@@ -39,5 +39,5 @@ if (! document.createElement('dialog').hasOwnProperty('showModal')) {
 		backdrop.style.right = 0;
 		backdrop.style.backgroundColor = 'rgba(0,0,0,0.7)';
 		this.after(backdrop);
-	}
+	};
 }
