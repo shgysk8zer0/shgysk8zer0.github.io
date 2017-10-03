@@ -10,34 +10,48 @@
         "@type": "SoftwareApplication",
         "@context": "http://schema.org",
         "name": "Super User Blog",
-        "image": "img\/logos\/super-user.svg",
+        "image": "/img\/logos\/super-user.svg",
         "url": "https:\/\/chriszuber.com\/",
         "description": "Blogging with HTML5 & JavaScript"
     }, {
         "@type": "SoftwareApplication",
         "@context": "http://schema.org",
-        "name": "std-js",
-        "image": "img\/logos\/javascript.svg",
-        "url": "https:\/\/github.com\/shgysk8zer0\/std-js\/",
-        "description": "A JavaScript library for making front-end development sane!"
-    }, {
-        "@type": "SoftwareApplication",
-        "@context": "http://schema.org",
         "name": "HTML5 WYSIWYG-Editor",
-        "image": "https:\/\/wysiwyg.chriszuber.com\/images\/screenshot.png",
+        "image": "https://i.imgur.com/qdnVcJA.png",
         "url": "https:\/\/wysiwyg.chriszuber.com\/",
         "description": "An all HTML, CSS, & JavaScript HTML5 WYSIWYG Editor"
     }, {
     	"@type": "SoftwareApplication",
 	    "name": "FreeCodeCamp Twitch JSON API",
 	    "image": "https://i.imgur.com/j8gd6rW.png",
-	    "url": "https://codepen.io/shgysk8zer0/full/yzbmdy/",
+	    "url": "https://shgysk8zer0.github.io/freecodecamp-twitch",
 	    "description": "FreeCodeCamp: Use the Twitchtv JSON API"
     }, {
         "@type": "SoftwareApplication",
         "name": "FreeCodeCamp Weather",
-        "url": "https://codepen.io/shgysk8zer0/full/gGRdJz/",
-        "image": "https://i.imgur.com/YGnqUPp.png",
+        "url": "https://shgysk8zer0.github.io/freecodecamp-weather",
+        "image": "https://i.imgur.com/OXN2pCz.png",
         "description": "FreeCodeCamp: Show the Local Weather"
+    }, {
+        "@type": "SoftwareApplication",
+        "@context": "http://schema.org",
+        "name": "std-js",
+        "image": "/img\/logos\/javascript.svg",
+        "url": "https:\/\/github.com\/shgysk8zer0\/std-js\/",
+        "description": "A JavaScript library for making front-end development sane!"
+    }, {
+        "@type": "SoftwareApplication",
+        "@context": "http://schema.org",
+        "name": "core-css",
+        "image": "/img\/logos\/css3.svg",
+        "url": "https:\/\/github.com\/shgysk8zer0\/core-css\/",
+        "description": "A collection of CSS styles, categorized by files, which are useful on common projects"
+    }, {
+        "@type": "SoftwareApplication",
+        "@context": "http://schema.org",
+        "name": "adwaita-icons",
+        "image": "https://i.imgur.com/c1hLkNj.png",
+        "url": "https:\/\/github.com\/shgysk8zer0\/adwaita-icons\/",
+        "description": "A copy of adwaita-icon-theme as seen in the Gnome Project"
     }
 ]
