@@ -4,6 +4,7 @@ body > nav {
 	border-radius: 0 0 1rem 1rem;
 	grid-area: nav;
 	justify-content: space-evenly;
+	border-top: 0.2rem solid var(--highlight-color);
 }
 
 body > nav > * {
@@ -21,7 +22,7 @@ body > nav > *:last-child {
 }
 
 body > nav > *:not(:last-child) {
-	border-right: 2px solid lightgray;
+	border-right: 2px solid var(--highlight-color);
 }
 
 body > nav > *:hover {
