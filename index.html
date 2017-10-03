@@ -14,7 +14,7 @@
 		<meta itemprop="thumbnailUrl" content="./img/screenshot.jpg" />
 		<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 		<script type="module" src="./js/index.js" async=""></script>
-		<script type="application/javascript" src="./js/index.js" asyc="" nomodule=""></script>
+		<script type="application/javascript" src="./js/index.min.js" asyc="" nomodule=""></script>
 		<link rel="canonical" href="https://about.chriszuber.com/"/>
 		<link rel="stylesheet" href="./css/styles/index.min.css" name="style" media="screen" />
 		<link rel="icon" href="./img/favicon.svg" type="image/svg+xml" name="icon" sizes="any" />
@@ -38,7 +38,10 @@
 								https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=64 64w"
 							sizes="(orientation: portrait) 45vw, 20vw"
 							src="https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=256"
-							alt="Gravatar" class="round shadow-dark cursor-pointer" itemprop="url" data-show-modal="#about-dialog" />
+							alt="Gravatar"
+							itemprop="url"
+							class="round shadow-dark cursor-pointer"
+							data-show-modal="#about-dialog" />
 					</figure>
 					<hr />
 					<h1 class="capitalize">
@@ -105,6 +108,11 @@
 					<use xlink:href="./img/icons.svg#reddit" />
 				</svg>
 			</a>
+			<a href="https://www.freecodecamp.com/shgysk8zer0" title="FreeCodeCamp" target="_blank" rel="noopener external">
+				<svg class="icon big">
+					<use xlink:href="./img/icons.svg#freecodecamp" />
+				</svg>
+			</a>
 			<hr />
 			<a href="https://github.com/shgysk8zer0" title="My GitHub Profile" target="_blank" rel="noopener external">
 				<svg class="icon big">
@@ -129,7 +137,7 @@
 		</footer>
 		<dialog id="about-dialog" class="fixed z-4">
 			<header class="sticky top">
-				<button data-close="#about-dialog">X</button>
+				<button data-close="#about-dialog" class="font-main filter-shadow">X</button>
 			</header>
 			<figure itemprop="image" itemtype="http://schema.org/ImageObject" class="center">
 				<img
@@ -146,19 +154,14 @@
 					alt="Gravatar" class="round shadow-dark" itemprop="url" />
 					<blockquote>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-							do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco
-							laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-							irure dolor in reprehenderit in voluptate velit esse cillum
-							dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-							cupidatat non proident, sunt in culpa qui officia deserunt
-							mollit anim id est laborum.
+							I write code and poetry. Overall <q>knurd.</q> I know how to exit vim!
+							<br />
+							Full Stack Web Developer and follower of the Unix Philosophy
 						</p>
 						<cite>Chris Zuber</cite>
 					</blockquote>
 			</figure>
-			<div class="skills center animation-fill-forwards animation-stagger animation-alternate animation-ease-in-out animation-infinite">
+			<div class="skills center animation-stagger animation-alternate animation-ease-in-out animation-infinite">
 				<img src="/img/logos/html5.svg" width="48" height="48" alt="HTML5" class="bounce" />
 				<img src="/img/logos/css3.svg" width="48" height="48" alt="CSS3" class="bounce" />
 				<img src="/img/logos/javascript.svg" width="48" height="48" alt="javascript" class="bounce" />

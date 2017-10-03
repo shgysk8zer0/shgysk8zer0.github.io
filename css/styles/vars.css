@@ -4,10 +4,20 @@
 	--default-color: #010101;
 	--alt-color: whitesmoke;
 	--primary-color: #FAFAFA;
-	--highlight-color: #811717;
+	--highlight-color: #FC5B0B;
 	--link-color: inherit;
 	--visited-color: inherit;
+	--accent-color: #168080;
+	--accent-color-2: #0A4E4E;
 	--border-color: #2D2D2D;
+	--button-background: linear-gradient(var(--accent-color), var(--accent-color-2));
+	--button-active-background: linear-gradient(var(--accent-color-2), var(--accent-color));
+	--button-active-color: var(--button-color);
+	--button-disabled-background: var(--button-active-background);
+	--button-border: 0.1rem outset #0A4E4E;
+	--button-disabled-border: 0.1rem inset var(--accent-color-2);
+	--button-active-border: var(--button-distabled-border);
+	--button-color: var(--primary-color);
 
 	/*========== Set background images, etc here ==========*/
 	--mountains-full : url("../../img/background.jpg");

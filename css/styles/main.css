@@ -8,11 +8,3 @@ body > main {
 main > section {
 	padding: 0.7em;
 }
-
-main > section:hover {
-	transform: scale(1.2);
-}
-
-h3 {
-	text-align: center;
-}
