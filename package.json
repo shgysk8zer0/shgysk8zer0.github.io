@@ -12,22 +12,22 @@
     "lint:css": "stylelint 'css/**/*.css'",
     "test": "npm run lint",
     "build": "npm run build:all",
-    "build:css": "postcss css/styles/index.css -o css/styles/index.min.css -c",
-    "build:js": "rollup -c",
+    "build:css": "postcss css/styles/index.css -o css/styles/index.min.css -c postcss.config.js",
+    "build:js": "rollup -c rollup.config.js",
     "build:icons": "svg-sprite-generate -c img/icons.csv -o img/icons.svg",
     "build:all": "npm run build:icons && npm run build:css && npm run build:js",
     "postinstall": "npm run git:fetch && npm run git:submodules && npm run build:all"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shgysk8zer0/about.git"
+    "url": "git+https://github.com/shgysk8zer0/shgysk8zer0.github.io.git"
   },
-  "author": "Chris Zuber <shgysk8zer0@gmail.com>",
+  "author": "Chris Zuber <chris@chriszuber.com>",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/shgysk8zer0/about/issues"
+    "url": "https://github.com/shgysk8zer0/shgysk8zer0.github.io/issues"
   },
-  "homepage": "https://github.com/shgysk8zer0/about#readme",
+  "homepage": "https://shgysk8zer0.github.io",
   "devDependencies": {
     "eslint": "^4.2.0",
     "eslint-plugin-async-await": "0.0.0",
