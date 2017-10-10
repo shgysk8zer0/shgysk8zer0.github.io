@@ -1,7 +1,7 @@
 :root {
-	--desktop-rem: 1.3vmax;
-	--tablet-rem: 1.5vmax;
-	--mobile-rem: 2.3vmax;
+	--desktop-rem: 1.3vw;
+	--tablet-rem: 1.5vw;
+	--mobile-rem: 2.3vw;
 
 	/*================= Set color vars here =================*/
 	--default-color: #010101;
