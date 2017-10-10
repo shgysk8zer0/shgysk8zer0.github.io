@@ -18,13 +18,13 @@ async function readyHandler() {
 		const main = document.querySelector('main');
 		const template = document.getElementById('project-template');
 		const projects = await resp.json();
-		projects.forEach(project => {
+		projects.forEach(async project => {
 			const card = template.content.cloneNode(true);
-			$('[itemtype]',card).attr({itemscope: ''});
-			$('[itemprop="name"]', card).text(project.name);
-			$('[itemprop="image"]', card).attr({src: project.image});
-			$('[itemprop="description"]', card).text(project.description);
-			$('[itemprop="url"]', card).attr({href: project.url});
+			await $('[itemtype]',card).attr({itemscope: null});
+			await $('[itemprop="name"]', card).text(project.name);
+			await $('[itemprop="image"]', card).attr({src: project.image});
+			await $('[itemprop="description"]', card).text(project.description);
+			await $('[itemprop="url"]', card).attr({href: project.url});
 			main.append(card);
 		});
 	} else {
