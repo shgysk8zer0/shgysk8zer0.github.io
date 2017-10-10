@@ -36,7 +36,7 @@
         "@type": "SoftwareApplication",
         "@context": "http://schema.org",
         "name": "std-js",
-        "image": "/img\/logos\/javascript.svg",
+        "image": "https://i.imgur.com/WIaJgfx.png",
         "url": "https:\/\/github.com\/shgysk8zer0\/std-js\/",
         "description": "A JavaScript library for making front-end development sane!"
     }, {
