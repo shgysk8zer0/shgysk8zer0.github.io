@@ -6,10 +6,12 @@ import './shims.js';
 deprefix();
 
 async function readyHandler() {
+	const $body = $(document.body);
+	$body.replaceClass('no-js', 'js');
+	$body.toggleClass('offline', ! navigator.onLine);
+	$body.watch(Mutations.events, Mutations.options, Mutations.filter);
+
 	Mutations.init();
-	document.body.classList.replace('no-js', 'js');
-	document.body.classList.toggle('offline', ! navigator.onLine);
-	$(document.body).watch(Mutations.events, Mutations.options, Mutations.filter);
 
 	const resp = await fetch(new URL('portfolio.json', location.href));
 	if (resp.ok) {
@@ -18,12 +20,12 @@ async function readyHandler() {
 		const projects = await resp.json();
 		projects.forEach(project => {
 			const card = template.content.cloneNode(true);
-			card.querySelector('[itemprop="name"]').textContent = project.name;
-			card.querySelector('[itemprop="image"]').src = project.image;
-			card.querySelector('[itemprop="description"]').textContent = project.description;
-			card.querySelector('[itemprop="url"]').href = project.url;
-			card.querySelector('[itemtype]').setAttribute('itemscope', '');
-			main.appendChild(card);
+			$('[itemtype]',card).attr({itemscope: ''});
+			$('[itemprop="name"]', card).text(project.name);
+			$('[itemprop="image"]', card).attr({src: project.image});
+			$('[itemprop="description"]', card).text(project.description);
+			$('[itemprop="url"]', card).attr({href: project.url});
+			main.append(card);
 		});
 	} else {
 		throw new Error(`${resp.url} [${resp.status} ${resp.statusText}]`);
