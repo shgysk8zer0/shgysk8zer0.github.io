@@ -6,10 +6,11 @@ import './shims.js';
 deprefix();
 
 async function readyHandler() {
-	const $body = $(document.body);
-	$body.replaceClass('no-js', 'js');
-	$body.toggleClass('offline', ! navigator.onLine);
-	$body.watch(Mutations.events, Mutations.options, Mutations.filter);
+	const $doc = $(document.documentElement);
+	$doc.replaceClass('no-js', 'js');
+	$doc.toggleClass('offline', ! navigator.onLine);
+	$doc.watch(Mutations.events, Mutations.options, Mutations.filter);
+	$doc.data({fooBar: 'baz'});
 
 	Mutations.init();
 
