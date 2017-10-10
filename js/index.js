@@ -10,7 +10,6 @@ async function readyHandler() {
 	$doc.replaceClass('no-js', 'js');
 	$doc.toggleClass('offline', ! navigator.onLine);
 	$doc.watch(Mutations.events, Mutations.options, Mutations.filter);
-	$doc.data({fooBar: 'baz'});
 
 	Mutations.init();
 
