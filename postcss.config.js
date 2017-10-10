@@ -1,9 +1,12 @@
-module.exports = {
-	"map": true,
+module.exports = ctx => ({
+	"map": {inline: false},
 	"plugins": {
-		"cssnano": null,
-		"postcss-cssnext": null,
-		"postcss-import": null,
-		"postcss-url": null
+		"cssnano": {preset: 'default'},
+		"postcss-cssnext": {},
+		"postcss-import": {},
+		"postcss-url": {},
+		"autoprefixer": {},
+		"postcss-custom-properties": {},
+		"postcss-calc": {},
 	}
-}
+});
