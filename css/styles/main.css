@@ -4,27 +4,3 @@ body > main {
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	grid-gap: 1.7em;
 }
-
-@media screen and (min-width: 1201px) {
-	body > main {
-		background-image: var(--sunset-full);
-	}
-}
-
-@media screen and (min-width: 801px) and (max-width: 1200px) {
-	body > main {
-		background-image: var(--sunset-l);
-	}
-}
-
-@media screen and (min-width: 421px) and (max-width: 800px) {
-	body > main {
-		background-image: var(--sunset-m);
-	}
-}
-
-@media screen and (max-width: 420px) {
-	body > main {
-		background-image: var(--sunset-s);
-	}
-}
