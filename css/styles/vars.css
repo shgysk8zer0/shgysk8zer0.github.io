@@ -27,6 +27,10 @@
 	--mountains-l: url("../../img/background-1200.jpg");
 	--mountains-m: url("../../img/background-800.jpg");
 	--mountains-s: url("../../img/background-420.jpg");
+	--sunset-full : url("../../img/sunset.jpg");
+	--sunset-l: url("../../img/sunset-1200.jpg");
+	--sunset-m: url("../../img/sunset-800.jpg");
+	--sunset-s: url("../../img/sunset-420.jpg");
 	--nav-height: 2.5rem;
 
 	/*==================== Set fonts here ====================*/

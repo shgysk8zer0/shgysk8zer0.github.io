@@ -2,9 +2,5 @@ body > main {
 	padding: 1rem;
 	grid-area: main;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-	grid-gap: 0.7em;
-}
-
-main > section {
-	padding: 0.7em;
+	grid-gap: 1.7em;
 }

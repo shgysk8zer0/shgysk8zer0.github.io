@@ -66,12 +66,17 @@
 	--button-disabled-border: 0.1rem inset var(--accent-color-2);
 	--button-active-border: var(--button-distabled-border);
 	--button-color: var(--primary-color);
+	/*--card-bg: rgba(255,255,255,0.9);*/
 
 	/*========== Set background images, etc here ==========*/
 	--mountains-full : url("../../img/background.jpg");
 	--mountains-l: url("../../img/background-1200.jpg");
 	--mountains-m: url("../../img/background-800.jpg");
 	--mountains-s: url("../../img/background-420.jpg");
+	--sunset-full : url("../../img/sunset.jpg");
+	--sunset-l: url("../../img/sunset-1200.jpg");
+	--sunset-m: url("../../img/sunset-800.jpg");
+	--sunset-s: url("../../img/sunset-420.jpg");
 	--nav-height: 2.5rem;
 
 	/*==================== Set fonts here ====================*/
@@ -915,6 +920,10 @@ template {
 
 [hidden] {
   display: none;
+}
+
+.clearfix::after {
+	clear: both;
 }
 
 .shadow {
@@ -1968,7 +1977,7 @@ body {
 	grid-template-columns: 1fr 8fr 2fr 1fr;
 	grid-template-areas: 'header header header header'
 	'nav nav nav nav'
-	'. main main .'
+	'main main main main'
 	'footer footer footer footer';
 }
 
@@ -2081,11 +2090,7 @@ body > main {
 	padding: 1rem;
 	grid-area: main;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-	grid-gap: 0.7em;
-}
-
-main > section {
-	padding: 0.7em;
+	grid-gap: 1.7em;
 }
 
 body > footer {
