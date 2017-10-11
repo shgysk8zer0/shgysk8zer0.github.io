@@ -3,7 +3,7 @@ body {
 	grid-template-columns: 1fr 8fr 2fr 1fr;
 	grid-template-areas: 'header header header header'
 	'nav nav nav nav'
-	'. main main .'
+	'main main main main'
 	'footer footer footer footer';
 }
 

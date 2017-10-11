@@ -15,7 +15,7 @@
 		<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 		<script type="module" src="./js/index.js" async=""></script>
 		<script type="application/javascript" src="./js/index.min.js" asyc="" nomodule=""></script>
-		<link rel="stylesheet" href="./css/styles/index.min.css" name="style" media="screen" />
+		<link rel="stylesheet" href="./css/styles/index.css" name="style" media="screen" />
 		<link rel="canonical" href="https://shgysk8zer0.github.io"/>
 		<link rel="icon" href="./img/favicon.svg" type="image/svg+xml" name="icon" sizes="any" />
 		<link rel="preload" href="./img/icons.svg" as="image" type="image/svg+xml" name="icons" />
@@ -23,7 +23,7 @@
 		<link rel="author" href="htps://plus.google.com/+ChrisZuber" />
 		<link rel="manifest" href="./manifest.webapp" />
 	</head>
-	<body class="grid border-box scroll-smooth background-primary cursor-default font-main" id="top">
+	<body class="grid border-box scroll-smooth cursor-default font-main" id="top">
 		<header id="about" class="center background-fixed background-no-repeat background-cover color-alt optimize-speed transition-speed-slow" role="banner">
 				<div itemtype="http://schema.org/Person" itemprop="about" itemscope="" class="flex column wrap transform-origin-bottom transition-ease-in-out">
 					<figure itemprop="image" itemtype="http://schema.org/ImageObject">
@@ -84,7 +84,7 @@
 			<a href="#portfolio">Portfolio</a>
 			<a href="#contact">Contact</a>
 		</nav>
-		<main id="portfolio" class="grid color-default font-article overflow-visible animation-ease-in animation-fill-both" role="main"></main>
+		<main id="portfolio" class="grid color-default font-article overflow-visible animation-ease-in animation-fill-both background-fixed background-no-repeat background-cover" role="main"></main>
 		<aside role="complementary"></aside>
 		<footer id="contact" class="color-alt no-text-decoration optimize-speed transition-transform transition-speed-slow" role="contentinfo">
 			<a href="https://twitter.com/shgysk8zer0" title="Twitter" target="_blank" rel="noopener external">
@@ -175,7 +175,7 @@
 			</div>
 		</dialog>
 		<template id="project-template">
-			<section class="card shadow optimize-legibility fade-in" itemtype="http://schema.org/SoftwareApplication">
+			<section class="project card shadow optimize-legibility fade-in" itemtype="http://schema.org/SoftwareApplication">
 				<a href="" itemprop="url" target="_blank" class="no-text-decoration">
 					<h3 itemprop="name"></h3>
 					<img src="" itemprop="image" />
