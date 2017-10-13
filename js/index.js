@@ -20,7 +20,7 @@ async function readyHandler() {
 		const projects = await resp.json();
 		projects.forEach(async project => {
 			const card = template.content.cloneNode(true);
-			await $('[itemtype]',card).attr({itemscope: null});
+			await $('[itemtype]', card).attr({itemscope: true});
 			await $('[itemprop="name"]', card).text(project.name);
 			await $('[itemprop="applicationCategory"]', card).text(project.applicationCategory);
 			await $('[itemprop="keywords"]', card).text(project.keywords);
