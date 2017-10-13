@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js" itemtype="http://schema.org/WebSite" itemscope="">
+<html lang="en" dir="ltr" class="no-js" itemtype="http://schema.org/WebSite" itemscope="" data-service-worker="./js/worker.js">
 	<head>
 		<title itemprop="headline">Chris Zuber | About</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<meta name="referrer" content="origin-when-cross-origin"/>
 		<meta name="mobile-web-app-capable" content="yes" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+		<meta name="description" content="Contact info and work examples for Chris Zuber" />
+		<meta name="keywords" content="Chris Zuber, portfolio" />
 		<meta name="author" content="Chris Zuber"/>
-		<meta itemprop="description" content="" />
-		<meta itemprop="keywords" content="" />
+		<meta itemprop="description" content="Contact info and work examples for Chris Zuber" />
+		<meta itemprop="keywords" content="Chris Zuber, portfolio" />
 		<meta itemprop="thumbnailUrl" content="./img/screenshot.jpg" />
+		<meta name="theme-color" content="#FC5B0B" />
 		<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-		<script type="module" src="./js/index.js" async=""></script>
-		<script type="application/javascript" src="./js/index.min.js" asyc="" nomodule=""></script>
+		<!-- <script type="module" src="./js/index.js" async=""></script> -->
+		<script type="application/javascript" src="./js/index.min.js" asyc=""></script>
 		<link rel="stylesheet" href="./css/styles/index.min.css" name="style" media="screen" />
 		<link rel="canonical" href="https://shgysk8zer0.github.io"/>
 		<link rel="icon" href="./img/favicon.svg" type="image/svg+xml" name="icon" sizes="any" />
@@ -74,7 +75,7 @@
 					</div>
 				</div>
 			</header>
-		<nav class="sticky top shadow-dark color-alt flex row title-font center no-text-decoration z-3" role="navigation">
+		<nav class="sticky top shadow-dark color-alt flex row title-font center no-text-decoration z-2" role="navigation">
 			<a href="#top">
 				<svg class="current-color icon">
 					<use xlink:href="./img/icons.svg#favicon" />
@@ -143,7 +144,7 @@
 			<header class="sticky top">
 				<button data-close="#about-dialog" class="font-main filter-shadow">X</button>
 			</header>
-			<figure itemprop="image" itemtype="http://schema.org/ImageObject" class="center">
+			<figure itemprop="image" itemtype="http://schema.org/ImageObject" class="clearfix">
 				<img
 					srcset="
 						https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=512 512w,
@@ -155,8 +156,8 @@
 						https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=64 64w"
 					sizes="(orientation: portrait) 13vw, 10vw"
 					src="https://gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=256"
-					alt="Gravatar" class="round shadow-dark" itemprop="url" />
-					<blockquote>
+					alt="Gravatar" class="round shadow-dark left" itemprop="url" />
+					<blockquote class="left">
 						<p>
 							I write code and poetry. Overall <q>knurd.</q> I know how to exit vim!
 							<br />
@@ -176,14 +177,14 @@
 		</dialog>
 		<template id="project-template">
 			<section class="project card shadow optimize-legibility fade-in" itemtype="http://schema.org/SoftwareApplication">
-				<a href="" itemprop="url" target="_blank" class="no-text-decoration">
+				<a href="" itemprop="url" target="_blank" class="no-text-decoration" rel="noopener external">
 					<h3 itemprop="name" class="center font-title color-highlight"></h3>
 					<h4 class="center" itemprop="applicationCategory"></h4>
-					<img src="" itemprop="screenshot" />
+					<img src="" itemprop="screenshot" alt="screenshot" />
 					<hr />
 					<span class="underline color-highlight" itemprop="keywords"></span>
 					<br />
-					<i class="text-align-right block font-article" itemprop="description"></i>
+					<blockquote class="text-align-right block font-article" itemprop="description"></blockquote>
 					<meta itemprop="operatingSystem" content="" />
 				</a>
 			</section>
