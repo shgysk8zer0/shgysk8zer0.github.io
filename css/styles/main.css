@@ -4,3 +4,7 @@ body > main {
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	grid-gap: 1.7em;
 }
+
+[itemtype="http://schema.org/SoftwareApplication"] [itemprop="keywords"] {
+	font-size: 0.7em;
+}
