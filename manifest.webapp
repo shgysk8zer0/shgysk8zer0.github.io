@@ -1,32 +1,44 @@
 {
 	"version": "0.1.0",
 	"name": "Chris Zuber | Portfolio",
-	"short_name": "",
+	"short_name": "Chris Zuber",
 	"description": "Info and work examples from Chris Zuber",
 	"start_url": "/",
 	"lang": "en-us",
 	"display": "standalone",
-	"theme_color": "#333",
-	"background_color": "#fff",
+	"theme_color": "#FC5B0B",
+	"background_color": "#FEFEFE",
 	"icons": [{
 		"src": "img/favicon.svg",
 		"sizes": "any",
 		"type": "image/svg+xml"
 	}, {
-		"src": "img/icon-16.svg",
+		"src": "img/icon-16.png",
 		"sizes": "16x16",
 		"type": "image/png"
 	}, {
-		"src": "img/icon-48.svg",
+		"src": "img/icon-48.png",
 		"sizes": "48x48",
 		"type": "image/png"
 	}, {
-		"src": "img/icon-60.svg",
+		"src": "img/icon-60.png",
 		"sizes": "60x60",
 		"type": "image/png"
 	}, {
-		"src": "img/icon-128.svg",
+		"src": "img/icon-128.png",
 		"sizes": "128x128",
+		"type": "image/png"
+	}, {
+		"src": "img/icon-144.png",
+		"sizes": "144x144",
+		"type": "image/png"
+	}, {
+		"src": "img/icon-192.png",
+		"sizes": "192x192",
+		"type": "image/png"
+	}, {
+		"src": "img/icon-512.png",
+		"sizes": "512x512",
 		"type": "image/png"
 	}],
 	"screenshots": [{
@@ -45,5 +57,5 @@
 	"developer": {
 		"name": "Chris Zuber",
 		"url": "http://chriszuber.com"
-	},
+	}
 }

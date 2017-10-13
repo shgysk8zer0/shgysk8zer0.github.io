@@ -30,14 +30,6 @@ if (! document.createElement('dialog').hasOwnProperty('showModal')) {
 		this.open = true;
 		const backdrop = document.createElement('div');
 		backdrop.classList.add('backdrop');
-		backdrop.style.position = 'fixed';
-		backdrop.style.width = '100vw';
-		backdrop.style.height = '100vh';
-		backdrop.style.top = 0;
-		backdrop.style.bottom = 0;
-		backdrop.style.left = 0;
-		backdrop.style.right = 0;
-		backdrop.style.backgroundColor = 'rgba(0,0,0,0.7)';
 		this.after(backdrop);
 	};
 }

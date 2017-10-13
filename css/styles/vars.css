@@ -31,6 +31,7 @@
 	--sunset-l: url("../../img/sunset-1200.jpg");
 	--sunset-m: url("../../img/sunset-800.jpg");
 	--sunset-s: url("../../img/sunset-420.jpg");
+	--backdrop-background: rgba(0,0,0,0.7);
 	--nav-height: 2.5rem;
 
 	/*==================== Set fonts here ====================*/
@@ -41,4 +42,8 @@
 	--article-header-font: var(--header-font);
 
 	--animation-stagger: 150ms;
+}
+
+::backdrop {
+	--backdrop-background: rgba(0,0,0,0.7);
 }

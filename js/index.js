@@ -5,11 +5,34 @@ import './shims.js';
 
 deprefix();
 
+async function registerServiceWorker(el) {
+	try {
+		if (! navigator.hasOwnProperty('serviceWorker')) {
+			throw new Error('Service worker not supported');
+		}
+
+		const url = new URL(el.dataset.serviceWorker, location.origin);
+		const reg = await navigator.serviceWorker.register(url);
+
+		if(reg.installing) {
+			console.log('Service worker installing');
+		} else if(reg.waiting) {
+			console.log('Service worker installed');
+		} else if(reg.active) {
+			console.log('Service worker active');
+		}
+	} catch (error) {
+		console.error(error);
+	}
+}
+
 async function readyHandler() {
 	const $doc = $(document.documentElement);
 	$doc.replaceClass('no-js', 'js');
 	$doc.toggleClass('offline', ! navigator.onLine);
 	$doc.watch(Mutations.events, Mutations.options, Mutations.filter);
+
+	$('[data-service-worker]').each(registerServiceWorker);
 
 	Mutations.init();
 
