@@ -7,7 +7,7 @@ deprefix();
 
 async function registerServiceWorker(el) {
 	try {
-		if (! navigator.hasOwnProperty('serviceWorker')) {
+		if (! Navigator.prototype.hasOwnProperty('serviceWorker')) {
 			throw new Error('Service worker not supported');
 		}
 
@@ -32,7 +32,7 @@ async function readyHandler() {
 	$doc.toggleClass('offline', ! navigator.onLine);
 	$doc.watch(Mutations.events, Mutations.options, Mutations.filter);
 
-	$('[data-service-worker]').each(registerServiceWorker);
+	$('[data-service-worker]').each(registerServiceWorker).catch(console.error);
 
 	Mutations.init();
 
