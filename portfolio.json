@@ -3,7 +3,7 @@
         "@type": "SoftwareApplication",
         "@context": "http://schema.org",
         "name": "Awesome RSS",
-        "screenshot": "https:\/\/github.com\/shgysk8zer0\/awesome-rss\/raw\/master\/screenshot.png",
+        "screenshot": "https:\/\/media.githubusercontent.com\/media\/shgysk8zer0\/awesome-rss\/master\/screenshot.png",
         "url": "https:\/\/addons.mozilla.org\/en-US\/firefox\/addon\/awesome-rss\/",
         "description": "Puts and RSS/Atom subscribe button back in the URL bar",
         "keywords": "WebExtension, JavaScript, RSS",
