@@ -2092,6 +2092,10 @@ body > main {
 	grid-gap: 1.7em;
 }
 
+[itemtype="http://schema.org/SoftwareApplication"] [itemprop="keywords"] {
+	font-size: 0.7em;
+}
+
 body > footer {
 	grid-area: footer;
 	padding: 1em;
