@@ -22,6 +22,7 @@ async function readyHandler() {
 			const card = template.content.cloneNode(true);
 			await $('[itemtype]',card).attr({itemscope: null});
 			await $('[itemprop="name"]', card).text(project.name);
+			await $('[itemprop="keywords"]', card).text(project.keywords);
 			await $('[itemprop="image"]', card).attr({src: project.image});
 			await $('[itemprop="description"]', card).text(project.description);
 			await $('[itemprop="url"]', card).attr({href: project.url});
