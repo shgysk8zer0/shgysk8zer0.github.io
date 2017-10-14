@@ -17,6 +17,7 @@ Write access to the GitHub repository is restricted, so make a fork and clone th
 
 ## Requirements
 - [Git](https://www.git-scm.com/download/)
+- [jekyll](https://jekyllrb.com/)
 
 ## JavaScript
 Due to Content-Security-Policy, use of `eval` and inline scripts are **prohibited**. Further, this project uses ECMAScript 2015  [modules](http://exploringjs.com/es6/ch_modules.html), so be sure to familiarize yourself with the syntax.
@@ -45,6 +46,8 @@ Several useful modules are included for Node users, which is strongly recommende
 - `build:all` which runs all of the above
 - `update` which updates Git submodules recursively, installing any new ones
 - `test` which runs any configured tests (*lints CSS & JS*)
+- `serve` Triggers build process and starts jekyll server
+- `serve:dev` Same as `serve`, except using dev / un-transpiled resources
 NPM also has a `postinstall` script which will automatically install and update
 
 ## Git submodules

@@ -4,6 +4,7 @@
 /npm-debug.log
 /*.html
 !/index.html
+/_site/
 
 #################
 ## Eclipse

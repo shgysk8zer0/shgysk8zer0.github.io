@@ -1,0 +1,27 @@
+<head>
+	<title itemprop="headline">{{ site.author }} | {{ site.title }}</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="referrer" content="origin-when-cross-origin"/>
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="description" content="{{ site.description }}" />
+	<meta name="keywords" content="{{ site.keywords }}" />
+	<meta name="author" content="{{ site.author }}"/>
+	<meta itemprop="description" content="{{ site.description }}" />
+	<meta itemprop="keywords" content="{{ site.keywords }}" />
+	<meta itemprop="thumbnailUrl" content="./img/screenshot.jpg" />
+	<meta name="theme-color" content="{{ site.theme_color }}" />
+	<meta http-equiv="Content-Security-Policy" content="default-src {{ site.data.csp.default }}; img-src {{ site.data.csp.img }}; script-src {{ site.data.csp.script }}; style-src {{ site.data.csp.style }}; connect-src {{ site.data.csp.conenct }}; font-src {{ site.data.csp.font }}; media-src {{ site.data.csp.media }}; block-all-mixed-content;" />
+	{% for script in site.scripts %}
+	<script type="{{ script.type }}" src="{{ script.src }}" {% if script.async %}async="" {% endif %}{% if script.defer %}defer="" {% endif %}{% if script.nomodule %}nomodule="" {% endif %}></script>
+	{% endfor %}
+	{% for stylesheet in site.stylesheets %}
+	<link rel="stylesheet" href="{{ stylesheet.href }}" media="{{ stylesheet.media }}" />
+	{% endfor %}
+	<link rel="canonical" href="https://shgysk8zer0.github.io"/>
+	<link rel="icon" href="./img/favicon.svg" type="image/svg+xml" name="icon" sizes="any" />
+	<link rel="preload" href="./img/icons.svg" as="image" type="image/svg+xml" name="icons" />
+	<link rel="publisher" href="https://plus.google.com/+Chriszuber_dot_com" />
+	<link rel="author" href="https://plus.google.com/+ChrisZuber" />
+	<link rel="manifest" href="./manifest.webapp" />
+</head>
