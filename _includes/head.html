@@ -11,7 +11,15 @@
 	<meta itemprop="keywords" content="{{ site.keywords }}" />
 	<meta itemprop="thumbnailUrl" content="./img/screenshot.jpg" />
 	<meta name="theme-color" content="{{ site.theme_color }}" />
-	<meta http-equiv="Content-Security-Policy" content="default-src {{ site.data.csp.default }}; img-src {{ site.data.csp.img }}; script-src {{ site.data.csp.script }}; style-src {{ site.data.csp.style }}; connect-src {{ site.data.csp.conenct }}; font-src {{ site.data.csp.font }}; media-src {{ site.data.csp.media }}; block-all-mixed-content;" />
+	<meta http-equiv="Content-Security-Policy" content="
+		default-src {{ site.data.csp.default | join: ' ' }};
+		img-src {{ site.data.csp.img | join: ' ' }};
+		script-src {{ site.data.csp.script | join: ' ' }};
+		style-src {{ site.data.csp.style | join: ' ' }};
+		connect-src {{ site.data.csp.conenct | join: ' ' }};
+		font-src {{ site.data.csp.font | join: ' ' }};
+		media-src {{ site.data.csp.media | join: '' }};
+		block-all-mixed-content;" />
 	{% for script in site.scripts %}
 	<script type="{{ script.type }}" src="{{ script.src | absolute_url }}" {% if script.async %}async="" {% endif %}{% if script.defer %}defer="" {% endif %}{% if script.nomodule %}nomodule="" {% endif %}></script>
 	{% endfor %}

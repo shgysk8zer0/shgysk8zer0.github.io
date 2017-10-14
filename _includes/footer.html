@@ -2,7 +2,7 @@
 	{% for link in site.data.footer.social %}
 		<a href="{{ link.url }}" title="{{ link.title }}" target="_blank" rel="noopener external">
 			<svg class="icon big">
-				<use xlink:href="/img/icons.svg#{{ link.icon }}" />
+				<use xlink:href="{{ '/img/icons.svg' | absolute_url }}#{{ link.icon }}" />
 			</svg>
 		</a>
 	{% endfor %}
