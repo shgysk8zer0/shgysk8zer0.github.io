@@ -1,0 +1,8 @@
+---
+default: "'self'"
+img: "'self' https://media.githubusercontent.com https://i.imgur.com https://gravatar.com/"
+script: "'self' https://cdn.polyfill.io"
+style: "'self'"
+connect: "'self'"
+font: "'self'"
+media: "*"

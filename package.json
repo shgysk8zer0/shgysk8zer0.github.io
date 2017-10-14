@@ -1,6 +1,6 @@
 {
   "name": "about",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Project for creating simple about pages.",
   "main": "index.html",
   "scripts": {
@@ -16,7 +16,10 @@
     "build:js": "rollup --config rollup.config.js",
     "build:icons": "svg-sprite-generate -c img/icons.csv -o img/icons.svg",
     "build:all": "npm run build:icons && npm run build:css && npm run build:js",
-    "postinstall": "npm run git:fetch && npm run git:submodules && npm run build:all"
+    "postinstall": "npm run git:fetch && npm run git:submodules && npm run build:all",
+	"serve": "npm run serve:production",
+	"serve:production": "npm run build:all && jekyll serve --config _config.yml",
+	"serve:dev": "jekyll serve --config _config_devel.yml"
   },
   "repository": {
     "type": "git",

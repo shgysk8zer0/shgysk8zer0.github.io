@@ -1,0 +1,45 @@
+<header id="about" class="center background-fixed background-no-repeat background-cover color-alt optimize-speed transition-speed-slow" role="banner">
+		<div itemtype="http://schema.org/Person" itemprop="about" itemscope="" class="flex column wrap transform-origin-bottom transition-ease-in-out">
+			<figure itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="">
+				<img
+					srcset="{% for size in site.data.gravatar.sizes %}
+					https://gravatar.com/avatar/{{ site.data.gravatar.email_hash }}?s={{ size }} {{ size }}w,
+					{% endfor %}"
+					sizes="(orientation: portrait) 30vw, 15vw"
+					src="https://gravatar.com/avatar/{{ site.data.gravatar.email_hash }}?s=256"
+					alt="Gravatar"
+					itemprop="url"
+					class="round shadow-dark cursor-pointer"
+					data-show-modal="#about-dialog" />
+			</figure>
+			<h1 class="capitalize">
+				<span itemprop="givenName">{{ site.data.contact.name.first }}</span>
+				<span itemprop="familyName">{{ site.data.contact.name.last }}</span>
+			</h1>
+			<h2 itemprop="jobTitle" class="capitalize">{{ site.data.contact.job_title }}</h2>
+			<hr />
+			<h4>
+				<address itemprop="homeLocation" itemtype="http://schema.org/PostalAddress" itemscope="">
+					<span itemprop="addressLocality">{{ site.data.contact.city }}</span>,
+					<span itemprop="addressRegion">{{ site.data.contact.state}}</span>
+				</address>
+			</h4>
+			<div class="flex row container bigger">
+				<a href="tel:{{ site.data.contact.tel }}" itemprop="telephone" content="{{ site.data.contact.tel }}">
+					<svg class="current-color icon transition-transform">
+						<use xlink:href="./img/icons.svg#call-start" />
+					</svg>
+				</a>
+				<a href="mailto:{{ site.data.contact.email }}" itemprop="email" content="{{ site.data.contact.email }}">
+					<svg class="current-color icon transition-transform">
+						<use xlink:href="./img/icons.svg#mail-send" />
+					</svg>
+				</a>
+				<a href="geo:{{ site.data.contact.gps.latitude }},{{ site.data.contact.gps.longitude }};u=0">
+					<svg class="current-color icon transition-transform">
+						<use xlink:href="./img/icons.svg#location" />
+					</svg>
+				</a>
+			</div>
+		</div>
+	</header>

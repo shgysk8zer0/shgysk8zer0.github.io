@@ -1,0 +1,12 @@
+---
+name:
+    first: Christopher
+    last: Zuber
+tel: +1-661-619-6712
+email: chris@chriszuber.com
+job_title: Full Stack Web Developer
+city: Mount Vernon
+state: Washington
+gps:
+    longitude: -122.326916
+    latitude: 48.420778

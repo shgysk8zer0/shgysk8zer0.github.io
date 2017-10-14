@@ -1,0 +1,31 @@
+<dialog id="about-dialog">
+	<header class="sticky top">
+		<button data-close="#about-dialog" class="font-main filter-shadow">X</button>
+	</header>
+	<figure itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="" class="clearfix">
+		<img
+			srcset="{% for size in site.data.gravatar.sizes %}
+			https://gravatar.com/avatar/{{ site.data.gravatar.email_hash }}?s={{ size }} {{ size }}w,
+			{% endfor %}"
+			sizes="(orientation: portrait) 30vw, 15vw"
+			src="https://gravatar.com/avatar/{{ site.data.gravatar.email_hash }}?s=256"
+			alt="Gravatar"
+			itemprop="url"
+			class="round shadow-dark cursor-pointer left"
+		</figure>
+			<blockquote class="left">
+					I write code and poetry. Overall <q>knurd.</q> I know how to exit vim!
+					<br />
+					Full Stack Web Developer and follower of the Unix Philosophy
+				<cite>{{ site.data.contact.name.first }} {{ site.data.contact.name.last }}</cite>
+			</blockquote>
+	</figure>
+	<div class="skills center animation-stagger animation-alternate animation-ease-in-out animation-infinite">
+		<img src="/img/logos/html5.svg" width="48" height="48" alt="HTML5" class="bounce" />
+		<img src="/img/logos/css3.svg" width="48" height="48" alt="CSS3" class="bounce" />
+		<img src="/img/logos/javascript.svg" width="48" height="48" alt="javascript" class="bounce" />
+		<img src="/img/logos/svg.svg" width="48" height="48" alt="SVG" class="bounce" />
+		<img src="/img/logos/PHP.svg" width="48" height="48" alt="PHP" class="bounce" />
+		<img src="/img/logos/MySQL.svg" width="48" height="48" alt="MySQL" class="bounce" />
+	</div>
+</dialog>

@@ -1,0 +1,29 @@
+author: Chris Zuber
+title: Portfolio
+description: Contact info and work examples for Chris Zuber
+keywords: Chris Zuber, portfolio
+theme_color: "#FC5B0B"
+publisher_url: https://plus.google.com/+Chriszuber_dot_com
+author_url: https://plus.google.com/+ChrisZuber
+url: http://localhost
+scripts:
+- src: "/js/index.js"
+  type: module
+  async: true
+  defer: false
+  nomodule: false
+- src: "/js/index.min.js"
+  type: application/javascript
+  async: true
+  defer: false
+  nomodule: true
+- src: "https://cdn.polyfill.io/v2/polyfill.min.js"
+  type: application/javascript
+  async: false
+  defer: false
+  nomodule: false
+stylesheets:
+- href: "/css/styles/index.css"
+  media: all
+markdown: kramdown
+port: 8080
