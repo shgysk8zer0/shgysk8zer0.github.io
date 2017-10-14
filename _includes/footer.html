@@ -2,24 +2,24 @@
 	{% for link in site.data.footer.social %}
 		<a href="{{ link.url }}" title="{{ link.title }}" target="_blank" rel="noopener external">
 			<svg class="icon big">
-				<use xlink:href="./img/icons.svg#{{ link.icon }}" />
+				<use xlink:href="/img/icons.svg#{{ link.icon }}" />
 			</svg>
 		</a>
 	{% endfor %}
 	<hr />
 	<a href="https://github.com/shgysk8zer0" title="My GitHub Profile" target="_blank" rel="noopener external">
 		<svg class="icon big">
-			<use xlink:href="./img/icons.svg#mark-github" />
+			<use xlink:href="{{ '/img/icons.svg#mark-github' | absolute_url }}" />
 		</svg>
 	</a>
 	<a href="https://github.com/shgysk8zer0/shgysk8zer0.github.io" title="The GitHub Repository for this Page" target="_blank" rel="noopener external">
 		<svg class="icon big">
-			<use xlink:href="./img/icons.svg#repo" />
+			<use xlink:href="{{ '/img/icons.svg#repo' | absolute_url }}" />
 		</svg>
 	</a>
 	<a href="https://github.com/shgysk8zer0/shgysk8zer0.github.io/issues" title="Open issues for the repository on Github" target="_blank" rel="noopener external">
 		<svg class="icon big">
-			<use xlink:href="./img/icons.svg#issue-opened" />
+			<use xlink:href="{{ '/img/icons.svg#issue-opened' | absolute_url }}" />
 		</svg>
 	</a>
 	<hr />
