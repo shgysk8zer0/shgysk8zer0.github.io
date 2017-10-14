@@ -1,10 +1,5 @@
-language:
-- node_js
-- ruby
+language: node_js
 node_js:
-- "node"
-rvm:
-- 2.3.3
-install: gem install jekyll
+  - "node"
 cache: bundler
 script: npm test
