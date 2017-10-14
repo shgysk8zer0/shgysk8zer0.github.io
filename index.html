@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="no-js" itemtype="http://schema.org/WebSite" itemscope="" data-service-worker="./js/worker.js">
+<html lang="en" dir="ltr" class="no-js" itemtype="http://schema.org/WebSite" itemscope="" data-service-worker="./js/worker.js" data-support-test="details, dialog, cssvars">
 	<head>
 		<title itemprop="headline">Chris Zuber | About</title>
 		<meta charset="utf-8" />
@@ -138,9 +138,12 @@
 			<div class="license">
 				<a rel="license" itemprop="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><svg width="88" height="31"><use xlink:href="./img/icons.svg#creative-commons" /></svg></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">shgysk8zer0.github.io</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/shgysk8zer0/" property="cc:attributionName" rel="cc:attributionURL">Chris Zuber</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 			</div>
-			<p>©<time itemprop="copyrightYear">2017</time></p>
+			<details>
+				<summary>Copyright</summary>
+				<p>©<time itemprop="copyrightYear">2017</time></p>
+			</details>
 		</footer>
-		<dialog id="about-dialog" class="fixed z-4">
+		<dialog id="about-dialog">
 			<header class="sticky top">
 				<button data-close="#about-dialog" class="font-main filter-shadow">X</button>
 			</header>
