@@ -26,4 +26,32 @@ stylesheets:
 - href: "/css/styles/index.css"
   media: all
 markdown: kramdown
-port: 8080
+exclude:
+- node_modules/
+- docs
+- palette.xml
+- me.json
+- package.json
+- postcss.config.js
+- postcss.config.json
+- README.md
+- LICENSE
+- rollup.config.js
+- "img/octicons/test"
+- "img/octicons/*.js"
+- "img/octicons/LICENSE"
+- "img/octicons/*.json"
+- "img/octicons/*.md"
+- "img/octicons/lib/*.json"
+- "img/octicons/lib/*.sketch"
+- "img/octicons/lib/*.css"
+- "img/adwaita-icons/*.php"
+- "img/adwaita-icons/*.md"
+- "img/adwaita-icons/docs"
+- "img/adwaita-icons/LICENSE"
+- "css/core-css/docs"
+- "css/normalize/*.md"
+- "css/normalize/*.json"
+- "css/normalize/*.html"
+- "js/std-js/docs"
+- "js/std-js/test"
