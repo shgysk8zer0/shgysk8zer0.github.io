@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "description": "Contact info and work examples for Chris Zuber",
+    "keywords": "Chris Zuber, portfolio",
+    "viewport": "width=device-width,initial-scale=1",
+    "referrer": "origin-when-cross-origin",
+    "mobile-web-app-capable": true,
+    "theme_color": "#FC5B0B",
+    "publisher": "https://plus.google.com/+Chriszuber_dot_com",
+    "author": "https://plus.google.com/+ChrisZuber",
+    "thumbnail": "/img/screenshot.jpg",
+    "manifest": "/manifest.webapp"
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "canonical": "https://shgysk8zer0.github.io",
+  "manifest": "/manifest.webapp",
+  "scripts": {
+    "development": [
+      {
+        "src": "https://cdn.polyfill.io/v2/polyfill.min.js",
+        "type": "application/javascript",
+        "async": false,
+        "defer": false,
+        "nomodule": false
+      },
+      {
+        "src": "/js/index.js",
+        "type": "module",
+        "async": true,
+        "defer": false,
+        "nomodule": false
+      },
+      {
+        "src": "/js/index.min.js",
+        "type": "application/javascript",
+        "async": true,
+        "defer": false,
+        "nomodule": true
+      }
+    ],
+    "production": [
+      {
+        "src": "https://cdn.polyfill.io/v2/polyfill.min.js",
+        "type": "application/javascript",
+        "async": false,
+        "defer": false,
+        "nomodule": false
+      },
+      {
+        "src": "/js/index.min.js",
+        "type": "application/javascript",
+        "async": true,
+        "defer": false,
+        "nomodule": false
+      }
+    ]
+  },
+  "stylesheets": {
+    "development": [
+      {
+        "href": "/css/styles/index.css",
+        "media": "all"
+      }
+    ],
+    "production": [
+      {
+        "href": "/css/styles/index.min.css",
+        "media": "all"
+      }
+    ]
+  },
+  "preload": [
+    {
+      "href": "/img/icons.svg",
+      "as": "image",
+      "type": "image/svg+xml",
+      "name": "icons"
+    }
+  ],
+  "icons": [
+    {
+      "href": "/img/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "href": "/img/icon-144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "href": "/img/icon-128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "href": "/img/icon-60.png",
+      "type": "image/png",
+      "sizes": "60x60"
+    },
+    {
+      "href": "/img/icon-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "href": "/img/icon-60.png",
+      "type": "image/png",
+      "sizes": "60x60"
+    },
+    {
+      "href": "/img/icon-16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "href": "/img/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "csp": {
+	"default": ["'self'"],
+	"img": [
+		"'self'",
+		"https://media.githubusercontent.com",
+		"https://i.imgur.com",
+		"https://gravatar.com/"
+	],
+	"script": [
+		"'self'",
+		"https://cdn.polyfill.io"
+	],
+	"style": ["'self'"],
+	"connect": ["'self'"],
+	"font": ["'self'"],
+	"media": ["*"],
+	"block-mixed-content": true
+  }
+}

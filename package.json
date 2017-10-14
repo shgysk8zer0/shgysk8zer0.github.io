@@ -1,6 +1,6 @@
 {
   "name": "about",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Project for creating simple about pages.",
   "main": "index.html",
   "scripts": {
@@ -18,8 +18,8 @@
     "build:all": "npm run build:icons && npm run build:css && npm run build:js",
     "postinstall": "npm run git:fetch && npm run git:submodules && npm run build:all",
 	"serve": "npm run serve:production",
-	"serve:production": "npm run build:all && jekyll serve --config _config.yml",
-	"serve:dev": "jekyll serve --config _config_devel.yml"
+	"serve:production": "npm run build:all && JEKYLL_ENV=production jekyll serve",
+	"serve:dev": "jekyll serve"
   },
   "repository": {
     "type": "git",
