@@ -1,7 +1,8 @@
 import {$} from './std-js/functions.js';
 import * as Mutations from './std-js/mutations.js';
 import deprefix from './std-js/deprefixer.js';
-import './shims.js';
+import './std-js/shims.js';
+import {supportsAsClasses} from './std-js/support_test.js';
 
 deprefix();
 
@@ -31,6 +32,8 @@ async function readyHandler() {
 	$doc.replaceClass('no-js', 'js');
 	$doc.toggleClass('offline', ! navigator.onLine);
 	$doc.watch(Mutations.events, Mutations.options, Mutations.filter);
+	$doc.keypress(event => event.key === 'Escape' && $('dialog[open]').close());
+	supportsAsClasses(...document.documentElement.dataset.supportTest.split(',').map(test => test.trim()));
 
 	$('[data-service-worker]').each(registerServiceWorker).catch(console.error);
 
