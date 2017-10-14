@@ -3,5 +3,6 @@
 /fonts/
 /css/core-css/
 /css/normalize/
+/_site/
 *.min*
 *.map
