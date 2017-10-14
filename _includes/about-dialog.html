@@ -2,20 +2,19 @@
 	<header class="sticky top">
 		<button data-close="#about-dialog" class="font-main filter-shadow">X</button>
 	</header>
-	<figure itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="" class="clearfix">
+	<figure class="clearfix">
 		<img
 			srcset="{% for size in site.data.gravatar.sizes %}
-			https://gravatar.com/avatar/{{ site.data.gravatar.email_hash }}?s={{ size }} {{ size }}w,
+			https://gravatar.com/avatar/{{ site.data.gravatar[site.data.person.email] }}?s={{ size }} {{ size }}w,
 			{% endfor %}"
 			sizes="(orientation: portrait) 30vw, 15vw"
-			src="https://gravatar.com/avatar/{{ site.data.gravatar.email_hash }}?s=256"
+			src="https://gravatar.com/avatar/{{ site.data.gravatar[site.data.person.email] }}?s=256"
 			alt="Gravatar"
-			itemprop="url"
-			class="round shadow-dark cursor-pointer left"
+			class="round shadow-dark cursor-pointer left">
 		</figure>
 			<blockquote class="left">
-					{{ site.data.contact.about.description }}
-				<cite>{{ site.data.contact.name.first }} {{ site.data.contact.name.last }}</cite>
+					{{ site.data.person.description }}
+				<cite>{{ site.data.person.givenName }} {{ site.data.person.familyName }}</cite>
 			</blockquote>
 	</figure>
 	<div class="skills center animation-stagger animation-alternate animation-ease-in-out animation-infinite">

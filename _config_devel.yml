@@ -6,6 +6,7 @@ theme_color: "#FC5B0B"
 publisher_url: https://plus.google.com/+Chriszuber_dot_com
 author_url: https://plus.google.com/+ChrisZuber
 url: http://localhost
+baseurl: /
 scripts:
 - src: "/js/index.js"
   type: module
