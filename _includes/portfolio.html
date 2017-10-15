@@ -1,10 +1,10 @@
 <section id="portfolio" class="grid overflow-visible animation-ease-in animation-fill-both background-fixed background-no-repeat background-cover">
 	{% for project in site.data.portfolio %}
 	<div class="project card shadow optimize-legibility fade-in relative" itemprop="workExample" itemtype="http://schema.org/SoftwareApplication" itemscope="">
-		<a href="{{ project.url }}" itemprop="url" target="_blank" class="no-text-decoration" rel="noopener external">
+		<a href="{{ project.url }}" itemprop="url" target="_blank" class="no-text-decoration" rel="noopener external" title="{{ project.name }}">
 			<h3 itemprop="name" class="center font-title color-highlight">{{ project.name }}</h3>
 			<h4 class="center" itemprop="applicationCategory">{{ project.applicationCategory }}</h4>
-			<img src="{{ project.screenshot }}" class="filter-shadow" itemprop="screenshot" alt="screenshot" />
+			<img src="{{ project.screenshot }}" class="filter-shadow" itemprop="screenshot" alt="{{ project.name }} image" />
 			<hr />
 			<span class="underline color-highlight" itemprop="keywords">{{ project.keywords }}</span>
 			<br />
