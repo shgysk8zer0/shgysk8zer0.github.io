@@ -3,11 +3,11 @@ header svg:hover {
 	filter: drop-shadow(0.8em 0.8em 0.3em #000c);
 }
 
-footer svg {
+.icon-twirl {
 	transition-timing-function: cubic-bezier(.68,-0.55,.27,1.55);
 }
 
-footer svg:hover {
+.icon-twirl:hover {
 	transform: rotate(360deg) scale(1.7);
 }
 

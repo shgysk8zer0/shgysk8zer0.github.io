@@ -16,6 +16,8 @@
     "build:js": "rollup --config rollup.config.js",
     "build:icons": "svg-sprite-generate -c img/icons.csv -o img/icons.svg",
     "build:all": "npm run build:icons && npm run build:css && npm run build:js",
+    "build:site": "npm run build:all && JEKYLL_ENV=production jekyll build",
+    "build:site:dev": "jekyll build",
     "postinstall": "npm run git:fetch && npm run git:submodules && npm run build:all",
 	"serve": "npm run serve:production",
 	"serve:production": "npm run build:all && JEKYLL_ENV=production jekyll serve",

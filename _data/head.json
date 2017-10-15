@@ -15,6 +15,7 @@
   "dir": "ltr",
   "canonical": "https://shgysk8zer0.github.io",
   "manifest": "/manifest.webapp",
+  "service_worker": "/js/worker.js",
   "scripts": {
     "development": [
       {

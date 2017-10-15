@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<!-- {{jekyll.environment }} -->
-<html lang="{{ site.data.head.lang}}" dir="{{ site.data.head.dir }}" class="no-js" itemtype="http://schema.org/WebSite" itemscope=""{% if site.env == 'production' %} data-service-worker="{{ site.data.head.service_worker }}"{% endif %} data-support-test="details, dialog, cssvars">
+<html lang="{{ site.data.head.lang}}" dir="{{ site.data.head.dir }}" class="no-js" itemtype="http://schema.org/WebSite" itemscope=""{% if jekyll.environment == 'production' and site.data.head.service_worker %} data-service-worker="{{ site.data.head.service_worker }}"{% endif %} data-support-test="details, dialog, cssvars">
 	{% include head.html %}
 	<body class="grid border-box scroll-smooth cursor-default font-main" id="top">
 		{% include header.html %}
 		{% include nav.html %}
-		{% include portfolio.html %}
+		{% include main.html %}
 		{% include footer.html %}
 		{% include about-dialog.html %}
 	</body>

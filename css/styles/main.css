@@ -1,19 +1,6 @@
+@import url("./portfolio.css");
+
 body > main {
 	padding: 1rem;
 	grid-area: main;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-	grid-gap: 1.7em;
-}
-
-[itemtype="http://schema.org/SoftwareApplication"] {
-	transition: box-shadow 600ms ease-in-out, transform 600ms ease-in-out;
-}
-
-[itemtype="http://schema.org/SoftwareApplication"]:hover {
-	box-shadow: 0 0 0.8em var(--highlight-color);
-	transform: scale(1.05) rotate(-1deg);
-}
-
-[itemtype="http://schema.org/SoftwareApplication"] [itemprop="keywords"] {
-	font-size: 0.7em;
 }
