@@ -1,7 +1,7 @@
 {
   "name": "about",
   "version": "2.0.2",
-  "description": "Project for creating simple about pages.",
+  "description": "A responsive, progressive about / portfolio page built using Jekyll",
   "main": "index.html",
   "scripts": {
     "git:fetch": "git fetch --prune --tags",
