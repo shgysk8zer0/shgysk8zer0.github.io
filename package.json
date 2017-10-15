@@ -1,6 +1,6 @@
 {
   "name": "about",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Project for creating simple about pages.",
   "main": "index.html",
   "scripts": {

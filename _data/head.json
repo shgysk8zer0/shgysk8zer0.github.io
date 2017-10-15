@@ -8,14 +8,13 @@
     "theme_color": "#FC5B0B",
     "publisher": "https://plus.google.com/+Chriszuber_dot_com",
     "author": "https://plus.google.com/+ChrisZuber",
-    "thumbnail": "/img/screenshot.jpg",
-    "manifest": "/manifest.webapp"
+    "thumbnail": "/img/screenshot.jpg"
   },
   "lang": "en",
   "dir": "ltr",
   "canonical": "https://shgysk8zer0.github.io",
   "manifest": "/manifest.webapp",
-  "service_worker": "/js/worker.js",
+  "service_worker": "/service-worker.js",
   "scripts": {
     "development": [
       {
@@ -134,7 +133,7 @@
 		"https://cdn.polyfill.io"
 	],
 	"style": ["'self'"],
-	"connect": ["'self'"],
+	"connect": ["*"],
 	"font": ["'self'"],
 	"media": ["*"],
 	"block-mixed-content": true
