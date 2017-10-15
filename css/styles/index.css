@@ -35,7 +35,3 @@ svg {
 .container.flex.row {
 	justify-content: space-evenly;
 }
-
-.filter-invert {
-	filter: invert(1);
-}
