@@ -2066,11 +2066,11 @@ ol > ol > ol > ol > ol {
 
 body {
 	grid-template-rows: calc(100vh - var(--nav-height)) var(--nav-height) auto auto;
-	grid-template-columns: 1fr 8fr 2fr 1fr;
-	grid-template-areas: 'header header header header'
-	'nav nav nav nav'
-	'. main main .'
-	'footer footer footer footer';
+	grid-template-columns: 1fr 10fr 1fr;
+	grid-template-areas: 'header header header'
+	'nav nav nav'
+	'. main .'
+	'footer footer footer';
 }
 
 @media (max-width: 600px) {
@@ -2089,11 +2089,11 @@ header svg:hover {
 	filter: drop-shadow(0.8em 0.8em 0.3em #000c);
 }
 
-footer svg {
+.icon-twirl {
 	transition-timing-function: cubic-bezier(.68,-0.55,.27,1.55);
 }
 
-footer svg:hover {
+.icon-twirl:hover {
 	transform: rotate(360deg) scale(1.7);
 }
 
@@ -2178,11 +2178,15 @@ body > nav > *:hover {
 	background-image: linear-gradient(#222, #444);
 }
 
-body > main {
-	padding: 1rem;
-	grid-area: main;
+#portfolio.grid {
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	grid-gap: 1.7em;
+}
+
+#portfolio [itemprop="screenshot"] {
+	max-height: 12rem;
+	margin-left: 50%;
+	transform: translateX(-50%);
 }
 
 [itemtype="http://schema.org/SoftwareApplication"] {
@@ -2196,6 +2200,11 @@ body > main {
 
 [itemtype="http://schema.org/SoftwareApplication"] [itemprop="keywords"] {
 	font-size: 0.7em;
+}
+
+body > main {
+	padding: 1rem;
+	grid-area: main;
 }
 
 body > footer {

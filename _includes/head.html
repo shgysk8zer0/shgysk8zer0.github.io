@@ -5,11 +5,11 @@
 	{% if site.data.head.meta.referrer %}<meta name="referrer" content="{{ site.data.head.meta.referrer }}"/>{% endif %}
 	{% if site.data.head.meta.mobile-web-app-capable %}<meta name="mobile-web-app-capable" content="yes" />{% endif %}
 	{% if site.data.head.meta.description %}
-		<meta name="description" content="{{ site.description }}" />
+		<meta name="description" content="{{ site.data.head.meta.description }}" />
 		<meta itemprop="description" content="{{ site.data.head.meta.description }}" />
 	{% endif %}
 	{% if site.data.head.meta.keywords %}
-		<meta name="keywords" content="{{ site.keywords }}" />
+		<meta name="keywords" content="{{ site.data.head.meta.keywords }}" />
 		<meta itemprop="keywords" content="{{ site.data.head.meta.keywords }}" />
 	{% endif %}
 	{% if site.data.head.meta.author %}<meta name="author" content="{{ site.author }}"/>{% endif %}
@@ -42,5 +42,5 @@
 	{% endfor %}{% endif %}
 	{% if site.data.head.meta.publisher %}<link rel="publisher" href="{{ site.data.head.meta.publisher }}" />{% endif %}
 	{% if site.data.head.meta.author %}<link rel="author" href="{{ site.data.head.meta.author }}" />{% endif %}
-	{% if site.data.head.manifest %}<link rel="manifest" href="{{ site.manifest }}" />{% endif %}
+	{% if site.data.head.manifest %}<link rel="manifest" href="{{ site.data.head.manifest }}" />{% endif %}
 </head>

@@ -1,10 +1,10 @@
 body {
 	grid-template-rows: calc(100vh - var(--nav-height)) var(--nav-height) auto auto;
-	grid-template-columns: 1fr 8fr 2fr 1fr;
-	grid-template-areas: 'header header header header'
-	'nav nav nav nav'
-	'. main main .'
-	'footer footer footer footer';
+	grid-template-columns: 1fr 10fr 1fr;
+	grid-template-areas: 'header header header'
+	'nav nav nav'
+	'. main .'
+	'footer footer footer';
 }
 
 @media (max-width: 600px) {
@@ -17,3 +17,4 @@ body {
 		'footer';
 	}
 }
+

@@ -1,16 +1,16 @@
-<main id="portfolio" class="grid color-default font-article overflow-visible animation-ease-in animation-fill-both background-fixed background-no-repeat background-cover" role="main">
+<section id="portfolio" class="grid overflow-visible animation-ease-in animation-fill-both background-fixed background-no-repeat background-cover">
 	{% for project in site.data.portfolio %}
-	<section class="project card shadow optimize-legibility fade-in" itemtype="http://schema.org/SoftwareApplication" itemscope="">
+	<div class="project card shadow optimize-legibility fade-in" itemtype="http://schema.org/SoftwareApplication" itemscope="">
 		<a href="{{ project.url }}" itemprop="url" target="_blank" class="no-text-decoration" rel="noopener external">
 			<h3 itemprop="name" class="center font-title color-highlight">{{ project.name }}</h3>
 			<h4 class="center" itemprop="applicationCategory">{{ project.applicationCategory }}</h4>
-			<img src="{{ project.screenshot }}" itemprop="screenshot" alt="screenshot" />
+			<img src="{{ project.screenshot }}" class="filter-shadow" itemprop="screenshot" alt="screenshot" />
 			<hr />
 			<span class="underline color-highlight" itemprop="keywords">{{ project.keywords }}</span>
 			<br />
 			<blockquote class="text-align-right block font-article" itemprop="description">{{ project.description }}</blockquote>
-			<meta itemprop="operatingSystem" content="{{ project.operatingSystem}}" />
+			<meta itemprop="operatingSystem" content="{{ project.operatingSystem }}" />
 		</a>
-	</section>
+	</div>
 	{% endfor %}
-</main>
+</section>
