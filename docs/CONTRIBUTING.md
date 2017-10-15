@@ -2,6 +2,8 @@
 **Table of Contents**
 - [General](#general)
 - [Requirements](#requirements)
+- [Installation](#installing)
+- [Forks](#forking)
 - [JavaScript Contributions](#javascript)
 - [CSS Contributions](#css)
 - [Icons](#icons)
@@ -11,7 +13,10 @@
 - - -
 
 ## General
-Write access to the GitHub repository is restricted, so make a fork and clone that. All work should be done on its own branch, named according to the issue number (*e.g. `42` or `bug/23`*). When you are finished with your work, push your feature branch to your fork, preserving branch name (*not to master*), and create a pull request.
+Write access to the GitHub repository is restricted, so make a fork and clone that.
+All work should be done on its own branch, named according to the issue number
+(*e.g. `42` or `bug/23`*). When you are finished with your work, push your feature
+branch to your fork, preserving branch name (*not to master*), and create a pull request.
 
 **Always pull from `upstream master` prior to sending pull-requests.**
 
@@ -19,35 +24,62 @@ Write access to the GitHub repository is restricted, so make a fork and clone th
 - [Git](https://www.git-scm.com/download/)
 - [jekyll](https://jekyllrb.com/)
 
-## JavaScript
-Due to Content-Security-Policy, use of `eval` and inline scripts are **prohibited**. Further, this project uses ECMAScript 2015  [modules](http://exploringjs.com/es6/ch_modules.html), so be sure to familiarize yourself with the syntax.
+## Installing
+- `git clone git://github.com/shgysk8zer0/shgysk8zer0.github.io.git`
+- `npm install`
+- `jekyll serve`
 
-All JavaScript **MUST** pass Eslint according to the rules defined in `.eslintrc.json`
-and have an extension of `.es6`.
-Since this project minifies and packages all JavaScript using Babel & Webpack, with
-the exception of `custom.es6`, all script **MUST NOT** execute any code, but only
+## Forking
+Feel free to fork this repository and make it your own, but know the limitations
+of forking Jekyll sites. Expect merge conflicts if you want to pull from upstream.
+
+Most of the content is stored in [`_data/`](../_data)
+
+## JavaScript
+Due to Content-Security-Policy, use of `eval` and inline scripts are **prohibited**.
+Further, this project uses ECMAScript 2015  [modules](http://exploringjs.com/es6/ch_modules.html),
+so be sure to familiarize yourself with the syntax.
+
+All JavaScript **MUST** pass Eslint according to the rules defined in [`.eslintrc`](../.eslintrc).
+
+Since this project minifies and packages all JavaScript using rollup.js, with
+the exception of `index.js`, all script **MUST NOT** execute any code, but only
 import/export functions, classes, etc.
 
 ![JavaScript sample](https://i.imgur.com/Ac0fKZu.png)
 
 ## CSS
-Like in the above, one of the goals of this project is to keep things working natively, which means standardized CSS and JavaScript. Although the features may be new, `import` and `export` in JavaScript, and `@import` and `--var-name: value` are official standards. In the case of CSS, browser support does exist, and so this project will use `@import` and CSS variables in favor of SASS or LESS.
+Like in the above, one of the goals of this project is to keep things working
+natively, which means standardized CSS and JavaScript. Although the features may
+be new, `import` and `export` in JavaScript, and `@import` and `--var-name: value`
+are official standards. In the case of CSS, browser support does exist, and so
+this project will use `@import` and CSS variables in favor of SASS or LESS.
+
+All CSS **MUST** pass Stylelint according to the rules defined in [`.stylelintrc`.](../.stylelintrc)
 
 ![CSS sample](https://i.imgur.com/j4sC5qv.png)
 
 ## Icons
-Wherever possible, all icons are to be created in SVG and minified. PNGs may then be created in whatever size is appropriate. Also, all commonly used icons are to be added to `images/icons.svg` so that they may be used using `<symbol>` and `<use xlink:href/>`.
+Wherever possible, all icons are to be created in SVG and minified. PNGs may then
+be created in whatever size is appropriate. Also, all commonly used icons are to
+be added to `img/icons.svg` so that they may be used using `<symbol>` and `<use xlink:href/>`.
 
 ## NPM
-Several useful modules are included for Node users, which is strongly recommended for all development aside from PHP. Simply run `npm install` after download to install all Node modules and Git submodules. There are also several NPM scripts configured, which may be run using `npm run $script`.
+Several useful modules are included for Node users, which is strongly recommended
+for all development. Simply run `npm install` after download to install all Node
+modules and Git submodules. There are also several NPM scripts configured in [`package.json`](../package.json),
+which may be run using `npm run $script`.
 - `build:css` which transpiles and minifies CSS
 - `build:js` which transpiles and minifies JavaScript
-- `build:icons` which creates SVG sprites from `images/icons.json`
+- `build:icons` which creates SVG sprites from [`img/icons.csv`](../img/icons.csv)
 - `build:all` which runs all of the above
 - `update` which updates Git submodules recursively, installing any new ones
 - `test` which runs any configured tests (*lints CSS & JS*)
-- `serve` Triggers build process and starts jekyll server
-- `serve:dev` Same as `serve`, except using dev / un-transpiled resources
+- `serve` Triggers build process and starts jekyll server in production environment
+`JEKYLL_ENV=production`
+- `serve:dev` Same as `serve`, except using dev / un-transpiled resources in
+development environment
+
 NPM also has a `postinstall` script which will automatically install and update
 
 ## Git submodules
