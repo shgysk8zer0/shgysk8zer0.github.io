@@ -5,7 +5,6 @@ const config = {
 		'/js/index.min.js',
 		'/css/styles/index.min.css',
 		'/img/icons.svg',
-		'/portfolio.json',
 		'/img/logos/html5.svg',
 		'/img/logos/css3.svg',
 		'/img/logos/javascript.svg',
