@@ -2079,7 +2079,6 @@ body {
 		grid-template-areas: 'header'
 		'nav'
 		'main'
-		'sidebar'
 		'footer';
 	}
 }
@@ -2257,6 +2256,8 @@ dialog > header [data-close] {
 dialog > *:not(header) {
 	margin: 0.8em;
 }
+
+:root{width:100vw;overflow-x:hidden}
 
 hr{max-width:calc(100vw - 100px);width:100%}
 

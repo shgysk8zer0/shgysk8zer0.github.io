@@ -13,8 +13,6 @@ body {
 		grid-template-areas: 'header'
 		'nav'
 		'main'
-		'sidebar'
 		'footer';
 	}
 }
-
