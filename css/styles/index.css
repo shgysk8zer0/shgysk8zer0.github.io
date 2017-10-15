@@ -17,6 +17,11 @@
 @import url("./footer.css");
 @import url("./dialog.css");
 
+:root {
+	width: 100vw;
+	overflow-x: hidden;
+}
+
 hr {
 	max-width: calc(100vw - 100px);
 	width: 100%;
