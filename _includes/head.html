@@ -27,6 +27,7 @@
 				{% if site.data.head.csp.block-mixed-content %}block-all-mixed-content;{% endif %}
 		" />
 	{% endif %}
+	{% if site.data.head.meta.google-site-verification %}<meta name="google-site-verification" content="{{ site.data.head.meta.google-site-verification}}" />{% endif %}
 	{% for script in site.data.head.scripts[jekyll.environment] %}
 	<script type="{{ script.type }}" src="{{ script.src | absolute_url }}" {% if script.async %}async="" {% endif %}{% if script.defer %}defer="" {% endif %}{% if script.nomodule %}nomodule="" {% endif %}></script>
 	{% endfor %}
