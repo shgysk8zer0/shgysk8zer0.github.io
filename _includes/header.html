@@ -1,5 +1,6 @@
 <header id="about" class="center background-fixed background-no-repeat background-cover color-alt optimize-speed transition-speed-slow" role="banner">
 	<div itemtype="http://schema.org/Person" itemprop="about" itemscope="" class="flex column wrap transform-origin-bottom transition-ease-in-out">
+		<meta itemprop="url" content="/" />
 		<figure itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="">
 			<img
 				srcset="{% for size in site.data.gravatar.sizes %}
@@ -25,20 +26,30 @@
 		</h4>
 		<div class="flex row container bigger">
 			<a href="tel:{{ site.data.person.telephone }}" itemprop="telephone" content="{{ site.data.person.telephone }}">
-				<svg class="current-color icon transition-transform">
+				<svg class="current-color icon transition-transform  contact-icon">
 					<use xlink:href="{{ '/img/icons.svg#call-start' | absolute_url }}" />
 				</svg>
 			</a>
 			<a href="mailto:{{ site.data.person.email }}" itemprop="email" content="{{ site.data.person.email }}">
-				<svg class="current-color icon transition-transform">
+				<svg class="current-color icon transition-transform  contact-icon">
 					<use xlink:href="{{ '/img/icons.svg#mail-send' | absolute_url}}" />
 				</svg>
 			</a>
 			<a href="geo:{{ site.data.person.homeLocation.geo.latitude }},{{ site.data.person.homeLocation.geo.longitude }};u=0">
-				<svg class="current-color icon transition-transform">
+				<svg class="current-color icon transition-transform  contact-icon">
 					<use xlink:href="{{ '/img/icons.svg#location' | absolute_url}}" />
 				</svg>
 			</a>
+		</div>
+		<hr />
+		<div class="no-text-decoration optimize-speed transition-transform transition-speed-slow transform-origin-center flex row container bigger">
+			{% for link in site.data.links.social %}
+			<a href="{{ link.url }}" class="icon-twirl" title="{{ link.title }}" target="_blank" rel="noopener external" itemprop="sameAs">
+				<svg class="icon">
+					<use xlink:href="{{ '/img/icons.svg' | absolute_url }}#{{ link.icon }}" />
+				</svg>
+			</a>
+			{% endfor %}
 		</div>
 	</div>
 </header>
