@@ -14,3 +14,11 @@ header svg:hover {
 a {
 	display: inline-block;
 }
+
+[data-share] {
+	bottom: 0.5rem;
+	right: 0.5rem;
+	height: 2.3em;
+	width: 2.3em;
+	padding: 0.2em;
+}

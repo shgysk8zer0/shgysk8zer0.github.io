@@ -2100,6 +2100,14 @@ a {
 	display: inline-block;
 }
 
+[data-share] {
+	bottom: 0.5rem;
+	right: 0.5rem;
+	height: 2.3em;
+	width: 2.3em;
+	padding: 0.2em;
+}
+
 header {
 	font-family: var(--header-font);
 }
@@ -2264,6 +2272,4 @@ hr{max-width:calc(100vw - 100px);width:100%}
 svg{max-width:4em;max-height:4em}
 
 .container.flex.row{justify-content:space-evenly}
-
-.filter-invert{filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="1 0" /><feFuncG type="table" tableValues="1 0" /><feFuncB type="table" tableValues="1 0" /></feComponentTransfer></filter></svg>#filter');filter:invert(1)}
 /*# sourceMappingURL=index.min.css.map */
