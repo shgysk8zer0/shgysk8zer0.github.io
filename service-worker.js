@@ -44,7 +44,14 @@ addEventListener('fetch', event => {
 		if (response instanceof Response) {
 			return response;
 		} else {
-			return fetch(event.request);
+			try {
+				const fetched = await fetch(event.request);
+				const respClone = fetched.clone();
+				await cache.put(event.request, respClone);
+				return fetched;
+			} catch(error) {
+				console.error(error);
+			}
 		}
 	}());
 });
