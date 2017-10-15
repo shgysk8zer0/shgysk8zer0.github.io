@@ -1,12 +1,4 @@
 <footer id="contact" class="color-alt no-text-decoration optimize-speed transition-transform transition-speed-slow" role="contentinfo">
-	{% for link in site.data.footer.social %}
-		<a href="{{ link.url }}" class="icon-twirl" title="{{ link.title }}" target="_blank" rel="noopener external">
-			<svg class="icon big">
-				<use xlink:href="{{ '/img/icons.svg' | absolute_url }}#{{ link.icon }}" />
-			</svg>
-		</a>
-	{% endfor %}
-	<hr />
 	<a href="https://github.com/shgysk8zer0" class="icon-twirl" title="My GitHub Profile" target="_blank" rel="noopener external">
 		<svg class="icon big">
 			<use xlink:href="{{ '/img/icons.svg#mark-github' | absolute_url }}" />

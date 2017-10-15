@@ -12,33 +12,55 @@
 				data-show-modal="#about-dialog" />
 		</figure>
 		<h1 class="capitalize">
-			<span itemprop="givenName">{{ site.data.person.givenName }}</span>
-			<span itemprop="familyName">{{ site.data.person.familyName }}</span>
+			<a href="{{ site.data.person.url }}" rel="noopener external" title="Personal Blog">
+				<span itemprop="givenName">{{ site.data.person.givenName }}</span>
+				<span itemprop="familyName">{{ site.data.person.familyName }}</span>
+			</a>
 		</h1>
-		<h2 itemprop="jobTitle" class="capitalize">{{ site.data.person.jobTitle }}</h2>
+		<h2 class="capitalize">
+			<span itemprop="jobTitle">{{ site.data.person.jobTitle }}</span> |
+			<span itemprop="worksFor" itemtype="http://schema.Organization" itemtype="">
+				<a href="{{ site.data.person.worksFor.url }}" rel="noopener external">
+					<span itemprop="name">{{ site.data.person.worksFor.name }}</span>
+					<img src="{{ site.data.person.worksFor.logo.contentUrl }}" width="32" height="32" alt="site.data.person.worksFor.name" />
+				</a>
+			</span>
+		</h2>
 		<hr />
 		<h4>
 			<address itemprop="homeLocation" itemtype="http://schema.org/PostalAddress" itemscope="">
+				<span itemprop="streetAddress">{{ site.data.person.homeLocation.address.streetAddress }}</span>
+				<br />
 				<span itemprop="addressLocality">{{ site.data.person.homeLocation.address.addressLocality }}</span>,
 				<span itemprop="addressRegion">{{ site.data.person.homeLocation.address.addressRegion }}</span>
 			</address>
 		</h4>
 		<div class="flex row container bigger">
-			<a href="tel:{{ site.data.person.telephone }}" itemprop="telephone" content="{{ site.data.person.telephone }}">
-				<svg class="current-color icon transition-transform">
+			<a href="tel:{{ site.data.person.telephone }}" itemprop="telephone" content="{{ site.data.person.telephone }}" title="Telephone">
+				<svg class="current-color icon transition-transform  contact-icon">
 					<use xlink:href="{{ '/img/icons.svg#call-start' | absolute_url }}" />
 				</svg>
 			</a>
-			<a href="mailto:{{ site.data.person.email }}" itemprop="email" content="{{ site.data.person.email }}">
-				<svg class="current-color icon transition-transform">
+			<a href="mailto:{{ site.data.person.email }}" itemprop="email" content="{{ site.data.person.email }}" title="Email">
+				<svg class="current-color icon transition-transform  contact-icon">
 					<use xlink:href="{{ '/img/icons.svg#mail-send' | absolute_url}}" />
 				</svg>
 			</a>
-			<a href="geo:{{ site.data.person.homeLocation.geo.latitude }},{{ site.data.person.homeLocation.geo.longitude }};u=0">
-				<svg class="current-color icon transition-transform">
+			<a href="{{ site.data.person.homeLocation.geo.url }}" title="Geo">
+				<svg class="current-color icon transition-transform  contact-icon">
 					<use xlink:href="{{ '/img/icons.svg#location' | absolute_url}}" />
 				</svg>
 			</a>
+		</div>
+		<hr />
+		<div class="no-text-decoration optimize-speed transition-transform transition-speed-slow transform-origin-center flex row container bigger">
+			{% for link in site.data.links.social %}
+			<a href="{{ link.url }}" class="icon-twirl" title="{{ link.title }}" target="_blank" rel="noopener external" itemprop="sameAs">
+				<svg class="icon">
+					<use xlink:href="{{ '/img/icons.svg' | absolute_url }}#{{ link.icon }}" />
+				</svg>
+			</a>
+			{% endfor %}
 		</div>
 	</div>
 </header>
