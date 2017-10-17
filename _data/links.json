@@ -3,22 +3,26 @@
     {
       "url": "https://twitter.com/shgysk8zer0",
       "icon": "twitter",
-      "title": "Twitter"
+      "title": "Twitter",
+      "classes": ["icon"]
     },
     {
       "url": "https://www.linkedin.com/in/chris-zuber-455346141/",
       "icon": "linkedin",
-      "title": "LinkedIn"
+      "title": "LinkedIn",
+      "classes": ["icon"]
     },
     {
       "url": "https://plus.google.com/+ChrisZuber",
       "icon": "google+",
-      "title": "Google+"
+      "title": "Google+",
+      "classes": ["icon"]
     },
 	{
 		"url": "https://www.freecodecamp.com/shgysk8zer0",
 		"icon": "freecodecamp",
-		"title": "FreeCodeCamp"
+		"title": "FreeCodeCamp",
+		"classes": ["current-color", "icon"]
 	}
   ]
 }

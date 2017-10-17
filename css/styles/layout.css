@@ -1,0 +1,13 @@
+@media (min-width: 601px) {
+	.layout-home {
+		grid-template-rows: calc(100vh - var(--nav-height)) var(--nav-height) auto auto;
+	}
+
+	body {
+		grid-template-columns: 1fr 14fr 5fr;
+		grid-template-areas: 'header header header'
+		'nav nav nav'
+		'. main sidebar'
+		'footer footer footer';
+	}
+}

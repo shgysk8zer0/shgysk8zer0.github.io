@@ -1,5 +1,5 @@
-<head>
-	<title itemprop="headline">{{ site.author }} | {{ site.title }}</title>
+<head{% if jekyll.environment == 'development' %} data-jekyll-data="{{ page | jsonify | uri_escape }}"{% endif %}>
+	<title itemprop="headline">{{ page.title }} | {{ site.title }}</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="{% if site.data.head.meta.viewport %}{{ site.data.head.meta.viewport}}{% else %}width=device-width,initial-scale=1{% endif %}" />
 	{% if site.data.head.meta.referrer %}<meta name="referrer" content="{{ site.data.head.meta.referrer }}"/>{% endif %}
@@ -23,25 +23,26 @@
 				{% if site.data.head.csp.style %}style-src {{ site.data.head.csp.style | join: ' ' }};{% endif %}
 				{% if site.data.head.csp.connect %}connect-src {{ site.data.head.csp.connect | join: ' ' }};{% endif %}
 				{% if site.data.head.csp.font %}font-src {{ site.data.head.csp.font | join: ' ' }};{% endif %}
-				{% if site.data.head.csp.media %}media-src {{ site.data.head.csp.media | join: '' }};{% endif %}
+				{% if site.data.head.csp.media %}media-src {{ site.data.head.csp.media | join: ' ' }};{% endif %}
+				{% if site.data.head.csp.child %}child-src {{ site.data.head.csp.child | join: ' ' }};{% endif %}
 				{% if site.data.head.csp.block-mixed-content %}block-all-mixed-content;{% endif %}
 		" />
 	{% endif %}
 	{% if site.data.head.meta.google-site-verification %}<meta name="google-site-verification" content="{{ site.data.head.meta.google-site-verification}}" />{% endif %}
 	{% for script in site.data.head.scripts[jekyll.environment] %}
-	<script type="{{ script.type }}" src="{{ script.src | absolute_url }}" {% if script.async %}async="" {% endif %}{% if script.defer %}defer="" {% endif %}{% if script.nomodule %}nomodule="" {% endif %}></script>
+	<script type="{{ script.type }}" src="{{ script.src | absolute_url }}"{% if script.async %} async=""{% endif %}{% if script.defer %} defer=""{% endif %}{% if script.nomodule %} nomodule=""{% endif %}></script>
 	{% endfor %}
 	{% for stylesheet in site.data.head.stylesheets[jekyll.environment] %}
 	<link rel="stylesheet" href="{{ stylesheet.href | absolute_url }}" media="{{ stylesheet.media }}" />
 	{% endfor %}
-	{% if  site.data.head.canonical %}<link rel="canonical" href="{{ site.data.head.canonical }}"/>{% endif %}
+	{% if  site.data.head.canonical %}<link rel="canonical" href="{{ site.data.head.canonical }}{{ page.url }}"/>{% endif %}
 	{% if site.data.head.icons %}{% for icon in site.data.head.icons %}
-	<link rel="icon" href="{{ icon.href | absolute_url}}" type="{{ icon.type }}" sizes="{{ icon.sizes }}" />
+	<link rel="icon" href="{{ icon.href | absolute_url }}" type="{{ icon.type }}" sizes="{{ icon.sizes }}" />
 	{% endfor %}{% endif %}
 	{% if site.data.head.preload %}{% for preload in site.data.head.preload %}
 	<link rel="preload" href="{{ preload.href | absolute_url }}" as="{{ preload.as }}" type="{{ preload.type }}" name="{{ preload.name }}" />
 	{% endfor %}{% endif %}
 	{% if site.data.head.meta.publisher %}<link rel="publisher" href="{{ site.data.head.meta.publisher }}" />{% endif %}
 	{% if site.data.head.meta.author %}<link rel="author" href="{{ site.data.head.meta.author }}" />{% endif %}
-	{% if site.data.head.manifest %}<link rel="manifest" href="{{ site.data.head.manifest }}" />{% endif %}
+	{% if site.data.head.manifest %}<link rel="manifest" href="{{ site.data.head.manifest | absolute_url }}" />{% endif %}
 </head>

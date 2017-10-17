@@ -6,10 +6,9 @@
 	/*================= Set color vars here =================*/
 	--default-color: #010101;
 	--alt-color: whitesmoke;
-	--primary-color: #FAFAFA;
+	--primary-color: lightgray;
 	--highlight-color: #FC5B0B;
-	--link-color: inherit;
-	--visited-color: inherit;
+	--link-color: auto;
 	--accent-color: #168080;
 	--accent-color-2: #0A4E4E;
 	--border-color: #2D2D2D;
@@ -42,8 +41,12 @@
 	--article-header-font: var(--header-font);
 
 	--animation-stagger: 150ms;
+
+	/* ================= Syntax Highlighting ====================*/
+	--highlight-background: #efefef;
+	--highlight-literal-number-color: #CCA418;
 }
 
-::backdrop {
+dialog::backdrop {
 	--backdrop-background: rgba(0,0,0,0.7);
 }

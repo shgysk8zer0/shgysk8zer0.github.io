@@ -3,4 +3,5 @@
 body > main {
 	padding: 1rem;
 	grid-area: main;
+	margin: 1rem 0;
 }
