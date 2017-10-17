@@ -26,32 +26,34 @@
 				</a>
 			</span>
 		</h2>
-		<hr />
-		<h4>
-			<address itemprop="homeLocation" itemtype="http://schema.org/PostalAddress" itemscope="">
-				<span itemprop="streetAddress">{{ site.data.person.homeLocation.address.streetAddress }}</span>
-				<br />
-				<span itemprop="addressLocality">{{ site.data.person.homeLocation.address.addressLocality }}</span>,
-				<span itemprop="addressRegion">{{ site.data.person.homeLocation.address.addressRegion }}</span>
-			</address>
-		</h4>
-		<div class="flex row container bigger">
-			<a href="tel:{{ site.data.person.telephone }}" itemprop="telephone" content="{{ site.data.person.telephone }}" title="Telephone">
-				<svg class="current-color icon transition-transform  contact-icon">
-					<use xlink:href="{{ '/img/icons.svg#call-start' | absolute_url }}" />
-				</svg>
-			</a>
-			<a href="mailto:{{ site.data.person.email }}" itemprop="email" content="{{ site.data.person.email }}" title="Email">
-				<svg class="current-color icon transition-transform  contact-icon">
-					<use xlink:href="{{ '/img/icons.svg#mail-send' | absolute_url}}" />
-				</svg>
-			</a>
-			<a href="{{ site.data.person.homeLocation.geo.url }}" title="Geo">
-				<svg class="current-color icon transition-transform  contact-icon">
-					<use xlink:href="{{ '/img/icons.svg#location' | absolute_url}}" />
-				</svg>
-			</a>
-		</div>
+		{% if page.layout == 'home' %}
+			<hr />
+			<h4>
+				<address itemprop="homeLocation" itemtype="http://schema.org/PostalAddress" itemscope="">
+					<span itemprop="streetAddress">{{ site.data.person.homeLocation.address.streetAddress }}</span>
+					<br />
+					<span itemprop="addressLocality">{{ site.data.person.homeLocation.address.addressLocality }}</span>,
+					<span itemprop="addressRegion">{{ site.data.person.homeLocation.address.addressRegion }}</span>
+				</address>
+			</h4>
+			<div class="flex row container bigger">
+				<a href="tel:{{ site.data.person.telephone }}" itemprop="telephone" content="{{ site.data.person.telephone }}" title="Telephone">
+					<svg class="current-color icon transition-transform  contact-icon">
+						<use xlink:href="{{ '/img/icons.svg#call-start' | absolute_url }}" />
+					</svg>
+				</a>
+				<a href="mailto:{{ site.data.person.email }}" itemprop="email" content="{{ site.data.person.email }}" title="Email">
+					<svg class="current-color icon transition-transform  contact-icon">
+						<use xlink:href="{{ '/img/icons.svg#mail-send' | absolute_url}}" />
+					</svg>
+				</a>
+				<a href="{{ site.data.person.homeLocation.geo.url }}" title="Geo">
+					<svg class="current-color icon transition-transform  contact-icon">
+						<use xlink:href="{{ '/img/icons.svg#location' | absolute_url}}" />
+					</svg>
+				</a>
+			</div>
+		{% endif %}
 		<hr />
 		<div class="no-text-decoration optimize-speed transition-transform transition-speed-slow transform-origin-center flex row container bigger">
 			{% for link in site.data.links.social %}

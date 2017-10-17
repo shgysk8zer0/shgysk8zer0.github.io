@@ -1,0 +1,4 @@
+article a, article a:hover {
+	color: var(--highlight-color);
+	text-decoration: underline;
+}
