@@ -1,6 +1,6 @@
 <header id="about" class="center background-fixed background-no-repeat background-cover color-alt optimize-speed transition-speed-slow" role="banner">
 	<div itemtype="http://schema.org/Person" itemprop="about" itemscope="" class="flex column wrap transform-origin-bottom transition-ease-in-out">
-		<figure itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="">
+		<figure itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="" class="tada animation-speed-crawl">
 			<img
 				srcset="{% for size in site.data.gravatar.sizes %}
 					https://gravatar.com/avatar/{{ site.data.gravatar[site.data.person.email] }}?s={{ size }} {{ size }}w,{% endfor %}"
@@ -38,28 +38,28 @@
 			</h4>
 			<div class="flex row container bigger">
 				<a href="tel:{{ site.data.person.telephone }}" itemprop="telephone" content="{{ site.data.person.telephone }}" title="Telephone">
-					<svg class="current-color icon transition-transform  contact-icon">
+					<svg class="current-color icon transition-transform contact-icon transition-speed-slow transition-ease-in-out">
 						<use xlink:href="{{ '/img/icons.svg#call-start' | absolute_url }}" />
 					</svg>
 				</a>
 				<a href="mailto:{{ site.data.person.email }}" itemprop="email" content="{{ site.data.person.email }}" title="Email">
-					<svg class="current-color icon transition-transform  contact-icon">
+					<svg class="current-color icon transition-transform contact-icon transition-speed-slow transition-ease-in-out">
 						<use xlink:href="{{ '/img/icons.svg#mail-send' | absolute_url}}" />
 					</svg>
 				</a>
 				<a href="{{ site.data.person.homeLocation.geo.url }}" title="Geo">
-					<svg class="current-color icon transition-transform  contact-icon">
+					<svg class="current-color icon transition-transform contact-icon transition-speed-slow transition-ease-in-out">
 						<use xlink:href="{{ '/img/icons.svg#location' | absolute_url}}" />
 					</svg>
 				</a>
 			</div>
 		{% endif %}
 		<hr />
-		<div class="no-text-decoration optimize-speed transition-transform transition-speed-slow transform-origin-center flex row container bigger">
+		<div class="no-text-decoration optimize-speed flex row container bigger animaion-stagger">
 			{% for link in site.data.links.social %}
-			<a href="{{ link.url }}" class="icon-twirl" title="{{ link.title }}" target="_blank" rel="noopener external" itemprop="sameAs">
-				<svg{% if link.classes %} class="{{ link.classes | join: ' '}}"{% endif %}>
-					<use xlink:href="{{ '/img/icons.svg#' | append: link.icon | absolute_url }}" />
+			<a href="{{ link.url }}" class="icon-twirl transition-transform transition-speed-slow transform-origin-center transition-ease-in-out" title="{{ link.title }}" target="_blank" rel="noopener external" itemprop="sameAs">
+				<svg class="icon bounceInDown animation-ease-in animation-fill-backwards animation-speed-slow animation-paused{% if link.classes %} {{ link.classes | join: ' '}}{% endif %}">
+					<use xlink:href=" {{ '/img/icons.svg#' | append: link.icon | absolute_url }}" />
 				</svg>
 			</a>
 			{% endfor %}

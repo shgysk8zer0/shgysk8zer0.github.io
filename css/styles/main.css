@@ -1,7 +1,14 @@
 @import url("./portfolio.css");
+@import url("./article.css");
 
-body > main {
+main {
 	padding: 1rem;
 	grid-area: main;
 	margin: 1rem 0;
+}
+
+@media (max-width: 600px) {
+	main {
+		margin: 1rem;
+	}
 }
