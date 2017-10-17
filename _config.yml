@@ -6,6 +6,9 @@ markdown: kramdown
 plugins:
   - jekyll-gist
   - jekyll-youtube
+keep_files:
+- ".well-known/"
+- ".well-known/*"
 exclude:
 - Gemfile
 - Gemfile.lock
