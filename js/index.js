@@ -76,6 +76,10 @@ async function readyHandler() {
 	$('[data-service-worker]').each( el => registerServiceWorker(el).then(console.log));
 	Mutations.init();
 	supportsAsClasses(...document.documentElement.dataset.supportTest.split(',').map(test => test.trim()));
+
+	if (document.head.dataset.hasOwnProperty('jekyllData')) {
+		console.log(JSON.parse(decodeURIComponent(document.head.dataset.jekyllData)));
+	}
 }
 
 $(self).ready(readyHandler, {once: true});

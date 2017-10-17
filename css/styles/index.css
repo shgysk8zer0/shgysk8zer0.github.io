@@ -9,13 +9,16 @@
 @import url("../core-css/class-rules.css");
 @import url("../core-css/element.css");
 @import url("../core-css/fonts.css");
-@import url("./grid.css");
+@import url("./layout.css");
 @import url("./icons.css");
 @import url("./header.css");
 @import url("./nav.css");
 @import url("./main.css");
+@import url("./sidebar.css");
 @import url("./footer.css");
 @import url("./dialog.css");
+@import url("../core-css/jekyll-highlight.css");
+@import url("./jekyll-youtube.css");
 
 :root {
 	width: 100vw;
@@ -34,4 +37,10 @@ svg {
 
 .container.flex.row {
 	justify-content: space-evenly;
+}
+
+.highlight {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.6)
 }

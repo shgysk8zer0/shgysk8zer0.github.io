@@ -1,3 +1,8 @@
-<main class="color-default font-article" role="main" itemprop="mainContentOfPage" itemtype="http://schema.org/WebPageElement" itemscope="">
-	{% include portfolio.html %}
+<main class="color-default font-article card shadow-dark" role="main" itemprop="mainContentOfPage" itemtype="http://schema.org/WebPageElement" itemscope="">
+	{% case page.layout %}
+	{% when 'home' %}
+		{% include portfolio.html %}
+	{% when 'post' %}
+		{% include article.html %}
+	{% endcase %}
 </main>

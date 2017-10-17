@@ -2,7 +2,14 @@ author: Chris Zuber
 title: Portfolio
 env: production
 markdown: kramdown
+plugins:
+  - jekyll-gist
+  - jekyll-sitemap
+  - jekyll-youtube
 exclude:
+- Gemfile
+- Gemfile.lock
+- "*.log"
 - node_modules/
 - docs
 - palette.xml

@@ -22,7 +22,7 @@
 			<span itemprop="worksFor" itemtype="http://schema.org/Organization" itemscope="">
 				<a href="{{ site.data.person.worksFor.url }}" rel="noopener external">
 					<span itemprop="name">{{ site.data.person.worksFor.name }}</span>
-					<img src="{{ site.data.person.worksFor.logo.contentUrl }}" width="32" height="32" alt="site.data.person.worksFor.name" />
+					<img src="{{ site.data.person.worksFor.logo.contentUrl | absolute_url }}" width="32" height="32" alt="site.data.person.worksFor.name" />
 				</a>
 			</span>
 		</h2>
@@ -56,8 +56,8 @@
 		<div class="no-text-decoration optimize-speed transition-transform transition-speed-slow transform-origin-center flex row container bigger">
 			{% for link in site.data.links.social %}
 			<a href="{{ link.url }}" class="icon-twirl" title="{{ link.title }}" target="_blank" rel="noopener external" itemprop="sameAs">
-				<svg class="icon">
-					<use xlink:href="{{ '/img/icons.svg' | absolute_url }}#{{ link.icon }}" />
+				<svg{% if link.classes %} class="{{ link.classes | join: ' '}}"{% endif %}>
+					<use xlink:href="{{ '/img/icons.svg#' | append: link.icon | absolute_url }}" />
 				</svg>
 			</a>
 			{% endfor %}
