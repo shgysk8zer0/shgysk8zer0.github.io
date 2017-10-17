@@ -1,10 +1,10 @@
 author: Chris Zuber
 title: Chris Zuber
+description: "A responsive, progressive about / portfolio & blog page built using Jekyll"
 env: production
 markdown: kramdown
 plugins:
   - jekyll-gist
-  - jekyll-sitemap
   - jekyll-youtube
 exclude:
 - Gemfile
