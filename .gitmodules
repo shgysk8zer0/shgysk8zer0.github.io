@@ -19,3 +19,6 @@
 [submodule "img/adwaita-icons"]
 	path = img/adwaita-icons
 	url = https://github.com/shgysk8zer0/adwaita-icons.git
+[submodule "css/animate.css"]
+	path = css/animate.css
+	url = https://github.com/daneden/animate.css.git
