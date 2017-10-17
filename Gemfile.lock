@@ -23,8 +23,6 @@ GEM
       octokit (~> 4.2)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
-    jekyll-sitemap (1.1.1)
-      jekyll (~> 3.3)
     jekyll-watch (1.5.0)
       listen (~> 3.0)
     jekyll-youtube (1.0.0)
@@ -60,7 +58,6 @@ PLATFORMS
 DEPENDENCIES
   jekyll (= 3.5.2)
   jekyll-gist (~> 1.4, >= 1.4.1)
-  jekyll-sitemap (~> 1.1, >= 1.1.1)
   jekyll-youtube (~> 1.0)
 
 RUBY VERSION
