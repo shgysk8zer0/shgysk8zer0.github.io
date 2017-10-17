@@ -11,20 +11,27 @@
 	<meta itemptop="wordCount" content="{{ content | number_of_words }}" />
 	<header>
 		<h2 class="font-title center" itemprop="headline">{{ page.title }}</h2>
-		{% if page.author %}By <span itemprop="author">{{ page.author }}</span>{% endif %}
-		{% if page.tags %}<meta itemprop="keywords" content="{{ page.tags | join: ', '}}" />{% endif %}
-	</header>
-	<div itemprop="text">{{ content }}</div>
-	<footer>
+		{% if page.author %}
+			{% if page.author_url %}
+				By <a href="{{ page.author_url}}" itemprop="author">{{ page.author }}</a>
+			{% else %}
+				By <span itemprop="author">{{ page.author }}</span>
+			{% endif %}
+		{% endif %}
 		{% if page.date %}
 			<b>
 				<span>Posted on</span>
-				<time itemprop="datePosted" datetime="{{ page.date | data_to_xmlschema }}">
-					{{ page.date | date_to_long_string }}
+				<time itemprop="datePosted" datetime="{{ page.date | date: data_to_xmlschema }}">
+					{{ page.date | date: '%a, %B %e, %Y %I:%M %p' }}
 				</time>
 			</b>
 		{% endif %}
-		<br />
+		{% if page.tags %}<meta itemprop="keywords" content="{{ page.tags | join: ', '}}" />{% endif %}
+		<hr />
+	</header>
+	<div itemprop="text">{{ content }}</div>
+	<footer>
+		<hr />
 		{% include license.html %}
 	</footer>
 </article>
