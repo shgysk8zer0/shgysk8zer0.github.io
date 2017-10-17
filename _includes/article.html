@@ -1,8 +1,18 @@
-<article itemtype="http://scema.org/Article" itemscope="">
+<article itemtype="http://scema.org/BlogPosting" itemscope="">
+	{% if page.image %}
+		<meta itemprop="image" content="{{ page.image }}" />
+	{% endif %}
+	{% if page.description %}
+		<meta itemprop="description" content="{{ page.description }}" />
+	{% endif %}
+	{% if page.tags %}
+		<meta itemprop="keywords" content="{{ page.tags | join: ', '}}" />
+	{% endif %}
+	<meta itemptop="wordCount" content="{{ content | number_of_words }}" />
 	<header>
 		<h2 class="font-title center" itemprop="headline">{{ page.title }}</h2>
 		{% if page.author %}By <span itemprop="author">{{ page.author }}</span>{% endif %}
-		{% if page.tags %}<hr /><span itemprop="keywords">{{ page.tags | join: ', '}}</span>{% endif %}
+		{% if page.tags %}<meta itemprop="keywords" content="{{ page.tags | join: ', '}}" />{% endif %}
 	</header>
 	<div itemprop="text">{{ content }}</div>
 	<footer>
@@ -14,5 +24,7 @@
 				</time>
 			</b>
 		{% endif %}
+		<br />
+		{% include license.html %}
 	</footer>
 </article>

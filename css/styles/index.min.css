@@ -2254,6 +2254,10 @@ body > header {
 	height: calc(100vh - var(--nav-height));
 }
 
+.layout-post header {
+	background-position-y: -40vmin;
+}
+
 .layout-home body > header > [itemtype="http://schema.org/Person"] {
 	height: 100%;
 	justify-content: center;
@@ -2406,6 +2410,11 @@ dialog > header [data-close] {
 
 dialog > *:not(header) {
 	margin: 0.8em;
+}
+
+article a, article a:hover {
+	color: var(--highlight-color);
+	text-decoration: underline;
 }
 
 .highlight  {
