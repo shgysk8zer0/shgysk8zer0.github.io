@@ -4,8 +4,9 @@
 /npm-debug.log
 /*.html
 !/index.html
-/_site/
-
+/_site/*
+!/_site/.well-known/
+!/_site/.well-known/*
 #################
 ## Eclipse
 #################
