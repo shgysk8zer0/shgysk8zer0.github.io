@@ -1,6 +1,6 @@
 # [shgysk8zer0.github.io](https://shgysk8zer0.github.io)
 
-A responsive, progressive about / portfolio page built using Jekyll
+A responsive, progressive about / portfolio & blog page built using Jekyll
 
 - - -
 [![Build Status](https://travis-ci.org/shgysk8zer0/shgysk8zer0.github.io.svg?branch=master)](https://travis-ci.org/shgysk8zer0/shgysk8zer0.github.io)
