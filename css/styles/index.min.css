@@ -2208,6 +2208,13 @@ ol > ol > ol > ol > ol {
 	}
 }
 
+@media (max-width: 600px) {
+	body {
+		grid-template-areas: 'header' 'nav' 'main' 'sidebar' 'footer';
+		grid-auto-columns: 100%;
+	}
+}
+
 .contact-icon:hover {
 	transform: scale(1.3) rotateY(360deg);
 	filter: drop-shadow(0.8em 0.8em 0.3em #000c);

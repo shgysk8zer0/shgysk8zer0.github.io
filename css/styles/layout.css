@@ -11,3 +11,11 @@
 		'footer footer footer';
 	}
 }
+
+@media (max-width: 600px) {
+	body {
+		grid-template-areas: 'header' 'nav' 'main' 'sidebar' 'footer';
+		grid-auto-columns: 100%;
+	}
+}
+
