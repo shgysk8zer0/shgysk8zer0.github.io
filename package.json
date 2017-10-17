@@ -1,6 +1,6 @@
 {
   "name": "about",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "A responsive, progressive about / portfolio & blog page built using Jekyll",
   "main": "index.html",
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "npm run lint:all",
     "lint:all": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint .",
-    "lint:css": "stylelint 'css/**/*.css'",
+    "lint:css": "stylelint 'css/styles/*.css'",
     "test": "npm run lint",
     "build": "npm run build:all",
     "build:css": "postcss -c postcss.config.json css/styles/index.css -o css/styles/index.min.css",

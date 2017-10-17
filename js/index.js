@@ -1,4 +1,4 @@
-import {$} from './std-js/functions.js';
+import {$, wait} from './std-js/functions.js';
 import * as Mutations from './std-js/mutations.js';
 import deprefix from './std-js/deprefixer.js';
 import './std-js/shims.js';
@@ -79,6 +79,27 @@ async function readyHandler() {
 
 	if (document.head.dataset.hasOwnProperty('jekyllData')) {
 		console.log(JSON.parse(decodeURIComponent(document.head.dataset.jekyllData)));
+	}
+
+	$('header .animation-paused').each(async (el, n) => {
+		await wait(n * 200);
+		el.classList.remove('animation-paused');
+	});
+
+	if ('IntersectionObserver' in window) {
+		$('main .animation-paused').intersect((entries, observer) => {
+			entries.filter(entry => entry.isIntersecting).forEach(async (entry, n) => {
+				observer.unobserve(entry.target);
+				await wait(n * 200);
+				entry.target.classList.remove('animation-paused');
+
+			});
+		}, {rootMargin: '50%'});
+	} else {
+		await $('main .animation-paused').each(async (el, n) => {
+			await wait(n * 200);
+			el.classList.remove('animation-paused');
+		});
 	}
 }
 
