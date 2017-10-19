@@ -10,9 +10,9 @@ layout: null
 	<url>
 		<loc>{{ post.url | absolute_url }}</loc>
 		{% if post.updated %}
-			<lastmod>{{ post.updated | date: '%Y-%m-%dT%H:%M:%S+%z' }}</lastmod>
+			<lastmod>{{ post.updated | date: '%Y-%m-%d' }}</lastmod>
 		{% else %}
-			<lastmod>{{ post.date | date: '%Y-%m-%dT%H:%M:%S+%z' }}</lastmod>
+			<lastmod>{{ post.date | date: '%Y-%m-%d' }}</lastmod>
 		{% endif %}
 	</url>
 	{% endfor %}
