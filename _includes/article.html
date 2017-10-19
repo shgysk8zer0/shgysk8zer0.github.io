@@ -1,4 +1,4 @@
-<article itemtype="http://scema.org/BlogPosting" itemscope="" class="bounceInRight animation-speed-normal animation-fill-backwards font-article">
+<article itemprop="mainEntityOfPage" itemtype="http://schema.org/BlogPosting" itemscope="" class="bounceInRight animation-speed-normal animation-fill-backwards font-article">
 	<header class="article-meta sticky shadow-dark z-2">
 		<h2 class="font-title" itemprop="headline">{{ page.title }}</h2>
 		{% if site.data.authors[page.author] != null %}
@@ -10,7 +10,7 @@
 		{% if page.date %}
 			<b class="meta-date-posted">
 				<span>Posted on</span>
-				<time itemprop="datePosted" datetime="{{ page.date | date: data_to_xmlschema }}">
+				<time itemprop="datePublished" datetime="{{ page.date | date: data_to_xmlschema }}">
 					{{ page.date | date: '%a, %B %e, %Y %I:%M %P' }}
 				</time>
 			</b>
