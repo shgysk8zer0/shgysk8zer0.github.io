@@ -3,10 +3,18 @@ title: Chris Zuber
 description: "A responsive, progressive about / portfolio & blog page built using Jekyll"
 env: production
 markdown: kramdown
+defaults:
+  -
+    scope:
+      path: "_posts"
+    values:
+      layout: "post"
+      author: "Chris Zuber"
+      author_url: "https://chriszuber.com"
 plugins:
   - jekyll-gist
   - jekyll-youtube
-keep_files:
+include:
 - ".well-known/"
 - ".well-known/*"
 exclude:
