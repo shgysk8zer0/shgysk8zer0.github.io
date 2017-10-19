@@ -5,9 +5,9 @@
 	"url": "https://github.com/superuserdev",
 	"logo": {
 		"@type": "ImageObject",
-		"url": "https://chriszuber.com/images/appicons/256.png",
-		"width": 256,
-		"height": 256,
+		"url": "https://github.com/superuserdev.png",
+		"width": 460,
+		"height": 460,
 		"encodingFormat": "png"
 	}
 }
