@@ -3,6 +3,7 @@ import * as Mutations from './std-js/mutations.js';
 import deprefix from './std-js/deprefixer.js';
 import './std-js/shims.js';
 import {supportsAsClasses} from './std-js/support_test.js';
+import './share-shim.js';
 
 if (location.hostname === 'localhost' && ! Navigator.prototype.hasOwnProperty('share')) {
 	Navigator.prototype.share = console.info;
