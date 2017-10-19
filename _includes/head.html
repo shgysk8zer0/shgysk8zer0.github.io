@@ -50,7 +50,7 @@
 	{% if site.data.head.preload %}{% for preload in site.data.head.preload %}
 	<link rel="preload" href="{{ preload.href | absolute_url }}" as="{{ preload.as }}" type="{{ preload.type }}" name="{{ preload.name }}" />
 	{% endfor %}{% endif %}
-	<link rel="alternate" href="{{ '/feed.atom' | absolute_url }}" type="application/atom+xml" />
+	<link rel="alternate" href="{{ '/feed.rss' | absolute_url }}" type="application/atom+xml" />
 	{% if site.data.head.meta.publisher %}<link rel="publisher" href="{{ site.data.head.meta.publisher }}" />{% endif %}
 	{% if site.data.head.meta.author %}<link rel="author" href="{{ site.data.head.meta.author }}" />{% endif %}
 	{% if site.data.head.manifest %}<link rel="manifest" href="{{ site.data.head.manifest | absolute_url }}" />{% endif %}
