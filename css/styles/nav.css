@@ -11,11 +11,16 @@ body > nav {
 body > nav > * {
 	flex: 1 0 auto;
 	line-height: var(--nav-height);
+	height: var(--nav-height);
 	background-image: inherit;
 }
 
 body > nav > *:first-child {
 	border-radius: 0 0 0 1rem;
+	flex-basis: 6rem;
+	flex-grow: 0;
+	align-self: flex-start;
+	justify-self: flex-start;
 }
 
 body > nav > *:last-child {
@@ -29,3 +34,4 @@ body > nav > *:not(:last-child) {
 body > nav > *:hover {
 	background-image: linear-gradient(#222, #444);
 }
+

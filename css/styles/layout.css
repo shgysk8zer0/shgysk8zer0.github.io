@@ -4,7 +4,7 @@
 
 @media (min-width: 601px) {
 	body {
-		grid-template-columns: 1fr 14fr 5fr;
+		grid-template-columns: 2vw 75vw 23vw;
 		grid-template-areas: 'header header header'
 		'nav nav nav'
 		'. main pinned-posts'
@@ -16,7 +16,11 @@
 
 @media (max-width: 600px) {
 	body {
-		grid-template-areas: 'header' 'nav' 'pinned-posts' 'main' 'recent-posts' 'footer';
 		grid-auto-columns: 100%;
+		grid-template-areas: 'header' 'nav' 'main' 'pinned-posts' 'recent-posts' 'footer';
+	}
+
+	.layout-home {
+		grid-template-areas: 'header' 'nav' 'pinned-posts' 'main' 'recent-posts' 'footer';
 	}
 }
