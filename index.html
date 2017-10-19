@@ -1,7 +1,11 @@
+---
+title: Portfolio
+layout: home
+---
 <section id="portfolio" class="grid overflow-visible animation-ease-in animation-fill-both background-fixed background-no-repeat background-cover">
 	{% for project in site.data.portfolio %}
-	<div class="jackInTheBox project card shadow optimize-legibility animation-paused animation-overshoot animation-speed-normal animation-fill-forwards relative" itemprop="workExample" itemtype="http://schema.org/SoftwareApplication" itemscope="">
-		<a href="{{ project.url }}" itemprop="url" target="_blank" class="no-text-decoration" rel="noopener external" title="{{ project.name }}">
+	<div class="jackInTheBox project card shadow optimize-legibility animation-paused animation-overshoot animation-speed-crawl animation-fill-forwards relative transition-all transition-speed-normal transition-ease-in-out" itemprop="workExample" itemtype="http://schema.org/SoftwareApplication" itemscope="">
+		<a href="{{ project.url }}" itemprop="url" target="_blank" class="no-text-decoration inline-block" rel="noopener external" title="{{ project.name }}">
 			<h3 itemprop="name" class="center font-title color-highlight">{{ project.name }}</h3>
 			<h4 class="center" itemprop="applicationCategory">{{ project.applicationCategory }}</h4>
 			<img src="{{ project.screenshot }}" class="filter-shadow" itemprop="screenshot" alt="{{ project.name }} image" />

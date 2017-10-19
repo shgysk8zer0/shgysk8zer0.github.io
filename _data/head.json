@@ -146,7 +146,9 @@
         "script": [
             "'self'",
             "https://cdn.polyfill.io",
-            "https://gist.github.com"
+            "https://gist.github.com",
+            "https://production-assets.codepen.io",
+            "https://codepen.io/",
         ],
         "style": [
             "'self'",

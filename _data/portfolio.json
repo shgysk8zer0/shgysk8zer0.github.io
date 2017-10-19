@@ -69,7 +69,7 @@
     "name": "core-css",
     "screenshot": "/img/logos/css3.svg",
     "url": "https://github.com/shgysk8zer0/core-css/",
-    "description": "A collection of CSS styles, categorized by files, which are useful on common projects",
+    "description": "A collection of CSS styles which are useful on many projects",
     "keywords": "CSS3, Animations, Responsive Design, Flexbox",
     "applicationCategory": "CSS Framework",
     "operatingSystem": "all"

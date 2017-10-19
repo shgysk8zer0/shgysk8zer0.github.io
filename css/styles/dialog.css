@@ -1,44 +1,27 @@
-dialog {
-	animation-play-state: paused;
+dialog:not([open]) {
+	animation-name: none;
 }
 
-dialog[open] {
-	background: white;
+dialog {
 	overflow-y: auto;
 	border: 1px solid #ccc;
 	border-radius: 2px;
 	box-shadow: 0 6px 60px rgba(0,0,0,.8);
 	padding: 0;
-	max-height: 30rem;
-	width: 60vw;
-	top: 50%;
-	transform: translateY(-50%);
-	transform-origin: bottom right;
-	animation: fade-in 400ms ease-in;
+	max-width: 85vw;
+	max-height: 55vh;
 }
 
-dialog[open] + .backdrop, ::backdrop {
-	animation: fade-in 400ms ease-in;
+dialog[open] + .backdrop, dialog::backdrop {
+	animation: fadeIn 200ms ease-in;
 }
 
 dialog > header {
-	background-image: linear-gradient(#f2f2f2, #e9e9e9);
 	padding: 0.3em;
 	border-bottom: 1px solid #ddd;
 	box-shadow: 0 2px 2px rgba(0,0,0,.8);
 }
 
-dialog > header::after {
-	clear: both;
-	content: '';
-	display: block;
-}
-
-dialog > header [data-close] {
-	float: right;
-}
-
 dialog > *:not(header) {
 	margin: 0.8em;
 }
-

@@ -7,8 +7,8 @@
 		</svg>
 		{% include header.html %}
 		{% include nav.html %}
-		<main class="color-default font-article card shadow-dark" role="main" itemprop="mainContentOfPage" itemtype="http://schema.org/WebPageElement" itemscope="">
-			{% include article.html %}
+		<main class="color-default font-article grid card shadow-dark" role="main" itemprop="mainContentOfPage" itemtype="http://schema.org/WebPageElement" itemscope="">
+			{{ content }}
 		</main>
 
 		{% include pinned-posts.html %}

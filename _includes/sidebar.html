@@ -1,9 +1,0 @@
-<aside role="complementary" itemtype="http://schema.org/WPSideBar" itemscope="">
-	<section class="card shadow-dark sticky" id="recent-posts">
-		<h4 class="color-highlight underline">Recent Posts</h4>
-		{% for post in site.posts %}
-			<a href="{{ post.url | absolute_url }}" class="block">{{ post.title }}</a>
-
-		{% endfor %}
-	</section>
-</aside>

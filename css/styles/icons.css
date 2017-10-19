@@ -1,24 +1,11 @@
-.contact-icon:hover {
-	transform: scale(1.3) rotateY(360deg);
-	filter: drop-shadow(0.8em 0.8em 0.3em #000c);
-}
-
-.icon-twirl {
-	transition-timing-function: cubic-bezier(.68,-0.55,.27,1.55);
-}
-
 .icon-twirl:hover {
 	transform: rotate(360deg) scale(1.7);
-}
-
-a {
-	display: inline-block;
 }
 
 [data-share] {
 	bottom: 0.5rem;
 	right: 0.5rem;
-	height: 2.3em;
-	width: 2.3em;
+	min-height: 2.3em;
+	min-width: 2.3em;
 	padding: 0.2em;
 }

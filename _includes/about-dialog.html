@@ -1,6 +1,8 @@
-<dialog id="about-dialog">
-	<header class="sticky top">
-		<button data-close="#about-dialog" class="font-main filter-shadow">X</button>
+<dialog id="about-dialog" class="fadeInUp animation-speed-normal animation-ease-in animation-fill-backwards">
+	<header class="sticky top background-primary">
+		<span class="clearfix">
+			<button data-close="#about-dialog" class="font-main filter-shadow right">X</button>
+		</span>
 	</header>
 	<figure class="clearfix">
 		<img
@@ -15,22 +17,22 @@
 			<cite>{{ site.data.person.givenName }} {{ site.data.person.familyName }}</cite>
 		</blockquote>
 	</figure>
-	<div class="skills center animation-stagger animation-alternate animation-ease-in-out animation-infinite">
-		<svg width="48" height="48" class="bounce animation-infinite animation-speed-normal animation-overshoot animation-alternate">
+	<div class="skills center animation-stagger">
+		<svg width="48" height="48" class="trampoline animation-infinite animation-speed-normal animation-overshoot animation-alternate">
 			<use xlink:href="{{ '/img/icons.svg#html5' | absolute_url }}" />
 		</svg>
-		<svg width="48" height="48" class="bounce animation-infinite animation-speed-normal animation-overshoot animation-alternatee">
+		<svg width="48" height="48" class="trampoline animation-infinite animation-speed-normal animation-overshoot animation-alternatee">
 			<use xlink:href="{{ '/img/icons.svg#css3' | absolute_url }}" />
 		</svg>
-		<svg width="48" height="48" class="bounce animation-infinite animation-speed-normal animation-overshoot animation-alternate">
+		<svg width="48" height="48" class="trampoline animation-infinite animation-speed-normal animation-overshoot animation-alternate">
 			<use xlink:href="{{ '/img/icons.svg#javascript' | absolute_url }}" />
 		</svg>
-		<img src="/img/logos/svg.svg" width="48" height="48" alt="MySQL" class="bounce animation-infinite animation-speed-normal animation-overshoot animation-alternate" />
-		<svg width="48" height="48" class="bounce animation-infinite animation-speed-normal animation-overshoot animation-alternate">
+		<img src="/img/logos/svg.svg" width="48" height="48" alt="MySQL" class="trampoline animation-infinite animation-speed-normal animation-overshoot animation-alternate" />
+		<svg width="48" height="48" class="trampoline animation-infinite animation-speed-normal animation-overshoot animation-alternate">
 			<use xlink:href="{{ '/img/icons.svg#git' | absolute_url }}" />
 		</svg>
-		<img src="/img/logos/PHP.svg" width="48" height="48" alt="PHP" class="bounce animation-infinite animation-speed-normal animation-overshoot animation-alternate" />
-		<svg width="48" height="48" class="bounce animation-infinite animation-speed-normal animation-overshoot animation-alternate">
+		<img src="/img/logos/PHP.svg" width="48" height="48" alt="PHP" class="trampoline animation-infinite animation-speed-normal animation-overshoot animation-alternate" />
+		<svg width="48" height="48" class="trampoline animation-infinite animation-speed-normal animation-overshoot animation-alternate">
 			<use xlink:href="{{ '/img/icons.svg#mysql' | absolute_url }}" />
 		</svg>
 	</div>

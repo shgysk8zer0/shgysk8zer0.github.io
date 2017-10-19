@@ -1,6 +1,7 @@
 #portfolio.grid {
-	grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-	grid-gap: 1.7em;
+	grid-template-columns: repeat(auto-fill, minmax(270px, 400px));
+	grid-gap: 0.6em;
+	justify-content: center;
 }
 
 #portfolio [itemprop="screenshot"] {
@@ -9,15 +10,10 @@
 	transform: translateX(-50%);
 }
 
-[itemtype="http://schema.org/SoftwareApplication"] {
-	transition: box-shadow 600ms ease-in-out, transform 600ms ease-in-out;
-}
-
-[itemtype="http://schema.org/SoftwareApplication"]:hover {
+[itemprop="workExample"]:hover {
 	box-shadow: 0 0 0.8em var(--highlight-color);
-	transform: scale(1.05) rotate(-1deg);
 }
 
-[itemtype="http://schema.org/SoftwareApplication"] [itemprop="keywords"] {
+[itemprop="workExample"] [itemprop="keywords"] {
 	font-size: 0.7em;
 }
