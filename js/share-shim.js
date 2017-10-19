@@ -1,71 +1,57 @@
-if (! Navigator.prototype.hasOwnProperty('share')) {
-	Navigator.prototype.share = ({
-		text = null,
-		title = null,
-		url = null
-	} = {}) => {
-		const shares = {
-			facebook: {
-				url: new URL('https://www.facebook.com/sharer/sharer.php?u&t'),
-				icon: new URL('/img/logos/Facebook.svg', location.origin),
-				text: 'Facebook',
-			},
-			twitter: {
-				url: new URL('https://twitter.com/intent/tweet/?text&url'),
-				icon: new URL('/img/logos/twitter.svg', location.origin),
-				text: 'Twitter',
-			},
-			googlePlus: {
-				url: new URL('https://plus.google.com/share/?url'),
-				icon: new URL('/img/logos/Google_plus.svg', location.origin),
-				text: 'Google+',
-			},
-			linkedIn: {
-				url: new URL('https://www.linkedin.com/shareArticle/?title&summary&url'),
-				icon: new URL('/img/logos/linkedin.svg', location.origin),
-				text: 'LinkedIn',
-			},
-			reddit: {
-				url: new URL('https://www.reddit.com/submit/?url&title'),
-				icon: new URL('/img/logos/Reddit.svg', location.origin),
-				text: 'Reddit',
-			},
-			// pinterest:   'https://www.pinterest.com/pin/create/button/',
-		};
+export default (...shares) => {
+	if (! Navigator.prototype.hasOwnProperty('share')) {
+		Navigator.prototype.share = ({
+			text  = null,
+			title = null,
+			url   = null,
+		} = {}) =>   new Promise((resolve, reject) => {
+			const size   = 64;
+			const dialog = document.createElement('dialog');
+			const header = document.createElement('header');
+			const close  = document.createElement('button');
+			const body   = document.createElement('div');
+			const msg    = document.createElement('b');
+			const font   = 'Roboto, Helvetica, "Sans Seriff"';
 
-		const size = 64;
-		const dialog = document.createElement('dialog');
-		const header = document.createElement('header');
-		const close = document.createElement('button');
-		const body = document.createElement('div');
-		const msg = document.createElement('b');
-		const font = 'Roboto, Helvetica, "Sans Seriff"';
+			function closeDialog(event) {
+				if (
+					(event.type === 'click'
+						&& ! event.target.matches('dialog[open],dialog[open] *')
+					) || (event.type === 'keypress' && event.code === 'Escape')
+				) {
+					dialog.close('Share canceled');
+				}
+			}
 
-		return new Promise((resolve, reject) => {
+			function closeHandler(event) {
+				if (Element.prototype.hasOwnProperty('animate')) {
+					const rects = dialog.getClientRects()[0];
+
+					const anim = dialog.animate([
+						{top: 0},
+						{top: `-${rects.height}px`},
+					], {
+						duration: 400,
+						easing:   'ease-out',
+						fill:     'both',
+					});
+					anim.onfinish = () => dialog.remove();
+				} else {
+					dialog.remove();
+				}
+
+				document.removeEventListener('keypress', closeDialog);
+				document.removeEventListener('click', closeDialog);
+				reject(new DOMException(event.detail));
+			}
+
 			if (text === null && title === null && url === null) {
 				reject(new TypeError('No known share data fields supplied. If using only new fields (other than title, text and url), you must feature-detect them first.'));
 			} else {
-				close.style.setProperty('float', 'right');
-				msg.style.setProperty('display', 'block');
 				msg.textContent = 'Share via';
-				close.title = 'Close dialog';
-				msg.style.setProperty('font-family', font);
-				msg.style.setProperty('font-size', '24px');
+				close.title     = 'Close dialog';
 
-				header.append(close, msg);
-				close.append('x');
-				close.style.setProperty('font-family', font);
-				close.style.setProperty('font-weight', 'bold');
-				close.style.setProperty('font-size', '16px');
-
-				close.addEventListener('click', () => {
-					dialog.close();
-					dialog.remove();
-				});
-
-				dialog.append(header);
-
-				Object.entries(shares).forEach(([key, share]) => {
+				shares.forEach(share => {
 					const link = document.createElement('a');
 					const icon = new Image(size, size);
 
@@ -92,17 +78,21 @@ if (! Navigator.prototype.hasOwnProperty('share')) {
 					link.style.setProperty('text-align', 'center');
 					link.style.setProperty('font-family', font);
 					link.style.setProperty('font-size', '20px');
+
 					link.target = '_blank';
-					icon.src = shares[key].icon.toString();
-					link.href = share.url.toString();
-					link.title = key;
+					icon.src    = share.icon.toString();
+					link.href   = share.url.toString();
+					link.title  = share.text;
+
 					link.append(icon, document.createElement('br'), share.text);
 					body.append(link);
+
+					link.addEventListener('click', () => {
+						resolve();
+						dialog.close();
+					});
 				});
 
-				dialog.append(body);
-				document.body.append(dialog);
-				dialog.showModal();
 				dialog.style.setProperty('display', 'block');
 				dialog.style.setProperty('position' ,'fixed');
 				dialog.style.setProperty('background', '#fefefe');
@@ -113,11 +103,21 @@ if (! Navigator.prototype.hasOwnProperty('share')) {
 				dialog.style.setProperty('transform', 'none');
 				dialog.style.setProperty('border-radius', '0 0 5px 5px');
 				dialog.style.setProperty('max-height', '500px');
+
 				header.style.setProperty('height', '47px');
 				header.style.setProperty('line-height', '47px');
 				header.style.setProperty('color', '#232323');
 				header.style.setProperty('box-shadow', 'none');
 				header.style.setProperty('border-bottom', '1px solid #d5d5d5');
+
+				msg.style.setProperty('font-family', font);
+				msg.style.setProperty('font-size', '24px');
+				msg.style.setProperty('display', 'block');
+
+				close.style.setProperty('float', 'right');
+				close.style.setProperty('font-family', font);
+				close.style.setProperty('font-weight', 'bold');
+				close.style.setProperty('font-size', '16px');
 
 				if (CSS.supports('width', 'fit-content')) {
 					dialog.style.setProperty('width', 'fit-content');
@@ -129,33 +129,34 @@ if (! Navigator.prototype.hasOwnProperty('share')) {
 					dialog.style.setProperty('min-width', '320px');
 				}
 
+				header.append(close, msg);
+				close.append('X');
+				dialog.append(header);
+				dialog.append(body);
+				document.body.append(dialog);
+				dialog.showModal();
+
 				if (Element.prototype.hasOwnProperty('animate')) {
 					const rects = dialog.getClientRects()[0];
+
 					dialog.animate([
 						{top: `-${rects.height}px`},
-						{top: 0}
+						{top: 0},
 					], {
 						duration: 400,
-						easing: 'ease-out',
-						fill: 'both',
+						easing:   'ease-out',
+						fill:     'both',
 					});
 				}
 
-
-				dialog.addEventListener('close', () => {
-					reject(new DOMException('Share canceled'));
-				});
-
-				[...dialog.querySelectorAll('a')].forEach(link => {
-					link.addEventListener('click', function(event) {
-						event.preventDefault();
-						window.open(this.href);
-						resolve();
-						dialog.close();
-						dialog.remove();
-					});
-				});
+				dialog.addEventListener('close', closeHandler, {once: true});
+				document.addEventListener('keypress', closeDialog);
+				document.addEventListener('click', closeDialog);
+				close.addEventListener('click', () => {
+					dialog.close('Share canceled');
+				}, {once: true});
 			}
 		});
-	};
-}
+	}
+};
+
