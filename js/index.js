@@ -4,6 +4,10 @@ import deprefix from './std-js/deprefixer.js';
 import './std-js/shims.js';
 import {supportsAsClasses} from './std-js/support_test.js';
 
+if (location.hostname === 'localhost' && ! Navigator.prototype.hasOwnProperty('share')) {
+	Navigator.prototype.share = console.info;
+}
+
 deprefix();
 
 async function registerServiceWorker(el) {
@@ -33,17 +37,32 @@ async function registerServiceWorker(el) {
 	});
 }
 
-async function readyHandler() {
-	const $doc = $(document.documentElement);
-	if (navigator.share) {
-		$('[data-share]').attr({hidden: false});
-		$('[data-share]').click(async function(event) {
-			event.preventDefault();
-			const containerEl = this.dataset.share === '' ? this : document.querySelector(this.dataset.share);
-			const urlEl = containerEl.closest('[itemtype]').querySelector('[itemprop="url"], [rel="canonical"]');
-			const titleEl = containerEl.closest('[itemtype]').querySelector('[itemprop="name"],[itemprop="headline"]');
-			const textEl = containerEl.closest('[itemtype]').querySelector('[itemprop="description"], [name="description"]');
-			let url, text, title;
+function shareHandler(event) {
+	event.preventDefault();
+	if (! this.dataset.hasOwnProperty('share')) {
+		this.removeEventListener('click', shareHandler);
+		return;
+	}
+
+	const containerEl = this.dataset.share === '' ? this : document.querySelector(this.dataset.share);
+	let url = location.href, text = '', title = document.title;
+
+	if (containerEl instanceof HTMLImageElement) {
+		url = containerEl.src;
+		title = containerEl.alt;
+	} else if (containerEl instanceof HTMLAnchorElement) {
+		url = containerEl.href;
+		title = containerEl.title;
+		text = containerEl.textContent;
+	} else if (containerEl instanceof Element) {
+		const urlEl = containerEl.closest('[itemtype]')
+			.querySelector('[itemprop="url"], [rel="canonical"]');
+		const titleEl = containerEl.closest('[itemtype]')
+			.querySelector('[itemprop="name"],[itemprop="headline"]');
+		const textEl = containerEl.closest('[itemtype]')
+			.querySelector('[itemprop="description"], [name="description"]');
+
+		if (urlEl instanceof Element) {
 			if (urlEl.hasAttribute('content')) {
 				url = urlEl.getAttribute('content');
 			} else if (urlEl.hasAttribute('href')) {
@@ -51,24 +70,40 @@ async function readyHandler() {
 			} else {
 				url = urlEl.textContent;
 			}
+		}
 
+		if (titleEl instanceof Element) {
 			if (titleEl.hasAttribute('content')) {
 				title = titleEl.getAttribute('content');
 			} else {
 				title = titleEl.textContent;
 			}
+		}
 
+		if (textEl instanceof Element) {
 			if (textEl.hasAttribute('content')) {
 				text = textEl.getAttribute('content');
 			} else {
 				text = textEl.textContent;
 			}
+		}
+	}
 
-			navigator.share({url, title, text});
-		});
+	navigator.share({url: new URL(url, location.origin).toString(), title, text});
+}
+
+function shareRegister(base = document) {
+	if (Navigator.prototype.hasOwnProperty('share')) {
+		$('[data-share]', base).attr({hidden: false});
+		$('[data-share]', base).click(shareHandler);
 	} else {
 		$('[data-share]').remove();
 	}
+}
+
+async function readyHandler() {
+	const $doc = $(document.documentElement);
+	shareRegister(document);
 	$doc.replaceClass('no-js', 'js');
 	$doc.toggleClass('offline', ! navigator.onLine);
 	$doc.watch(Mutations.events, Mutations.options, Mutations.filter);
@@ -81,7 +116,7 @@ async function readyHandler() {
 		console.log(JSON.parse(decodeURIComponent(document.head.dataset.jekyllData)));
 	}
 
-	$('header .animation-paused').each(async (el, n) => {
+	$('header .animation-paused, body > .animation-paused').each(async (el, n) => {
 		await wait(n * 200);
 		el.classList.remove('animation-paused');
 	});

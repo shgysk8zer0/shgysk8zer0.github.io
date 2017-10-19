@@ -24,7 +24,7 @@
 	{% if site.data.head.meta.thumbnail %}<meta itemprop="thumbnailUrl" content="{{ site.data.head.meta.thumbnail }}" />{% endif %}
 	{% if site.data.head.meta.theme_color %}<meta name="theme-color" content="{{ site.data.head.meta.theme_color }}" />{% endif %}
 	{% if site.data.head.csp %}
-		<meta http-equiv="Content-Security-Policy" content="
+		<meta http-equiv="{% if jekyll.environment == 'production'%}Content-Security-Policy{% else %}Content-Security-Policy-Report-Only{% endif %}" content="
 				{% if site.data.head.csp.default %}default-src {{ site.data.head.csp.default | join: ' ' }};{% endif %}
 				{% if site.data.head.csp.img %}img-src {{ site.data.head.csp.img | join: ' ' }};{% endif %}
 				{% if site.data.head.csp.script %}script-src {{ site.data.head.csp.script | join: ' ' }};{% endif %}

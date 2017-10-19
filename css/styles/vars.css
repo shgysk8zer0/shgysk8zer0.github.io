@@ -9,10 +9,10 @@
 	--primary-color: lightgray;
 	--highlight-color: #FC5B0B;
 	--link-color: auto;
-	--accent-color: #168080;
-	--accent-color-2: #0A4E4E;
+	--accent-color: var(--highlight-color);
+	--accent-color-2: #a73800;
 	--border-color: #2D2D2D;
-	--button-background: linear-gradient(var(--accent-color), var(--accent-color-2));
+	--button-background: linear-gradient(var(--accent-color), var(--accent-color-2), var(--accent-color));
 	--button-active-background: linear-gradient(var(--accent-color-2), var(--accent-color));
 	--button-active-color: var(--button-color);
 	--button-disabled-background: var(--button-active-background);

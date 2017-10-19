@@ -1,24 +1,22 @@
-@media (min-width: 601px) {
-	.layout-home {
-		grid-template-rows: calc(100vh - var(--nav-height)) var(--nav-height) auto auto;
-	}
+.layout-home {
+	grid-template-rows: minmax(calc(100vh - var(--nav-height)), auto) var(--nav-height);
+}
 
+@media (min-width: 601px) {
 	body {
 		grid-template-columns: 1fr 14fr 5fr;
 		grid-template-areas: 'header header header'
 		'nav nav nav'
-		'. main sidebar'
+		'. main pinned-posts'
+		'. main recent-posts'
+		' . main .'
 		'footer footer footer';
 	}
 }
 
 @media (max-width: 600px) {
-	.layout-home {
-		grid-template-rows: calc(100vh - var(--nav-height)) var(--nav-height) auto auto;
-	}
-
 	body {
-		grid-template-areas: 'header' 'nav' 'main' 'sidebar' 'footer';
+		grid-template-areas: 'header' 'nav' 'pinned-posts' 'main' 'recent-posts' 'footer';
 		grid-auto-columns: 100%;
 	}
 }

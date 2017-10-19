@@ -1,0 +1,4 @@
+#pinned-posts {
+	grid-area: pinned-posts;
+	margin: 0.8rem;
+}
