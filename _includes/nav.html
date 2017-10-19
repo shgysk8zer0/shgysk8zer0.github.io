@@ -1,10 +1,11 @@
 <nav class="sticky top shadow-dark color-alt flex row title-font center no-text-decoration z-3" role="navigation" itemtype="http://schema.org/SiteNavigationElement" itemscope="">
-	<a href="{{'/#top' | absolute_url }}">
+	<a href="{% if page.layout == 'home' %}{{'/#top' | absolute_url }}{% else %}{{'/' | absolute_url}}{% endif %}">
 		<svg class="current-color icon">
 			<use xlink:href="{{ '/img/icons.svg#favicon' | absolute_url }}" />
 		</svg>
 	</a>
 	<span data-show-modal="#about-dialog" class="cursor-pointer">About</span>
 	{% if page.layout == 'home' %}<a href="#portfolio">Portfolio</a>{% endif %}
-	<a href="#contact">Contact</a>
+	<a href="#pinned-posts">Pinned Posts</a>
+	<a href="#recent-posts">Recent Posts</a>
 </nav>
