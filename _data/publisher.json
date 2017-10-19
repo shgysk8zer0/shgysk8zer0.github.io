@@ -1,0 +1,13 @@
+{
+	"@type": "Organization",
+	"@context": "http://schema.org",
+	"name": "SuperUserDev",
+	"url": "https://github.com/superuserdev",
+	"logo": {
+		"@type": "ImageObject",
+		"url": "https://chriszuber.com/images/appicons/256.png",
+		"width": 256,
+		"height": 256,
+		"encodingFormat": "png"
+	}
+}
