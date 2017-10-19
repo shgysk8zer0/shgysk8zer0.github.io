@@ -12,6 +12,8 @@ location,img/adwaita-icons/actions/mark-location.svg
 call-start,img/adwaita-icons/actions/call-start.svg
 share,img/adwaita-icons/places/folder-publicshare.svg
 mail-send,img/adwaita-icons/actions/mail-send.svg
+web-browser,img/adwaita-icons/apps/web-browser.svg
+rss,img/adwaita-icons/mimetypes/application-rss+xml.svg
 favicon,img/favicon.svg
 git,img/logos/git.svg
 html5,img/logos/html5.svg
