@@ -1,4 +1,4 @@
-<article itemtype="http://scema.org/BlogPosting" itemscope="" class="bounceInRight animation-speed-normal animation-fill-backwards font-article">
+<article itemtype="http://schema.org/BlogPosting" itemscope="" class="bounceInRight animation-speed-normal animation-fill-backwards font-article">
 	<header class="article-meta sticky shadow-dark z-2">
 		<h2 class="font-title" itemprop="headline">{{ page.title }}</h2>
 		{% if site.data.authors[page.author] != null %}
@@ -10,10 +10,20 @@
 		{% if page.date %}
 			<b class="meta-date-posted">
 				<span>Posted on</span>
-				<time itemprop="datePosted" datetime="{{ page.date | date: data_to_xmlschema }}">
+				<time itemprop="datePublished" datetime="{{ page.date | date: data_to_xmlschema }}">
 					{{ page.date | date: '%a, %B %e, %Y %I:%M %P' }}
 				</time>
 			</b>
+		{% endif %}
+		{% if page.updated %}
+			<b class="meta-date-updated">
+				<span>modified on</span>
+				<time itemprop="dateModified" datetime="{{ page.updated | date: data_to_xmlschema }}">
+					{{ page.updated | date: '%a, %B %e, %Y %I:%M %P' }}
+				</time>
+			</b>
+		{% else %}
+			<meta itemprop="dateModified" content="{{ page.date | date: data_to_xmlschema }}" />
 		{% endif %}
 		{% if page.tags %}<meta itemprop="keywords" content="{{ page.tags | join: ', '}}" />{% endif %}
 		{% if page.image %}
@@ -27,8 +37,19 @@
 		{% endif %}
 		<meta itemptop="wordCount" content="{{ content | number_of_words }}" />
 		<meta itemprop="url" content="{{ page.url | absolute_url }}" />
+		{% assign publisher = site.data.publisher %}
+		<div itemprop="publisher" itemtype="{{ publisher['@context'] }}/{{ publisher['@type'] }}" itemscope="" hidden="">
+			<meta itemprop="name" content="{{publisher.name }}" />
+			<meta itemprop="url" content="{{ publisher.url }}" />
+			<meta itemprop="email" content="{{ publisher.email }}" />
+			<div itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
+				<meta itemprop="url" content="{{ publisher.logo.url }}" />
+			</div>
+		</div>
 	</header>
-	<div itemprop="text" class="optimize-legibility">{{ content }}</div>
+	<div itemprop="mainEntityOfPage">
+		<div itemprop="text" class="optimize-legibility">{{ content }}</div>
+	</div>
 	<footer class="clearfix relative">
 		<hr />
 		{% include license.html %}
