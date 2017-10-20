@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html
-	lang="{{ site.data.head.lang}}"
+	lang="{{ site.data.head.lang }}"
 	dir="{{ site.data.head.dir }}"
 	class="no-js"
 	itemtype="http://schema.org/WebPage"
 	itemscope=""
-	{% if site.data.head.service_worker %} data-service-worker="{{ site.data.head.service_worker | absolute_url }}"{% endif %}
+	{% if site.data.head.service_worker %}data-service-worker="{{ site.data.head.service_worker | absolute_url }}"{% endif %}
 	data-support-test="details, dialog, cssvars"
 >
 	{% include head.html %}
@@ -15,12 +15,13 @@
 		</svg>
 		{% include header.html %}
 		{% include nav.html %}
-		<main class="color-default font-article grid card shadow-dark" role="main" itemprop="mainContentOfPage" itemtype="http://schema.org/WebPageElement" itemscope="">
-			{{ content }}
+		<main class="color-default font-article card shadow-dark" role="main" itemprop="mainContentOfPage" itemtype="http://schema.org/WebPageElement" itemscope="">
+			<h2 class="center font-title color-highlight" id="{{ page.slug }}">{{ page.title }}</h2>
+			<div class="grid grid-gallery">
+				{{ content }}
+			</div>
 		</main>
-
 		{% include pinned-posts.html %}
-		{% include recent-posts.html %}
 		{% include footer.html %}
 		{% include nav-menu.html %}
 		{% include about-dialog.html %}
