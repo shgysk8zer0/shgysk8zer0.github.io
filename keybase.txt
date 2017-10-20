@@ -1,0 +1,59 @@
+---
+layout: null
+permalink: "/.well-known/keybase.txt"
+---
+==================================================================
+https://keybase.io/shgysk8zer0
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://shgysk8zer0.github.io
+  * I am shgysk8zer0 (https://keybase.io/shgysk8zer0) on keybase.
+  * I have a public key ASC2tJxfqs_w_YqE8m_QYh53E5CkVI8hob4gF35S5YAWyQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010136b46e65d2f80a46129cc6613b34fd1f095a86327115b36a96715a9e2ce3e25f0a",
+      "host": "keybase.io",
+      "kid": "0120b6b49c5faacff0fd8a84f26fd0621e771390a4548f21a1be20177e52e58016c90a",
+      "uid": "8b27e8144f07fb2cd1cf2e7f9e566319",
+      "username": "shgysk8zer0"
+    },
+    "merkle_root": {
+      "ctime": 1508536751,
+      "hash": "c539104c36b947ca4802ae1e56c6cdc6b60e6ff49edaea8659f1a33eaf8e7d3ed3b7071e819ef61af3f0eb0b7df6f86408b93b1cdd38a94013fc54ce9ab91213",
+      "hash_meta": "a187a9888ebb1f0e5c3aa94da8359e9e30fa79d978612a1058a42a44c1c76655",
+      "seqno": 1610082
+    },
+    "service": {
+      "hostname": "shgysk8zer0.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.34"
+  },
+  "ctime": 1508536781,
+  "expire_in": 504576000,
+  "prev": "a4778b4ca87b25279c37bb5280d9d35897afe1018b27cc634c96ea16cfd976af",
+  "seqno": 57,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgtrScX6rP8P2KhPJv0GIedxOQpFSPIaG+IBd+UuWAFskKp3BheWxvYWTFA1F7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxMzZiNDZlNjVkMmY4MGE0NjEyOWNjNjYxM2IzNGZkMWYwOTVhODYzMjcxMTViMzZhOTY3MTVhOWUyY2UzZTI1ZjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYjZiNDljNWZhYWNmZjBmZDhhODRmMjZmZDA2MjFlNzcxMzkwYTQ1NDhmMjFhMWJlMjAxNzdlNTJlNTgwMTZjOTBhIiwidWlkIjoiOGIyN2U4MTQ0ZjA3ZmIyY2QxY2YyZTdmOWU1NjYzMTkiLCJ1c2VybmFtZSI6InNoZ3lzazh6ZXIwIn0sIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNTA4NTM2NzUxLCJoYXNoIjoiYzUzOTEwNGMzNmI5NDdjYTQ4MDJhZTFlNTZjNmNkYzZiNjBlNmZmNDllZGFlYTg2NTlmMWEzM2VhZjhlN2QzZWQzYjcwNzFlODE5ZWY2MWFmM2YwZWIwYjdkZjZmODY0MDhiOTNiMWNkZDM4YTk0MDEzZmM1NGNlOWFiOTEyMTMiLCJoYXNoX21ldGEiOiJhMTg3YTk4ODhlYmIxZjBlNWMzYWE5NGRhODM1OWU5ZTMwZmE3OWQ5Nzg2MTJhMTA1OGE0MmE0NGMxYzc2NjU1Iiwic2Vxbm8iOjE2MTAwODJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoic2hneXNrOHplcjAuZ2l0aHViLmlvIiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMzQifSwiY3RpbWUiOjE1MDg1MzY3ODEsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiYTQ3NzhiNGNhODdiMjUyNzljMzdiYjUyODBkOWQzNTg5N2FmZTEwMThiMjdjYzYzNGM5NmVhMTZjZmQ5NzZhZiIsInNlcW5vIjo1NywidGFnIjoic2lnbmF0dXJlIn2jc2lnxECc8CZRRIrApuo1nH04PuadSE3n1snOvqalbtlMLUc0ztkaqG8vvI3N5tC2My2vRm0h1D1y/iTOAy3D7HOSF3QOqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgK6fbp6PLN9UKnb6Vqa3vK4Ax/shwUUs2HUcVgjRpnNqjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/shgysk8zer0
+
+==================================================================
