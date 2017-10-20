@@ -1,14 +1,10 @@
 const config = {
-	version: '3.2.4',
+	version: '3.2.5',
 	caches: [
 		'/',
 		'/js/index.min.js',
 		'/css/styles/index.min.css',
 		'/img/icons.svg',
-		'/img/logos/html5.svg',
-		'/img/logos/css3.svg',
-		'/img/logos/javascript.svg',
-		'/img/logos/svg.svg',
 		'/img/logos/PHP.svg',
 		'/img/logos/MySQL.svg',
 		'https://cdn.polyfill.io/v2/polyfill.min.js',
@@ -46,8 +42,10 @@ addEventListener('fetch', event => {
 		} else {
 			try {
 				const fetched = await fetch(event.request);
-				const respClone = fetched.clone();
-				await cache.put(event.request, respClone);
+				if (fetched.ok) {
+					const respClone = fetched.clone();
+					await cache.put(event.request, respClone);
+				}
 				return fetched;
 			} catch(error) {
 				console.error(error);
