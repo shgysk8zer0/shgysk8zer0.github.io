@@ -4,6 +4,7 @@ title: "Web Share API"
 author: "Chris Zuber"
 pinned: true
 date: "2017-10-19 15:13:28 -0700"
+updated: "2017-10-20 10:12:00 -0700"
 image: https://i.imgur.com/3YHRZq3.png
 description: "A Gist demonstrating a polyfill for the new Web Share API"
 tags:
@@ -31,27 +32,27 @@ you call in the next five minutes, you can get an easy to implement and customiz
 dose of HTML, CSS, & JavaScript that'll make it so easy to implement, even your
 aunt could figure it out. No promises though.
 
+<div class="clear-both"></div>
+
 Actually, I have take that back, since Promises, the JavaScript kind, are part
 of the spec. [Introducing the Web Share API](https://developers.google.com/web/updates/2016/09/navigator-share).
-
-Since I'm a real sucker for making use of the [`dataset`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset "HTMLElement.dataset")
-API and [microdata](https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata),
-I wrote up a few lines of JavaScript to make sharing pages or elements within
-a page nearly as easy as can be.
-
-<div class="clear-both"></div>
 
 ```javascript
 navigator.share({
 	title: document.title,
 	text: 'Check out Web Share API',
 	url: location.href
-});
-
+}).then(/* Shared */).catch(/* Share canceled */);
 ```
 
-The JavaScript to this is a bit lengthy since I really try to make it handle a
-wide variety of uses.
+### The handler
+Since I'm a real sucker for making use of the [`dataset`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset "HTMLElement.dataset")
+API and [microdata](https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata),
+I wrote up a few lines of JavaScript to make sharing pages or elements within
+a page nearly as easy as can be.
+
+The JavaScript I use to do this is a bit lengthy since I really try to make it
+handle a wide variety of uses, so I'm not including it here.
 
 - If `data-share` has no value, (*an empty string*), share the page
 - If it is the CSS selector to a microdata / structured data element, piece
@@ -60,20 +61,20 @@ together info from the embedded data
 - If it is an `<a>`, share that link with title taken from `title` and text
 taken from the link's text content
 
-### Just create some `<button>`s with `data-share`
+#### Just create some `<button>`s with `data-share`
 ```html
 <button data-share="">Share Page</button>
 <button data-share="article">Share Article</button>
 <button data-share="#share-api-demo-target">Share Image</button>
 ```
 
-### Import and use
+#### Import and use
 ```javascript
 import {$, shareHandler} from './my-script.js';
 
 $('[data-share]').click(shareHandler);
 ```
-### The Hacking for other browsers
+#### The Hacking for other browsers
 Then, I made a [polyfill]({{ '#polyfill-gist' | prepend: page.url | absolute_url }}) of sorts for
 everything that's not Chrome on Android using the [`<dialog>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
 element and the [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL) API.
