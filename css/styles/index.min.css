@@ -374,6 +374,14 @@ dialog::backdrop {
 	animation-direction: alternate;
 }
 
+.animation-reverse {
+	animation-direction: reverse;
+}
+
+.animation-alternate-reverse {
+	animation-direction: alternate-reverse;
+}
+
 .animation-normal {
 	animation-direction: normal;
 }
@@ -4488,7 +4496,7 @@ main {
 	margin: 1rem 0;
 }
 
-main.grid {
+.grid.grid-gallery {
 	grid-template-columns: repeat(auto-fill, minmax(270px, 400px));
 	grid-gap: 0.6em;
 	justify-content: center;
@@ -4505,7 +4513,7 @@ main.grid {
 	margin: 0.8rem;
 }
 
-#recent-posts {
+aside#recent-posts {
 	grid-area: recent-posts;
 	margin: 0.8rem;
 }
