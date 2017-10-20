@@ -10,13 +10,10 @@ defaults:
     values:
       layout: "post"
       author: "Chris Zuber"
-      author_url: "https://chriszuber.com"
+      permalink: /posts/:categories/:year/:month/:day/:title/
 plugins:
   - jekyll-gist
   - jekyll-youtube
-include:
-- ".well-known/"
-- ".well-known/*"
 exclude:
 - Gemfile
 - Gemfile.lock
