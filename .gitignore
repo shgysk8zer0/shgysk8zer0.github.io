@@ -2,8 +2,6 @@
 *.patch
 /node_modules/
 /npm-debug.log
-/*.html
-!/index.html
 /_site/
 #################
 ## Eclipse
