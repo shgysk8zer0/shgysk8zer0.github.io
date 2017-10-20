@@ -3,10 +3,10 @@ import * as Mutations from './std-js/mutations.js';
 import deprefix from './std-js/deprefixer.js';
 import './std-js/shims.js';
 import {supportsAsClasses} from './std-js/support_test.js';
-import shareShim from './share-shim.js';
+import webShareApi from './std-js/webShareApi.js';
 import {facebook, twitter, googlePlus, linkedIn, reddit} from './share-config.js';
 
-shareShim(facebook, twitter, linkedIn, googlePlus, reddit);
+webShareApi(facebook, twitter, linkedIn, googlePlus, reddit);
 
 deprefix();
 
