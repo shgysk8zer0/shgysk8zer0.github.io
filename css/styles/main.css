@@ -7,7 +7,7 @@ main {
 	margin: 1rem 0;
 }
 
-main.grid {
+.grid.grid-gallery {
 	grid-template-columns: repeat(auto-fill, minmax(270px, 400px));
 	grid-gap: 0.6em;
 	justify-content: center;
