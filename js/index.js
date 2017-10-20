@@ -3,11 +3,10 @@ import * as Mutations from './std-js/mutations.js';
 import deprefix from './std-js/deprefixer.js';
 import './std-js/shims.js';
 import {supportsAsClasses} from './std-js/support_test.js';
-import './share-shim.js';
+import webShareApi from './std-js/webShareApi.js';
+import {facebook, twitter, googlePlus, linkedIn, reddit} from './share-config.js';
 
-if (location.hostname === 'localhost' && ! Navigator.prototype.hasOwnProperty('share')) {
-	Navigator.prototype.share = console.info;
-}
+webShareApi(facebook, twitter, linkedIn, googlePlus, reddit);
 
 deprefix();
 
@@ -40,6 +39,7 @@ async function registerServiceWorker(el) {
 
 function shareHandler(event) {
 	event.preventDefault();
+	event.stopPropagation();
 	if (! this.dataset.hasOwnProperty('share')) {
 		this.removeEventListener('click', shareHandler);
 		return;
@@ -90,7 +90,7 @@ function shareHandler(event) {
 		}
 	}
 
-	navigator.share({url: new URL(url, location.origin).toString(), title, text});
+	navigator.share({url: new URL(url, location.origin).toString(), title, text}).catch(console.error);
 }
 
 function shareRegister(base = document) {
