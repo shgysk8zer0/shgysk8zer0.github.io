@@ -81,11 +81,36 @@
         ]
     },
     "preload": [
-         {
+        {
             "href": "/img/icons.svg",
             "as": "image",
             "type": "image/svg+xml",
             "name": "icons"
+        }, {
+            "href": "/img/logos/Facebook.svg",
+            "as": "image",
+            "type": "image/svg+xml",
+            "name": "Facebook"
+        }, {
+            "href": "/img/logos/twitter.svg",
+            "as": "image",
+            "type": "image/svg+xml",
+            "name": "Twitter"
+        }, {
+            "href": "/img/logos/Google_plus.svg",
+            "as": "image",
+            "type": "image/svg+xml",
+            "name": "Google+"
+        }, {
+            "href": "/img/logos/Reddit.svg",
+            "as": "image",
+            "type": "image/svg+xml",
+            "name": "Reddit"
+        }, {
+            "href": "/img/logos/linkedin.svg",
+            "as": "image",
+            "type": "image/svg+xml",
+            "name": "LinkedIn"
         }
     ],
     "icons": [
