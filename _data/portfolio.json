@@ -1,88 +1,136 @@
 [
   {
-    "@type": "SoftwareApplication",
+    "@type": "WebApplication",
     "@context": "http://schema.org",
     "name": "Awesome RSS",
+	"offers": {
+		"@type": "Offer",
+		"price": 0,
+		"priceCurrency": "USD"
+	},
     "screenshot": "https://media.githubusercontent.com/media/shgysk8zer0/awesome-rss/master/screenshot.png",
     "url": "https://addons.mozilla.org/en-US/firefox/addon/awesome-rss/",
     "description": "Puts and RSS/Atom subscribe button back in the URL bar",
     "keywords": "WebExtension, JavaScript, RSS",
     "applicationCategory": "Firefox Add-on",
-    "operatingSystem": "all"
+    "operatingSystem": "Windows, OSX, Linux, Android",
+	"browserRequirements": "async / await, querySelectorAll, WebExtension API, History API"
   },
   {
-    "@type": "SoftwareApplication",
+    "@type": "WebApplication",
     "@context": "http://schema.org",
     "name": "Super User Blog",
+	"offers": {
+		"@type": "Offer",
+		"price": 0,
+		"priceCurrency": "USD"
+	},
     "screenshot": "/img/logos/super-user.svg",
     "url": "https://chriszuber.com/",
     "description": "Blogging with HTML5 & JavaScript",
     "keywords": "HTML5, JavaScript, CSS, SVG, PHP, MySQL",
     "applicationCategory": "Blog",
-    "operatingSystem": "all"
+    "operatingSystem": "Windows, OSX, Linux, Android, iOS",
+	"browserRequirements": "flex, fetch, SVG"
   },
   {
-    "@type": "SoftwareApplication",
+    "@type": "WebApplication",
     "@context": "http://schema.org",
     "name": "HTML5 WYSIWYG-Editor",
+	"offers": {
+		"@type": "Offer",
+		"price": 0,
+		"priceCurrency": "USD"
+	},
     "screenshot": "https://i.imgur.com/qdnVcJA.png",
     "url": "https://wysiwyg.chriszuber.com/",
     "description": "An all HTML, CSS, & JavaScript HTML5 WYSIWYG Editor",
     "keywords": "HTML5, JavaScript, appCache",
     "applicationCategory": "Web App",
-    "operatingSystem": "all"
+    "operatingSystem": "Windows, OSX, Linux",
+	"browserRequirements": "contentEditable, addEventListener, localStorage"
   },
   {
-    "@type": "SoftwareApplication",
+    "@type": "WebApplication",
     "name": "FreeCodeCamp Twitch JSON API",
+	"offers": {
+		"@type": "Offer",
+		"price": 0,
+		"priceCurrency": "USD"
+	},
     "screenshot": "https://i.imgur.com/j8gd6rW.png",
     "url": "https://shgysk8zer0.github.io/freecodecamp-twitch",
     "description": "FreeCodeCamp: Use the Twitchtv JSON API",
     "keywords": "HTML5, JavaScript, FreeCodeCamp, fetch",
     "applicationCategory": "Twitch client",
-    "operatingSystem": "all"
+    "operatingSystem": "Windows, OSX, Linux, Android, iOS",
+	"browserRequirements": "fetch, CSS grid"
   },
   {
-    "@type": "SoftwareApplication",
+    "@type": "WebApplication",
     "name": "FreeCodeCamp Weather",
+	"offers": {
+		"@type": "Offer",
+		"price": 0,
+		"priceCurrency": "USD"
+	},
     "url": "https://shgysk8zer0.github.io/freecodecamp-weather",
     "screenshot": "https://i.imgur.com/OXN2pCz.png",
     "description": "FreeCodeCamp: Show the Local Weather",
     "keywords": "HTML5, JavaScript, FreeCodeCamp, GeoLocation, fetch",
     "applicationCategory": "Weather",
-    "operatingSystem": "all"
+    "operatingSystem": "Windows, OSX, Linux, Android, iOS",
+	"browserRequirements": "fetch, GeoLocation"
   },
   {
-    "@type": "SoftwareApplication",
+    "@type": "WebApplication",
     "@context": "http://schema.org",
     "name": "std-js",
+	"offers": {
+		"@type": "Offer",
+		"price": 0,
+		"priceCurrency": "USD"
+	},
     "screenshot": "https://i.imgur.com/WIaJgfx.png",
     "url": "https://github.com/shgysk8zer0/std-js/",
     "description": "A JavaScript library for making front-end development sane!",
     "keywords": "JavaScript, async/await, Animations API",
     "applicationCategory": "JavaScript Framework",
-    "operatingSystem": "all"
+    "operatingSystem": "Windows, OSX, Linux, Android, iOS",
+	"browserRequirements": "fetch, async / await, Promise, addEventListener"
   },
   {
-    "@type": "SoftwareApplication",
+    "@type": "WebApplication",
     "@context": "http://schema.org",
     "name": "core-css",
+	"offers": {
+		"@type": "Offer",
+		"price": 0,
+		"priceCurrency": "USD"
+	},
     "screenshot": "/img/logos/css3.svg",
     "url": "https://github.com/shgysk8zer0/core-css/",
     "description": "A collection of CSS styles which are useful on many projects",
     "keywords": "CSS3, Animations, Responsive Design, Flexbox",
     "applicationCategory": "CSS Framework",
-    "operatingSystem": "all"
+    "operatingSystem": "Windows, OSX, Linux, Android, iOS",
+	"browserRequirements": "CSS Animations, flex, grid, linearGradient, CSS custom properties, rem, vw"
   },
   {
-    "@type": "SoftwareApplication",
+    "@type": "WebApplication",
     "@context": "http://schema.org",
     "name": "adwaita-icons",
+	"offers": {
+		"@type": "Offer",
+		"price": 0,
+		"priceCurrency": "USD"
+	},
     "screenshot": "https://i.imgur.com/c1hLkNj.png",
     "url": "https://github.com/shgysk8zer0/adwaita-icons/",
     "description": "A copy of adwaita-icon-theme as seen in the Gnome Project",
     "keywords": "SVG, icons",
     "applicationCategory": "Icon package",
-    "operatingSystem": "all"
+    "operatingSystem": "all",
+	"browserRequirements": "SVG, SVG symbols, SVG use"
   }
 ]
