@@ -1,6 +1,10 @@
 {
   "social": [
     {
+      "url": "https://github.com/shgysk8zer0",
+      "icon": "mark-github",
+      "title": "GitHub"
+    },{
       "url": "https://twitter.com/shgysk8zer0",
       "icon": "twitter",
       "title": "Twitter"

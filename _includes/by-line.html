@@ -55,6 +55,13 @@
 					</svg>
 				</a>
 			{% endif %}
+			{% if author.youtube != null %}
+				<a itemprop="sameAs" href="https://youtube/com/channel/{{ author.youtube }}" rel="noopener external" title="YouTube" class="no-text-decoration">
+					<svg class="icon {{ animation }} animation-speed-normal animation-ease-out">
+						<use xlink:href="{{ '/img/icons.svg#youtube' | absolute_url }}" />
+					</svg>
+				</a>
+			{% endif %}
 			{% if author.email != null %}
 				<a itemprop="email" content="{{ author.email }}" href="mailto:{{ author.email }}" title="Email" class="no-text-decoration">
 					<svg class="icon {{ animation }} animation-speed-normal animation-ease-out">
