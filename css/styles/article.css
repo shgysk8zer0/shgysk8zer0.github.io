@@ -2,7 +2,7 @@
 @import url("./jekyll-youtube.css");
 
 article a, article a:hover {
-	color: var(--highlight-color);
+	color: var(--accent-color);
 	text-decoration: underline;
 }
 
