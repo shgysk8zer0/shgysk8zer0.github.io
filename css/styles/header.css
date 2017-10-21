@@ -17,25 +17,30 @@ body > header > [itemtype="http://schema.org/Person"] {
 	justify-content: center;
 }
 
-@media screen and (min-width: 1201px) {
+
+@media (orientation: portrait) and (min-height: 901px),
+	(orientation: landscape) and (min-width: 1201px) {
 	body > header {
 		background-image: var(--mountains-full);
 	}
 }
 
-@media screen and (min-width: 801px) and (max-width: 1200px) {
+@media (orientation: portrait) and (min-height: 801px) and (max-height: 900px),
+	(orientation: landscape) and (min-width: 801px) and (max-width: 1200px) {
 	body > header {
 		background-image: var(--mountains-l);
 	}
 }
 
-@media screen and (min-width: 421px) and (max-width: 800px) {
+@media (orientation: portrait) and (min-height: 316px) and (max-height: 600px),
+	(orientation: landscape) and (min-width: 421px) and (max-width: 800px) {
 	body > header {
 		background-image: var(--mountains-m);
 	}
 }
 
-@media screen and (max-width: 420px) {
+@media (orientation: portrait) and (max-height: 315px),
+	(orientation: landscape) and (max-width: 420px) {
 	body > header {
 		background-image: var(--mountains-s);
 	}
