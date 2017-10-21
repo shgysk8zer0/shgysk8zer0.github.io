@@ -1,5 +1,5 @@
 const config = {
-	version: '3.2.7',
+	version: '3.2.8',
 	caches: [
 		'/',
 		'/js/index.min.js',
@@ -11,6 +11,10 @@ const config = {
 		'/img/logos/PHP.svg',
 		'/img/logos/MySQL.svg',
 		'/img/logos/super-user.svg',
+		'/fonts/acme.woff',
+		'/fonts/Alice.woff',
+		'/fonts/roboto.woff',
+		'/fonts/ubuntu.woff2',
 		'https://cdn.polyfill.io/v2/polyfill.min.js',
 		'https://media.githubusercontent.com/media/shgysk8zer0/awesome-rss/master/screenshot.png',
 		'https://i.imgur.com/qdnVcJA.png',
@@ -40,6 +44,8 @@ addEventListener('install', async () => {
 		}
 	});
 	await cache.addAll(config.caches);
+	clients.claim();
+	skipWaiting();
 
 });
 

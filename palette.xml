@@ -15,10 +15,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>
 -->
 <palette id="gb-cp-1506994022200033" name="shgysk8zer0.github.io-palette">
   <color name="default" value="#010101"/>
-  <color name="" value="#F5F5F5"/>
-  <color name="primary" value="#FAFAFA"/>
-  <color name="highlight" value="#FC5B0B"/>
-  <color name="accent" value="#168080"/>
-  <color name="accent-2" value="#0A4E4E"/>
+  <color name="alt" value="#F5F5F5"/>
+  <color name="primary" value="#E0E0E0"/>
+  <color name="accent" value="#FF5722"/>
+  <color name="accent-2" value="#D84315"/>
   <color name="border" value="#2D2D2D"/>
 </palette>
