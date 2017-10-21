@@ -4,7 +4,12 @@ layout: home
 ---
 <section id="portfolio" class="grid grid-gallery overflow-visible animation-ease-in animation-fill-both background-fixed background-no-repeat background-cover">
 	{% for project in site.data.portfolio %}
-	<div class="jackInTheBox project card shadow optimize-legibility animation-paused animation-overshoot animation-speed-crawl animation-fill-forwards relative transition-all transition-speed-normal transition-ease-in-out" itemprop="workExample" itemtype="http://schema.org/SoftwareApplication" itemscope="">
+	<div class="jackInTheBox project card shadow optimize-legibility animation-paused animation-overshoot animation-speed-crawl animation-fill-forwards relative transition-all transition-speed-normal transition-ease-in-out" itemprop="workExample" itemtype="http://schema.org/WebApplication" itemscope="">
+		<div itemprop="offers" itemtype="https://schema.org/Offer" itemscope="" hidden="">
+			<meta itemprop="price" content="{{ project.offers.price }}" />
+			<meta itemprop="priceCurrency" content="{{ project.offers.priceCurrency }}" />
+		</div>
+		<meta itemprop="browserRequirements" content="{{ project.browserRequirements }}" />
 		<a href="{{ project.url }}" itemprop="url" target="_blank" class="no-text-decoration inline-block" rel="noopener external" title="{{ project.name }}">
 			<h3 itemprop="name" class="center font-title color-highlight">{{ project.name }}</h3>
 			<h4 class="center" itemprop="applicationCategory">{{ project.applicationCategory }}</h4>
