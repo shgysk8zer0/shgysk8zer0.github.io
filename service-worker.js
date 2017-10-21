@@ -44,7 +44,6 @@ addEventListener('install', async () => {
 		}
 	});
 	await cache.addAll(config.caches);
-	clients.claim();
 	skipWaiting();
 
 });
