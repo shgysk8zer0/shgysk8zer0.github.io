@@ -1,5 +1,5 @@
 const config = {
-	version: '3.2.6',
+	version: '3.2.7',
 	caches: [
 		'/',
 		'/js/index.min.js',

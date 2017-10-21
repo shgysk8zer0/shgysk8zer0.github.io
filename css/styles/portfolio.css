@@ -11,7 +11,7 @@
 }
 
 [itemprop="workExample"]:hover {
-	box-shadow: 0 0 0.8em var(--highlight-color);
+	box-shadow: 0 0 0.8em var(--accent-color);
 }
 
 [itemprop="workExample"] [itemprop="keywords"] {

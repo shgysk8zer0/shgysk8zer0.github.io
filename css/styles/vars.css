@@ -5,12 +5,12 @@
 
 	/*================= Set color vars here =================*/
 	--default-color: #010101;
-	--alt-color: whitesmoke;
-	--primary-color: lightgray;
+	--alt-color: #FAFAFA;
+	--primary-color: #E0E0E0;
 	--highlight-color: #FC5B0B;
 	--link-color: auto;
 	--accent-color: var(--highlight-color);
-	--accent-color-2: #a73800;
+	--accent-color-2: #B71C1C;
 	--border-color: #2D2D2D;
 	--button-background: linear-gradient(var(--accent-color), var(--accent-color-2), var(--accent-color));
 	--button-active-background: linear-gradient(var(--accent-color-2), var(--accent-color));
@@ -30,7 +30,6 @@
 	--sunset-l: url("../../img/sunset-1200.jpg");
 	--sunset-m: url("../../img/sunset-800.jpg");
 	--sunset-s: url("../../img/sunset-420.jpg");
-	--backdrop-background: rgba(0,0,0,0.7);
 	--nav-height: 2.5rem;
 
 	/*==================== Set fonts here ====================*/
@@ -40,6 +39,7 @@
 	--article-font: 'Ubuntu';
 	--article-header-font: var(--header-font);
 
+	/*================== Animation properties ==================*/
 	--animation-stagger: 150ms;
 
 	/* ================= Syntax Highlighting ====================*/
@@ -47,6 +47,6 @@
 	--highlight-literal-number-color: #CCA418;
 }
 
-dialog::backdrop {
+:root, dialog::backdrop {
 	--backdrop-background: rgba(0,0,0,0.7);
 }

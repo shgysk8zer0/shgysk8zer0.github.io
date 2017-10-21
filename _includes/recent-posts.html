@@ -1,5 +1,5 @@
 <aside role="complementary" itemtype="http://schema.org/WPSideBar" itemscope="" class="card shadow-dark bounceInDown animation-speed-crawl animation-ease-in animation-paused" id="recent-posts">
-		<h4 class="color-highlight underline center">Recent Posts</h4>
+		<h4 class="color-accent underline center">Recent Posts</h4>
 		{% for post in site.posts limit: 10 %}
 			<a href="{{ post.url | absolute_url }}" title="{{ post.title }}">
 				{% if post.image != null %}
