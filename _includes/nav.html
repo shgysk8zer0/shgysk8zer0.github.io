@@ -1,11 +1,43 @@
 <nav class="sticky top shadow-dark color-alt flex row title-font center no-text-decoration z-3" role="navigation" itemtype="http://schema.org/SiteNavigationElement" itemscope="">
-	<a href="{% if page.layout == 'home' %}{{'/#top' | absolute_url }}{% else %}{{'/' | absolute_url}}{% endif %}">
+	{% if page.layout == 'home' %}
+		<a href="{{'/#top' | absolute_url }}" title="Top">
+			<svg class="current-color icon">
+				<use xlink:href="{{ '/img/icons.svg#top' | absolute_url }}" />
+			</svg>
+			<span class="mobile-hidden">Top</span>
+		</a>
+	{% else %}
+		<a href="{{'/' | absolute_url }}" title="Home">
+			<svg class="current-color icon">
+				<use xlink:href="{{ '/img/icons.svg#home' | absolute_url }}" />
+			</svg>
+			<span class="mobile-hidden">Home</span>
+		</a>
+	{% endif %}
+	<span data-show-modal="#about-dialog" class="cursor-pointer" title="About">
 		<svg class="current-color icon">
-			<use xlink:href="{{ '/img/icons.svg#favicon' | absolute_url }}" />
+			<use xlink:href="{{ '/img/icons.svg#avatar-default' | absolute_url }}" />
 		</svg>
+		<span class="mobile-hidden">About</span>
+	</span>
+	{% if page.layout == 'home' %}
+		<a href="#portfolio" title="Portfolio">
+			<svg class="current-color icon">
+				<use xlink:href="{{ '/img/icons.svg#engineering' | absolute_url }}" />
+			</svg>
+			<span class="mobile-hidden">Portfolio</span>
+		</a>
+	{% endif %}
+	<a href="#pinned-posts" title="Pinned Posts">
+		<svg class="current-color icon">
+			<use xlink:href="{{ '/img/icons.svg#pin' | absolute_url }}" />
+		</svg>
+		<span class="mobile-hidden">Pinned Posts</span>
 	</a>
-	<span data-show-modal="#about-dialog" class="cursor-pointer">About</span>
-	{% if page.layout == 'home' %}<a href="#portfolio">Portfolio</a>{% endif %}
-	<!-- <a href="#pinned-posts">Pinned Posts</a> -->
-	<a href="#recent-posts">Posts</a>
+	<a href="#recent-posts" title="Recent Posts">
+		<svg class="current-color icon">
+			<use xlink:href="{{ '/img/icons.svg#recent' | absolute_url }}" />
+		</svg>
+		<span class="mobile-hidden">Recent Posts</span>
+	</a>
 </nav>

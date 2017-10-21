@@ -20,8 +20,8 @@ layout: home
 			<blockquote class="text-align-right block font-article" itemprop="description">{{ project.description }}</blockquote>
 			<meta itemprop="operatingSystem" content="{{ project.operatingSystem }}" />
 		</a>
-		<svg data-share="" width="48" height="48" class="current-color absolute filter-shadow cursor-pointer color-default z-1" role="button" hidden="">
-			<use xlink:href="/img/icons.svg#share"></use>
+		<svg data-share="" width="48" height="48" class="current-color absolute filter-shadow cursor-pointer color-accent z-1" hidden="">
+			<use xlink:href="{{ '/img/icons.svg#share' absolute_url }}"></use>
 		</svg>
 	</div>
 	{% endfor %}

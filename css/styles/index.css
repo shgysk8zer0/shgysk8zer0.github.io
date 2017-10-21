@@ -48,3 +48,9 @@ pre.highlight, code.highlight {
 .no-js [data-show], .no-js [data-show-modal] {
 	cursor: not-allowed;
 }
+
+@media (max-width: 800px) {
+	.mobile-hidden {
+		display: none;
+	}
+}
