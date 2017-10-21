@@ -7,18 +7,17 @@
 	--default-color: #010101;
 	--alt-color: #FAFAFA;
 	--primary-color: #E0E0E0;
-	--highlight-color: #FC5B0B;
 	--link-color: auto;
-	--accent-color: var(--highlight-color);
-	--accent-color-2: #B71C1C;
+	--accent-color: #FF5722;
+	--accent-color-2: #D84315;
 	--border-color: #2D2D2D;
 	--button-background: linear-gradient(var(--accent-color), var(--accent-color-2), var(--accent-color));
-	--button-active-background: linear-gradient(var(--accent-color-2), var(--accent-color));
+	--button-active-background: linear-gradient(var(--accent-color-2), var(--accent-color), var(--accent-color-2));
 	--button-active-color: var(--button-color);
 	--button-disabled-background: var(--button-active-background);
-	--button-border: 0.1rem outset #0A4E4E;
-	--button-disabled-border: 0.1rem inset var(--accent-color-2);
-	--button-active-border: var(--button-distabled-border);
+	--button-border: 0.1rem outset var(--border-color);
+	--button-disabled-border: 0.1rem inset var(--border-color);
+	--button-active-border: var(--button-disabled-border);
 	--button-color: var(--primary-color);
 
 	/*========== Set background images, etc here ==========*/
