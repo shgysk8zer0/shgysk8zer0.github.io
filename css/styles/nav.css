@@ -3,24 +3,18 @@ body > nav {
 	background-image: linear-gradient(#444, #222);
 	border-radius: 0 0 1rem 1rem;
 	grid-area: nav;
-	justify-content: space-evenly;
 	border-top: 0.2rem solid var(--accent-color);
 	height: var(--nav-height);
+	line-height: var(--nav-height);
 }
 
 body > nav > * {
-	flex: 1 0 auto;
-	line-height: var(--nav-height);
-	height: var(--nav-height);
-	background-image: inherit;
+	flex: 2 0 auto;
 }
 
 body > nav > *:first-child {
 	border-radius: 0 0 0 1rem;
-	flex-basis: 6rem;
-	flex-grow: 0;
-	align-self: flex-start;
-	justify-self: flex-start;
+	flex-grow: 1;
 }
 
 body > nav > *:last-child {
