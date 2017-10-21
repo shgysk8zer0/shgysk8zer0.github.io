@@ -14,7 +14,7 @@ tags:
 - javascript
 - js
 ---
-<img class="right shadow-dark clearfix" src="https://i.imgur.com/9AZcG7R.png)](https://i.imgur.com/9AZcG7R.png" alt="Native Web Share API on Chrome for Android" title="Native Web Share API on Chrome for Android" style="margin: 1.2em" />
+<img class="right shadow-dark clearfix" src="https://i.imgur.com/9AZcG7R.png" alt="Native Web Share API on Chrome for Android" title="Native Web Share API on Chrome for Android" style="margin: 1.2em" />
 
 ### Web Share API
 Soon, there will be little need to add those bloated scripts from half a dozen
