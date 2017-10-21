@@ -8,7 +8,7 @@ body > header {
 	text-shadow: 0.4em 0.4em 0.4em black;
 }
 
-body >header {
+body.layout-home > header {
 	height: calc(100vh - var(--nav-height));
 }
 
