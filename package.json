@@ -1,6 +1,6 @@
 {
   "name": "about",
-  "version": "3.2.8",
+  "version": "3.2.9",
   "description": "A responsive, progressive about / portfolio & blog page built using Jekyll",
   "main": "index.html",
   "scripts": {
@@ -21,7 +21,7 @@
     "postinstall": "npm run git:fetch && npm run git:submodules && npm run build:all",
 	"serve": "npm run serve:production --incremental",
 	"serve:production": "npm run build:all && JEKYLL_ENV=production bundle exec jekyll serve --incremental",
-	"serve:dev": "bundle exec jekyll serve --drafts --unpublished --incremental --future --profile --trace --strict_front_matter"
+	"serve:dev": "bundle exec jekyll serve --drafts --unpublished --future --profile --trace --strict_front_matter"
   },
   "repository": {
     "type": "git",

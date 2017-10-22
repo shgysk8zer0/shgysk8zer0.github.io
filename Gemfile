@@ -12,6 +12,18 @@ ruby RUBY_VERSION
 gem "jekyll", "3.5.2"
 gem 'jekyll-gist', '~> 1.4', '>= 1.4.1'
 gem 'jekyll-youtube', '~> 1.0'
+gem 'jekyll-admin'
+gem 'jekyll-avatar'
+# gem 'jekyll-github-metadata'
+# gem 'jekyll-mentions'
+gem 'jekyll-paginate'
+gem 'jekyll-optional-front-matter'
+gem 'jekyll-readme-index'
+gem 'jekyll-titles-from-headings'
+gem 'jekyll-include-cache'
+# gem 'jekyll-seo-tag'
+# gem 'jemoji'
+# gem 'jekyll-octicons'
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "minima"
