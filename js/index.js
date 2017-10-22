@@ -48,6 +48,11 @@ async function readyHandler() {
 	$doc.keypress(event => event.key === 'Escape' && $('dialog[open]').close());
 	$('[data-service-worker]').each( el => registerServiceWorker(el).then(console.log));
 	Mutations.init();
+	$('[data-open]').click(event => {
+		event.preventDefault();
+		const url = new URL(event.target.dataset.open, location.origin);
+		window.open(url);
+	});
 	supportsAsClasses(...document.documentElement.dataset.supportTest.split(',').map(test => test.trim()));
 
 	if (document.head.dataset.hasOwnProperty('jekyllData')) {
