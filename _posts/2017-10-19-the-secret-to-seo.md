@@ -2,6 +2,7 @@
 layout: post
 title: "The Secret to SEO"
 date: "2017-10-19 04:30:48 -0700"
+updated: "2017-10-21 17:06:00 -0700"
 author: Chris Zuber
 author_url: https://chriszuber.com
 image: https://i.imgur.com/cFKqWym.png
@@ -122,7 +123,8 @@ It may be delivered in a few different ways:
 ```
 
 To see this in action, check out the
-[structured data for this page](https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fshgysk8zer0.github.io%2F2017%2F10%2F19%2Fthe-secret-to-seo.html)
+{% assign url = page.url | absolute_url %}
+[structured data for this page](https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fshgysk8zer0.github.io%2Fposts%2F2017%2F10%2F19%2Fthe-secret-to-seo%2F)
 
 In my opinion, `<script type="application/ld+json">` is the easiest to implement
 because it allows you to dump all the data into a page without worrying how to
@@ -178,4 +180,3 @@ what they like
 - Know the differene between "Likes" on Facebook and site engagement
 - Use appropriate elements such as `<article>`, `<time>`, `<address>` as well
 - The more semantic your markup, the better
-
