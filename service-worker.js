@@ -65,41 +65,50 @@ addEventListener('activate', async () => {
 
 addEventListener('fetch', event => {
 	function isValid(resp) {
-		if (! resp.ok) {
-			return false;
-		} else {
-			const url = new URL(resp.url);
-			if (url.origin !== location.origin) {
-				return true;
+		try {
+			if (! resp.ok) {
+				return false;
 			} else {
-				const isHome = ['/', '/index.html', '/index.php'].some(path => url.pathname === path);
-				const notIgnored = config.ignored.every(path => url.pathname !== path);
-				const allowedPath = config.paths.some(path => url.pathname.startsWith(path));
-				const isExternal = url.origin !== location.origin;
-				const isGet = resp.method === 'GET';
+				const url = new URL(resp.url);
+				if (url.origin !== location.origin) {
+					return true;
+				} else {
+					const isHome = ['/', '/index.html', '/index.php'].some(path => url.pathname === path);
+					const notIgnored = config.ignored.every(path => url.pathname !== path);
+					const allowedPath = config.paths.some(path => url.pathname.startsWith(path));
+					const isExternal = url.origin !== location.origin;
 
-				return isGet && isHome || isExternal || (allowedPath && notIgnored);
+					return isHome || isExternal || (allowedPath && notIgnored);
+				}
 			}
+		} catch(err) {
+			console.error(err);
+			return false;
 		}
 	}
 
-	event.respondWith(async function() {
-		const cache = await caches.open(config.version);
-		const response = await cache.match(event.request);
+	if (event.request.method !== 'GET') {
+		return;
+	}
 
-		if (response instanceof Response) {
-			return response;
-		} else if (navigator.onLine) {
-			try {
+	event.respondWith(async function() {
+		try {
+			const cache = await caches.open(config.version);
+			const response = await cache.match(event.request);
+
+			if (response instanceof Response) {
+				return response;
+			} else if (navigator.onLine) {
 				const fetched = await fetch(event.request);
 				if (isValid(fetched)) {
 					const respClone = await fetched.clone();
 					await cache.put(event.request, respClone);
 				}
 				return fetched;
-			} catch(error) {
-				console.error(error);
 			}
+		} catch (err) {
+			console.error(err);
+			return fetch(event.request);
 		}
 	}());
 });
