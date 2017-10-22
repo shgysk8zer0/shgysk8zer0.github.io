@@ -1,8 +1,14 @@
 author: Chris Zuber
 title: Chris Zuber
 description: "A responsive, progressive about / portfolio & blog page built using Jekyll"
-env: production
 markdown: kramdown
+respository: "shgysk8zer0/shgysk8zer0.github.io"
+github:
+  url: "https://shgysk8zer0.github.io"
+twitter:
+  username: shgysk8zer0
+webmaster_verifications:
+  google: "0cMX_-aKH-pe1wQXGDlK833KE3-kN5V7y3eaywoCXdk"
 defaults:
   -
     scope:
@@ -11,38 +17,60 @@ defaults:
       layout: "post"
       author: "Chris Zuber"
       permalink: /posts/:categories/:year/:month/:day/:title/
+
+  -
+    scope:
+      path: "_drafts"
+    values:
+      layout: "post"
+      author: "Chris Zuber"
+      permalink: /posts/:categories/:year/:month/:day/:title/
 plugins:
   - jekyll-gist
   - jekyll-youtube
+  - jekyll-admin
+  - jekyll-avatar
+  # - jekyll-mentions
+  # - jekyll-github-metadata
+  - jekyll-paginate
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+  - jekyll-include-cache
+  # - jekyll-seo-tag
+  # - jemoji
+  # - jekyll-octicons
 exclude:
-- Gemfile
-- Gemfile.lock
+- "*.rb"
+- "*.php"
+- "*.sh"
+- "*.csv"
+- "*.json"
+- "*.sfd"
+- "*.ai"
+- "*.psd"
+- "*.sketch"
+- "*.yml"
+- "*.lock"
 - "*.log"
+- Gemfile
 - node_modules/
 - docs
 - palette.xml
-- me.json
-- package.json
 - postcss.config.js
 - postcss.config.json
 - README.md
 - LICENSE
-- rollup.config.js
+- "*.config.js"
 - "img/octicons/test"
 - "img/octicons/*.js"
-- "img/octicons/LICENSE"
-- "img/octicons/*.json"
 - "img/octicons/*.md"
-- "img/octicons/lib/*.json"
-- "img/octicons/lib/*.sketch"
+- "img/octicons/LICENSE"
 - "img/octicons/lib/*.css"
-- "img/adwaita-icons/*.php"
-- "img/adwaita-icons/*.md"
 - "img/adwaita-icons/docs"
 - "img/adwaita-icons/LICENSE"
 - "css/core-css/docs"
-- "css/normalize/*.md"
-- "css/normalize/*.json"
 - "css/normalize/*.html"
 - "js/std-js/docs"
 - "js/std-js/test"
+
