@@ -1,0 +1,54 @@
+'@context': 'http://schema.org'
+'@type': Person
+givenName: Christopher
+additionalName: Wayne
+familyName: Zuber
+url: 'https://chriszuber.com'
+sameAs:
+  - 'https://twitter.com/shgysk8zer0'
+  - 'https://plus.google.com/+ChrisZuber'
+  - 'https://www.linkedin.com/in/chris-zuber-455346141/'
+  - 'https://www.youtube.com/user/shgysk8zer0/feed'
+  - 'https://github.com/shgysk8zer0'
+birthDate: '1985-03-26'
+telephone: +1-661-619-6712
+email: chris@chriszuber.com
+description: |-
+  I write code and poetry. Overall <q>knurd.</q> I know how to exit vim!
+  <br />
+  Full Stack Web Developer and follower of the Unix Philosophy
+jobTitle: Full Stack Web Developer
+worksFor:
+  '@type': Organization
+  name: SuperUserDev
+  url: 'https://github.com/superuserdev'
+  logo:
+    '@type': ImageObject
+    contentUrl: /img/logos/super-user.svg
+    width: 48
+    height: 48
+    encodingFormat: svg
+image:
+  '@context': 'http://schema.org'
+  '@type': ImageObject
+  contentUrl: 'https://gravatar.com/avatar/43578597e449298f5488c2407c8a8ae5?s=256'
+  width: 256
+  height: 256
+  encodingFormat: png
+homeLocation:
+  '@type': Place
+  '@context': 'http://schema.org'
+  address:
+    '@type': PostalAddress
+    '@context': 'http://schema.org'
+    streetAddress: 1116 Maddox Creek Lane
+    addressLocality: Mount Vernon
+    addressRegion: Washington
+    postalCode: 98274
+    addressCountry: United States
+  geo:
+    '@type': GeoCoordinates
+    '@context': 'http://schema.org'
+    latitude: 48.414106
+    longitude: -122.301008
+    url: 'geo:48.414106,-122.301008;crs=wgs84;u=0'

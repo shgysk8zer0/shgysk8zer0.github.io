@@ -1,0 +1,144 @@
+meta:
+  description: 'A responsive, progressive about / portfolio & blog page built using Jekyll'
+  keywords:
+    - Chris Zuber
+    - portfolio
+    - CSS3
+    - Responsive Design
+    - Progressive Web App
+    - ECMAScript
+    - PWA
+    - Jekyll
+  viewport: 'width=device-width,initial-scale=1'
+  referrer: origin-when-cross-origin
+  mobile-web-app-capable: true
+  theme_color: '#FC5B0B'
+  publisher: 'https://plus.google.com/+Chriszuber_dot_com'
+  author: 'https://plus.google.com/+ChrisZuber'
+  thumbnail: 'https://i.imgur.com/Ers0Xql.png'
+  google-site-verification: 0cMX_-aKH-pe1wQXGDlK833KE3-kN5V7y3eaywoCXdk
+lang: en
+dir: ltr
+canonical: 'https://shgysk8zer0.github.io'
+manifest: /manifest.json
+service_worker: /service-worker.js
+scripts:
+  development:
+    - src: 'https://cdn.polyfill.io/v2/polyfill.min.js'
+      type: application/javascript
+      async: false
+      defer: false
+      nomodule: false
+    - src: /js/index.js
+      type: module
+      async: true
+      defer: false
+      nomodule: false
+    - src: /js/index.min.js
+      type: application/javascript
+      async: true
+      defer: false
+      nomodule: true
+  production:
+    - src: 'https://cdn.polyfill.io/v2/polyfill.min.js'
+      type: application/javascript
+      async: false
+      defer: false
+      nomodule: false
+    - src: /js/index.min.js
+      type: application/javascript
+      async: true
+      defer: false
+      nomodule: false
+stylesheets:
+  development:
+    - href: /css/styles/index.css
+      media: all
+  production:
+    - href: /css/styles/index.min.css
+      media: all
+preload:
+  - href: /img/icons.svg
+    as: image
+    type: image/svg+xml
+    name: icons
+  - href: /img/logos/Facebook.svg
+    as: image
+    type: image/svg+xml
+    name: Facebook
+  - href: /img/logos/twitter.svg
+    as: image
+    type: image/svg+xml
+    name: Twitter
+  - href: /img/logos/Google_plus.svg
+    as: image
+    type: image/svg+xml
+    name: Google+
+  - href: /img/logos/Reddit.svg
+    as: image
+    type: image/svg+xml
+    name: Reddit
+  - href: /img/logos/linkedin.svg
+    as: image
+    type: image/svg+xml
+    name: LinkedIn
+icons:
+  - href: /img/icon-192.png
+    type: image/png
+    sizes: 192x192
+  - href: /img/icon-144.png
+    type: image/png
+    sizes: 144x144
+  - href: /img/icon-128.png
+    type: image/png
+    sizes: 128x128
+  - href: /img/icon-60.png
+    type: image/png
+    sizes: 60x60
+  - href: /img/icon-48.png
+    type: image/png
+    sizes: 48x48
+  - href: /img/icon-60.png
+    type: image/png
+    sizes: 60x60
+  - href: /img/icon-16.png
+    type: image/png
+    sizes: 16x16
+  - href: /img/favicon.svg
+    type: image/svg+xml
+    sizes: any
+csp:
+  default:
+    - '''self'''
+  img:
+    - '''self'''
+    - 'https://media.githubusercontent.com'
+    - 'https://camo.githubusercontent.com'
+    - 'https://i.imgur.com'
+    - 'https://gravatar.com/'
+    - 'https://travis-ci.org'
+    - 'https://api.travis-ci.org'
+    - 'https://img.shields.io'
+    - 'data:'
+  script:
+    - '''self'''
+    - 'https://cdn.polyfill.io'
+    - 'https://gist.github.com'
+    - 'https://production-assets.codepen.io'
+    - 'https://codepen.io/'
+  style:
+    - '''self'''
+    - '''unsafe-inline'''
+    - 'https://assets-cdn.github.com'
+    - 'https://www.youtube.com'
+  connect:
+    - '*'
+  child:
+    - '''self'''
+    - 'http://www.youtube.com'
+    - 'http://www.youtube-nocookie.com'
+  font:
+    - '''self'''
+  media:
+    - '*'
+  block-mixed-content: true
