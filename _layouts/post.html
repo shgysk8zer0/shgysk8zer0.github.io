@@ -5,7 +5,7 @@
 	class="no-js"
 	itemtype="http://schema.org/WebPage"
 	itemscope=""
-	{% if site.data.head.service_worker %} data-service-worker="{{ site.data.head.service_worker | absolute_url }}"{% endif %}
+	{% if site.data.head.service_worker and jekyll.environment == 'production' %}data-service-worker="{{site.data.head.service_worker | absolute_url }}"{% endif %}
 	data-support-test="details, dialog, cssvars"
 >
 	{% include head.html %}
