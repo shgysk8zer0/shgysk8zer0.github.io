@@ -68,8 +68,8 @@
 	/*========== Set background images, etc here ==========*/
 	--header-background-full : url("../../img/background.jpg");
 	--header-background-l: url("../../img/background-1200.jpg");
-	--header-background--m: url("../../img/background-800.jpg");
-	--header-background--s: url("../../img/background-420.jpg");
+	--header-background-m: url("../../img/background-800.jpg");
+	--header-background-s: url("../../img/background-420.jpg");
 	--nav-height: 2.5rem;
 
 	/*==================== Set fonts here ====================*/
@@ -3929,7 +3929,7 @@ header {
 body > header {
 	grid-area: header;
 	background-image: var(--header-background-l);
-	background-position: bottom;
+	background-position: bottom right;
 	text-shadow: 0.4em 0.4em 0.4em black;
 }
 
@@ -3956,7 +3956,7 @@ body > header > [itemtype="http://schema.org/Person"] {
 
 @media (orientation: portrait) and (min-height: 316px) and (max-height: 600px), (orientation: landscape) and (min-width: 421px) and (max-width: 800px) {
 	body > header {
-		background-image: var(--header-backdrop-m);
+		background-image: var(--header-background-m);
 	}
 }
 

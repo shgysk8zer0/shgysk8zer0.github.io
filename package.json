@@ -1,6 +1,6 @@
 {
   "name": "about",
-  "version": "3.2.9",
+  "version": "3.2.10",
   "description": "A responsive, progressive about / portfolio & blog page built using Jekyll",
   "main": "index.html",
   "scripts": {
@@ -17,11 +17,11 @@
     "build:icons": "svg-sprite-generate -c img/icons.csv -o img/icons.svg",
     "build:all": "npm run build:icons && npm run build:css && npm run build:js",
     "build:site": "npm run build:all && JEKYLL_ENV=production jekyll build",
-    "build:site:dev": "jekyll build --incremental --drafts",
+    "build:site:dev": "bundle exec jekyll build --incremental --drafts",
     "postinstall": "npm run git:fetch && npm run git:submodules && npm run build:all",
 	"serve": "npm run serve:production --incremental",
-	"serve:production": "npm run build:all && JEKYLL_ENV=production jekyll serve --incremental",
-	"serve:dev": "jekyll serve --drafts --unpublished --future --profile --trace --strict_front_matter"
+	"serve:production": "npm run build:all && JEKYLL_ENV=production bundle exec jekyll serve --incremental",
+	"serve:dev": "bundle exec jekyll serve --drafts --unpublished --future --profile --trace --strict_front_matter"
   },
   "repository": {
     "type": "git",

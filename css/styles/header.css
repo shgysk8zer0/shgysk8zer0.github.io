@@ -5,7 +5,7 @@ header {
 body > header {
 	grid-area: header;
 	background-image: var(--header-background-l);
-	background-position: bottom;
+	background-position: bottom right;
 	text-shadow: 0.4em 0.4em 0.4em black;
 }
 
@@ -36,7 +36,7 @@ body > header > [itemtype="http://schema.org/Person"] {
 @media (orientation: portrait) and (min-height: 316px) and (max-height: 600px),
 	(orientation: landscape) and (min-width: 421px) and (max-width: 800px) {
 	body > header {
-		background-image: var(--header-backdrop-m);
+		background-image: var(--header-background-m);
 	}
 }
 
