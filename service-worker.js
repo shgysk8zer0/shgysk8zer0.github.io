@@ -1,25 +1,36 @@
 const config = {
 	version: '3.2.9',
 	caches: [
+		// Main assets
 		'/',
 		'/js/index.min.js',
 		'/css/styles/index.min.css',
 		'/img/icons.svg',
+
+		// Nav menu icons
 		'/img/adwaita-icons/actions/document-open-recent.svg',
 		'/img/adwaita-icons/actions/go-top.svg',
 		'/img/adwaita-icons/actions/view-pin.svg',
-		'/img/logos/PHP.svg',
-		'/img/logos/MySQL.svg',
+		'/img/adwaita-icons/places/folder-publicshare.svg',
+
+		// Logos
 		'/img/logos/super-user.svg',
+		'/img/logos/css3.svg',
+		'/img/logos/PHP.svg',
+		'/img/logos/svg.svg',
 		'/img/logos/Facebook.svg',
 		'/img/logos/twitter.svg',
-		'/img/logos/Google_plus.svg',
 		'/img/logos/linkedin.svg',
+		'/img/logos/Google_plus.svg',
 		'/img/logos/Reddit.svg',
+
+		// Fonts
 		'/fonts/acme.woff',
 		'/fonts/Alice.woff',
 		'/fonts/roboto.woff',
 		'/fonts/ubuntu.woff2',
+
+		// External images
 		'https://cdn.polyfill.io/v2/polyfill.min.js',
 		'https://media.githubusercontent.com/media/shgysk8zer0/awesome-rss/master/screenshot.png',
 		'https://i.imgur.com/qdnVcJA.png',
@@ -100,6 +111,7 @@ addEventListener('fetch', event => {
 				return response;
 			} else if (navigator.onLine) {
 				const fetched = await fetch(event.request);
+
 				if (isValid(fetched)) {
 					const respClone = await fetched.clone();
 					await cache.put(event.request, respClone);
