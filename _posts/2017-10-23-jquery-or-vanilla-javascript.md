@@ -1,7 +1,8 @@
 ---
 title: jQuery or Vanilla JavaScript
 layout: post
-description: 'The ultimate battle: jQuery vs. Vanilla JS'
+description: 'The ultimate battle: jQuery vs. Vanilla JS. But are those really the
+  only two options?'
 tags:
 - jQuery
 - Vanilla JS
@@ -203,36 +204,12 @@ infancy, jQuery was there to assist developers in writing a single script that d
 
 Even today, it's not uncommon to have a JavaScript question on Stack Overflow answered with jQuery.
 
-It seems that, for the vast majority of the simple cases, the entire jQuery library can be replaced with the following few lines of JavaScript:
+11 years after it's initial release, it is still dominatng the web, and developers are still talking about it (*though,
+lately, in a more similar context to Flash*).
 
-```javascript
-function $(query) {
-	return document.querySelector(query);
-}
-
-EventTarget.prototype.on = EventTarget.prototype.addEventListener;
-
-HTMLElement.prototype.html = function(str) {
-	this.innerHTML = str;
-};
-
-HTMLElement.prototype.css = function(prop, value) {
-	this.style.setProperty(prop, value);
-};
-
-$('#clickme').on('click', async event => {
-	const resp = await fetch('/some/endpoint');
-	const html = await resp.text();
-
-	$('#banner').html(html);
-	$('#some-el').css('opacity', 0.75);
-
-	event.target.animate([
-		{opacity: 1},
-		{opacity: 0}
-	], 600);
-});
-```
+It's everywhere. It has influenced JavaScript itself. It made JavaScript more approachable in the darkest old days of
+JavaScript's history, greatly impacting the adoption of the use of JavaScript, it's popularity amongst developers,
+and made it possible for developers to remain sane while writing JavaScript.
 
 ## Intruducing [esQuery](https://github.com/shgysk8zer0/std-js/blob/master/esQuery.js)
 Every article I've seen on this subject creates a false dichotomy, in a sense. jQuery was / is popular for a reason.
