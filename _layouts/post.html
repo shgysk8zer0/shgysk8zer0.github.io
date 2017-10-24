@@ -2,14 +2,14 @@
 <html
 	lang="{{ site.data.head.lang}}"
 	dir="{{ site.data.head.dir }}"
-	class="no-js"
+	class="no-js scroll-smooth"
 	itemtype="http://schema.org/WebPage"
 	itemscope=""
 	{% if site.data.head.service_worker %}data-service-worker="{{ site.data.head.service_worker | absolute_url }}"{% endif %}
 	data-support-test="details, dialog, cssvars"
 >
 	{% include head.html %}
-	<body class="layout-{{ page.layout }} background-primary grid border-box scroll-smooth cursor-default font-main" contextmenu="nav-menu" id="top">
+	<body class="layout-{{ page.layout }} background-primary grid border-box cursor-default font-main" contextmenu="nav-menu" id="top">
 		<svg data-share="" width="48" height="48" class="current-color fixed filter-shadow-dark cursor-pointer color-alt z-4" hidden="">
 			<use xlink:href="{{ '/img/icons.svg#share' | absolute_url }}"></use>
 		</svg>
