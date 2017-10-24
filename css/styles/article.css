@@ -27,6 +27,16 @@ article [itemprop="text"] {
 	margin: .7em;
 }
 
+article [itemprop="text"] table td, article [itemprop="text"] table th {
+	border: 1px solid #d4d7d9;
+	padding: .4em;
+}
+
+article [itemprop="text"] table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 .meta-author-links {
 	align-content: center;
 	align-items: center;

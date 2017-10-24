@@ -1,5 +1,2 @@
 User-agent: *
-Disallow: /css/
-Disallow: /js/
-Disallow: /fonts/
 Sitemap: https://shgysk8zer0.github.io/sitemap.xml
