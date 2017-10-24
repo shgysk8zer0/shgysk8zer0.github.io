@@ -12,7 +12,7 @@ tags:
 - esQuery
 date: '2017-10-23 00:00:00'
 pinned: true
-image: "/img/uploads/jq-vs-js.svg"
+image: "https://i.imgur.com/IOLu7fz.png"
 category: javascript
 ---
 
