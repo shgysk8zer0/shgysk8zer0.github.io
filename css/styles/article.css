@@ -1,7 +1,7 @@
 @import url("../core-css/jekyll-highlight.css");
 @import url("./jekyll-youtube.css");
 
-article a, article a:hover {
+article [itemprop="text"] a, article [itemprop="text"] a:hover {
 	color: var(--accent-color);
 	text-decoration: underline;
 }
