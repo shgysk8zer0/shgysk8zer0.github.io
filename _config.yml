@@ -42,10 +42,10 @@ plugins:
   # - jekyll-octicons
 exclude:
 - "*.rb"
+- "*.gemspec"
 - "*.php"
 - "*.sh"
 - "*.csv"
-- "*.json"
 - "*.sfd"
 - "*.ai"
 - "*.psd"
@@ -53,6 +53,14 @@ exclude:
 - "*.yml"
 - "*.lock"
 - "*.log"
+- "/css/*.md"
+- "/js/*.md"
+- "/img/*.md"
+- "/fonts/*.md"
+- "/js/*.json"
+- "/css/*.json"
+- "/img/*.json"
+- "/js/*.html"
 - Gemfile
 - node_modules/
 - docs
@@ -62,13 +70,18 @@ exclude:
 - README.md
 - LICENSE
 - "*.config.js"
-- "img/octicons/test"
-- "img/octicons/*.js"
-- "img/octicons/*.md"
-- "img/octicons/LICENSE"
-- "img/octicons/lib/*.css"
-- "img/adwaita-icons/docs"
-- "img/adwaita-icons/LICENSE"
+- "/img/octicons/test"
+- "/img/octicons/*.js"
+- "/img/octicons/*.md"
+- "/img/octicons/LICENSE"
+- "/img/octicons/lib/*.css"
+- "/img/octicons/lib/octicons_gem"
+- "/img/octicons/lib/octicons_node"
+- "/img/octicons/lib/octicons_helper"
+- "/img/octicons/lib/jekyll-octicons"
+- "/img/octicons/script"
+- "/img/adwaita-icons/docs"
+- "/img/adwaita-icons/LICENSE"
 - "css/core-css/docs"
 - "css/normalize/*.html"
 - "js/std-js/docs"
