@@ -31,7 +31,7 @@ const config = {
 		'/fonts/roboto.woff',
 		'/fonts/ubuntu.woff2',
 
-		// External images
+		// External Resources
 		'https://cdn.polyfill.io/v2/polyfill.min.js',
 		'https://media.githubusercontent.com/media/shgysk8zer0/awesome-rss/master/screenshot.png',
 		'https://i.imgur.com/qdnVcJA.png',
