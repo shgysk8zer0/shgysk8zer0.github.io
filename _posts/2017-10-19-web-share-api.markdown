@@ -7,6 +7,7 @@ date: "2017-10-19 15:13:28 -0700"
 updated: "2017-10-20 10:12:00 -0700"
 image: https://i.imgur.com/3YHRZq3.png
 description: "A Gist demonstrating a polyfill for the new Web Share API"
+category: javascript
 tags:
 - navigator.share
 - shim
