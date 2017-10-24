@@ -119,6 +119,7 @@ csp:
     - 'https://travis-ci.org'
     - 'https://api.travis-ci.org'
     - 'https://img.shields.io'
+    - 'https://screenshots.firefoxusercontent.com'
     - 'data:'
   script:
     - '''self'''
