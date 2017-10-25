@@ -1,13 +1,12 @@
+import './std-js/shims.js';
 import {$, wait} from './std-js/functions.js';
 import * as Mutations from './std-js/mutations.js';
 import deprefix from './std-js/deprefixer.js';
-import './std-js/shims.js';
 import {supportsAsClasses} from './std-js/support_test.js';
 import webShareApi from './std-js/webShareApi.js';
 import {facebook, twitter, googlePlus, linkedIn, reddit} from './share-config.js';
 
 webShareApi(facebook, twitter, linkedIn, googlePlus, reddit);
-
 deprefix();
 
 async function registerServiceWorker(el) {
@@ -38,21 +37,25 @@ async function registerServiceWorker(el) {
 }
 
 async function readyHandler() {
+	const $doc = $(document.documentElement);
+	$('[data-service-worker]').each( el => registerServiceWorker(el));
+
 	if (Navigator.prototype.hasOwnProperty('share')) {
 		$('[data-share]').attr({hidden: false});
 	}
-	const $doc = $(document.documentElement);
+
 	$doc.replaceClass('no-js', 'js');
 	$doc.toggleClass('offline', ! navigator.onLine);
 	$doc.watch(Mutations.events, Mutations.options, Mutations.filter);
 	$doc.keypress(event => event.key === 'Escape' && $('dialog[open]').close());
-	$('[data-service-worker]').each( el => registerServiceWorker(el).then(console.log));
 	Mutations.init();
+
 	$('[data-open]').click(event => {
 		event.preventDefault();
 		const url = new URL(event.target.dataset.open, location.origin);
 		window.open(url);
 	});
+
 	supportsAsClasses(...document.documentElement.dataset.supportTest.split(',').map(test => test.trim()));
 
 	if (document.head.dataset.hasOwnProperty('jekyllData')) {
