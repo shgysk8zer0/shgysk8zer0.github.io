@@ -98,15 +98,21 @@ icons:
   - href: /img/icon-48.png
     type: image/png
     sizes: 48x48
-  - href: /img/icon-60.png
-    type: image/png
-    sizes: 60x60
   - href: /img/icon-16.png
     type: image/png
     sizes: 16x16
   - href: /img/favicon.svg
     type: image/svg+xml
     sizes: any
+touch-icons:
+  - href: /img/icon-80.png
+    size: 80
+  - href: /img/icon-152.png
+    size: 152
+  - href: /img/icon-180.png
+    size: 180
+  - href: /img/icon-167.png
+    size: 167
 csp:
   default:
     - '''self'''
