@@ -1,0 +1,35 @@
+default:
+- '''none'''
+img:
+- '''self'''
+- 'https://media.githubusercontent.com'
+- 'https://camo.githubusercontent.com'
+- 'https://i.imgur.com'
+- 'https://gravatar.com/'
+- 'https://travis-ci.org'
+- 'https://api.travis-ci.org'
+- 'https://img.shields.io'
+- 'https://screenshots.firefoxusercontent.com'
+- 'data:'
+script:
+- '''self'''
+- 'https://cdn.polyfill.io'
+- 'https://gist.github.com'
+- 'https://production-assets.codepen.io'
+- 'https://codepen.io/'
+style:
+- '''self'''
+- '''unsafe-inline'''
+- 'https://assets-cdn.github.com'
+- 'https://www.youtube.com'
+connect:
+- '*'
+child:
+- '''self'''
+- 'http://www.youtube.com'
+- 'http://www.youtube-nocookie.com'
+font:
+- '''self'''
+media:
+- '*'
+block-mixed-content: true

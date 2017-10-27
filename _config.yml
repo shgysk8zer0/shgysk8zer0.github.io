@@ -1,14 +1,30 @@
 author: Chris Zuber
 title: Chris Zuber
 description: "A responsive, progressive about / portfolio & blog page built using Jekyll"
+keywords:
+  - jekyll
+  - Chris Zuber
+  - Web Developer
+  - portfolio
+  - CSS3
+  - HTML5
+  - responsive design
+  - progressive web app
+  - pwa
+  - ecmascript
+  - javascript
+  - es6
 markdown: kramdown
 respository: "shgysk8zer0/shgysk8zer0.github.io"
+lang: en_US
+dir: ltr
+theme-color: '#FC5B0B'
 github:
   url: "https://shgysk8zer0.github.io"
-twitter:
-  username: shgysk8zer0
-webmaster_verifications:
-  google: "0cMX_-aKH-pe1wQXGDlK833KE3-kN5V7y3eaywoCXdk"
+twitter: shgysk8zer0
+webmaster-verifications:
+  google: 0cMX_-aKH-pe1wQXGDlK833KE3-kN5V7y3eaywoCXdk
+  bing: D0C151304642EDCA64F73FE5C4B43D7A
 defaults:
   -
     scope:
@@ -17,7 +33,6 @@ defaults:
       layout: "post"
       author: "Chris Zuber"
       permalink: /posts/:categories/:year/:month/:day/:title/
-
   -
     scope:
       path: "_drafts"
@@ -86,4 +101,3 @@ exclude:
 - "css/normalize/*.html"
 - "js/std-js/docs"
 - "js/std-js/test"
-

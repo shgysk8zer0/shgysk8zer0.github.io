@@ -1,0 +1,14 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+	<msapplication>
+		<tile>
+			<square70x70logo src="{{ '/img/icon-70.png' | absolute_url }}"/>
+			<square150x150logo src="{{ '/img/icon-150.png' | absolute_url }}"/>
+			<square310x310logo src="{{ '/img/icon-310.png' | absolute_url }}"/>
+		</tile>
+		{% if site.theme-color %}<TileColor>{{ site.theme-color }}</TileColor>{% endif %}
+	</msapplication>
+</browserconfig>

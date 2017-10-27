@@ -1,52 +1,104 @@
 <head>
-	<title itemprop="headline">{{ page.title }} | {{ site.title }}</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="{% if site.data.head.meta.viewport %}{{ site.data.head.meta.viewport}}{% else %}width=device-width,initial-scale=1{% endif %}" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title itemprop="headline">{{ page.title }} | {{ site.title }}</title>
+	{% if page.fb-og-type %}
+		<meta property="og:type" content="{{ page.fb-og-type }}" />
+	{% elsif page.layout == 'post' %}
+		<meta property="og:type" content="article" />
+	{% else %}
+		<meta property="og:type" content="website" />
+	{% endif %}
+	<meta property="og:url" content="{{ page.url | absolute_url }}" />
+	<meta property="og:title" content="{{ page.title }} | {{ site.title }}" />
+	<meta property="og:site_name" content="{{ site.title }}" />
+	<meta property="og:locale" content="{{ site.lang }}" />
+	{% if site.facebook-id %}
+		<meta property="og:app_id" content="{{ site.facebook-id }}" />
+	{% endif %}
+	<meta name="twitter:card" content="summary">
+	{% if site.twitter %}
+		<meta name="twitter:site" content="@{{ site.twitter }}">
+	{% endif %}
+	{% if page.author and site.data.authors[page.author] and site.data.authors[page.author].twitter %}
+		<meta name="twitter:creator" content="@{{ site.data.authors[page.author].twitter }}">
+	{% endif %}
+	<meta name="twitter:url" content="{{ page.url | absolute_url }}">
+	<meta name="twitter:title" content="{{ page.title }} | {{ site.title }}">
 	{% if site.data.head.meta.referrer %}<meta name="referrer" content="{{ site.data.head.meta.referrer }}"/>{% endif %}
 	{% if site.data.head.meta.mobile-web-app-capable %}<meta name="mobile-web-app-capable" content="yes" />{% endif %}
 	{% if page.description %}
 		<meta name="description" content="{{ page.description }}" />
 		<meta itemprop="description" content="{{ page.description }}" />
+		<meta property="og:description" content="{{ page.description }}">
+		<meta name="twitter:description" content="{{ page.description }}">
 	{% elsif site.description %}
-		<meta name="description" content="{{ site.data.head.meta.description }}" />
-		<meta itemprop="description" content="{{ site.data.head.meta.description }}" />
+		<meta name="description" content="{{ site.description }}" />
+		<meta itemprop="description" content="{{ site.description }}" />
+		<meta property="og:description" content="{{ site.description }}" />
+		<meta name="twitter:description" content="{{ site.description }}">
 	{% endif %}
 	{% if page.tags %}
 		<meta name="keywords" content="{{ page.tags | join: ', ' }}" />
 		<meta itemprop="keywords" content="{{ page.tags | join: ', ' }}" />
 	{% elsif site.data.head.meta.keywords %}
-		<meta name="keywords" content="{{ site.data.head.meta.keywords | join: ', ' }}" />
-		<meta itemprop="keywords" content="{{ site.data.head.meta.keywords | join: ', ' }}" />
+		<meta name="keywords" content="{{ site.keywords | join: ', ' }}" />
+		<meta itemprop="keywords" content="{{ site.keywords | join: ', ' }}" />
 	{% endif %}
 	{% if page.author %}
 		<meta name="author" content="{{ page.author }}"/>
 	{% elsif site.data.head.meta.author %}<meta name="author" content="{{ site.author }}"/>{% endif %}
-	{% if site.data.head.meta.thumbnail %}<meta itemprop="thumbnailUrl" content="{{ site.data.head.meta.thumbnail }}" />{% endif %}
-	{% if site.data.head.meta.theme_color %}<meta name="theme-color" content="{{ site.data.head.meta.theme_color }}" />{% endif %}
-	{% if site.data.head.csp %}
+	{% if page.image %}
+		<meta property="og:image" content="{{ page.image | absolute_url }}" />
+		<meta name="twitter:image" content="{{ page.image | absolute_url }}">
+	{% elsif site.data.head.meta.thumbnail %}
+		<meta property="og:image" content="{{ site.data.head.meta.thumbnail | absolute_url }}" />
+		<meta name="twitter:image" content="{{ site.data.head.meta.thumbnail | absolute_url }}">
+	{% endif %}
+	{% if site.data.head.meta.thumbnail %}
+			<meta itemprop="thumbnailUrl" content="{{ site.data.head.meta.thumbnail }}" />
+	{% endif %}
+	{% if site.theme-color %}
+		<meta name="theme-color" content="{{ site.theme-color }}" />
+		<meta name="msapplication-TileColor" content="{{ site.theme-color }}" />
+	{% endif %}
+	{% if site.data.csp %}
 		<meta http-equiv="{% if jekyll.environment == 'production'%}Content-Security-Policy{% else %}Content-Security-Policy-Report-Only{% endif %}" content="
-				{% if site.data.head.csp.default %}default-src {{ site.data.head.csp.default | join: ' ' }};{% endif %}
-				{% if site.data.head.csp.img %}img-src {{ site.data.head.csp.img | join: ' ' }};{% endif %}
-				{% if site.data.head.csp.script %}script-src {{ site.data.head.csp.script | join: ' ' }};{% endif %}
-				{% if site.data.head.csp.style %}style-src {{ site.data.head.csp.style | join: ' ' }};{% endif %}
-				{% if site.data.head.csp.connect %}connect-src {{ site.data.head.csp.connect | join: ' ' }};{% endif %}
-				{% if site.data.head.csp.font %}font-src {{ site.data.head.csp.font | join: ' ' }};{% endif %}
-				{% if site.data.head.csp.media %}media-src {{ site.data.head.csp.media | join: ' ' }};{% endif %}
-				{% if site.data.head.csp.child %}child-src {{ site.data.head.csp.child | join: ' ' }};{% endif %}
-				{% if site.data.head.csp.block-mixed-content %}block-all-mixed-content;{% endif %}
+				{% if site.data.csp.default %}default-src {{ site.data.csp.default | join: ' ' }};{% endif %}
+				{% if site.data.csp.img %}img-src {{ site.data.csp.img | join: ' ' }};{% endif %}
+				{% if site.data.csp.script %}script-src {{ site.data.csp.script | join: ' ' }};{% endif %}
+				{% if site.data.csp.style %}style-src {{ site.data.csp.style | join: ' ' }};{% endif %}
+				{% if site.data.csp.connect %}connect-src {{ site.data.csp.connect | join: ' ' }};{% endif %}
+				{% if site.data.csp.font %}font-src {{ site.data.csp.font | join: ' ' }};{% endif %}
+				{% if site.data.csp.media %}media-src {{ site.data.csp.media | join: ' ' }};{% endif %}
+				{% if site.data.csp.child %}child-src {{ site.data.csp.child | join: ' ' }};{% endif %}
+				{% if site.data.csp.block-mixed-content %}block-all-mixed-content;{% endif %}
 		" />
 	{% endif %}
-	{% if site.data.head.meta.google-site-verification %}<meta name="google-site-verification" content="{{ site.data.head.meta.google-site-verification}}" />{% endif %}
+	{% if site.webmaster-verifications.google %}
+		<meta name="google-site-verification" content="{{ site.webmaster-verifications.google }}" />
+	{% endif %}
+	{% if site.webmaster-verifications.bing %}
+		<meta name="msvalidate.01" content="{{ site.webmaster-verifications.bing }}" />
+	{% endif %}
 	{% for script in site.data.head.scripts[jekyll.environment] %}
-	<script type="{{ script.type }}" src="{{ script.src | absolute_url }}"{% if script.async %} async=""{% endif %}{% if script.defer %} defer=""{% endif %}{% if script.nomodule %} nomodule=""{% endif %}></script>
+		<script type="{{ script.type }}" src="{{ script.src | absolute_url }}"{% if script.async %} async=""{% endif %}{% if script.defer %} defer=""{% endif %}{% if script.nomodule %} nomodule=""{% endif %}></script>
 	{% endfor %}
 	{% for stylesheet in site.data.head.stylesheets[jekyll.environment] %}
-	<link rel="stylesheet" href="{{ stylesheet.href | absolute_url }}" media="{{ stylesheet.media }}" />
+		<link rel="stylesheet" href="{{ stylesheet.href | absolute_url }}" media="{{ stylesheet.media }}" />
 	{% endfor %}
 	{% if  site.data.head.canonical %}<link rel="canonical" href="{{ site.data.head.canonical }}{{ page.url }}"/>{% endif %}
 	{% if site.data.head.icons %}{% for icon in site.data.head.icons %}
-	<link rel="icon" href="{{ icon.href | absolute_url }}" type="{{ icon.type }}" sizes="{{ icon.sizes }}" />
+		<link rel="icon" href="{{ icon.href | absolute_url }}" type="{{ icon.type }}" sizes="{{ icon.sizes }}" />
 	{% endfor %}{% endif %}
+	{% if site.data.head.touch-icons %}{% for icon in site.data.head.touch-icons %}
+	<link rel="apple-touch-icon" href="{{ icon.href | absolute_url }}" sizes="{{ icon.size }}x{{ icon.size }}" />
+	{% endfor %}{% endif %}
+	<meta name="msapplication-config" content="{{ 'browserconfig.xml' | absolute_url }}" />
+	{% if site.data.head.windows-tile %}
+		<meta name="msapplication-TileImage" content="{{ site.data.head.windows-tile | absolute_url }}" />
+	{% endif %}
 	{% if site.data.head.preload %}{% for preload in site.data.head.preload %}
 	<link rel="preload" href="{{ preload.href | absolute_url }}" as="{{ preload.as }}" type="{{ preload.type }}" name="{{ preload.name }}" />
 	{% endfor %}{% endif %}
