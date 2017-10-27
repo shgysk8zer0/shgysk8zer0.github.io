@@ -2,6 +2,7 @@
 	<title itemprop="headline">{{ page.title }} | {{ site.title }}</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="{% if site.data.head.meta.viewport %}{{ site.data.head.meta.viewport}}{% else %}width=device-width,initial-scale=1{% endif %}" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	{% if site.data.head.meta.referrer %}<meta name="referrer" content="{{ site.data.head.meta.referrer }}"/>{% endif %}
 	{% if site.data.head.meta.mobile-web-app-capable %}<meta name="mobile-web-app-capable" content="yes" />{% endif %}
 	{% if page.description %}
