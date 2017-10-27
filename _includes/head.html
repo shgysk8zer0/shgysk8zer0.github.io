@@ -9,15 +9,15 @@
 		<meta name="description" content="{{ page.description }}" />
 		<meta itemprop="description" content="{{ page.description }}" />
 	{% elsif site.description %}
-		<meta name="description" content="{{ site.data.head.meta.description }}" />
-		<meta itemprop="description" content="{{ site.data.head.meta.description }}" />
+		<meta name="description" content="{{ site.description }}" />
+		<meta itemprop="description" content="{{ site.description }}" />
 	{% endif %}
 	{% if page.tags %}
 		<meta name="keywords" content="{{ page.tags | join: ', ' }}" />
 		<meta itemprop="keywords" content="{{ page.tags | join: ', ' }}" />
 	{% elsif site.data.head.meta.keywords %}
-		<meta name="keywords" content="{{ site.data.head.meta.keywords | join: ', ' }}" />
-		<meta itemprop="keywords" content="{{ site.data.head.meta.keywords | join: ', ' }}" />
+		<meta name="keywords" content="{{ site.keywords | join: ', ' }}" />
+		<meta itemprop="keywords" content="{{ site.keywords | join: ', ' }}" />
 	{% endif %}
 	{% if page.author %}
 		<meta name="author" content="{{ page.author }}"/>
@@ -37,7 +37,7 @@
 				{% if site.data.head.csp.block-mixed-content %}block-all-mixed-content;{% endif %}
 		" />
 	{% endif %}
-	{% if site.data.head.meta.google-site-verification %}<meta name="google-site-verification" content="{{ site.data.head.meta.google-site-verification}}" />{% endif %}
+	{% if site.webmaster-verifications.google %}<meta name="google-site-verification" content="{{ site.webmaster-verifications.google }}" />{% endif %}
 	{% for script in site.data.head.scripts[jekyll.environment] %}
 	<script type="{{ script.type }}" src="{{ script.src | absolute_url }}"{% if script.async %} async=""{% endif %}{% if script.defer %} defer=""{% endif %}{% if script.nomodule %} nomodule=""{% endif %}></script>
 	{% endfor %}

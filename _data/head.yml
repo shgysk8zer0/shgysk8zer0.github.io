@@ -1,5 +1,4 @@
 meta:
-  description: 'A responsive, progressive about / portfolio & blog page built using Jekyll'
   keywords:
     - Chris Zuber
     - portfolio
@@ -12,13 +11,9 @@ meta:
   viewport: 'width=device-width,initial-scale=1'
   referrer: origin-when-cross-origin
   mobile-web-app-capable: true
-  theme_color: '#FC5B0B'
   publisher: 'https://plus.google.com/+Chriszuber_dot_com'
   author: 'https://plus.google.com/+ChrisZuber'
   thumbnail: 'https://i.imgur.com/Ers0Xql.png'
-  google-site-verification: 0cMX_-aKH-pe1wQXGDlK833KE3-kN5V7y3eaywoCXdk
-lang: en
-dir: ltr
 canonical: 'https://shgysk8zer0.github.io'
 manifest: /manifest.json
 service_worker: /service-worker.js
