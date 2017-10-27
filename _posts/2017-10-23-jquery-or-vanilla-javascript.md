@@ -11,13 +11,14 @@ tags:
 - JavaScript
 - esQuery
 date: '2017-10-23 00:00:00'
+updated: '2017-10-27 12:15:00'
 pinned: true
 image: "https://i.imgur.com/IOLu7fz.png"
 category: javascript
 ---
 
 # [jQuery](http://jquery.com/) vs. [Vanilla JS](http://vanilla-js.com/)
-The Internet is packed with articies either questioning the necessity of jQuery or criticizing its very existence. What I'm trying to do in this article
+The Internet is packed with articles either questioning the necessity of jQuery or criticizing its very existence. What I'm trying to do in this article
 is not just to jump on the bandwagon. I'm also not going to tell you to go back through everything you've ever created using jQuery and update it
 to use vanilla JavaScript. Instead, I'd like for you to keep the following in mind for any future projects and, if you feel the benefit is worth the effort,
 update anything old that would benefit from the performance improvements.
@@ -167,7 +168,7 @@ a lot cleaner and easier.
 
 There are some differences though for more advanced cases. [`jQuery.on`](http://api.jquery.com/on/)
 can have a few additional arguments, such as `data`. [`element.addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener),
-on the other hand, allows for the third paramater (commonly thought of as `useCapture`) to be an object
+on the other hand, allows for the third parameter (commonly thought of as `useCapture`) to be an object
 with keys for `capture`, `once` (*removes listener after fired*), and `passive`.
 
 ## Ajax
@@ -204,14 +205,14 @@ infancy, jQuery was there to assist developers in writing a single script that d
 
 Even today, it's not uncommon to have a JavaScript question on Stack Overflow answered with jQuery.
 
-11 years after it's initial release, it is still dominatng the web, and developers are still talking about it (*though,
+11 years after it's initial release, it is still dominating the web, and developers are still talking about it (*though,
 lately, in a more similar context to Flash*).
 
 It's everywhere. It has influenced JavaScript itself. It made JavaScript more approachable in the darkest old days of
 JavaScript's history, greatly impacting the adoption of the use of JavaScript, it's popularity amongst developers,
 and made it possible for developers to remain sane while writing JavaScript.
 
-## Intruducing [esQuery](https://github.com/shgysk8zer0/std-js/blob/master/esQuery.js)
+## Introducing [esQuery](https://github.com/shgysk8zer0/std-js/blob/master/esQuery.js)
 Every article I've seen on this subject creates a false dichotomy, in a sense. jQuery was / is popular for a reason.
 There are still plenty of ways that it is easier to use than vanilla JavaScript. But, not using jQuery doesn't have to
 mean not using a JavaScript library at all.
@@ -222,7 +223,7 @@ is what jQuery might have been, had it been created today instead of decades ago
 
 Weighing in at just under 3 KB when compressed, it is a modern JavaScript library
 that offers the majority of features of jQuery, quite a few of its own, and might
-just offer better performance in some circumstances than regualr JavaScript since it
+just offer better performance in some circumstances than regular JavaScript since it
 is almost entirely asynchronous.
 
 ```javascript
