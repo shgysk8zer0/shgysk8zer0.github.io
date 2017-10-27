@@ -205,7 +205,7 @@ infancy, jQuery was there to assist developers in writing a single script that d
 
 Even today, it's not uncommon to have a JavaScript question on Stack Overflow answered with jQuery.
 
-11 years after it's initial release, it is still dominatng the web, and developers are still talking about it (*though,
+11 years after it's initial release, it is still dominating the web, and developers are still talking about it (*though,
 lately, in a more similar context to Flash*).
 
 It's everywhere. It has influenced JavaScript itself. It made JavaScript more approachable in the darkest old days of
@@ -223,7 +223,7 @@ is what jQuery might have been, had it been created today instead of decades ago
 
 Weighing in at just under 3 KB when compressed, it is a modern JavaScript library
 that offers the majority of features of jQuery, quite a few of its own, and might
-just offer better performance in some circumstances than regualr JavaScript since it
+just offer better performance in some circumstances than regular JavaScript since it
 is almost entirely asynchronous.
 
 ```javascript
