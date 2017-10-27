@@ -47,6 +47,7 @@
 	{% if site.data.head.icons %}{% for icon in site.data.head.icons %}
 	<link rel="icon" href="{{ icon.href | absolute_url }}" type="{{ icon.type }}" sizes="{{ icon.sizes }}" />
 	{% endfor %}{% endif %}
+	<meta name="msapplication-config" content="{{ 'browserconfig.xml' | absolute_url }}" />
 	{% if site.data.head.preload %}{% for preload in site.data.head.preload %}
 	<link rel="preload" href="{{ preload.href | absolute_url }}" as="{{ preload.as }}" type="{{ preload.type }}" name="{{ preload.name }}" />
 	{% endfor %}{% endif %}
