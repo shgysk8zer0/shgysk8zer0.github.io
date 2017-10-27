@@ -32,7 +32,6 @@ defaults:
       layout: "post"
       author: "Chris Zuber"
       permalink: /posts/:categories/:year/:month/:day/:title/
-
   -
     scope:
       path: "_drafts"
@@ -101,4 +100,3 @@ exclude:
 - "css/normalize/*.html"
 - "js/std-js/docs"
 - "js/std-js/test"
-
