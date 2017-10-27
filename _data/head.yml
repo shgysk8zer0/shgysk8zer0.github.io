@@ -1,5 +1,4 @@
 meta:
-  description: 'A responsive, progressive about / portfolio & blog page built using Jekyll'
   keywords:
     - Chris Zuber
     - portfolio
@@ -12,13 +11,9 @@ meta:
   viewport: 'width=device-width,initial-scale=1'
   referrer: origin-when-cross-origin
   mobile-web-app-capable: true
-  theme_color: '#FC5B0B'
   publisher: 'https://plus.google.com/+Chriszuber_dot_com'
   author: 'https://plus.google.com/+ChrisZuber'
   thumbnail: 'https://i.imgur.com/Ers0Xql.png'
-  google-site-verification: 0cMX_-aKH-pe1wQXGDlK833KE3-kN5V7y3eaywoCXdk
-lang: en
-dir: ltr
 canonical: 'https://shgysk8zer0.github.io'
 manifest: /manifest.json
 service_worker: /service-worker.js
@@ -98,48 +93,19 @@ icons:
   - href: /img/icon-48.png
     type: image/png
     sizes: 48x48
-  - href: /img/icon-60.png
-    type: image/png
-    sizes: 60x60
   - href: /img/icon-16.png
     type: image/png
     sizes: 16x16
   - href: /img/favicon.svg
     type: image/svg+xml
     sizes: any
-csp:
-  default:
-    - '''self'''
-  img:
-    - '''self'''
-    - 'https://media.githubusercontent.com'
-    - 'https://camo.githubusercontent.com'
-    - 'https://i.imgur.com'
-    - 'https://gravatar.com/'
-    - 'https://travis-ci.org'
-    - 'https://api.travis-ci.org'
-    - 'https://img.shields.io'
-    - 'https://screenshots.firefoxusercontent.com'
-    - 'data:'
-  script:
-    - '''self'''
-    - 'https://cdn.polyfill.io'
-    - 'https://gist.github.com'
-    - 'https://production-assets.codepen.io'
-    - 'https://codepen.io/'
-  style:
-    - '''self'''
-    - '''unsafe-inline'''
-    - 'https://assets-cdn.github.com'
-    - 'https://www.youtube.com'
-  connect:
-    - '*'
-  child:
-    - '''self'''
-    - 'http://www.youtube.com'
-    - 'http://www.youtube-nocookie.com'
-  font:
-    - '''self'''
-  media:
-    - '*'
-  block-mixed-content: true
+touch-icons:
+  - href: /img/icon-80.png
+    size: 80
+  - href: /img/icon-152.png
+    size: 152
+  - href: /img/icon-180.png
+    size: 180
+  - href: /img/icon-167.png
+    size: 167
+windows-tile: /img/icon-150.png
