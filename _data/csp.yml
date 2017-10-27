@@ -1,5 +1,5 @@
 default:
-- '''none'''
+- '''self'''
 img:
 - '''self'''
 - 'https://media.githubusercontent.com'
