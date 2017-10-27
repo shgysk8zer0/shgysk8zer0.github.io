@@ -95,7 +95,7 @@
 	{% if site.data.head.touch-icons %}{% for icon in site.data.head.touch-icons %}
 	<link rel="apple-touch-icon" href="{{ icon.href | absolute_url }}" sizes="{{ icon.size }}x{{ icon.size }}" />
 	{% endfor %}{% endif %}
-	<link rel="mask-icon" href="{{ '/img/favicon.svg' | absolute_url }}" />
+	<link rel="mask-icon" href="{{ '/img/favicon.svg' | absolute_url }}" color="transparent" />
 	<meta name="msapplication-config" content="{{ 'browserconfig.xml' | absolute_url }}" />
 	{% if site.data.head.windows-tile %}
 		<meta name="msapplication-TileImage" content="{{ site.data.head.windows-tile | absolute_url }}" />
