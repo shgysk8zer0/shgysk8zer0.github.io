@@ -104,7 +104,11 @@
 	<link rel="preload" href="{{ preload.href | absolute_url }}" as="{{ preload.as }}" type="{{ preload.type }}" name="{{ preload.name }}" />
 	{% endfor %}{% endif %}
 	<link rel="alternate" href="{{ '/feed.rss' | absolute_url }}" type="application/rss+xml" />
-	{% if site.data.head.meta.publisher %}<link rel="publisher" href="{{ site.data.head.meta.publisher }}" />{% endif %}
-	{% if site.data.head.meta.author %}<link rel="author" href="{{ site.data.head.meta.author }}" />{% endif %}
+	{% if site.data.head.meta.publisher %}
+		<link rel="publisher" href="{{ site.data.head.meta.publisher }}" />
+	{% endif %}
+	{% if site.data.authors[page.author] and site.data.authors[page.author].googlePlus %}
+		<link rel="author" href="https://plus.google.com/{{ site.data.authors[page.author].googlePlus }}" />
+	{% endif %}
 	{% if site.data.head.manifest %}<link rel="manifest" href="{{ site.data.head.manifest | absolute_url }}" />{% endif %}
 </head>
