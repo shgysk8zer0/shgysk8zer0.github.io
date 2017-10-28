@@ -1,6 +1,9 @@
 '@type': Organization
 '@context': 'http://schema.org'
 name: SuperUserDev
+email: 'chris@chriszuber.com'
+sameAs:
+  - 'https://twitter.com/SudoDevTeam'
 url: 'https://github.com/superuserdev'
 logo:
   '@type': ImageObject
