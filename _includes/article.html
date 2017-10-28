@@ -37,15 +37,20 @@
 			<b>By <span itemprop="author">{{ page.author }}</span></b>
 			<br />
 		{% endif %}
-		{% assign publisher = site.data.publisher %}
-		<div itemprop="publisher" itemtype="{{ publisher['@context'] }}/{{ publisher['@type'] }}" itemscope="" hidden="">
-			<meta itemprop="name" content="{{publisher.name }}" />
-			<meta itemprop="url" content="{{ publisher.url }}" />
-			<meta itemprop="email" content="{{ publisher.email }}" />
-			<div itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
-				<meta itemprop="url" content="{{ publisher.logo.url }}" />
+		{% if site.data.publisher %}
+			{% assign publisher = site.data.publisher %}
+			<div itemprop="publisher" itemtype="{{ publisher['@context'] }}/{{ publisher['@type'] }}" itemscope="" hidden="">
+				<meta itemprop="name" content="{{publisher.name }}" />
+				<meta itemprop="url" content="{{ publisher.url }}" />
+				<meta itemprop="email" content="{{ publisher.email }}" />
+				<div itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
+					<meta itemprop="url" content="{{ publisher.logo.url }}" />
+				</div>
+				{% if publisher.sameAs %}{% for link in publisher.sameAs %}
+					<meta itemprop="sameAs" content="{{ link }}" />
+				{% endfor %}{% endif %}
 			</div>
-		</div>
+		{% endif %}
 	</header>
 	<div itemprop="mainEntityOfPage">
 		<div itemprop="text" class="optimize-legibility">{{ content }}</div>
