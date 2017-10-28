@@ -65,14 +65,16 @@ addEventListener('install', async () => {
 
 });
 
-addEventListener('activate', async () => {
-	clients.claim();
-	const keys = await caches.keys();
-	keys.forEach(async key => {
-		if (key !== config.version) {
-			await caches.delete(key);
-		}
-	});
+addEventListener('activate', event => {
+	event.waitUntil( (async () => {
+		clients.claim();
+		const keys = await caches.keys();
+		keys.forEach(async key => {
+			if (key !== config.version) {
+				await caches.delete(key);
+			}
+		});
+	})());
 });
 
 addEventListener('fetch', event => {
