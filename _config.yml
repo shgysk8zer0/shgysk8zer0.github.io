@@ -18,8 +18,12 @@ markdown: kramdown
 respository: "shgysk8zer0/shgysk8zer0.github.io"
 lang: en_US
 dir: ltr
+feed: /feed.rss
+icons: '/img/icons.svg'
 theme-color: '#FC5B0B'
 github:
+  username: shgysk8zer0
+  repo: shgysk8zer0.github.io
   url: "https://shgysk8zer0.github.io"
 twitter: SudoDevTeam
 webmaster-verifications:
