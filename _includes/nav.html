@@ -2,41 +2,41 @@
 	{% if page.layout == 'home' %}
 		<a href="{{'/#top' | absolute_url }}" title="Top">
 			<svg class="current-color icon">
-				<use xlink:href="{{ '/img/icons.svg#top' | absolute_url }}" />
+				<use xlink:href="{{ site.icons | absolute_url | append: '#top' }}" />
 			</svg>
 			<span class="mobile-hidden">Top</span>
 		</a>
 	{% else %}
 		<a href="{{'/' | absolute_url }}" title="Home">
 			<svg class="current-color icon">
-				<use xlink:href="{{ '/img/icons.svg#home' | absolute_url }}" />
+				<use xlink:href="{{ site.icons | absolute_url | append: '#home' }}" />
 			</svg>
 			<span class="mobile-hidden">Home</span>
 		</a>
 	{% endif %}
 	<span data-show-modal="#about-dialog" class="cursor-pointer" title="About">
 		<svg class="current-color icon">
-			<use xlink:href="{{ '/img/icons.svg#avatar-default' | absolute_url }}" />
+			<use xlink:href="{{ site.icons | absolute_url | append: '#avatar-default' }}" />
 		</svg>
 		<span class="mobile-hidden">About</span>
 	</span>
 	{% if page.layout == 'home' %}
 		<a href="#portfolio" title="Portfolio">
 			<svg class="current-color icon">
-				<use xlink:href="{{ '/img/icons.svg#engineering' | absolute_url }}" />
+				<use xlink:href="{{ site.icons | absolute_url | append: '#engineering' }}" />
 			</svg>
 			<span class="mobile-hidden">Portfolio</span>
 		</a>
 	{% endif %}
 	<a href="#pinned-posts" title="Pinned Posts">
 		<svg class="current-color icon">
-			<use xlink:href="{{ '/img/icons.svg#pin' | absolute_url }}" />
+			<use xlink:href="{{ site.icons | absolute_url | append: '#pin' }}" />
 		</svg>
 		<span class="mobile-hidden">Pinned Posts</span>
 	</a>
 	<a href="#recent-posts" title="Recent Posts">
 		<svg class="current-color icon">
-			<use xlink:href="{{ '/img/icons.svg#recent' | absolute_url }}" />
+			<use xlink:href="{{ site.icons | absolute_url | append: '#recent' }}" />
 		</svg>
 		<span class="mobile-hidden">Recent Posts</span>
 	</a>
