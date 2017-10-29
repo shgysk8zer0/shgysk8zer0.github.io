@@ -6,10 +6,6 @@ article [itemprop="text"] a, article [itemprop="text"] a:hover {
 	text-decoration: underline;
 }
 
-article .author-info img {
-	margin-right: 1em;
-}
-
 article header {
 	border: 2px solid #dbdbdb;
 	border-top-width: 0;

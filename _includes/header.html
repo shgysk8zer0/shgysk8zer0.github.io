@@ -39,17 +39,17 @@
 			<div class="contact-links flex row container bigger">
 				<a href="tel:{{ site.data.person.telephone }}" itemprop="telephone" content="{{ site.data.person.telephone }}" title="{{ site.data.person.telephone }}">
 					<svg class="current-color icon transition-transform contact-icon transition-speed-normal transition-ease-in-out bounceInDown animation-ease-in animation-fill-backwards animation-speed-crawl animation-paused">
-						<use xlink:href="{{ '/img/icons.svg#call-start' | absolute_url }}" />
+						<use xlink:href="{{ site.icons | absolute_url | append: '#call-start' }}" />
 					</svg>
 				</a>
 				<a href="mailto:{{ site.data.person.email }}" itemprop="email" content="{{ site.data.person.email }}" title="{{ site.data.person.email }}">
 					<svg class="current-color icon transition-transform contact-icon transition-speed-normal transition-ease-in-out bounceInDown animation-ease-in animation-fill-backwards animation-speed-crawl animation-paused">
-						<use xlink:href="{{ '/img/icons.svg#mail-send' | absolute_url}}" />
+						<use xlink:href="{{ site.icons | absolute_url | append: '#mail-send' }}" />
 					</svg>
 				</a>
 				<a href="{{ site.data.person.homeLocation.geo.url }}" title="Geo">
 					<svg class="current-color icon transition-transform contact-icon transition-speed-normal transition-ease-in-out bounceInDown animation-ease-in animation-fill-backwards animation-speed-crawl animation-paused">
-						<use xlink:href="{{ '/img/icons.svg#location' | absolute_url}}" />
+						<use xlink:href="{{ site.icons | absolute_url | append: '#location' }}" />
 					</svg>
 				</a>
 			</div>
@@ -58,7 +58,7 @@
 				{% for link in site.data.links.social %}
 				<a href="{{ link.url }}" class="icon-twirl transition-transform transition-speed-normal transform-origin-center transition-ease-in-out" title="{{ link.title }}" target="_blank" rel="noopener external" itemprop="sameAs">
 					<svg class="icon bounceInDown animation-ease-in animation-fill-backwards animation-speed-crawl animation-paused{% if link.classes %} {{ link.classes | join: ' '}}{% endif %}">
-						<use xlink:href=" {{ '/img/icons.svg#' | append: link.icon | absolute_url }}" />
+						<use xlink:href=" {{ site.icons | absolute_url | append: link.icon }}" />
 					</svg>
 				</a>
 				{% endfor %}

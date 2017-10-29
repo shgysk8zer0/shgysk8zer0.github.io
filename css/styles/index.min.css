@@ -3882,7 +3882,7 @@ ol > ol > ol > ol > ol {
 	grid-template-rows: minmax(calc(100vh - var(--nav-height)), auto) var(--nav-height);
 }
 
-@media (min-width: 601px) {
+@media (min-width: 701px) {
 	body {
 		grid-template-columns: 2vw 75vw 23vw;
 		grid-template-areas: 'header header header'
@@ -3894,7 +3894,7 @@ ol > ol > ol > ol > ol {
 	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 	body {
 		grid-auto-columns: 100%;
 		grid-template-areas: 'header' 'nav' 'main' 'pinned-posts' 'recent-posts' 'footer';
@@ -4442,10 +4442,6 @@ body > nav > *:hover {
 article [itemprop="text"] a, article [itemprop="text"] a:hover {
 	color: var(--accent-color);
 	text-decoration: underline;
-}
-
-article .author-info img {
-	margin-right: 1em;
 }
 
 article header {

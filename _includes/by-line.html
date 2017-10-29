@@ -17,55 +17,69 @@
 			</b>
 		</summary>
 		<div class="big meta-author-links flex row">
-			{% if author.image != null %}
+			{% if author.gravatar %}
+				<a href="https://gravatar.com/{{ author.gravatar }}" title="Gravatar" rel="noopener external">
+					<img
+						itemprop="image"
+						alt="Gravatar"
+						srcset="
+							https://gravatar.com/avatar/{{ author.gravatar }}?s=64 64w,
+							https://gravatar.com/avatar/{{ author.gravatar }}?s=32 32w
+							https://gravatar.com/avatar/{{ author.gravatar }}?s=24 24w,"
+						sizes="(min-width: 1000px) 2.6vmax, (min-width: 500px) 3vmax, 4.6vmax"
+						src="https://gravatar.com/avatar/{{ author.gravatar }}?s=32"
+						class="round {{ animation }} animation-speed-normal animation-ease-out"
+					/>
+				</a>
+			{% elsif author.image %}
 				<img itemprop="image" src="{{ author.image | absolute_url }}" class="round {{ animation }} animation-speed-normal animation-ease-out" />
 			{% endif %}
 			{% if author.url != null %}
 			<a itemprop="url" href="{{ author.url | absolute_url }}" rel="external noopener" class="no-text-decoration">
 				<svg class="icon {{ animation }} animation-speed-normal animation-ease-out">
-					<use xlink:href="{{ '/img/icons.svg#web-browser' | absolute_url }}" />
+					<use xlink:href="{{ site.icons | absolute_url | append: '#web-browser' }}" />
 				</svg>
 			</a>
 			{% endif %}
 			{% if author.github != null %}
 				<a itemprop="sameAs" href="https://github.com/{{ author.github }}" rel="external noopener" title="GitHub" class="no-text-decoration">
 					<svg class="icon {{ animation }} animation-speed-normal animation-ease-out">
-						<use xlink:href="{{ '/img/icons.svg#mark-github' | absolute_url }}" />
+						<use xlink:href="{{ site.icons | absolute_url | append: '#mark-github' }}" />
 					</svg>
 				</a>
 			{% endif %}
 			{% if author.twitter != null %}
 			<a itemprop="sameAs" href="https://twitter.com/{{ author.twitter }}" rel="external noopener" title="Twitter" class="no-text-decoration">
 				<svg class="icon {{ animation }} animation-speed-normal animation-ease-out">
-					<use xlink:href="{{ '/img/icons.svg#twitter' | absolute_url }}" />
+					<use xlink:href="{{ site.icons | absolute_url | append: '#twitter' }}" />
 				</svg>
 			</a>
 			{% endif %}
 			{% if author.linkedin != null %}
 				<a itemprop="sameAs" href="https://www.linkedin.com/in/{{ author.linkedin }}/" rel="noopener external" title="LinkedIn" class="no-text-decoration">
 					<svg class="icon {{ animation }} animation-speed-normal animation-ease-out">
-						<use xlink:href="{{ '/img/icons.svg#linkedin' | absolute_url }}" />
+						<use xlink:href="{{ site.icons | absolute_url | append: '#linkedin' }}" />
 					</svg>
 				</a>
 			{% endif %}
 			{% if author.googlePlus != null %}
 				<a itemprop="sameAs" href="https://plus.google.com/{{ author.googlePlus }}" rel="noopener external" title="Google+" class="no-text-decoration">
 					<svg class="icon {{ animation }} animation-speed-normal animation-ease-out">
-						<use xlink:href="{{ '/img/icons.svg#google+' | absolute_url }}" />
+						<use xlink:href="{{ site.icons | absolute_url | append: '#google+' }}" />
 					</svg>
 				</a>
 			{% endif %}
 			{% if author.youtube != null %}
 				<a itemprop="sameAs" href="https://youtube/com/channel/{{ author.youtube }}" rel="noopener external" title="YouTube" class="no-text-decoration">
 					<svg class="icon {{ animation }} animation-speed-normal animation-ease-out">
-						<use xlink:href="{{ '/img/icons.svg#youtube' | absolute_url }}" />
+						<use xlink:href="{{ site.icons | absolute_url | append: '#youtube' }}" />
 					</svg>
 				</a>
 			{% endif %}
 			{% if author.email != null %}
 				<a itemprop="email" content="{{ author.email }}" href="mailto:{{ author.email }}" title="Email" class="no-text-decoration">
 					<svg class="icon {{ animation }} animation-speed-normal animation-ease-out">
-						<use xlink:href="{{ '/img/icons.svg#mail-send' | absolute_url }}" />
+						<use xlink:href="{{ site.icons | absolute_url | append: '#mail-send' | absolute_url }}" />
 					</svg>
 				</a>
 			{% endif %}
