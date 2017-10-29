@@ -1,6 +1,6 @@
 // TODO: Allow easier updating / refreshing while still maintaining speed
 const config = {
-	version: '3.2.12',
+	version: '3.2.13',
 	caches: [
 		// Main assets
 		'/',
