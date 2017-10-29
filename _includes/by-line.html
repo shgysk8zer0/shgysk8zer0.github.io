@@ -18,16 +18,19 @@
 		</summary>
 		<div class="big meta-author-links flex row">
 			{% if author.gravatar %}
-				<img
-					itemprop="image"
-					srcset="
-						https://gravatar.com/avatar/{{ author.gravatar }}?s=64 64w,
-						https://gravatar.com/avatar/{{ author.gravatar }}?s=32 32w
-						https://gravatar.com/avatar/{{ author.gravatar }}?s=24 24w,"
-					sizes="(min-width: 1000px) 2.6vmax, (min-width: 500px) 3vmax, 4.6vmax"
-					src="https://gravatar.com/avatar/{{ author.gravatar }}?s=32"
-					class="round {{ animation }} animation-speed-normal animation-ease-out"
-				/>
+				<a href="https://gravatar.com/{{ author.gravatar }}" title="Gravatar" rel="noopener external">
+					<img
+						itemprop="image"
+						alt="Gravatar"
+						srcset="
+							https://gravatar.com/avatar/{{ author.gravatar }}?s=64 64w,
+							https://gravatar.com/avatar/{{ author.gravatar }}?s=32 32w
+							https://gravatar.com/avatar/{{ author.gravatar }}?s=24 24w,"
+						sizes="(min-width: 1000px) 2.6vmax, (min-width: 500px) 3vmax, 4.6vmax"
+						src="https://gravatar.com/avatar/{{ author.gravatar }}?s=32"
+						class="round {{ animation }} animation-speed-normal animation-ease-out"
+					/>
+				</a>
 			{% elsif author.image %}
 				<img itemprop="image" src="{{ author.image | absolute_url }}" class="round {{ animation }} animation-speed-normal animation-ease-out" />
 			{% endif %}
