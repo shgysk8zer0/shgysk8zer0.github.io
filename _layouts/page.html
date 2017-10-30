@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html
+	lang="{{ site.lang }}"
+	dir="{{ site.dir }}"
+	class="no-js scroll-smooth"
+	itemtype="http://schema.org/WebPage"
+	itemscope=""
+	{% if site.data.head.service_worker %}data-service-worker="{{site.data.head.service_worker | absolute_url }}"{% endif %}
+	data-support-test="details, dialog, cssvars"
+>
+	{% include head.html %}
+	<body class="layout-{{ page.layout }} background-primary grid border-box cursor-default font-main" contextmenu="nav-menu" id="top">
+		<svg data-share="" width="48" height="48" class="current-color fixed filter-shadow-dark cursor-pointer color-alt z-4" hidden="">
+			<use xlink:href="{{ site.icons | absolute_url | append: '#share' }}" />
+		</svg>
+		{% include header.html %}
+		{% include nav.html %}
+		<main class="color-default font-article card shadow-dark" role="main" itemprop="mainContentOfPage" itemtype="http://schema.org/WebPageElement" itemscope="">
+			{{ content }}
+		</main>
+		{% include pinned-posts.html %}
+		{% include recent-posts.html %}
+		{% include footer.html %}
+		{% include nav-menu.html %}
+		{% include about-dialog.html %}
+	</body>
+</html>
