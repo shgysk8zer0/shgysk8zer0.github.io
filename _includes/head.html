@@ -103,7 +103,7 @@
 	{% if site.data.head.preload %}{% for preload in site.data.head.preload %}
 	<link rel="preload" href="{{ preload.href | absolute_url }}" as="{{ preload.as }}" type="{{ preload.type }}" name="{{ preload.name }}" />
 	{% endfor %}{% endif %}
-	<link rel="alternate" href="{{ '/feed.rss' | absolute_url }}" type="application/rss+xml" />
+	{% if site.feed %}<link rel="alternate" href="{{ site.feed | absolute_url }}" type="application/rss+xml" />{% endif %}
 	{% if site.data.head.meta.publisher %}
 		<link rel="publisher" href="{{ site.data.head.meta.publisher }}" />
 	{% endif %}
