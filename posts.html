@@ -1,10 +1,10 @@
 ---
-layout: gallery
+layout: page
 title: Recent Posts
 permalink: posts/
 slug: recent-posts
 ---
-{% for post in site.posts limit: 10 %}
+{% for post in site.posts limit: 12 %}
 	<div class="card shadow">
 		<a href="{{ post.url | absolute_url }}">
 			<h3>{{ post.title }}</h3>
