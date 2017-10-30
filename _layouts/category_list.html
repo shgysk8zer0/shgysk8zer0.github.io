@@ -11,7 +11,7 @@
 	{% include head.html %}
 	<body class="layout-{{ page.layout }} background-primary grid border-box scroll-smooth cursor-default font-main" contextmenu="nav-menu" id="top">
 		<svg data-share="" width="48" height="48" class="current-color fixed filter-shadow-dark cursor-pointer color-alt z-4" hidden="">
-			<use xlink:href="{{ '/img/icons.svg#share' | absolute_url }}"></use>
+			<use xlink:href="{{ site.icons | absolute_url | append: '#share' }}" />
 		</svg>
 		{% include header.html %}
 		{% include nav.html %}
