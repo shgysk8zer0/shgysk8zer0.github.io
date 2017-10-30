@@ -2,10 +2,16 @@
 	<div itemtype="http://schema.org/Person" itemprop="about" itemscope="" class="flex column wrap transform-origin-bottom transition-ease-in-out">
 		<figure itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="">
 			<img
-				srcset="{% for size in site.data.gravatar.sizes %}
-					https://gravatar.com/avatar/{{ site.data.gravatar[site.data.person.email] }}?s={{ size }} {{ size }}w,{% endfor %}"
+				srcset="
+					https://gravatar.com/avatar/{{ site.gravatar }}?s=512 512w,
+					https://gravatar.com/avatar/{{ site.gravatar }}?s=400 400w,
+					https://gravatar.com/avatar/{{ site.gravatar }}?s=300 300w,
+					https://gravatar.com/avatar/{{ site.gravatar }}?s=256 256w,
+					https://gravatar.com/avatar/{{ site.gravatar }}?s=180 180w,
+					https://gravatar.com/avatar/{{ site.gravatar }}?s=128 128w,
+					https://gravatar.com/avatar/{{ site.gravatar }}?s=64 64w"
 				sizes="(orientation: portrait) 30vw, 15vw"
-				src="https://gravatar.com/avatar/{{ site.data.gravatar[site.data.person.email] }}?s=256"
+				src="https://gravatar.com/avatar/{{ site.gravatar }}?s=256"
 				alt="Gravatar"
 				itemprop="url"
 				class="round shadow-dark cursor-pointer"
