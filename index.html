@@ -21,7 +21,7 @@ layout: home
 			<meta itemprop="operatingSystem" content="{{ project.operatingSystem }}" />
 		</a>
 		<svg data-share="" width="48" height="48" class="current-color absolute filter-shadow cursor-pointer color-accent z-1" hidden="">
-			<use xlink:href="{{ '/img/icons.svg#share' | absolute_url }}"></use>
+			<use xlink:href="{{ site.icons | absolute_url | append: '#share' }}" />
 		</svg>
 	</div>
 	{% endfor %}
