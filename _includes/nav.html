@@ -28,6 +28,7 @@
 			<span class="mobile-hidden">Portfolio</span>
 		</a>
 	{% endif %}
+	{% if page.layout != 'full-width' %}
 	<a href="#pinned-posts" title="Pinned Posts">
 		<svg class="current-color icon">
 			<use xlink:href="{{ site.icons | absolute_url | append: '#pin' }}" />
@@ -40,4 +41,9 @@
 		</svg>
 		<span class="mobile-hidden">Recent Posts</span>
 	</a>
+	{% else %}
+		<a href="{{ '/posts/' | absolute_url }}">Posts</a>
+		<a href="{{ '/posts/javascript/' | absolute_url }}">JavaScript</a>
+		<a href="{{ '/posts/php/' | absolute_url }}">PHP</a>
+	{% endif %}
 </nav>
