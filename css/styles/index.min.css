@@ -3892,12 +3892,24 @@ ol > ol > ol > ol > ol {
 		' . main .'
 		'footer footer footer';
 	}
+
+	.layout-full-width {
+		grid-template-columns: 5vw 90vw 5vw;
+		grid-template-areas: 'header header header'
+		'nav nav nav'
+		'. main .'
+		'footer footer footer';
+	}
 }
 
 @media (max-width: 700px) {
 	body {
 		grid-auto-columns: 100%;
 		grid-template-areas: 'header' 'nav' 'main' 'pinned-posts' 'recent-posts' 'footer';
+	}
+
+	.layout-full-width {
+		grid-template-areas: 'header' 'nav' 'main' 'footer';
 	}
 
 	.layout-home {
