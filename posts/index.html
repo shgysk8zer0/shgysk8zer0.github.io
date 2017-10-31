@@ -1,17 +1,24 @@
 ---
 title: Home
-layout: home
+layout: full-width
 ---
 {% if paginator.total_pages > 1 %}
 <section class="pagination">
 	{% for post in paginator.posts %}
-		<div class="card clearfix flex row">
+		<div class="card clearfix post">
 			{% if post.image %}
-				<img src="{{ post.image | absolute_url }}" class="left" height="64"/>
+				<a href="{{ post.url | absolute_url }}"  class="left">
+					<img src="{{ post.image | absolute_url }}" height="64" alt="{{ post.title }}" />
+				</a>
 			{% endif %}
 			<a href="{{ post.url | absolute_url }}">
 				<h3>{{ post.title }}</h3>
 			</a>
+			<div>
+				<span>By {{ post.author }}</span>
+				<span>on {{ post.date | date: '%a, %B %e, %Y'}}</span>
+			</div>
+			<blockquote>{{ post.description }}</blockquote>
 		</div>
 	{% endfor %}
 	<footer>
