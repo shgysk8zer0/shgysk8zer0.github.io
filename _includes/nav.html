@@ -7,7 +7,7 @@
 			<span class="mobile-hidden">Top</span>
 		</a>
 	{% else %}
-		<a href="{{'/' | absolute_url }}" title="Home">
+		<a href="{{'/' | absolute_url }}" rel="bookmark" title="Home">
 			<svg class="current-color icon">
 				<use xlink:href="{{ site.icons | absolute_url | append: '#home' }}" />
 			</svg>
