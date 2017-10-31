@@ -2,7 +2,6 @@
 title: Home
 layout: full-width
 ---
-{% if paginator.total_pages > 1 %}
 <section class="pagination">
 	{% for post in paginator.posts %}
 		<div class="card clearfix post">
@@ -39,5 +38,3 @@ layout: full-width
 		{% endif %}
 	</footer>
 </section>
-{% endif %}
-
