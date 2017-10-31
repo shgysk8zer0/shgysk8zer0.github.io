@@ -1,0 +1,35 @@
+---
+title: Home
+layout: home
+---
+{% if paginator.total_pages > 1 %}
+<section class="pagination">
+	{% for post in paginator.posts %}
+		<div class="card clearfix flex row">
+			{% if post.image %}
+				<img src="{{ post.image | absolute_url }}" class="left" height="64"/>
+			{% endif %}
+			<a href="{{ post.url | absolute_url }}">
+				<h3>{{ post.title }}</h3>
+			</a>
+		</div>
+	{% endfor %}
+	<footer>
+		{% if paginator.previous_page %}
+		<a href="{{ paginator.previous_page_path | absolute_url }}" role="button" title="Previous page">
+			<svg class="current-color icon">
+				<use xlink:href="{{ site.icons | absolute_url | append: '#prev' }}" />
+			</svg>
+		</a>
+		{% endif %}
+		{% if paginator.next_page %}
+		<a href="{{ paginator.next_page_path | absolute_url }}" role="button" title="Next page">
+			<svg class="current-color icon">
+				<use xlink:href="{{ site.icons | absolute_url | append: '#next' }}" />
+			</svg>
+		</a>
+		{% endif %}
+	</footer>
+</section>
+{% endif %}
+
