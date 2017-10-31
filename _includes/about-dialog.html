@@ -6,12 +6,18 @@
 	</header>
 	<figure class="clearfix">
 		<img
-			srcset="{% for size in site.data.gravatar.sizes %}
-				https://gravatar.com/avatar/{{ site.data.gravatar[site.data.person.email] }}?s={{ size }} {{ size }}w,{% endfor %}"
+			srcset="
+				https://gravatar.com/avatar/{{ site.gravatar }}?s=512 512w,
+				https://gravatar.com/avatar/{{ site.gravatar }}?s=400 400w,
+				https://gravatar.com/avatar/{{ site.gravatar }}?s=300 300w,
+				https://gravatar.com/avatar/{{ site.gravatar }}?s=256 256w,
+				https://gravatar.com/avatar/{{ site.gravatar }}?s=180 180w,
+				https://gravatar.com/avatar/{{ site.gravatar }}?s=128 128w,
+				https://gravatar.com/avatar/{{ site.gravatar }}?s=64 64w"
 			sizes="(orientation: portrait) 15vw, 12vw"
-			src="https://gravatar.com/avatar/{{ site.data.gravatar[site.data.person.email] }}?s=256"
+			src="https://gravatar.com/avatar/{{ site.gravatar }}?s=256"
 			alt="Gravatar"
-			class="round shadow-dark left">
+			class="round shadow-dark left" />
 		<blockquote class="left">
 				{{ site.data.person.description }}
 			<cite>{{ site.data.person.givenName }} {{ site.data.person.familyName }}</cite>

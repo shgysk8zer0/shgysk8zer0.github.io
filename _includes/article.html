@@ -12,7 +12,15 @@
 		{% endif %}
 		<meta itemptop="wordCount" content="{{ content | number_of_words }}" />
 		<meta itemprop="url" content="{{ page.url | absolute_url }}" />
-		<h2 class="font-title" itemprop="headline">{{ page.title }}</h2>
+		<h2 class="font-title">
+			<a href="{{ '/posts' | absolute_url }}" class="color-inherit no-text-decoration">Posts /</a>
+			{% if page.category %}
+				<a href="{{ '/posts/' | append: page.category | absolute_url }}"  class="color-inherit no-text-decoration">
+					{{ page.category | capitalize }} /
+				</a>
+			{% endif %}
+			<b itemprop="headline">{{ page.title }}</b>
+		</h2>
 		{% if page.date %}
 			<b class="meta-date-posted">
 				<span>Posted on</span>

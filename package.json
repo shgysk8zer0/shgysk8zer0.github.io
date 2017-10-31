@@ -1,6 +1,6 @@
 {
   "name": "about",
-  "version": "3.2.13",
+  "version": "3.2.14",
   "description": "A responsive, progressive about / portfolio & blog page built using Jekyll",
   "main": "index.html",
   "scripts": {
