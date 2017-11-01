@@ -19,25 +19,32 @@
 	{% endif %}
 	<meta name="twitter:card" content="summary">
 	{% if site.twitter %}
-		<meta name="twitter:site" content="@{{ site.twitter }}">
+		<meta name="twitter:site" content="@{{ site.twitter }}" />
 	{% endif %}
 	{% if page.author and site.data.authors[page.author] and site.data.authors[page.author].twitter %}
-		<meta name="twitter:creator" content="@{{ site.data.authors[page.author].twitter }}">
+		<meta name="twitter:creator" content="@{{ site.data.authors[page.author].twitter }}" />
 	{% endif %}
-	<meta name="twitter:url" content="{{ page.url | absolute_url }}">
-	<meta name="twitter:title" content="{{ page.title }} | {{ site.title }}">
+	<meta name="twitter:url" content="{{ page.url | absolute_url }}" />
+	<meta name="twitter:title" content="{{ page.title }} | {{ site.title }}" />
 	{% if site.data.head.meta.referrer %}<meta name="referrer" content="{{ site.data.head.meta.referrer }}"/>{% endif %}
+	{% if page.robots %}
+		<meta name="robots" content="{{ page.robots }}" />
+	{% elsif site.robots %}
+		<meta name="robots" content="{{ site.robots }}" />
+	{% else %}
+		<meta name="robots" content="follow,index" />
+	{% endif %}
 	{% if site.data.head.meta.mobile-web-app-capable %}<meta name="mobile-web-app-capable" content="yes" />{% endif %}
 	{% if page.description %}
 		<meta name="description" content="{{ page.description }}" />
 		<meta itemprop="description" content="{{ page.description }}" />
-		<meta property="og:description" content="{{ page.description }}">
-		<meta name="twitter:description" content="{{ page.description }}">
+		<meta property="og:description" content="{{ page.description }}" />
+		<meta name="twitter:description" content="{{ page.description }}" />
 	{% elsif site.description %}
 		<meta name="description" content="{{ site.description }}" />
 		<meta itemprop="description" content="{{ site.description }}" />
 		<meta property="og:description" content="{{ site.description }}" />
-		<meta name="twitter:description" content="{{ site.description }}">
+		<meta name="twitter:description" content="{{ site.description }}" />
 	{% endif %}
 	{% if page.tags %}
 		<meta name="keywords" content="{{ page.tags | join: ', ' }}" />
