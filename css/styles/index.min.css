@@ -3913,13 +3913,13 @@ body {
 }
 
 @media (max-width: 700px) {
-	body:not(.layout-full-width) {
-		grid-auto-columns: 100%;
+	body {
+		grid-template-columns: 100vw;
 		grid-template-areas: 'header' 'nav' 'main' 'pinned-posts' 'recent-posts' 'footer';
 	}
 
-	.layout-home {
-		grid-template-areas: 'header' 'nav' 'pinned-posts' 'main' 'recent-posts' 'footer';
+	.layout-full-width {
+		grid-template-areas: 'header' 'nav' 'main' 'footer';
 	}
 
 	.pagination .post {
