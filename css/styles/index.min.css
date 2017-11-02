@@ -3897,19 +3897,19 @@ ol > ol > ol > ol > ol {
 body {
 	grid-template-columns: 2vw 75vw 23vw;
 	grid-template-areas: 'header header header'
-		'nav nav nav'
-		'. main pinned-posts'
-		'. main recent-posts'
-		' . main .'
-		'footer footer footer';
+	'nav nav nav'
+	'. main pinned-posts'
+	'. main recent-posts'
+	' . main .'
+	'footer footer footer';
 }
 
 .layout-full-width {
 	grid-template-columns: 5vw 90vw 5vw;
 	grid-template-areas: 'header header header'
-		'nav nav nav'
-		'. main .'
-		'footer footer footer';
+	'nav nav nav'
+	'. main .'
+	'footer footer footer';
 }
 
 @media (max-width: 700px) {
