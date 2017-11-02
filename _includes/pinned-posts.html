@@ -9,7 +9,7 @@
 		{% for post in posts limit: 5 %}
 		<a href="{{ post.url | absolute_url }}" title="{{ post.title }}">
 			{% if post.image != null %}
-				<img src="{{ post.image | absolute_url }}" class="post-img" />
+				<img src="{{ post.image | absolute_url }}" class="post-img" crossorigin="anonymous" />
 			{% endif %}
 		</a>
 		<a href="{{ post.url | absolute_url }}" title="{{ post.title }}">

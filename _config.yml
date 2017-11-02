@@ -1,5 +1,6 @@
 author: Chris Zuber
 title: Chris Zuber
+version: 3.2.15
 description: "A responsive, progressive about / portfolio & blog page built using Jekyll"
 keywords:
   - jekyll
@@ -31,6 +32,20 @@ webmaster-verifications:
   google: 0cMX_-aKH-pe1wQXGDlK833KE3-kN5V7y3eaywoCXdk
   bing: D0C151304642EDCA64F73FE5C4B43D7A
 robots: 'follow,index'
+appicons:
+  - src: /img/favicon.svg
+    sizes: any
+    type: image/svg+xml
+  - src: /img/512.png
+    sizes: 512x512
+    type: image/png
+  - src: /img/192.png
+    sizes: 192x192
+    type: image/png
+screenshots:
+  - src: 'https://i.imgur.com/Ers0Xql.png'
+    sizes: 649x604
+    type: image/png
 paginate: 5
 paginate_path: "/posts/page-:num/"
 defaults:

@@ -1,5 +1,5 @@
 const config = {
-	version: '3.2.14',
+	version: '3.2.15',
 	caches: [
 		// Main assets
 		'/',
