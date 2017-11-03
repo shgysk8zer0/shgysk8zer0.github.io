@@ -7,6 +7,7 @@ const config = {
 		'/js/index.min.js',
 		'/css/styles/index.min.css',
 		'/img/icons.svg',
+		'/img/favicon.svg',
 
 		// Nav menu icons
 		'/img/adwaita-icons/actions/document-open-recent.svg',
@@ -42,6 +43,7 @@ const config = {
 	],
 	ignored: [
 		'/service-worker.js',
+		'/manifest.json',
 	],
 	paths: [
 		'/js/',
@@ -101,29 +103,35 @@ addEventListener('fetch', event => {
 		}
 	}
 
+	async function get(request) {
+		const cache = await caches.open(config.version);
+		const cached = await cache.match(request);
+
+		if (navigator.onLine) {
+			const fetched = fetch(request).then(async resp => {
+				if (resp.ok && isValid(resp)) {
+					const respClone = await resp.clone();
+					await cache.put(event.request, respClone);
+					return resp;
+				} else if (resp.ok) {
+					return resp;
+				} else {
+					throw new Error(`${resp.url} [${resp.status} ${resp.statusText}]`);
+				}
+			});
+			if (cached instanceof Response) {
+				return cached;
+			} else {
+				return fetched;
+			}
+		} else {
+			return cached;
+		}
+	}
+
 	if (event.request.method !== 'GET') {
 		return;
 	}
 
-	event.respondWith(async function() {
-		try {
-			const cache = await caches.open(config.version);
-			const response = await cache.match(event.request);
-
-			if (response instanceof Response) {
-				return response;
-			} else if (navigator.onLine) {
-				const fetched = await fetch(event.request);
-
-				if (isValid(fetched)) {
-					const respClone = await fetched.clone();
-					await cache.put(event.request, respClone);
-				}
-				return fetched;
-			}
-		} catch (err) {
-			console.error(err);
-			return fetch(event.request);
-		}
-	}());
+	event.respondWith(get(event.request));
 });
