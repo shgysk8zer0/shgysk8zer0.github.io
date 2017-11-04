@@ -68,7 +68,7 @@ addEventListener('install', async () => {
 });
 
 addEventListener('activate', event => {
-	event.waitUntil( (async () => {
+	event.waitUntil(async function() {
 		clients.claim();
 		const keys = await caches.keys();
 		keys.forEach(async key => {
@@ -76,26 +76,23 @@ addEventListener('activate', event => {
 				await caches.delete(key);
 			}
 		});
-	})());
+	}());
 });
 
-addEventListener('fetch', event => {
-	function isValid(resp) {
+addEventListener('fetch', async event => {
+	function isValid(req) {
 		try {
-			if (! resp.ok) {
-				return false;
+			const url = new URL(req.url);
+			if (url.origin !== location.origin) {
+				return true;
 			} else {
-				const url = new URL(resp.url);
-				if (url.origin !== location.origin) {
-					return true;
-				} else {
-					const isHome = ['/', '/index.html', '/index.php'].some(path => url.pathname === path);
-					const notIgnored = config.ignored.every(path => url.pathname !== path);
-					const allowedPath = config.paths.some(path => url.pathname.startsWith(path));
-					const isExternal = url.origin !== location.origin;
+				const isGet = req.method === 'GET';
+				const isHome = ['/', '/index.html', '/index.php'].some(path => url.pathname === path);
+				const notIgnored = config.ignored.every(path => url.pathname !== path);
+				const allowedPath = config.paths.some(path => url.pathname.startsWith(path));
+				const isExternal = url.origin !== location.origin;
 
-					return isHome || isExternal || (allowedPath && notIgnored);
-				}
+				return isGet && (isHome || isExternal || (allowedPath && notIgnored));
 			}
 		} catch(err) {
 			console.error(err);
@@ -109,29 +106,18 @@ addEventListener('fetch', event => {
 
 		if (navigator.onLine) {
 			const fetched = fetch(request).then(async resp => {
-				if (resp.ok && isValid(resp)) {
-					const respClone = await resp.clone();
-					await cache.put(event.request, respClone);
-					return resp;
-				} else if (resp.ok) {
-					return resp;
-				} else {
-					throw new Error(`${resp.url} [${resp.status} ${resp.statusText}]`);
+				if (resp instanceof Response) {
+					await cache.put(event.request, resp.clone());
 				}
+				return resp;
 			});
-			if (cached instanceof Response) {
-				return cached;
-			} else {
-				return fetched;
-			}
+			return cached instanceof Response ? cached : fetched;
 		} else {
 			return cached;
 		}
 	}
 
-	if (event.request.method !== 'GET') {
-		return;
+	if (isValid(event.request)) {
+		event.respondWith(get(event.request));
 	}
-
-	event.respondWith(get(event.request));
 });
