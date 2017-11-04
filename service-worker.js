@@ -31,15 +31,6 @@ const config = {
 		'/fonts/Alice.woff',
 		'/fonts/roboto.woff',
 		'/fonts/ubuntu.woff2',
-
-		// External Resources
-		'https://cdn.polyfill.io/v2/polyfill.min.js',
-		'https://media.githubusercontent.com/media/shgysk8zer0/awesome-rss/master/screenshot.png',
-		'https://i.imgur.com/qdnVcJA.png',
-		'https://i.imgur.com/j8gd6rW.png',
-		'https://i.imgur.com/OXN2pCz.png',
-		'https://i.imgur.com/WIaJgfx.png',
-		'https://i.imgur.com/c1hLkNj.png',
 	],
 	ignored: [
 		'/service-worker.js',
@@ -83,17 +74,13 @@ addEventListener('fetch', async event => {
 	function isValid(req) {
 		try {
 			const url = new URL(req.url);
-			if (url.origin !== location.origin) {
-				return true;
-			} else {
-				const isGet = req.method === 'GET';
-				const isHome = ['/', '/index.html', '/index.php'].some(path => url.pathname === path);
-				const notIgnored = config.ignored.every(path => url.pathname !== path);
-				const allowedPath = config.paths.some(path => url.pathname.startsWith(path));
-				const isExternal = url.origin !== location.origin;
+			const isGet = req.method === 'GET';
+			const sameOrigin = url.origin === location.origin;
+			const isHome = ['/', '/index.html', '/index.php'].some(path => url.pathname === path);
+			const notIgnored = config.ignored.every(path => url.pathname !== path);
+			const allowedPath = config.paths.some(path => url.pathname.startsWith(path));
 
-				return isGet && (isHome || isExternal || (allowedPath && notIgnored));
-			}
+			return isGet && sameOrigin && (isHome || (allowedPath && notIgnored));
 		} catch(err) {
 			console.error(err);
 			return false;
@@ -107,11 +94,18 @@ addEventListener('fetch', async event => {
 		if (navigator.onLine) {
 			const fetched = fetch(request).then(async resp => {
 				if (resp instanceof Response) {
-					await cache.put(event.request, resp.clone());
+					const respClone = await resp.clone();
+					await cache.put(event.request, respClone);
 				}
 				return resp;
 			});
-			return cached instanceof Response ? cached : fetched;
+
+			if (cached instanceof Response) {
+				return cached;
+			} else {
+				const resp = await fetched;
+				return resp;
+			}
 		} else {
 			return cached;
 		}
