@@ -16,6 +16,11 @@
 			</svg>
 		</a>
 	{% endif %}
+	<a href="{{ '/resume.pdf' | absolute_url }}" download="Chris Zuber.pdf" title="My Résumé">
+		<svg class="big icon icon-twirl transition-speed-normal transition-overshoot transition-transform">
+			<use xlink:href="{{ site.icons | absolute_url | append: '#documents' }}" />
+		</svg>
+	</a>
 	{% if site.feed %}
 		<a href="{{ site.feed | absolute_url}}" title="Subscribe to feed" target="_blank" class="inline-block">
 			<svg class="icon big icon-twirl transition-speed-normal transition-overshoot transition-transform">
