@@ -26,7 +26,9 @@ preferences,img/adwaita-icons/categories/preferences-system.svg
 web-browser,img/adwaita-icons/apps/web-browser.svg
 rss,img/adwaita-icons/mimetypes/application-rss+xml.svg
 documents,img/adwaita-icons/emblems/emblem-documents.svg
-favicon,img/favicon.svg
+pause,img/adwaita-icons/actions/media-playback-pause.svg
+play,img/adwaita-icons/actions/media-playback-start.svg
+stop,img/adwaita-icons/actions/media-playback-stop.svg
 git,img/logos/git.svg
 html5,img/logos/html5.svg
 css3,img/logos/css3.svg
