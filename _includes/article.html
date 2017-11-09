@@ -1,8 +1,8 @@
-<article itemtype="http://schema.org/BlogPosting" itemscope="" class="font-article">
+<article itemtype="http://schema.org/BlogPosting" itemscope="" itemprop="mainEntityOfPage" class="font-article">
 	<header class="article-meta sticky-desktop shadow-dark z-2">
 		{% if page.tags %}<meta itemprop="keywords" content="{{ page.tags | join: ', '}}" />{% endif %}
 		{% if page.image %}
-			<meta itemprop="image" content="{{ page.image }}" />
+			<meta itemprop="image" content="{{ page.image | absolute_url }}" />
 		{% endif %}
 		{% if page.description %}
 			<meta itemprop="description" content="{{ page.description }}" />
@@ -60,9 +60,7 @@
 			</div>
 		{% endif %}
 	</header>
-	<div itemprop="mainEntityOfPage">
-		<div itemprop="text" class="optimize-legibility">{{ content }}</div>
-	</div>
+	<div itemprop="articleBody mainEntityOfPage" class="optimize-legibility">{{ content }}</div>
 	<footer class="clearfix relative">
 		<hr />
 		{% include license.html %}
