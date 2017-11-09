@@ -82,7 +82,7 @@ Right now, you may be thinking, "There's no way something like PhotoShop would b
 usable as a PWA." The battle of Web vs. Native has been fought for many years now
 and the popular opinion today is that web has lost, largely due to performance issues.
 
-Have you heard of [WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly Assembly | MDN)?
+Have you heard of [WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly "WebAssembly | MDN")?
 > WebAssembly is a new type of code that can be run in modern web browsers — it
 > is a low-level assembly-like language with a compact binary format that runs
 > with near-native performance and provides languages such as C/C++ with a
