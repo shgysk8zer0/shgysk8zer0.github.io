@@ -1,7 +1,7 @@
 @import url("../core-css/jekyll-highlight.css");
 @import url("./jekyll-youtube.css");
 
-article [itemprop="text"] a, article [itemprop="text"] a:hover {
+[itemprop~="articleBody"] a, [itemprop~="articleBody"] a:hover {
 	color: var(--accent-color);
 	text-decoration: underline;
 }
@@ -19,16 +19,16 @@ article header a:hover {
 	text-decoration: none;
 }
 
-article [itemprop="text"] {
+[itemprop~="articleBody"] {
 	margin: .7em;
 }
 
-article [itemprop="text"] table td, article [itemprop="text"] table th {
+[itemprop~="articleBody"] table td, [itemprop~="articleBody"] table th {
 	border: 1px solid #d4d7d9;
 	padding: .4em;
 }
 
-article [itemprop="text"] table {
+[itemprop~="articleBody"] table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
