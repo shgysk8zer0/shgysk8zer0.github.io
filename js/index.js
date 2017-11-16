@@ -4,9 +4,9 @@ import * as Mutations from './std-js/mutations.js';
 import deprefix from './std-js/deprefixer.js';
 import {supportsAsClasses} from './std-js/support_test.js';
 import webShareApi from './std-js/webShareApi.js';
-import {facebook, twitter, googlePlus, linkedIn, reddit} from './share-config.js';
+import * as shares from './share-config.js';
 
-webShareApi(facebook, twitter, linkedIn, googlePlus, reddit);
+webShareApi(...Object.values(shares));
 deprefix();
 
 async function registerServiceWorker(el) {
