@@ -10,6 +10,7 @@ reddit,img/logos/Reddit.svg
 creative-commons,img/logos/CreativeCommons.svg
 location,img/adwaita-icons/actions/mark-location.svg
 call-start,img/adwaita-icons/actions/call-start.svg
+network-workgroup,img/adwaita-icons/places/network-workgroup.svg
 top,img/adwaita-icons/actions/go-top.svg
 bottom,img/adwaita-icons/actions/go-bottom.svg
 next,img/adwaita-icons/actions/go-next.svg
@@ -20,6 +21,7 @@ recent,img/adwaita-icons/actions/document-open-recent.svg
 engineering,img/adwaita-icons/categories/applications-engineering.svg
 avatar-default,img/adwaita-icons/status/avatar-default.svg
 mail-send,img/adwaita-icons/actions/mail-send.svg
+mail-unread,img/adwaita-icons/status/mail-unread.svg
 home,img/adwaita-icons/places/user-home.svg
 menu,img/adwaita-icons/actions/open-menu.svg
 preferences,img/adwaita-icons/categories/preferences-system.svg
