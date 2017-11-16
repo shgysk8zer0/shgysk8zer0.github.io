@@ -1,0 +1,29 @@
+#contact-section figure {
+	margin: 0;
+	width: 100vw;
+}
+
+#contact-section .contact-info-card {
+	padding: 1em;
+	display: inline-block;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact-section .icon {
+	margin-right: 1.3em;
+}
+
+@media (min-aspect-ratio: 3/2) {
+	#contact-section .contact-info-card {
+		max-width: calc(100vw - 100vh);
+		max-height: calc(100vh - 2em);
+		overflow-y: auto;
+	}
+
+	#contact-section figure {
+		width: 100vh;
+		display: inline-block;
+	}
+}

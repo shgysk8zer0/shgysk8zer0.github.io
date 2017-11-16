@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html
+	lang="{{ site.lang }}"
+	dir="{{ site.dir }}"
+	class="no-js scroll-smooth"
+	itemtype="http://schema.org/WebPage"
+	itemscope=""
+	{% if site.data.head.service_worker %}data-service-worker="{{site.data.head.service_worker | absolute_url }}"{% endif %}
+	data-support-test="details, dialog, cssvars"
+>
+{% include head.html %}
+<body class="layout-{{ page.layout }}">
+	{{ content }}
+</body>
+</html>

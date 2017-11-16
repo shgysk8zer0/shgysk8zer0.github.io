@@ -18,20 +18,30 @@
 @import url("./recent-posts.css");
 @import url("./footer.css");
 @import url("./dialog.css");
+@import url("./contact.css");
 
 :root {
 	width: 100vw;
 	overflow-x: hidden;
 }
 
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
 hr {
 	max-width: calc(100vw - 100px);
 	width: 100%;
+	opacity: 0.15;
 }
 
 svg {
 	max-width: 4em;
 	max-height: 4em;
+}
+
+.social-icons {
+	justify-content: space-around;
 }
 
 .container.flex.row {
