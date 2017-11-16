@@ -4708,13 +4708,45 @@ dialog > *:not(header) {
 	margin: 0.8em;
 }
 
+#contact-section figure {
+	margin: 0;
+	width: 100vw;
+}
+
+#contact-section .contact-info-card {
+	padding: 1em;
+	display: inline-block;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact-section .icon {
+	margin-right: 1.3em;
+}
+
+@media (min-aspect-ratio: 3/2) {
+	#contact-section .contact-info-card {
+		max-width: calc(100vw - 100vh);
+		max-height: calc(100vh - 2em);
+		overflow-y: auto;
+	}
+
+	#contact-section figure {
+		width: 100vh;
+		display: inline-block;
+	}
+}
+
 :root{width:100vw;overflow-x:hidden}
 
-hr{max-width:calc(100vw - 100px);width:100%}
+*,:after,:before{box-sizing:inherit}
+
+hr{max-width:calc(100vw - 100px);width:100%;opacity:.15}
 
 svg{max-width:4em;max-height:4em}
 
-.container.flex.row{justify-content:space-around}
+.container.flex.row,.social-icons{justify-content:space-around}
 
 code.highlight,pre.highlight{border:1px solid #ccc;border-radius:4px;box-shadow:1px 1px 2px rgba(0, 0, 0, .6)}
 
