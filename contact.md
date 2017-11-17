@@ -5,6 +5,9 @@ permalink: /contact/
 ---
 <div id="contact-section" class="clearfix font-article background-primary color-default" itemtype="http://schema.org/Person" itemscope="">
   <figure itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="" class="left">
+    <svg class="current-color icon color-alt fixed bottom right cursor-pointer filter-shadow-dark" data-share="">
+      <use xlink:href="{{ site.icons | absolute_url | append: '#share' }}" />
+    </svg>
     <img
       itemprop="url"
       srcset="
@@ -20,7 +23,7 @@ permalink: /contact/
     />
   </figure>
   <section class="contact-info-card inline-block">
-    <a href="{{ site.url | absolute|url }}" title="Home" class="fixed bottom right">
+    <a href="{{ site.url | absolute|url }}" title="Home" class="fixed top left color-alt filter-shadow-dark">
       <svg class="big current-color icon">
         <use xlink:href="{{ site.icons | absolute_url | append: '#home' }}" />
       </svg>
@@ -42,7 +45,6 @@ permalink: /contact/
         <img src="{{ '/img/logos/super-user.svg' | absolute_url }}" width="128" height="128" alt="SuperUserDev Logo" />
       </a>
     </h5>
-    
     <hr />
     <a href="tel:+1-661-619-6712" content="+1-661-619-6712" itemprop="telephone">
       <svg class="current-color icon">
