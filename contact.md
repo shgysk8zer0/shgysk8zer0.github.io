@@ -2,6 +2,12 @@
 layout: default
 title: Contact
 permalink: /contact/
+image: https://secure.gravatar.com/avatar/43578597e449298f5488c2407c8a8ae5?s=128
+description: Contact info for Chris Zuber, Mount Vernon, WA
+keywords:
+- Chris Zuber
+- Christopher Zuber
+- contact info
 ---
 <div id="contact-section" class="clearfix font-article background-primary color-default" itemtype="http://schema.org/Person" itemscope="">
   <figure itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="" class="left">
