@@ -2,7 +2,7 @@
 layout: default
 title: Contact
 permalink: /contact/
-image: https://i.imgur.com/4E3UTqI.png
+image: https://i.imgur.com/dlJHoGQ.png
 description: Contact info for Chris Zuber, Mount Vernon, WA
 keywords:
 - Chris Zuber
@@ -69,7 +69,6 @@ keywords:
         <use xlink:href="{{ site.icons | absolute_url | append: '#location' }}" />
       </svg>
       <span>
-        <span itemprop="streetAddress">1116 Maddox Creek Ln.</span>
         <span itemprop="addressLocality">Mount Vernon</span>,
         <span itemprop="addressRegion">Washington</span>
       </span>
