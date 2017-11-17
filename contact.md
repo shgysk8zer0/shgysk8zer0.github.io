@@ -9,11 +9,9 @@ keywords:
 - Christopher Zuber
 - contact info
 ---
+{% include share-button.html %}
 <div id="contact-section" class="clearfix font-article background-primary color-default" itemtype="http://schema.org/Person" itemscope="">
   <figure itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="" class="left">
-    <svg class="current-color icon color-alt fixed bottom right cursor-pointer filter-shadow-dark" data-share="">
-      <use xlink:href="{{ site.icons | absolute_url | append: '#share' }}" />
-    </svg>
     <img
       itemprop="url"
       srcset="
