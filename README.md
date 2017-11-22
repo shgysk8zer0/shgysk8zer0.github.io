@@ -89,14 +89,14 @@ via [structured data](https://schema.org/)
 ## Donations
 <a href="https://www.paypal.me/shgysk8zer0" title="PayPal" rel="noopener external">
   <img src="./img/logos/paypal.svg" width="128" height="128" alt="PayPal" />
-  <img src="./img/paypal.svg" width="128" height="128" alt="PayPal" />
+  <img src="./img/paypal.svg" width="128" height="128" alt="PayPal QR" />
   
   **https://www.paypal.me/shgysk8zer0**
 </a>
 
 <a href="bitcoin:1AdHne5JRY9GxVpYD13KithkNF2WEBbfKf" title="Bitcoin">
-  <img src="./img/logos/bitcoin.svg" width="128" height="128" alt="PayPal" />
-  <img src="./img/coinbase.svg" width="128" height="128" alt="PayPal" />
+  <img src="./img/logos/bitcoin.svg" width="128" height="128" alt="Bitcoin" />
+  <img src="./img/coinbase.svg" width="128" height="128" alt="Bitcoin QR" />
   
   **bitcoin:1AdHne5JRY9GxVpYD13KithkNF2WEBbfKf**
 </a>
