@@ -64,6 +64,13 @@ keywords:
       <span>chris@chriszuber.com</span>
     </a>
     <hr />
+     <a href="https://shgysk8zer0.github.io" itemprop="url">
+      <svg class="current-color icon">
+        <use xlink:href="{{ site.icons | absolute_url | append: '#web-browser' }}" />
+      </svg>
+      <span>https://shgysk8zer0.github.io</span>
+    </a>
+    <hr />
     <address class="clearfix" itemprop="address" itemtype="http://schema.org/PostalAddress" itemscope="">
       <svg class="current-color icon left">
         <use xlink:href="{{ site.icons | absolute_url | append: '#location' }}" />
@@ -94,6 +101,11 @@ keywords:
       <a href="https://plus.google.com/+ChrisZuber" rel="noopener external" title="Google+" itemprop="sameAs">
         <svg class="icon">
           <use xlink:href="{{ site.icons | absolute_url | append: '#google+' }}" />
+        </svg>
+      </a>
+      <a href="https://stackoverflow.com/users/2573566/chris" rel="noopener external" title="StackOverflow" itemprop="sameAs">
+        <svg class="icon">
+          <use xlink:href="{{ site.icons | absolute_url | append: '#stackoverflow' }}" />
         </svg>
       </a>
     </div>
