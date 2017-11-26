@@ -5,7 +5,8 @@ email: 'chris@chriszuber.com'
 sameAs:
   - 'https://twitter.com/SudoDevTeam'
   - 'https://plus.google.com/113117303106986445610'
-url: 'https://github.com/superuserdev'
+  - 'https://www.linkedin.com/company/superuserdev/'
+url: 'https://superuserdev.github.io/'
 logo:
   '@type': ImageObject
   url: 'https://github.com/superuserdev.png'

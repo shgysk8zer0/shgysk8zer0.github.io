@@ -21,7 +21,7 @@ jobTitle: Full Stack Web Developer
 worksFor:
   '@type': Organization
   name: SuperUserDev
-  url: 'https://github.com/superuserdev'
+  url: 'https://superuserdev.github.io/'
   logo:
     '@type': ImageObject
     contentUrl: /img/logos/super-user.svg
