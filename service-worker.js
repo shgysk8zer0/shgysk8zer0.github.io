@@ -1,6 +1,6 @@
 // 2017-11-02 16:19
 const config = {
-	version: '3.2.15',
+	version: 'shgysk8zer0@github.io',
 	caches: [
 		// Main assets
 		'/',
@@ -47,12 +47,6 @@ const config = {
 
 addEventListener('install', async () => {
 	const cache = await caches.open(config.version);
-	const keys = await caches.keys();
-	await keys.forEach(async key => {
-		if (key !== config.version) {
-			await caches.delete(key);
-		}
-	});
 	await cache.addAll(config.caches);
 	skipWaiting();
 
@@ -61,12 +55,6 @@ addEventListener('install', async () => {
 addEventListener('activate', event => {
 	event.waitUntil(async function() {
 		clients.claim();
-		const keys = await caches.keys();
-		keys.forEach(async key => {
-			if (key !== config.version) {
-				await caches.delete(key);
-			}
-		});
 	}());
 });
 
