@@ -87,7 +87,7 @@
 			{% if author.email != null %}
 				<a itemprop="email" content="{{ author.email }}" href="mailto:{{ author.email }}" title="Email" class="no-text-decoration">
 					<svg class="icon {{ animation }} animation-speed-normal animation-ease-out">
-						<use xlink:href="{{ site.icons | absolute_url | append: '#mail-send' | absolute_url }}" />
+						<use xlink:href="{{ site.icons | absolute_url | append: '#mail-unread' | absolute_url }}" />
 					</svg>
 				</a>
 			{% endif %}
