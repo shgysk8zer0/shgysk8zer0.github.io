@@ -41,7 +41,6 @@ homeLocation:
   address:
     '@type': PostalAddress
     '@context': 'http://schema.org'
-    streetAddress: 1116 Maddox Creek Lane
     addressLocality: Mount Vernon
     addressRegion: Washington
     postalCode: 98274
@@ -49,6 +48,6 @@ homeLocation:
   geo:
     '@type': GeoCoordinates
     '@context': 'http://schema.org'
-    latitude: 48.414106
-    longitude: -122.301008
-    url: 'geo:48.414106,-122.301008;crs=wgs84;u=0'
+    latitude: 48.420059
+    longitude: -122.326431
+    url: 'geo:48.420059,-122.326431;crs=wgs84;u=0'
