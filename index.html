@@ -6,8 +6,8 @@ layout: home
 	{% for project in site.data.portfolio %}
 	<div class="jackInTheBox project card shadow optimize-legibility animation-paused animation-overshoot animation-speed-crawl animation-fill-forwards relative transition-all transition-speed-normal transition-ease-in-out" itemprop="workExample" itemtype="http://schema.org/WebApplication" itemscope="">
 		<div itemprop="offers" itemtype="https://schema.org/Offer" itemscope="" hidden="">
-			<meta itemprop="price" content="{{ project.offers.price }}" />
-			<meta itemprop="priceCurrency" content="{{ project.offers.priceCurrency }}" />
+			<meta itemprop="price" content="{{ project.offers.price | default: '0' }}" />
+			<meta itemprop="priceCurrency" content="{{ project.offers.priceCurrency | default: 'USD' }}" />
 		</div>
 		<meta itemprop="browserRequirements" content="{{ project.browserRequirements }}" />
 		<a href="{{ project.url }}" itemprop="url" target="_blank" class="no-text-decoration inline-block" rel="noopener external" title="{{ project.name }}">
