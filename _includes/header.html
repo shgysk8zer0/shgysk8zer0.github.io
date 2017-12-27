@@ -19,10 +19,10 @@
 				crossorigin="anonymous" />
 		</figure>
 		<h1 class="capitalize">
-			<a href="{{ site.data.person.url }}" rel="noopener external" title="Personal Blog">
+			{% if site.data.person.url %}<a href="{{ site.data.person.url }}" rel="noopener external" title="Personal Blog">{% endif %}
 				<span itemprop="givenName">{{ site.data.person.givenName }}</span>
 				<span itemprop="familyName">{{ site.data.person.familyName }}</span>
-			</a>
+			{% if site.data.person.url %}</a>{% endif %}
 		</h1>
 		<h2 class="capitalize">
 			<span itemprop="jobTitle">{{ site.data.person.jobTitle }}</span> |
