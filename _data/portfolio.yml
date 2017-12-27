@@ -13,20 +13,28 @@
   applicationCategory: Firefox Add-on
   operatingSystem: 'Windows, OSX, Linux, Android'
   browserRequirements: 'async / await, querySelectorAll, WebExtension API, History API'
-- '@type': WebApplication
-  '@context': 'http://schema.org'
-  name: Super User Blog
-  offers:
-    '@type': Offer
-    price: 0
-    priceCurrency: USD
-  screenshot: /img/logos/super-user.svg
-  url: 'https://chriszuber.com/'
-  description: Blogging with HTML5 & JavaScript
-  keywords: 'HTML5, JavaScript, CSS, SVG, PHP, MySQL'
-  applicationCategory: Blog
-  operatingSystem: 'Windows, OSX, Linux, Android, iOS'
-  browserRequirements: 'flex, fetch, SVG'
+- name: YouTube Feeds
+  url: 'https://addons.mozilla.org/en-US/firefox/addon/youtube-feeds/?src=userprofile'
+  description: 'Firefox extension to expose YouTube channel and playlist feeds.'
+  screenshot: 'https://i.imgur.com/Ru8EO3m.png'
+  keywords: 'WebExtension, JavaScript, RSS, YouTube'
+  applicationCategory: Firefox Add-on
+  operatingSystem: 'Windows, OSX, Linux, Android'
+  browserRequirements: 'async / await, querySelectorAll, WebExtension API'
+# - '@type': WebApplication
+#   '@context': 'http://schema.org'
+#   name: Super User Blog
+#   offers:
+#     '@type': Offer
+#     price: 0
+#     priceCurrency: USD
+#   screenshot: /img/logos/super-user.svg
+#   url: 'https://chriszuber.com/'
+#   description: Blogging with HTML5 & JavaScript
+#   keywords: 'HTML5, JavaScript, CSS, SVG, PHP, MySQL'
+#   applicationCategory: Blog
+#   operatingSystem: 'Windows, OSX, Linux, Android, iOS'
+#   browserRequirements: 'flex, fetch, SVG'
 - '@type': WebApplication
   '@context': 'http://schema.org'
   name: HTML5 WYSIWYG-Editor
