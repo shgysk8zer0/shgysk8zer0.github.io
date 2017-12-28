@@ -1,13 +1,12 @@
+import './std-js/deprefixer.js';
 import './std-js/shims.js';
 import {$, wait} from './std-js/functions.js';
 import * as Mutations from './std-js/mutations.js';
-import deprefix from './std-js/deprefixer.js';
-import {supportsAsClasses} from './std-js/support_test.js';
+import {supportsAsClasses} from './std-js/supports.js';
 import webShareApi from './std-js/webShareApi.js';
 import * as shares from './share-config.js';
 
 webShareApi(...Object.values(shares));
-deprefix();
 
 async function registerServiceWorker(el) {
 	return new Promise(async (resolve, reject) => {
@@ -19,7 +18,7 @@ async function registerServiceWorker(el) {
 			}
 
 			const url = new URL(el.dataset.serviceWorker, location.origin);
-			const reg = await navigator.serviceWorker.register(url, {scope: '/'});
+			const reg = await navigator.serviceWorker.register(url, {scope: document.baseURI});
 
 			if (navigator.onLine) {
 				reg.update();
@@ -38,7 +37,7 @@ async function registerServiceWorker(el) {
 
 async function readyHandler() {
 	const $doc = $(document.documentElement);
-	$('[data-service-worker]').each( el => registerServiceWorker(el));
+	$('[data-service-worker]').each(registerServiceWorker).catch(console.error);
 
 	if (Navigator.prototype.hasOwnProperty('share')) {
 		$('[data-share]').attr({hidden: false});
