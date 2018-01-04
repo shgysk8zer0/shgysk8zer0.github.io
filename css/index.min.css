@@ -2629,7 +2629,7 @@ template {
 	max-height: 100%;
 	width: var(--icon-size, 1em);
 	height: var(--icon-size, 1em);
-	vertical-align: bottom;
+	vertical-align: middle;
 }
 
 .round {
