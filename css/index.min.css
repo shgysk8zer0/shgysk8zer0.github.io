@@ -2629,6 +2629,7 @@ template {
 	max-height: 100%;
 	width: var(--icon-size, 1em);
 	height: var(--icon-size, 1em);
+	vertical-align: bottom;
 }
 
 .round {
@@ -3687,7 +3688,8 @@ template {
 
 dialog {
 	position: absolute;
-	left: 0; right: 0;
+	left: 0;
+	right: 0;
 	width: -moz-fit-content;
 	width: -webkit-fit-content;
 	width: fit-content;
@@ -3713,7 +3715,7 @@ dialog + .backdrop {
 }
 
 dialog + .backdrop, dialog::backdrop {
-	background: var(--backdrop-background, rgba(0,0,0.1));
+	background: var(--backdrop-background, rgba(0,0,0,0.7));
 }
 
 /*._dialog_overlay {
