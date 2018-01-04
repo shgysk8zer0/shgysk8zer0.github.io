@@ -1,4 +1,4 @@
-@import url("../core-css/jekyll-highlight.css");
+@import url("./core-css/jekyll-highlight.css");
 @import url("./jekyll-youtube.css");
 
 [itemprop~="articleBody"] a, [itemprop~="articleBody"] a:hover {

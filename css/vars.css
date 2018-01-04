@@ -41,7 +41,3 @@
 	--highlight-background: #efefef;
 	--highlight-literal-number-color: #CCA418;
 }
-
-:root, dialog::backdrop {
-	--backdrop-background: rgba(0,0,0,0.7);
-}

@@ -38,10 +38,10 @@ scripts:
       async: true
 stylesheets:
   development:
-    - href: /css/styles/index.css
+    - href: /css/index.css
       media: all
   production:
-    - href: /css/styles/index.min.css
+    - href: /css/index.min.css
       media: all
 preload:
   - href: /img/icons.svg

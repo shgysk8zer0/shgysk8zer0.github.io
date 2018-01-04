@@ -5,7 +5,7 @@ const config = {
 		// Main assets
 		'/',
 		'/js/index.min.js',
-		'/css/styles/index.min.css',
+		'/css/index.min.css',
 		'/img/icons.svg',
 		'/img/favicon.svg',
 
