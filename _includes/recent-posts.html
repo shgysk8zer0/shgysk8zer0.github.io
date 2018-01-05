@@ -1,4 +1,4 @@
-<aside role="complementary" itemtype="http://schema.org/WPSideBar" itemscope="" class="card shadow-dark" id="recent-posts" crossorigin="anonymous">
+<aside role="complementary" itemtype="http://schema.org/WPSideBar" itemscope="" class="card shadow-dark" id="recent-posts">
 		<h4 class="color-accent underline center">
 			<svg class="current-color icon">
 				<use xlink:href="{{ site.icons | absolute_url | append: '#recent' }}" />
@@ -8,7 +8,7 @@
 		{% for post in site.posts limit: 10 %}
 			<a href="{{ post.url | absolute_url }}" title="{{ post.title }}">
 				{% if post.image != null %}
-					<img src="{{ post.image | absolute_url }}" class="post-img" />
+					<img src="{{ post.image | absolute_url }}" class="post-img" crossorigin="anonymous" />
 				{% endif %}
 			</a>
 			<a href="{{ post.url | absolute_url }}" title="{{ post.title }}">
