@@ -1,6 +1,6 @@
 import './std-js/deprefixer.js';
 import './std-js/shims.js';
-import {$, wait} from './std-js/functions.js';
+import {$, wait, ready} from './std-js/functions.js';
 import * as Mutations from './std-js/mutations.js';
 import {supportsAsClasses} from './std-js/supports.js';
 import webShareApi from './std-js/webShareApi.js';
@@ -35,7 +35,7 @@ async function registerServiceWorker(el) {
 	});
 }
 
-async function readyHandler() {
+ready().then(async () => {
 	const $doc = $(document.documentElement);
 	$('[data-service-worker]').each(registerServiceWorker).catch(console.error);
 
@@ -81,6 +81,4 @@ async function readyHandler() {
 			el.classList.remove('animation-paused');
 		});
 	}
-}
-
-$(self).ready(readyHandler, {once: true});
+});
