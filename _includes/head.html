@@ -90,6 +90,7 @@
 	{% if site.webmaster-verifications.bing %}
 		<meta name="msvalidate.01" content="{{ site.webmaster-verifications.bing }}" />
 	{% endif %}
+	<base href="{{ site.url }}" />
 	{% for script in site.data.head.scripts[jekyll.environment] %}
 		<script type="{{ script.type }}" src="{{ script.src | absolute_url }}"{% if script.async %} async=""{% endif %}{% if script.defer %} defer=""{% endif %}{% if script.nomodule %} nomodule=""{% endif %}{% if script.crossorigin %} crossorigin="{{ script.crossorigin }}"{% endif %}{% if script.integrity %} integrity="{{ script.integrity }}"{% endif %}></script>
 	{% endfor %}

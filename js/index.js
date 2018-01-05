@@ -1,6 +1,6 @@
 import './std-js/deprefixer.js';
 import './std-js/shims.js';
-import {$, wait, ready} from './std-js/functions.js';
+import {$, wait, ready, registerServiceWorker} from './std-js/functions.js';
 import * as Mutations from './std-js/mutations.js';
 import {supportsAsClasses} from './std-js/supports.js';
 import webShareApi from './std-js/webShareApi.js';
@@ -8,36 +8,9 @@ import * as shares from './share-config.js';
 
 webShareApi(...Object.values(shares));
 
-async function registerServiceWorker(el) {
-	return new Promise(async (resolve, reject) => {
-		try {
-			if (! Navigator.prototype.hasOwnProperty('serviceWorker')) {
-				throw new Error('Service worker not supported');
-			} else if (! navigator.onLine) {
-				throw new Error('Offline');
-			}
-
-			const url = new URL(el.dataset.serviceWorker, location.origin);
-			const reg = await navigator.serviceWorker.register(url, {scope: document.baseURI});
-
-			if (navigator.onLine) {
-				reg.update();
-			}
-
-			reg.addEventListener('updatefound', event => resolve(event.target));
-			reg.addEventListener('install', event => resolve(event.target));
-			reg.addEventListener('activate', event => resolve(event.target));
-			reg.addEventListener('error', event => reject(event.target));
-			reg.addEventListener('fetch', console.info);
-		} catch (error) {
-			reject(error);
-		}
-	});
-}
-
 ready().then(async () => {
 	const $doc = $(document.documentElement);
-	$('[data-service-worker]').each(registerServiceWorker).catch(console.error);
+	$('[data-service-worker]').each(el => registerServiceWorker(el.dataset.serviceWorker));
 
 	if (Navigator.prototype.hasOwnProperty('share')) {
 		$('[data-share]').attr({hidden: false});
