@@ -4099,6 +4099,10 @@ body > header > [itemtype="http://schema.org/Person"] {
 	justify-content: space-between;
 }
 
+.social-links {
+	margin-bottom: 1em;
+}
+
 @media (orientation: portrait) and (min-height: 901px), (orientation: landscape) and (min-width: 1201px) {
 	body > header {
 		background-image: var(--header-background-full);
