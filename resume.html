@@ -1,17 +1,78 @@
 ---
 layout: null
 permalink: /resume/
+title: Chris Zuber
+thumbnail: 'https://i.imgur.com/lCwsbhL.png'
+description: 'A resume for Chris Zuber, written in HTML and CSS'
+robots: follow,index
+keywords:
+- HTML
+- CSS
+- JavaScript
+- Resume
+- Chris Zuber
+- developer
+- web design
+- LAMP
+- full stack
 ---
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8">
-		<title>Chris Zuber</title>
+		<title>{{ page.title }}</title>
 		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<title itemprop="headline">{{ page.title }}</title>
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="{{ page.url | absolute_url }}" />
+		<meta property="og:title" content="{{ page.title }}" />
+		<meta property="og:site_name" content="{{ site.title }}" />
+		<meta property="og:locale" content="en_US" />
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@SudoDevTeam" />
+		<meta itemprop="url" content="{{ page.url | absolute_url }}" />
+		<meta name="twitter:url" content="{{ page.url | absolute_url }}" />
+		<meta name="twitter:title" content="{{ page.title }}" />
+		<meta name="referrer" content="origin-when-cross-origin"/>
+		<meta name="robots" content="{{ page.robots }}" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="description" content="{{ page.description }}" />
+		<meta itemprop="description" content="{{ page.description }}" />
+		<meta property="og:description" content="{{ page.description }}" />
+		<meta name="twitter:description" content="{{ page.description }}" />
+		<meta name="keywords" content="{{ page.keywords | join: ', ' }}" />
+		<meta itemprop="keywords" content="{{ page.keywords | join: ', ' }}" />
+		<meta name="author" content="Chris Zuber"/>
+		<meta property="og:image" content="{{ page.thumbnail }}" />
+		<meta name="twitter:image" content="{{ page.thumbnail }}">
+		<meta itemprop="thumbnailUrl" content="{{ page.thumbnail }}" />
+		<meta name="theme-color" content="#FC5B0B" />
+		<meta name="msapplication-TileColor" content="#FC5B0B" />
+		<meta http-equiv="Content-Security-Policy" content="
+				default-src 'self';
+				img-src *;
+				script-src 'self' https://cdn.polyfill.io https://gist.github.com https://production-assets.codepen.io https://codepen.io/;
+				style-src 'self' 'unsafe-inline' https://assets-cdn.github.com https://www.youtube.com;
+				connect-src *;
+				font-src 'self';
+				media-src *;
+				child-src 'self' http://www.youtube.com http://www.youtube-nocookie.com;
+				block-all-mixed-content;
+		" />
+		<meta name="google-site-verification" content="0cMX_-aKH-pe1wQXGDlK833KE3-kN5V7y3eaywoCXdk" />
+		<meta name="msvalidate.01" content="D0C151304642EDCA64F73FE5C4B43D7A" />
 		<base href="{{ site.url }}" />
+		<link rel="canonical" href="{{ page.url | absolute_url }}"/>
+		<link rel="icon" href="{{ '/img/favicon.svg' | absolute_url }}" type="image/svg+xml" sizes="any" />
+		<link rel="icon" href="{{ '/img/icon-32.png' | absolute_url }}" type="image/png" sizes="32x32" />
+		<link rel="icon" href="{{ '/img/icon-16.png' | absolute_url }}" type="image/png" sizes="16x16" />
+		<link rel="apple-touch-icon" href="{{ '/img/apple-touch-icon.png' | absolute_url }}" sizes="180x180" />
+		<link rel="mask-icon" href="{{ '/img/safari-pinned-tab.svg' | absolute_url }}" color="#ff5722"/>
+		<meta name="msapplication-TileImage" content="{{ '/img/mstile-150x150.png' | absolute_url }}" />
 		<script type="application/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js" crossorigin="annonymous"></script>
-		<script type="application/javascript" src="js/resume.js" async=""></script>
-		<link rel="stylesheet" href="css/resume.css" media="all" />
+		<script type="application/javascript" src="{{ 'js/resume.js' | absolute_url }}" async=""></script>
+		<link rel="stylesheet" href="{{ 'css/resume.css' | absolute_url }}" media="all" />
 	</head>
 	<body itemtype="http://schema.org/Person" itemscope="">
 		<header class="main-header">
