@@ -78,6 +78,17 @@ keywords:
 	<body itemtype="http://schema.org/Person" itemscope="">
 		<header class="main-header">
 			<div class="cols-2 contact-info"></div>
+			<img class="avatar" srcset="
+					https://secure.gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=512 512w,
+					https://secure.gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=400 400w,
+					https://secure.gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=300 300w,
+					https://secure.gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=256 256w,
+					https://secure.gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=180 180w,
+					https://secure.gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=128 128w,
+					https://secure.gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=64 64w"
+					sizes="((max-width:999px) and (min-width:500px)) 9vmax, (max-width:499px) 9.6vmax, 6vmax"
+					src="https://secure.gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=256" alt="Gravatar"
+					itemprop="image" crossorigin="anonymous" />
 		</header>
 		<main contextmenu="nav-menu">
 			<section id="summary" hidden=""></section>
@@ -112,10 +123,19 @@ keywords:
 				</address>
 			</div>
 			<div class="right">
+				<svg class="icon">
+					<use xlink:href="{{ site.icons | absolute_url | append: '#web-browser' }}" />
+				</svg>
 				<a href="" itemprop="url"></a>
 				<br />
+				<svg class="icon">
+					<use xlink:href="{{ site.icons | absolute_url | append: '#mail-unread' }}" />
+				</svg>
 				<a href="" itemprop="email" content=""></a>
 				<br />
+				<svg class="icon">
+					<use xlink:href="{{ site.icons | absolute_url | append: '#call-start' }}" />
+				</svg>
 				<a href="" itemprop="telephone" content=""></a>
 			</div>
 		</template>

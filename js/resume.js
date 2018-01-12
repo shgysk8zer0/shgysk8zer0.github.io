@@ -105,9 +105,12 @@
 			template.querySelector('[itemprop="addressLocality"]').textContent = contact.address.state;
 			template.querySelector('[itemprop="jobTitle"]').textContent = contact.jobTitle;
 			urlEl.href = url;
-			urlEl.textContent = `${url.host}${url.pathname}`;
+			urlEl.textContent = url.host;
+			if (url.pathname !== '/') {
+				urlEl.textContent += url.pathname;
+			}
 			telEl.href = tel;
-			telEl.textContent = tel.pathname;
+			telEl.textContent = tel.pathname.replace(/[^\d-]/i, '');
 			telEl.setAttribute('content', tel.pathname);
 			emailEl.href = email;
 			emailEl.textContent = email.pathname;
