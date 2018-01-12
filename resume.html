@@ -1,0 +1,98 @@
+---
+layout: null
+permalink: /resume/
+---
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Chris Zuber</title>
+		<meta name="viewport" content="width=device-width" />
+		<base href="{{ site.url }}" />
+		<script type="application/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js" crossorigin="annonymous"></script>
+		<script type="application/javascript" src="js/resume.js" async=""></script>
+		<link rel="stylesheet" href="css/resume.css" media="all" />
+	</head>
+	<body itemtype="http://schema.org/Person" itemscope="">
+		<header class="main-header">
+			<div class="cols-2 contact-info"></div>
+		</header>
+		<main contextmenu="nav-menu">
+			<section id="summary" hidden=""></section>
+			<section id="highlights" hidden="">
+				<h2 class="section-heading">Highlights</h2>
+			</section>
+			<section id="experience" hidden="">
+				<h2 class="section-heading">Professional Experience</h2>
+			</section>
+			<section id="education" hidden="">
+				<h2 class="section-heading">Education</h2>
+			</section>
+		</main>
+		<menu type="context" id="nav-menu"></menu>
+		<template id="summary-template">
+			<blockquote data-field="text"></blockquote>
+		</template>
+		<template id="contact-template">
+			<div>
+				<div itemprop="name">
+					<span itemprop="givenName"></span>
+					<span itemprop="familyName"></span>
+				</div>
+				<span itemprop="jobTitle"></span>
+				<br />
+				<address itemprop="address" itemtype="http://schema.org/PostalAddress" itemscope="">
+					<span itemprop="addressRegion" data-after=","></span>
+					<span itemprop="addressLocality"></span>
+				</address>
+			</div>
+			<div class="right">
+				<a href="" itemprop="url"></a>
+				<br />
+				<a href="" itemprop="email" content=""></a>
+				<br />
+				<a href="" itemprop="telephone" content=""></a>
+			</div>
+		</template>
+		<template id="highlights-template">
+			<ul class="cols-2 highlights"></ul>
+		</template>
+		<template id="employment-template">
+			<div class="employment-entry">
+					<h3 class="cols-2">
+						<div>
+							<span class="employer" data-field="employer"></span>
+							<span class="job-title" data-field="jobTitle" data-before=" / "></span>
+						</div>
+						<div class="right">
+							<time class="employed-from" data-field="employedFrom"></time>
+							<time class="employed-to" data-field="employedTo" data-before=" — "></time>
+						</div>
+					</h3>
+					<ul class="duties" data-list="duties">
+					</ul>
+				</div>
+		</template>
+		<template id="education-template">
+			<div class="education-entry">
+				<h3 class="school cols-2">
+				<div>
+					<span data-field="name"></span>
+					<span data-field="location" data-before=", "></span>
+				</div>
+				<div class="right">
+					<time data-field="started" data-after=" — "></time>
+					<time data-field="completed" ></time>
+				</div>
+			</h3>
+			<p class="study">
+				<span data-field="earned" data-after=" in "></span>
+				<span data-field="studied"></span>
+				<i data-field="GPA" data-before=" [GPA: " data-after="]"></i>
+			</p>
+			<ul class="awards"></ul>
+			<ul class="cols-2 areas-studied"></ul>
+		</div>
+		</template>
+	</body>
+</html>

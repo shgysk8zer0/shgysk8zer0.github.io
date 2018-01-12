@@ -1,0 +1,126 @@
+@media screen {
+	body {
+		background-color: #444444;
+	}
+
+	header, main {
+		max-width: 1000px;
+		box-shadow: 4px 8px 10px rgba(0,0,0,.5);
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.main-header {
+		position: sticky;
+		top: 0;
+	}
+
+	header, main {
+		margin-left: calc((100vw - 1000px) / 2);
+	}
+}
+
+@media print {
+	a {
+		text-decoration: none;
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+[hidden], menu, template {
+	display: none;
+}
+
+header, main, section {
+	display: block;
+}
+
+header {
+	padding: 1.1em;
+}
+
+section {
+	padding: 0 2.1em;
+}
+
+header a {
+	color: inherit;
+}
+
+main {
+	background: white;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+nav {
+	justify-content: space-around;
+	margin: 0.7em;
+}
+
+blockquote {
+	color: #777;
+	font-style: italic;
+	padding: 0px 15px;
+	border-left: 4px solid #DDD;
+}
+
+.cols-2 {
+	column-count: 2;
+}
+
+.right {
+	text-align: right;
+}
+
+.employed-to:empty::after {
+	content: "Present";
+}
+
+.section-heading {
+	border-bottom: 1px solid black;
+	text-align: center;
+}
+
+.main-header, .section-heading {
+	background-color: #009688;
+	color: #FEFEFE;
+	font-weight: 600;
+	line-height: 1.3;
+	text-shadow: 1px 1px 2px #222;
+}
+
+.flex {
+	display: flex;
+}
+
+[itemprop="name"] {
+	font-size: 1.3em;
+	font-weight: 700;
+}
+
+[data-before]::before {
+	content: attr(data-before);
+	display: inline;
+}
+
+[data-after]::after {
+	content: attr(data-after);
+	display: inline;
+}
+
+.section-heading {
+	padding: 0.3em;
+}
+
+.employment-entry h3, .education-entry .school {
+	border-bottom: 2px solid #009688;
+}
