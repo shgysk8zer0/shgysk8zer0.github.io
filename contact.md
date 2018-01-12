@@ -108,6 +108,11 @@ keywords:
           <use xlink:href="{{ site.icons | absolute_url | append: '#stackoverflow' }}" />
         </svg>
       </a>
+       <a href="https://www.upwork.com/o/profiles/users/_~01568b211423f33d85/" rel="noopener external" title="Upwork" itemprop="sameAs">
+        <svg class="icon">
+          <use xlink:href="{{ site.icons | absolute_url | append: '#upwork' }}" />
+        </svg>
+      </a>
     </div>
   </section>
 </div>
