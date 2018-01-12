@@ -21,6 +21,20 @@
   applicationCategory: Firefox Add-on
   operatingSystem: 'Windows, OSX, Linux, Android'
   browserRequirements: 'async / await, querySelectorAll, WebExtension API'
+- name: Resume
+  url: /resume/
+  description: 'A resume for Chris Zuber, written in HTML and CSS'
+  applicationCategory: Office
+  browserRequirements: 'fetch, template'
+  keywords: 'JavaScript, Resume'
+  screenshot: 'https://i.imgur.com/lCwsbhL.png'
+- name: Contact Page
+  url: /contact/
+  description: 'Contact info for Chris Zuber, Mount Vernon, WA'
+  applicationCategory: Office
+  browserRequirements: 'picture, media queries'
+  keywords: 'SVG, CSS3, Responsive Images'
+  screenshot: 'https://i.imgur.com/RU3Mqrh.png'
 # - '@type': WebApplication
 #   '@context': 'http://schema.org'
 #   name: Super User Blog
