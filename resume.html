@@ -73,6 +73,7 @@ keywords:
 		<script type="application/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js" crossorigin="annonymous"></script>
 		<script type="application/javascript" src="{{ 'js/resume.js' | absolute_url }}" async=""></script>
 		<link rel="stylesheet" href="{{ 'css/resume.css' | absolute_url }}" media="all" />
+		<link rel="preload" as="image" type="image/svg+xml" href="{{ site.icons | absolute_url }}" />
 	</head>
 	<body itemtype="http://schema.org/Person" itemscope="">
 		<header class="main-header">
@@ -90,6 +91,9 @@ keywords:
 				<h2 class="section-heading">Education</h2>
 			</section>
 		</main>
+		<svg data-share="" hidden="">
+			<use xlink:href="{{ site.icons | absolute_url | append: '#share' }}" />
+		</svg>
 		<menu type="context" id="nav-menu"></menu>
 		<template id="summary-template">
 			<blockquote data-field="text"></blockquote>
@@ -137,23 +141,23 @@ keywords:
 		<template id="education-template">
 			<div class="education-entry">
 				<h3 class="school cols-2">
-				<div>
-					<span data-field="name"></span>
-					<span data-field="location" data-before=", "></span>
-				</div>
-				<div class="right">
-					<time data-field="started" data-after=" — "></time>
-					<time data-field="completed" ></time>
-				</div>
-			</h3>
-			<p class="study">
-				<span data-field="earned" data-after=" in "></span>
-				<span data-field="studied"></span>
-				<i data-field="GPA" data-before=" [GPA: " data-after="]"></i>
-			</p>
-			<ul class="awards"></ul>
-			<ul class="cols-2 areas-studied"></ul>
-		</div>
+					<div>
+						<span data-field="name"></span>
+						<span data-field="location" data-before=", "></span>
+					</div>
+					<div class="right">
+						<time data-field="started" data-after=" — "></time>
+						<time data-field="completed" ></time>
+					</div>
+				</h3>
+				<p class="study">
+					<span data-field="earned" data-after=" in "></span>
+					<span data-field="studied"></span>
+					<i data-field="GPA" data-before=" [GPA: " data-after="]"></i>
+				</p>
+				<ul class="awards"></ul>
+				<ul class="cols-2 areas-studied"></ul>
+			</div>
 		</template>
 	</body>
 </html>

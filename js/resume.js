@@ -174,9 +174,10 @@
 
 	function getData() {
 		const loc = new URL(location.href);
-		const url = new URL(loc.searchParams.has('resume')
-			? `${loc.searchParams.get('resume')}.json`
-			: 'generic.json',
+		const url = new URL(
+			loc.searchParams.has('resume')
+				? `${loc.searchParams.get('resume')}.json`
+				: 'generic.json',
 			document.baseURI
 		);
 
@@ -217,6 +218,19 @@
 					block: 'start'
 				});
 			});
-		}))
+		})).then(() => {
+			if (Navigator.prototype.hasOwnProperty('share')) {
+				$('[data-share]').forEach(share => {
+					share.removeAttribute('hidden');
+					share.addEventListener('click', () => {
+						navigator.share({
+							url: location.href,
+							title: document.title,
+							text: document.querySelector('meta[itemprop="description"]').getAttribute('content'),
+						});
+					});
+				});
+			}
+		})
 		.catch(console.error);
 })();
