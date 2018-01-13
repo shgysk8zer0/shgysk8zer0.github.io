@@ -3,7 +3,7 @@
 	margin: 25mm 0 25mm 0;
 }
 
-@page:first {
+@page :first {
 	size: auto;
 	margin: 0 0 25mm 0;
 }
@@ -185,6 +185,7 @@ blockquote {
 .section-heading {
 	border-bottom: 1px solid black;
 	text-align: center;
+	page-break-after: avoid;
 }
 
 .main-header, .section-heading {
@@ -226,6 +227,10 @@ blockquote {
 	border-radius: 8px;
 }
 
+.education-entry {
+	page-break-inside: avoid;
+}
+
 .employment-entry h3, .education-entry .school {
 	border-bottom: 2px solid #009688;
 }
@@ -236,5 +241,3 @@ blockquote {
 	font-weight: 400;
 	src: local('Roboto'), local('Roboto-Regular'), url('/fonts/roboto.woff2') format('woff2'), url('/fonts/roboto.woff') format('woff'), url('/fonts/roboto.ttf') format('truetype');
 }
-
-
