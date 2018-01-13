@@ -1,5 +1,5 @@
 ---
 layout: null
-permalink: resume/resume.json
+permalink: resume.json
 ---
 {{ site.data.resume | jsonify }}

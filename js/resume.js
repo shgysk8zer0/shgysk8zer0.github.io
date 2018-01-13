@@ -176,16 +176,15 @@
 	}
 
 	function getData() {
-		const loc = new URL(location.href);
-		const url = new URL(
-			loc.searchParams.has('resume')
-				? `${loc.searchParams.get('resume')}.json`
-				: 'generic.json',
-			document.baseURI
-		);
+		const url = new URL('/resume/resume.json', document.baseURI);
 
-		return fetch(url).then(resp => {
-			return resp.json();
+		return fetch(url).then(resp => resp.json());
+	}
+
+	function scrollTo(id) {
+		document.getElementById(id).scrollIntoView({
+			behavior: 'smooth',
+			block: 'start'
 		});
 	}
 
@@ -202,26 +201,20 @@
 		.then(() => $('section').forEach(section => section.hidden = false))
 		.then(() => $('section:empty').forEach(section => section.remove()))
 		.then(() => {
-			const menu = document.getElementById('nav-menu');
-			$('section').forEach(section => {
-				const heading = section.querySelector('.section-heading');
-
-				if (heading instanceof HTMLElement) {
-					const menuitem = document.createElement('menuitem');
-					menuitem.setAttribute('label', heading.textContent);
-					menuitem.dataset.scrollTo = section.id;
-					menu.append(menuitem);
-				}
-			});
-		})
-		.then(() => $('[data-scroll-to]').forEach(el => {
-			el.addEventListener('click', event => {
-				document.getElementById(event.target.dataset.scrollTo).scrollIntoView({
-					behavior: 'smooth',
-					block: 'start'
+			if (document.body.contextMenu instanceof HTMLMenuElement) {
+				$('section').forEach(section => {
+					const heading = section.querySelector('.section-heading');
+					if (heading instanceof HTMLElement) {
+						const menuitem = document.createElement('menuitem');
+						menuitem.setAttribute('label', heading.textContent);
+						menuitem.dataset.scrollTo = section.id;
+						menuitem.addEventListener('click', event => scrollTo(event.target.dataset.scrollTo));
+						document.body.contextMenu.append(menuitem);
+					}
 				});
-			});
-		})).then(() => {
+			}
+		})
+		.then(() => {
 			$('[data-action="print"]').forEach(btn => btn.addEventListener('click', () => print()));
 
 			if (Navigator.prototype.hasOwnProperty('share')) {
