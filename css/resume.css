@@ -16,13 +16,13 @@
 
 @media screen and (max-width: 999px) and (min-width: 500px) {
 	:root {
-		font-size: var(--tablet-tem, 1.5vmax);
+		font-size: 1.5vmax;
 	}
 }
 
 @media screen and (max-width: 499px) {
 	:root {
-		font-size: var(--mobile-rem, 1.6vmax);
+		font-size: 1.6vmax;
 	}
 }
 
@@ -36,8 +36,6 @@
 		box-shadow: 4px 8px 10px rgba(0,0,0,.3);
 	}
 
-
-
 	main {
 		background: white;
 		border: 1px solid #ccc;
@@ -50,16 +48,37 @@
 		background: inherit;
 	}
 
-	[data-share] {
-		width: 3em;
-		height: 3em;
-		fill: white;
+	.floating {
 		position: fixed;
-		bottom: 1em;
-		right: 1em;
-		cursor: pointer;
+		bottom: 1rem;
+		width: 3.3rem;
+		height: 3.3rem;
+		font-size: 2rem;
+		border: none;
+		border-radius: 50%;
+		background-color: rgb(0, 150, 136);
+		display: flex;
+		justify-content: center;
+		transition: transform 400ms ease-in-out;
+	}
+
+	.floating:hover {
+		transform: scale(1.2);
+	}
+
+	[data-share] {
+		right: 5rem;
+		color: white;
 		filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.7));
 	}
+
+	[data-action] {
+		color: white;
+		right: 1rem;
+		filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.7));
+	}
+
+
 }
 
 @media screen and (min-width: 1000px) {
@@ -79,7 +98,7 @@
 		text-decoration: none;
 	}
 
-	[data-share] {
+	[data-share], [data-action], .floating {
 		display: none;
 	}
 }
@@ -116,6 +135,10 @@ header a {
 nav {
 	justify-content: space-around;
 	margin: 0.7em;
+}
+
+button {
+	cursor: pointer;
 }
 
 blockquote {
@@ -213,3 +236,5 @@ blockquote {
 	font-weight: 400;
 	src: local('Roboto'), local('Roboto-Regular'), url('/fonts/roboto.woff2') format('woff2'), url('/fonts/roboto.woff') format('woff'), url('/fonts/roboto.ttf') format('truetype');
 }
+
+

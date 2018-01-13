@@ -259,6 +259,14 @@
     </g>
 
 </symbol>
+<symbol id="print" viewBox="0 0 16 16">
+    <title>
+        Gnome Symbolic Icon Theme
+    </title>
+    <path d="M2 4c-.5 0-1 .5-1 1v4c0 .5.5 1 1 1h1V8h10v2h1c.5 0 1-.5 1-1V5c0-.5-.5-1-1-1zm2-3v2h8V1z"/>
+    <path d="M4 9v5h8V9z"/>
+
+</symbol>
 <symbol id="pause" viewBox="0 0 16 16">
     <title>
         Gnome Symbolic Icon Theme

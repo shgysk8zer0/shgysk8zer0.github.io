@@ -222,6 +222,8 @@
 				});
 			});
 		})).then(() => {
+			$('[data-action="print"]').forEach(btn => btn.addEventListener('click', () => print()));
+
 			if (Navigator.prototype.hasOwnProperty('share')) {
 				$('[data-share]').forEach(share => {
 					share.removeAttribute('hidden');

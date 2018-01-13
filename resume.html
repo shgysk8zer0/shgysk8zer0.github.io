@@ -102,9 +102,16 @@ keywords:
 				<h2 class="section-heading">Education</h2>
 			</section>
 		</main>
-		<svg data-share="" hidden="">
-			<use xlink:href="{{ site.icons | absolute_url | append: '#share' }}" />
-		</svg>
+		<button type="button" class="floating" data-share="" hidden="">
+			<svg class="icon">
+				<use xlink:href="{{ site.icons | absolute_url | append: '#share' }}" />
+			</svg>
+		</button>
+		<button type="button" class="floating" data-action="print">
+			<svg class="icon">
+				<use xlink:href="{{ site.icons | absolute_url | append: '#print' }}" />
+			</svg>
+		</button>
 		<menu type="context" id="nav-menu"></menu>
 		<template id="summary-template">
 			<blockquote data-field="text"></blockquote>
