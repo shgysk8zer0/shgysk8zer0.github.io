@@ -20,12 +20,12 @@
 		"Problem solving",
 		"Diversity of skills and experiences"
 	],
-	"summary": {},
+	"summary": null,
 	"employment": [
 		{
 			"employer": "SuperUserDev",
 			"jobTitle": "Web Developer",
-			"employedFrom": "2017-05",
+			"employedFrom": "May, 2017",
 			"employedTo": null,
 			"duties": [
 				"Create libraries, frameworks and modules for use in arbitrary projects",
@@ -38,8 +38,8 @@
 			"employer": "Kern Valley Sun",
 			"jobTitle": "Editor & Developer",
 			"location": "Lake Isabella, CA",
-			"employedFrom": "2015-05",
-			"employedTo": "2017-04",
+			"employedFrom": "Oct., 2015",
+			"employedTo": "April, 2017",
 			"duties": [
 				"Implement creative solutions for publishing content, such as synchronizing through Owncloud",
 				"Improve communication and organization using Slack and Wunderlist",
@@ -62,8 +62,8 @@
 			"employer": "Outdoor Supply Inc.",
 			"jobTitle": "Project Manager",
 			"location": "Lake Isabella, CA",
-			"employedFrom": "2012-09",
-			"employedTo": "2015-05",
+			"employedFrom": "Sep. 2012",
+			"employedTo": "May, 2015",
 			"duties": [
 				"Generate templates for eBay listings",
 				"Maintain multiple E-Commerce sites using Magento",
@@ -74,8 +74,8 @@
 			"employer": "McDonald's",
 			"jobTitle": "Shift Manager",
 			"location": "Lake Isabella, CA",
-			"employedFrom": "2004-05",
-			"employedTo": "2012-04",
+			"employedFrom": "May, 2004",
+			"employedTo": "April, 2012",
 			"duties": [
 				"Oversee crew of 3 – 16 employees",
 				"Train new employees",
@@ -106,8 +106,8 @@
 			"name": "Bakersfield Community College",
 			"location": "Bakersfield, CA",
 			"studied": "Mechanical & Electrical Engineering",
-			"started": "2009-01-02",
-			"completed": "2012-05",
+			"started": "Jan, 2009",
+			"completed": "May, 2012",
 			"studies": [
 				"Calculus",
 				"Introduction to Programming [C++]",
@@ -120,8 +120,8 @@
 			"location": "Lake Isabella, CA",
 			"earned": "AA",
 			"studied": "Liberal Arts",
-			"started": "2007-09",
-			"completed": "2009-05",
+			"started": "Sep, 2007",
+			"completed": "May, 2009",
 			"GPA": 3.54,
 			"studies": [
 				"Philosophy",

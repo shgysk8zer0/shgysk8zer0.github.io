@@ -49,27 +49,42 @@ keywords:
 		<meta itemprop="thumbnailUrl" content="{{ page.thumbnail }}" />
 		<meta name="theme-color" content="#FC5B0B" />
 		<meta name="msapplication-TileColor" content="#FC5B0B" />
-		<meta http-equiv="Content-Security-Policy" content="
-				default-src 'self';
-				img-src *;
-				script-src 'self' https://cdn.polyfill.io https://gist.github.com https://production-assets.codepen.io https://codepen.io/;
-				style-src 'self' 'unsafe-inline' https://assets-cdn.github.com https://www.youtube.com;
-				connect-src *;
-				font-src 'self';
-				media-src *;
-				child-src 'self' http://www.youtube.com http://www.youtube-nocookie.com;
-				block-all-mixed-content;
-		" />
-		<meta name="google-site-verification" content="0cMX_-aKH-pe1wQXGDlK833KE3-kN5V7y3eaywoCXdk" />
-		<meta name="msvalidate.01" content="D0C151304642EDCA64F73FE5C4B43D7A" />
+		{% if site.data.csp %}
+			<meta http-equiv="{% if jekyll.environment == 'production'%}Content-Security-Policy{% else %}Content-Security-Policy-Report-Only{% endif %}" content="
+				{% if site.data.csp.default %}default-src {{ site.data.csp.default | join: ' ' }};{% endif %}
+				{% if site.data.csp.img %}img-src {{ site.data.csp.img | join: ' ' }};{% endif %}
+				{% if site.data.csp.script %}script-src {{ site.data.csp.script | join: ' ' }};{% endif %}
+				{% if site.data.csp.style %}style-src {{ site.data.csp.style | join: ' ' }};{% endif %}
+				{% if site.data.csp.connect %}connect-src {{ site.data.csp.connect | join: ' ' }};{% endif %}
+				{% if site.data.csp.font %}font-src {{ site.data.csp.font | join: ' ' }};{% endif %}
+				{% if site.data.csp.media %}media-src {{ site.data.csp.media | join: ' ' }};{% endif %}
+				{% if site.data.csp.child %}child-src {{ site.data.csp.child | join: ' ' }};{% endif %}
+				{% if site.data.csp.block-mixed-content %}block-all-mixed-content;{% endif %}
+			" />
+		{% endif %}
+		{% if site.webmaster-verifications.google %}
+			<meta name="google-site-verification" content="{{ site.webmaster-verifications.google }}" />
+		{% endif %}
+		{% if site.webmaster-verifications.bing %}
+			<meta name="msvalidate.01" content="{{ site.webmaster-verifications.bing }}" />
+		{% endif %}
 		<base href="{{ site.url }}" />
 		<link rel="canonical" href="{{ page.url | absolute_url }}"/>
-		<link rel="icon" href="{{ '/img/favicon.svg' | absolute_url }}" type="image/svg+xml" sizes="any" />
-		<link rel="icon" href="{{ '/img/icon-32.png' | absolute_url }}" type="image/png" sizes="32x32" />
-		<link rel="icon" href="{{ '/img/icon-16.png' | absolute_url }}" type="image/png" sizes="16x16" />
-		<link rel="apple-touch-icon" href="{{ '/img/apple-touch-icon.png' | absolute_url }}" sizes="180x180" />
-		<link rel="mask-icon" href="{{ '/img/safari-pinned-tab.svg' | absolute_url }}" color="#ff5722"/>
-		<meta name="msapplication-TileImage" content="{{ '/img/mstile-150x150.png' | absolute_url }}" />
+		{% if site.data.head.icons %}{% for icon in site.data.head.icons %}
+			<link rel="icon" href="{{ icon.href | absolute_url }}" type="{{ icon.type }}" sizes="{{ icon.sizes }}" />
+		{% endfor %}{% endif %}
+		{% if site.data.head.touch-icons %}{% for icon in site.data.head.touch-icons %}
+			<link rel="apple-touch-icon" href="{{ icon.href | absolute_url }}" sizes="{{ icon.sizes }}" />
+		{% endfor %}{% endif %}
+		{% if site.data.head.mask-icon %}
+			<link rel="mask-icon" href="{{ site.data.head.mask-icon.href | absolute_url }}" color="{{ site.data.head.mask-icon.color }}"/>
+		{% endif %}
+		{% if site.data.head.tiles %}
+			<meta name="msapplication-config" content="{{ 'browserconfig.xml' | absolute_url }}" />
+		{% endif %}
+		{% if site.data.head.windows-tile %}
+			<meta name="msapplication-TileImage" content="{{ site.data.head.windows-tile | absolute_url }}" />
+		{% endif %}
 		<script type="application/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js" crossorigin="annonymous"></script>
 		<script type="application/javascript" src="{{ 'js/resume.js' | absolute_url }}" async=""></script>
 		<link rel="stylesheet" href="{{ 'css/resume.css' | absolute_url }}" media="all" />
@@ -77,7 +92,44 @@ keywords:
 	</head>
 	<body itemtype="http://schema.org/Person" itemscope="" contextmenu="nav-menu">
 		<header class="main-header">
-			<div class="cols-2 contact-info"></div>
+			<div class="cols-2 contact-info">
+				<div>
+					<div itemprop="name">
+						<span itemprop="givenName">{{ site.data.resume.contact.name.first }}</span>
+						<span itemprop="familyName">{{ site.data.resume.contact.name.last }}</span>
+					</div>
+					{% if site.data.resume.contact.jobTitle %}
+						<span itemprop="jobTitle"></span>
+					{% endif %}
+					<br />
+					<address itemprop="address" itemtype="http://schema.org/PostalAddress" itemscope="">
+						<span itemprop="addressRegion" data-after=",">{{ site.data.resume.contact.address.city }}</span>
+						<span itemprop="addressLocality">{{ site.data.resume.contact.address.state }}</span>
+					</address>
+				</div>
+				<div class="right">
+					<a href="{{ site.data.resume.contact.url }}" itemprop="url">
+						<svg class="icon">
+							<use xlink:href="{{ site.icons | absolute_url | append: '#web-browser' }}" />
+						</svg>
+						{{ site.data.resume.contact.url }}
+					</a>
+					<br />
+					<a href="mailto:{{ site.data.resume.contact.email }}" itemprop="email" content="{{ site.data.resume.contact.email }}">
+						<svg class="icon">
+							<use xlink:href="{{ site.icons | absolute_url | append: '#mail-unread' }}" />
+						</svg>
+						{{ site.data.resume.contact.email }}
+					</a>
+					<br />
+					<a href="tel:{{ site.data.resume.contact.telephone }}" itemprop="telephone" content="{{ site.data.resume.contact.telephone }}">
+						<svg class="icon">
+							<use xlink:href="{{ site.icons | absolute_url | append: '#call-start' }}" />
+						</svg>
+						{{ site.data.resume.contact.telephone }}
+					</a>
+				</div>
+			</div>
 			<img class="avatar" srcset="
 					https://secure.gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=512 512w,
 					https://secure.gravatar.com/avatar/73f08dc9b030c584e76a4c3c4e8a56c0?s=400 400w,
@@ -91,15 +143,88 @@ keywords:
 					itemprop="image" crossorigin="anonymous" />
 		</header>
 		<main>
-			<section id="summary" hidden=""></section>
-			<section id="highlights" hidden="">
+			{% if site.data.resume.summary %}
+				<section id="summary">
+					<blockquote itemprop="description">{{ site.data.resume.summary }}</blockquote>
+				</section>
+			{% endif %}
+			<section id="highlights">
 				<h2 class="section-heading">Highlights</h2>
+				<ul class="cols-2 highlights">
+					{% for highlight in site.data.resume.highlights %}<li>{{ highlight }}</li>{% endfor %}
+				</ul>
 			</section>
-			<section id="experience" hidden="">
+			<section id="experience">
 				<h2 class="section-heading">Professional Experience</h2>
+				{% for job in site.data.resume.employment %}
+					<div class="employment-entry">
+						<h3 class="cols-2">
+							<div>
+								<span class="employer" data-field="employer">{{ job.employer }}</span>
+								<span class="job-title" data-field="jobTitle" data-before=" / ">{{ job.jobTitle }}</span>
+							</div>
+							<div class="right">
+								{% if job.employedFrom %}
+									<time class="employed-from" data-field="employedFrom" datetime="{{ job.employedFrom | date: date_to_xmlschema }}">{{ job.employedFrom | date: '%b, %Y' }}</time>
+								{% endif %}
+								<time class="employed-to" datetime="{{ job.employedTo | date: date_to_xmlschema }}" data-field="employedTo" data-before=" — ">{{ job.employedTo | default: 'Present' }}</time>
+							</div>
+						</h3>
+						<ul class="duties" data-list="duties">
+							{% for duty in job.duties %}<li>{{ duty }}</li>{% endfor %}
+						</ul>
+					</div>
+				{% endfor %}
 			</section>
-			<section id="education" hidden="">
+			<section id="education">
 				<h2 class="section-heading">Education</h2>
+				{% for education in site.data.resume.education %}
+					<div class="education-entry">
+						<h3 class="school cols-2">
+							<div>
+								<span data-field="name">{{ education.name }}</span>
+								{% if education.location %}
+									<span data-field="location" data-before=", ">{{ education.location }}</span>
+								{% endif %}
+							</div>
+							<div class="right">
+								{% if education.started %}
+									<time data-field="started" datetime="{{ education.started | date: date_to_xmlschema }}" data-after=" — ">{{ education.started | date: '%Y' }}</time>
+								{% endif %}
+								{% if education.completed %}
+									<time data-field="completed" datetime="{{ education.completed | date: date_to_xmlschema  }}" >{{ education.completed | date: '%Y' }}</time>
+								{% else %}
+									<time data-field="completed" datetime="{{ 'now' | date: '%Y-%m-%d'  }}">Present</time>
+								{% endif %}
+							</div>
+						</h3>
+						<p class="study">
+							{% if education.earned %}
+								<span data-field="earned" data-after=" in ">{{ education.earned }}</span>
+							{% endif %}
+							{% if education.studied %}
+								<span data-field="studied">{{ education.studied }}</span>
+							{% endif %}
+							{% if education.GPA %}
+								<i data-field="GPA" data-before=" [GPA: " data-after="]">{{ education.GPA }}</i>
+							{% endif %}
+						</p>
+						{% if education.awards %}
+							<ul class="awards">
+								{% for award in education.awards %}
+									<li>{{ award.title }} ({{ award.years | join: ', '}})</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+						{% if education.studies %}
+							<ul class="cols-2 areas-studied">
+								{% for study in education.studies %}
+									<li>{{study }}</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+					</div>
+				{% endfor %}
 			</section>
 		</main>
 		<button type="button" class="floating" data-share="" hidden="">
@@ -113,77 +238,5 @@ keywords:
 			</svg>
 		</button>
 		<menu type="context" id="nav-menu"></menu>
-		<template id="summary-template">
-			<blockquote data-field="text"></blockquote>
-		</template>
-		<template id="contact-template">
-			<div>
-				<div itemprop="name">
-					<span itemprop="givenName"></span>
-					<span itemprop="familyName"></span>
-				</div>
-				<span itemprop="jobTitle"></span>
-				<br />
-				<address itemprop="address" itemtype="http://schema.org/PostalAddress" itemscope="">
-					<span itemprop="addressRegion" data-after=","></span>
-					<span itemprop="addressLocality"></span>
-				</address>
-			</div>
-			<div class="right">
-				<svg class="icon">
-					<use xlink:href="{{ site.icons | absolute_url | append: '#web-browser' }}" />
-				</svg>
-				<a href="" itemprop="url"></a>
-				<br />
-				<svg class="icon">
-					<use xlink:href="{{ site.icons | absolute_url | append: '#mail-unread' }}" />
-				</svg>
-				<a href="" itemprop="email" content=""></a>
-				<br />
-				<svg class="icon">
-					<use xlink:href="{{ site.icons | absolute_url | append: '#call-start' }}" />
-				</svg>
-				<a href="" itemprop="telephone" content=""></a>
-			</div>
-		</template>
-		<template id="highlights-template">
-			<ul class="cols-2 highlights"></ul>
-		</template>
-		<template id="employment-template">
-			<div class="employment-entry">
-					<h3 class="cols-2">
-						<div>
-							<span class="employer" data-field="employer"></span>
-							<span class="job-title" data-field="jobTitle" data-before=" / "></span>
-						</div>
-						<div class="right">
-							<time class="employed-from" data-field="employedFrom"></time>
-							<time class="employed-to" data-field="employedTo" data-before=" — "></time>
-						</div>
-					</h3>
-					<ul class="duties" data-list="duties">
-					</ul>
-				</div>
-		</template>
-		<template id="education-template">
-			<div class="education-entry">
-				<h3 class="school cols-2">
-					<div>
-						<span data-field="name"></span><span data-field="location" data-before=", "></span>
-					</div>
-					<div class="right">
-						<time data-field="started" data-after=" — "></time>
-						<time data-field="completed" ></time>
-					</div>
-				</h3>
-				<p class="study">
-					<span data-field="earned" data-after=" in "></span>
-					<span data-field="studied"></span>
-					<i data-field="GPA" data-before=" [GPA: " data-after="]"></i>
-				</p>
-				<ul class="awards"></ul>
-				<ul class="cols-2 areas-studied"></ul>
-			</div>
-		</template>
 	</body>
 </html>
