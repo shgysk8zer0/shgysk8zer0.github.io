@@ -3,6 +3,8 @@
 	--tablet-rem: 1.5vw;
 	--mobile-rem: 3.3vw;
 
+	--font-display: optional;
+
 	/*================= Set color vars here =================*/
 	--default-color: #010101;
 	--alt-color: #FAFAFA;
