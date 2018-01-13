@@ -235,9 +235,28 @@ blockquote {
 	border-bottom: 2px solid #009688;
 }
 
+/* Multi-column li bullet-point fix for Chrome */
+@supports (-webkit-column-count: auto) {
+	ul.cols-2 > li, cols-2 ul > li {
+		list-style-type: none;
+	}
+
+	ul.cols-2 > li::before, cols-2 ul > li::before {
+		display: inline-block;
+		border-radius: 50%;
+		background-color: currentColor;
+		content: '';
+		padding: 0.15em;
+		vertical-align: middle;
+		margin-right: 0.4em;
+	}
+}
+
 @font-face {
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 400;
+	font-display: fallback;
 	src: local('Roboto'), local('Roboto-Regular'), url('/fonts/roboto.woff2') format('woff2'), url('/fonts/roboto.woff') format('woff'), url('/fonts/roboto.ttf') format('truetype');
 }
+
