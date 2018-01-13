@@ -112,7 +112,7 @@ keywords:
 						<svg class="icon">
 							<use xlink:href="{{ site.icons | absolute_url | append: '#web-browser' }}" />
 						</svg>
-						{{ site.data.resume.contact.url }}
+						{{ site.data.resume.contact.url | remove: 'http://' | remove: 'https://'}}
 					</a>
 					<br />
 					<a href="mailto:{{ site.data.resume.contact.email }}" itemprop="email" content="{{ site.data.resume.contact.email }}">
@@ -126,7 +126,7 @@ keywords:
 						<svg class="icon">
 							<use xlink:href="{{ site.icons | absolute_url | append: '#call-start' }}" />
 						</svg>
-						{{ site.data.resume.contact.telephone }}
+						{{ site.data.resume.contact.telephone | remove: '+' }}
 					</a>
 				</div>
 			</div>
