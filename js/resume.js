@@ -1,4 +1,16 @@
 (() => {
+	if (! ('content' in document.createElement('template'))) {
+		Object.defineProperty(HTMLUnknownElement.prototype, 'content', {
+			get: function() {
+				const frag = document.createDocumentFragment();
+				for (let i = 0; i < this.childNodes.length; i++) {
+					frag.appendChild(this.childNodes[i].cloneNode(true));
+				}
+				return frag;
+			}
+		});
+	}
+
 	function ready() {
 		return new Promise(resolve => {
 			if (document.readyState === 'interactive') {
@@ -31,8 +43,6 @@
 		} else {
 			return fallback;
 		}
-
-
 	}
 
 	function $(selector, base = document) {
@@ -46,7 +56,8 @@
 	function getTemplate(id) {
 		return new Promise(resolve => {
 			const template = document.getElementById(`${id}-template`);
-			resolve(template.content.cloneNode(true));
+			const content = template.content.cloneNode(true);
+			resolve(content);
 		});
 	}
 
@@ -222,7 +233,12 @@
 				});
 			});
 		})).then(() => {
-			$('[data-action="print"]').forEach(btn => btn.addEventListener('click', () => print()));
+			if (print instanceof Function) {
+				$('[data-action="print"]').forEach(btn => {
+					btn.addEventListener('click', () => print());
+					btn.hidden = false;
+				});
+			}
 
 			if (Navigator.prototype.hasOwnProperty('share')) {
 				$('[data-share]').forEach(share => {
