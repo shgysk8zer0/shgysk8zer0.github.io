@@ -16,7 +16,7 @@
 - name: YouTube Feeds
   url: 'https://addons.mozilla.org/en-US/firefox/addon/youtube-feeds/'
   description: 'Firefox extension to expose YouTube channel and playlist feeds.'
-  screenshot: 'https://i.imgur.com/TiSApf8.png'
+  screenshot: 'https://i.imgur.com/Ru8EO3m.png'
   keywords: 'WebExtension, JavaScript, RSS, YouTube'
   applicationCategory: Firefox Add-on
   operatingSystem: 'Windows, OSX, Linux, Android'
