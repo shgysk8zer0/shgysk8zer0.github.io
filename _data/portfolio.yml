@@ -27,7 +27,7 @@
   applicationCategory: Office
   browserRequirements: 'fetch, template'
   keywords: 'JavaScript, Resume'
-  screenshot: 'https://i.imgur.com/lCwsbhL.png'
+  screenshot: 'https://i.imgur.com/TiSApf8.png'
 - name: Contact Page
   url: /contact/
   description: 'Contact info for Chris Zuber, Mount Vernon, WA'
