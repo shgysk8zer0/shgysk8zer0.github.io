@@ -1,4 +1,4 @@
-<button data-share="" class="fixed round shadow-dark color-alt border-hidden z-4" hidden="">
+<button data-share="{{ include.share | default: ''}}" class="fixed round shadow-dark color-alt border-hidden z-4" hidden="">
 	<svg class="current-color icon filter-shadow-dark">
 		<use xlink:href="{{ site.icons | absolute_url | append: '#share' }}" />
 	</svg>
