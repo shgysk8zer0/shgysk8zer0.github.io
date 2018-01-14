@@ -19,7 +19,7 @@ manifest: /manifest.json
 service_worker: /service-worker.js
 scripts:
   development:
-    - src: 'https://cdn.polyfill.io/v2/polyfill.min.js?unknown=polyfill&features=es6,MutationObserver,IntersectionObserver,IntersectionObserverEntry,WebAnimations,Object.values,Object.entries&flags=gated'
+    - src: 'https://cdn.polyfill.io/v2/polyfill.min.js?unknown=polyfill&features=es6,MutationObserver,IntersectionObserver,IntersectionObserverEntry,WebAnimations,Object.values,Object.entries,NodeList.prototype.@@iterator,Array.prototype.@@iterator&flags=gated'
       type: application/javascript
       crossorigin: anonymous
     - src: /js/index.js
@@ -30,7 +30,7 @@ scripts:
       async: true
       nomodule: true
   production:
-    - src: 'https://cdn.polyfill.io/v2/polyfill.min.js?unknown=polyfill&features=es6,MutationObserver,IntersectionObserver,IntersectionObserverEntry,WebAnimations,Object.values,Object.entries&flags=gated'
+    - src: 'https://cdn.polyfill.io/v2/polyfill.min.js?unknown=polyfill&features=es6,MutationObserver,IntersectionObserver,IntersectionObserverEntry,WebAnimations,Object.values,Object.entries,NodeList.prototype.@@iterator,Array.prototype.@@iterator&flags=gated'
       type: application/javascript
       crossorigin: anonymous
     - src: /js/index.min.js
