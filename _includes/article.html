@@ -40,7 +40,8 @@
 			<meta itemprop="dateModified" content="{{ page.date | date: data_to_xmlschema }}" />
 		{% endif %}
 		{% if site.data.authors[page.author] != null %}
-			{% include by-line.html %}
+			{% assign author =site.data.authors[page.author] %}
+			{% include by-line.html author=author %}
 		{% elsif page.author != null %}
 			<b>By <span itemprop="author">{{ page.author }}</span></b>
 			<br />

@@ -22,23 +22,17 @@
 	</span>
 	{% if page.layout == 'home' %}
 		<a href="#portfolio" title="Portfolio">
-			<svg class="current-color icon">
-				<use xlink:href="{{ site.icons | absolute_url | append: '#engineering' }}" />
-			</svg>
+			{% include icon.html icon='#engineering' %}
 			<span class="mobile-hidden">Portfolio</span>
 		</a>
 	{% endif %}
 	{% if page.layout != 'full-width' %}
 	<a href="#pinned-posts" title="Pinned Posts">
-		<svg class="current-color icon">
-			<use xlink:href="{{ site.icons | absolute_url | append: '#pin' }}" />
-		</svg>
+		{% include icon.html icon='#pin' %}
 		<span class="mobile-hidden">Pinned Posts</span>
 	</a>
 	<a href="#recent-posts" title="Recent Posts">
-		<svg class="current-color icon">
-			<use xlink:href="{{ site.icons | absolute_url | append: '#recent' }}" />
-		</svg>
+		{% include icon.html icon='#recent' %}
 		<span class="mobile-hidden">Recent Posts</span>
 	</a>
 	{% else %}

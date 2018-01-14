@@ -1,0 +1,3 @@
+<svg class="{{ include.class | default: 'icon current-color' }}"{% if include.width %} width="{{ include.width}}"{% endif %}{%if include.height %} height="{{ include.height }}{% endif %}">
+	<use xlink:href="{{ site.icons | absolute_url | append: include.icon }}" />
+</svg>
