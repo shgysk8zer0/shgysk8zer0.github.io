@@ -5,7 +5,7 @@
 			<span class="mobile-hidden">Home</span>
 		</a>
 	{% endif %}
-	<a href="{{'/#top' | absolute_url }}" title="Top">
+	<a href="{{'#top' | prepend: page.url | absolute_url }}" title="Top">
 		{% include icon.html icon='#top' %}
 		<span class="mobile-hidden">Top</span>
 	</a>
