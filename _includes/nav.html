@@ -1,15 +1,14 @@
 <nav class="sticky top shadow-dark color-alt flex row title-font center no-text-decoration z-3" role="navigation" itemtype="http://schema.org/SiteNavigationElement" itemscope="">
-	{% if page.layout == 'home' %}
-		<a href="{{'/#top' | absolute_url }}" title="Top">
-			{% include icon.html icon='#top' %}
-			<span class="mobile-hidden">Top</span>
-		</a>
-	{% else %}
+	{% if page.url != '/' %}
 		<a href="{{'/' | absolute_url }}" rel="bookmark" title="Home">
 			{% include icon.html icon='#home' %}
 			<span class="mobile-hidden">Home</span>
 		</a>
 	{% endif %}
+	<a href="{{'/#top' | absolute_url }}" title="Top">
+		{% include icon.html icon='#top' %}
+		<span class="mobile-hidden">Top</span>
+	</a>
 	<span data-show-modal="#about-dialog" class="cursor-pointer" title="About">
 		{% include icon.html icon='#avatar-default' %}
 		<span class="mobile-hidden">About</span>
