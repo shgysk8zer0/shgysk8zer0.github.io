@@ -9,7 +9,6 @@ keywords:
 - Christopher Zuber
 - contact info
 ---
-{% include share-button.html %}
 <div id="contact-section" class="clearfix font-article background-primary color-default" itemtype="http://schema.org/Person" itemscope="">
   <figure itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="" class="left">
     <img
@@ -28,9 +27,7 @@ keywords:
   </figure>
   <section class="contact-info-card inline-block">
     <a href="{{ site.url | absolute|url }}" title="Home" class="fixed top left color-alt filter-shadow-dark">
-      <svg class="big current-color icon">
-        <use xlink:href="{{ site.icons | absolute_url | append: '#home' }}" />
-      </svg>
+       {% include icon.html icon='#home' %}
     </a>
     <h3 class="center font-title">
       <span itemprop="givenName">Christopher</span>
@@ -39,9 +36,7 @@ keywords:
     </h3>
     <hr />
     <h5>
-      <svg class="current-color icon left">
-        <use xlink:href="{{ site.icons | absolute_url | append: '#network-workgroup' }}" />
-      </svg>
+      {% include icon.html icon='#network-workgroup' %}
       <span itemprop="jobTitle">Full Stack Web Developer</span> |
       <span itemprop="worksFor">SuperUserDev</span>
       <br /><br />
@@ -51,30 +46,22 @@ keywords:
     </h5>
     <hr />
     <a href="tel:+1-661-619-6712" content="+1-661-619-6712" itemprop="telephone">
-      <svg class="current-color icon">
-        <use xlink:href="{{ site.icons | absolute_url | append: '#call-start' }}" />
-      </svg>
+       {% include icon.html icon='#call=-start' %}
       <span>+1-661-619-6712</span>
     </a>
     <hr />
     <a href="mailto:chris@chriszuber.com" content="chris@chriszuber.com" itemprop="email">
-      <svg class="current-color icon">
-        <use xlink:href="{{ site.icons | absolute_url | append: '#mail-unread' }}" />
-      </svg>
+      {% include icon.html icon='#mail-unread' %}
       <span>chris@chriszuber.com</span>
     </a>
     <hr />
      <a href="https://shgysk8zer0.github.io" itemprop="url">
-      <svg class="current-color icon">
-        <use xlink:href="{{ site.icons | absolute_url | append: '#web-browser' }}" />
-      </svg>
+     {% include icon.html icon='#web-browser' %}
       <span>https://shgysk8zer0.github.io</span>
     </a>
     <hr />
     <address class="clearfix" itemprop="address" itemtype="http://schema.org/PostalAddress" itemscope="">
-      <svg class="current-color icon left">
-        <use xlink:href="{{ site.icons | absolute_url | append: '#location' }}" />
-      </svg>
+     {% include icon.html icon='#location' %}
       <span>
         <span itemprop="addressLocality">Mount Vernon</span>,
         <span itemprop="addressRegion">Washington</span>
@@ -84,35 +71,24 @@ keywords:
     <hr />
     <div class="flex row big social-icons">
       <a href="https://github.com/shgysk8zer0" rel="noopener external" title="GitHub" itemprop="sameAs">
-        <svg class="icon">
-          <use xlink:href="{{ site.icons | absolute_url | append: '#mark-github' }}" />
-        </svg>
+        {% include icon.html icon='#mark-github' class='icon' %}
       </a>
       <a href="https://twitter.com/shgysk8zer0" rel="noopener external" title="Twitter" itemprop="sameAs">
-        <svg class="icon">
-          <use xlink:href="{{ site.icons | absolute_url | append: '#twitter' }}" />
-        </svg>
+       {% include icon.html icon='#twitter' class='icon' %}
       </a>
       <a href="https://www.linkedin.com/in/chris-zuber-455346141/" title="LinkedIn" rel="noopener external" itemprop="sameAs">
-        <svg class="icon">
-          <use xlink:href="{{ site.icons | absolute_url | append: '#linkedin' }}" />
-        </svg>
+        {% include icon.html icon='#linkedin' class='icon' %}
       </a>
       <a href="https://plus.google.com/+ChrisZuber" rel="noopener external" title="Google+" itemprop="sameAs">
-        <svg class="icon">
-          <use xlink:href="{{ site.icons | absolute_url | append: '#google+' }}" />
-        </svg>
+        {% include icon.html icon='#google+' class='icon' %}
       </a>
       <a href="https://stackoverflow.com/users/2573566/chris" rel="noopener external" title="StackOverflow" itemprop="sameAs">
-        <svg class="icon">
-          <use xlink:href="{{ site.icons | absolute_url | append: '#stackoverflow' }}" />
-        </svg>
+       {% include icon.html icon='#stackoverflow' class='icon' %}
       </a>
        <a href="https://www.upwork.com/o/profiles/users/_~01568b211423f33d85/" rel="noopener external" title="Upwork" itemprop="sameAs">
-        <svg class="icon">
-          <use xlink:href="{{ site.icons | absolute_url | append: '#upwork' }}" />
-        </svg>
+        {% include icon.html icon='#upwork' class='icon' %}
       </a>
     </div>
   </section>
 </div>
+{% include share-button.html %}
