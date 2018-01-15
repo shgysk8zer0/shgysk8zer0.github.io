@@ -4,20 +4,6 @@
 			<span>Recent Posts</span>
 		</h4>
 		{% for post in site.posts limit: 10 %}
-			<a href="{{ post.url | absolute_url }}" title="{{ post.title }}">
-				{% if post.image != null %}
-					<img src="{{ post.image | absolute_url }}" class="post-img" crossorigin="anonymous" />
-				{% endif %}
-			</a>
-			<a href="{{ post.url | absolute_url }}" title="{{ post.title }}">
-				<h5 class="center post-title">{{ post.title }}</h5>
-			</a>
-			{% if post.description != null %}
-				<details>
-					<summary>More Info</summary>
-					<p>{{ post.description }}</p>
-				</details>
-			{% endif %}
-			<hr />
+			{% include post-preview.html post=post %}
 		{% endfor %}
 </aside>

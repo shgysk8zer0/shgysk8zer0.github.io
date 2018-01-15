@@ -1,0 +1,17 @@
+{% assign posts = site.posts | where: 'category', include.category %}
+<header class="background-accent color-alt">
+	<h2 class="center">
+		<a href="{{ site.url }}">
+			{% include icon.html icon='#home' %}
+		</a>
+		<span>/</span>
+		<a href="{{ '/posts' | absolute_url}}">Posts</a>
+		<span>/</span>
+		<a href="{{ page.url | absolute_url }}">{{ page.title }}</a>
+	</h2>
+</header>
+<div class="grid grid-gallery">
+	{% for post in posts limit: 12 %}
+		{% include article-preview-card.html post=post %}
+	{% endfor %}
+</div>
