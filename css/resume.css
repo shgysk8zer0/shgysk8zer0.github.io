@@ -48,7 +48,11 @@
 		background: inherit;
 	}
 
-	.floating {
+	.fixed {
+		position: fixed;
+	}
+
+	body > button {
 		position: fixed;
 		bottom: 1rem;
 		width: 3.3rem;
@@ -64,6 +68,15 @@
 
 	.floating:hover {
 		transform: scale(1.2);
+	}
+
+	.main-header, .section-heading {
+		color: #FEFEFE;
+		text-shadow: 1px 1px 2px #222;
+	}
+
+	.main-header .icon {
+		filter: drop-shadow( 1px 1px 2px #222);
 	}
 
 	[data-share] {
@@ -100,6 +113,19 @@
 
 	[data-share], [data-action], .floating {
 		display: none;
+	}
+
+	.main-header, .section-heading {
+		color: #FFFFFF;
+	}
+
+	.education-entry {
+		page-break-inside: avoid;
+	}
+
+	/* Adjust brightness, contrast, and saturation of images for print */
+	img {
+		filter: brightness(125%) saturate(90%) contrast(90%);
 	}
 }
 
@@ -190,16 +216,13 @@ blockquote {
 
 .main-header, .section-heading {
 	background-color: #009688;
-	color: #FEFEFE;
 	font-weight: 800;
 	font-size: 1.1em;
 	line-height: 1.3;
-	text-shadow: 1px 1px 2px #222;
 	font-family: Roboto;
 }
 
 .main-header .icon {
-	filter: drop-shadow( 1px 1px 2px #222);
 	margin-right: 0.7em;
 }
 
@@ -225,10 +248,6 @@ blockquote {
 .section-heading {
 	padding: 0.3em;
 	border-radius: 8px;
-}
-
-.education-entry {
-	page-break-inside: avoid;
 }
 
 .employment-entry h3, .education-entry .school {
