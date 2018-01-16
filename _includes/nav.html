@@ -14,7 +14,7 @@
 		<span class="mobile-hidden">About</span>
 	</span>
 	{% if page.layout == 'home' %}
-		<a href="{{ '#portfolio' | prepend: page.url | absolute_url }}" title="Portfolio">
+		<a href="{{ '#portfolio' | absolute_url }}" title="Portfolio">
 			{% include icon.html icon='#engineering' %}
 			<span class="mobile-hidden">Portfolio</span>
 		</a>
@@ -24,7 +24,7 @@
 		{% include icon.html icon='#pin' %}
 		<span class="mobile-hidden">Pinned Posts</span>
 	</a>
-	<a href="#recent-posts" title="Recent Posts">
+	<a href="{{ '#recent-posts' | prepend: page.url | absolute_url }}" title="Recent Posts">
 		{% include icon.html icon='#recent' %}
 		<span class="mobile-hidden">Recent Posts</span>
 	</a>
