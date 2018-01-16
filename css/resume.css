@@ -26,6 +26,12 @@
 	}
 }
 
+@media print {
+	:root {
+		font-size: 12pt;
+	}
+}
+
 @media screen {
 	body {
 		background-color: #444444;
