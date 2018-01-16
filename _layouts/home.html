@@ -11,7 +11,7 @@
 	{% include head.html %}
 	<body class="layout-{{ page.layout }} background-primary grid border-box cursor-default font-main" contextmenu="nav-menu" id="top">
 		{% include share-button.html %}
-		{% include header.html %}
+		{% include header.html extended=true %}
 		{% include nav.html %}
 		<main class="color-default font-article card shadow-dark" role="main" itemprop="mainContentOfPage">
 			{{ content }}
