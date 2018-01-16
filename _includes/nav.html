@@ -1,11 +1,11 @@
 <nav class="sticky top shadow-dark color-alt flex row title-font center no-text-decoration z-3" role="navigation" itemtype="http://schema.org/SiteNavigationElement" itemscope="">
 	{% if page.url != '/' %}
-		<a href="{{'/' | absolute_url }}" rel="bookmark" title="Home">
+		<a href="{{ '/' | absolute_url }}" rel="bookmark" title="Home">
 			{% include icon.html icon='#home' %}
 			<span class="mobile-hidden">Home</span>
 		</a>
 	{% endif %}
-	<a href="{{'#top' | prepend: page.url | absolute_url }}" title="Top">
+	<a href="{{ '#top' | prepend: page.url | absolute_url }}" title="Top">
 		{% include icon.html icon='#top' %}
 		<span class="mobile-hidden">Top</span>
 	</a>
@@ -14,13 +14,13 @@
 		<span class="mobile-hidden">About</span>
 	</span>
 	{% if page.layout == 'home' %}
-		<a href="{{'#portfolio' | prepend: page.url | absolute_url }}" title="Portfolio">
+		<a href="{{ '#portfolio' | prepend: page.url | absolute_url }}" title="Portfolio">
 			{% include icon.html icon='#engineering' %}
 			<span class="mobile-hidden">Portfolio</span>
 		</a>
 	{% endif %}
 	{% if page.layout != 'full-width' %}
-	<a href="{{'#pinned-posts' | prepend: page.url | absolute_url }}" title="Pinned Posts">
+	<a href="{{ '#pinned-posts' | prepend: page.url | absolute_url }}" title="Pinned Posts">
 		{% include icon.html icon='#pin' %}
 		<span class="mobile-hidden">Pinned Posts</span>
 	</a>
