@@ -25,6 +25,10 @@ body {
 	'footer footer footer';
 }
 
+.gist {
+	max-width: 75vw;
+}
+
 .layout-full-width {
 	grid-template-columns: 5fr 90fr 5fr;
 	grid-template-areas: 'header header header'
@@ -37,6 +41,10 @@ body {
 	body {
 		grid-template-columns: 100vw;
 		grid-template-areas: 'header' 'nav' 'main' 'pinned-posts' 'recent-posts' 'footer';
+	}
+
+	.gist {
+		max-width: 100vw;
 	}
 
 	.layout-full-width {
