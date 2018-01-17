@@ -19,6 +19,7 @@
 @import url("./footer.css");
 @import url("./dialog.css");
 @import url("./contact.css");
+
 hr {
 	max-width: calc(100vw - 100px);
 	width: 100%;
