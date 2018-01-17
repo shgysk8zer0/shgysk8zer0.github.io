@@ -4056,12 +4056,12 @@ body {
 
 @media (max-width: 700px) {
 	body {
-		grid-template-columns: auto;
+		grid-template-columns: 100vw;
 		grid-template-areas: 'header' 'nav' 'main' 'pinned-posts' 'recent-posts' 'footer';
 	}
 
 	.layout-full-width {
-		grid-template-columns: auto;
+		grid-template-columns: 100vw;
 		grid-template-areas: 'header' 'nav' 'main' 'footer';
 	}
 
@@ -4087,10 +4087,12 @@ body {
 [data-share] {
 	bottom: 0.5rem;
 	right: 0.5rem;
-	min-height: 2.3em;
-	min-width: 2.3em;
-	padding: 0.2em;
-	opacity: 0.7;
+	height: 2.3em;
+	width: 2.3em;
+	min-height: 40px;
+	min-width: 40px;
+	padding: 0em;
+	opacity: 0.8;
 	transition: opacity 400ms ease-in-out, transform 400ms ease-in-out;
 }
 
@@ -4099,9 +4101,9 @@ body {
 	transform: scale(1.1);
 }
 
-body > [data-share] {
-	width: 2.5em;
-	height: 2.5em;
+[data-share] > svg {
+	width: auto;
+	height: 60%;
 }
 
 header {
@@ -4766,15 +4768,13 @@ dialog > *:not(header) {
 	}
 }
 
-:root{width:100vw;overflow-x:hidden}
-
-*,:after,:before{box-sizing:inherit}
-
 hr{max-width:calc(100vw - 100px);width:100%;opacity:.15}
 
 svg{max-width:4em;max-height:4em}
 
 .container.flex.row,.social-icons{justify-content:space-around}
+
+pre,table,tfoot,thead,tr{overflow:auto}
 
 code.highlight,pre.highlight{border:1px solid #ccc;border-radius:4px;box-shadow:1px 1px 2px rgba(0, 0, 0, .6)}
 
