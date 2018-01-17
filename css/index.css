@@ -19,16 +19,6 @@
 @import url("./footer.css");
 @import url("./dialog.css");
 @import url("./contact.css");
-
-:root {
-	width: 100vw;
-	overflow-x: hidden;
-}
-
-*, *::before, *::after {
-	box-sizing: inherit;
-}
-
 hr {
 	max-width: calc(100vw - 100px);
 	width: 100%;
@@ -46,6 +36,10 @@ svg {
 
 .container.flex.row {
 	justify-content: space-around;
+}
+
+pre, table, tr, thead, tfoot {
+	overflow: auto;
 }
 
 pre.highlight, code.highlight {

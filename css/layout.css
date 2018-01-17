@@ -34,12 +34,12 @@ body {
 
 @media (max-width: 700px) {
 	body {
-		grid-template-columns: auto;
+		grid-template-columns: 100vw;
 		grid-template-areas: 'header' 'nav' 'main' 'pinned-posts' 'recent-posts' 'footer';
 	}
 
 	.layout-full-width {
-		grid-template-columns: auto;
+		grid-template-columns: 100vw;
 		grid-template-areas: 'header' 'nav' 'main' 'footer';
 	}
 
