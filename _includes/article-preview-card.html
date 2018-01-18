@@ -4,7 +4,7 @@
 	</a>
 	{% if include.post.image != null %}
 		<a href="{{ include.post.url | absolute_url }}" title="{{ include.post.title }}">
-			<img src="{{ include.post.image | absolute_url }}" class="post-img" alt="Article thumbnail" crossorigin="anonymous" />
+			<img src="{{ include.post.image | absolute_url }}"{% if post.srcset %} srcset="{{ post.srcset | join: ', '}}" sizes="(min-width: 700px) 75vw, 100vw"{% endif %} class="post-img" alt="Article thumbnail" crossorigin="anonymous" />
 		</a>
 	{% endif %}
 	<blockquote class="post-excert">{{ include.post.content | strip_html | truncatewords: 20 }}</blockquote>

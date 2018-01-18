@@ -16,7 +16,7 @@
 - name: YouTube Feeds
   url: 'https://addons.mozilla.org/en-US/firefox/addon/youtube-feeds/'
   description: 'Firefox extension to expose YouTube channel and playlist feeds.'
-  screenshot: 'https://i.imgur.com/Ru8EO3m.png'
+  screenshot: 'https://i.imgur.com/Ru8EO3mm.png'
   keywords: 'WebExtension, JavaScript, RSS, YouTube'
   applicationCategory: Firefox Add-on
   operatingSystem: 'Windows, OSX, Linux, Android'
@@ -27,14 +27,14 @@
   applicationCategory: Office
   browserRequirements: 'fetch, template'
   keywords: 'JavaScript, Resume'
-  screenshot: 'https://i.imgur.com/TiSApf8.png'
+  screenshot: 'https://i.imgur.com/TiSApf8m.png'
 - name: Contact Page
   url: /contact/
   description: 'Contact info for Chris Zuber, Mount Vernon, WA'
   applicationCategory: Office
   browserRequirements: 'picture, media queries'
   keywords: 'SVG, CSS3, Responsive Images'
-  screenshot: 'https://i.imgur.com/RU3Mqrh.png'
+  screenshot: 'https://i.imgur.com/RU3Mqrhm.png'
 # - '@type': WebApplication
 #   '@context': 'http://schema.org'
 #   name: Super User Blog
@@ -56,7 +56,7 @@
     '@type': Offer
     price: 0
     priceCurrency: USD
-  screenshot: 'https://i.imgur.com/qdnVcJA.png'
+  screenshot: 'https://i.imgur.com/qdnVcJAm.png'
   url: 'https://shgysk8zer0.github.io/wysiwyg/'
   description: 'An all HTML, CSS, & JavaScript HTML5 WYSIWYG Editor'
   keywords: 'HTML5, JavaScript, appCache'
@@ -69,7 +69,7 @@
     '@type': Offer
     price: 0
     priceCurrency: USD
-  screenshot: 'https://i.imgur.com/j8gd6rW.png'
+  screenshot: 'https://i.imgur.com/j8gd6rWm.png'
   url: 'https://shgysk8zer0.github.io/freecodecamp-twitch'
   description: 'FreeCodeCamp: Use the Twitchtv JSON API'
   keywords: 'HTML5, JavaScript, FreeCodeCamp, fetch'
@@ -83,7 +83,7 @@
     price: 0
     priceCurrency: USD
   url: 'https://shgysk8zer0.github.io/freecodecamp-weather'
-  screenshot: 'https://i.imgur.com/OXN2pCz.png'
+  screenshot: 'https://i.imgur.com/OXN2pCzm.png'
   description: 'FreeCodeCamp: Show the Local Weather'
   keywords: 'HTML5, JavaScript, FreeCodeCamp, GeoLocation, fetch'
   applicationCategory: Weather
@@ -96,7 +96,7 @@
     '@type': Offer
     price: 0
     priceCurrency: USD
-  screenshot: 'https://i.imgur.com/WIaJgfx.png'
+  screenshot: 'https://i.imgur.com/WIaJgfxm.png'
   url: 'https://github.com/shgysk8zer0/std-js/'
   description: A JavaScript library for making front-end development sane!
   keywords: 'JavaScript, async/await, Animations API'
@@ -124,7 +124,7 @@
     '@type': Offer
     price: 0
     priceCurrency: USD
-  screenshot: 'https://i.imgur.com/c1hLkNj.png'
+  screenshot: 'https://i.imgur.com/c1hLkNjm.png'
   url: 'https://github.com/shgysk8zer0/adwaita-icons/'
   description: A copy of adwaita-icon-theme as seen in the Gnome Project
   keywords: 'SVG, icons'
