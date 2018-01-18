@@ -5,7 +5,7 @@ author: "Chris Zuber"
 pinned: true
 date: "2017-10-19 15:13:28 -0700"
 updated: "2017-10-20 10:12:00 -0700"
-image: https://i.imgur.com/3YHRZq3.png
+image: https://i.imgur.com/3YHRZq3m.png
 srcset:
   - 'https://i.imgur.com/3YHRZq3t.png 160w'
   - 'https://i.imgur.com/3YHRZq3m.png 320w'
