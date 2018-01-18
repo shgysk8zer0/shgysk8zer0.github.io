@@ -17,7 +17,7 @@ keywords:
   - es6
 markdown: kramdown
 respository: "shgysk8zer0/shgysk8zer0.github.io"
-lang: en_US
+lang: en
 dir: ltr
 feed: /feed.rss
 icons: '/img/icons.svg'
