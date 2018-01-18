@@ -9,12 +9,6 @@ import * as shares from './share-config.js';
 webShareApi(...Object.values(shares));
 
 ready().then(async () => {
-	if (window.hasOwnProperty('speechSynthesis')) {
-		$('[data-read]').click(event => $(event.target.dataset.read).read()).then($btns => {
-			$btns.unhide();
-		});
-	}
-
 	const $doc = $(document.documentElement);
 	$('[data-service-worker]').each(el => registerServiceWorker(el.dataset.serviceWorker));
 
