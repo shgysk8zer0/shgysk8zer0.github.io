@@ -13,6 +13,8 @@
 	--accent-color: #FF5722;
 	--accent-color-2: #D84315;
 	--border-color: #2D2D2D;
+	--header-bg-color: #1b5e20;
+
 	--button-background: linear-gradient(var(--accent-color), var(--accent-color-2), var(--accent-color));
 	--button-active-background: linear-gradient(var(--accent-color-2), var(--accent-color), var(--accent-color-2));
 	--button-active-color: var(--button-color);
