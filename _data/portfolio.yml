@@ -23,6 +23,7 @@
   browserRequirements: 'async / await, querySelectorAll, WebExtension API'
 - name: Resume
   url: /resume/
+  target: self
   description: 'A resume for Chris Zuber, written in HTML and CSS'
   applicationCategory: Office
   browserRequirements: 'fetch, template'
@@ -30,6 +31,7 @@
   screenshot: 'https://i.imgur.com/TiSApf8m.png'
 - name: Contact Page
   url: /contact/
+  target: self
   description: 'Contact info for Chris Zuber, Mount Vernon, WA'
   applicationCategory: Office
   browserRequirements: 'picture, media queries'

@@ -4,7 +4,7 @@
 		<meta itemprop="priceCurrency" content="{{ include.project.offers.priceCurrency | default: 'USD' }}" />
 	</div>
 	<meta itemprop="browserRequirements" content="{{ include.project.browserRequirements }}" />
-	<a href="{{ include.project.url }}" itemprop="url" target="_blank" class="no-text-decoration inline-block" rel="noopener external" title="{{ include.project.name }}">
+	<a href="{{ include.project.url }}" itemprop="url" target="_{{ include.project.target | default: 'blank' }}" class="no-text-decoration inline-block" rel="noopener external" title="{{ include.project.name }}">
 		<h3 itemprop="name" class="center font-title color-accent">{{ include.project.name }}</h3>
 		<h4 class="center" itemprop="applicationCategory">{{ include.project.applicationCategory }}</h4>
 		<img src="{{ include.project.screenshot }}" class="filter-shadow" itemprop="screenshot" alt="{{ include.project.name }} image" crossorigin="anonymous" />
