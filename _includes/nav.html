@@ -1,11 +1,11 @@
 <nav class="sticky top shadow-dark color-alt flex row title-font center no-text-decoration z-3" role="navigation" itemtype="http://schema.org/SiteNavigationElement" itemscope="">
 	{% if page.url != '/' %}
-		<a href="{{ '/' | absolute_url }}" rel="bookmark" title="Home">
+		<a href="{{ '/' | absolute_url }}" rel="bookmark" title="Home" class="color-inherit">
 			{% include icon.html icon='#home' %}
 			<span class="mobile-hidden">Home</span>
 		</a>
 	{% endif %}
-	<a href="{{ '#top' | prepend: page.url | absolute_url }}" title="Top">
+	<a href="{{ '#top' | prepend: page.url | absolute_url }}" title="Top" class="color-inherit">
 		{% include icon.html icon='#top' %}
 		<span class="mobile-hidden">Top</span>
 	</a>
@@ -14,23 +14,23 @@
 		<span class="mobile-hidden">About</span>
 	</span>
 	{% if page.layout == 'home' %}
-		<a href="{{ '#portfolio' | absolute_url }}" title="Portfolio">
+		<a href="{{ '#portfolio' | absolute_url }}" title="Portfolio" class="color-inherit">
 			{% include icon.html icon='#engineering' %}
 			<span class="mobile-hidden">Portfolio</span>
 		</a>
 	{% endif %}
 	{% if page.layout != 'full-width' %}
-	<a href="{{ '#pinned-posts' | prepend: page.url | absolute_url }}" title="Pinned Posts">
+	<a href="{{ '#pinned-posts' | prepend: page.url | absolute_url }}" title="Pinned Posts" class="color-inherit">
 		{% include icon.html icon='#pin' %}
 		<span class="mobile-hidden">Pinned Posts</span>
 	</a>
-	<a href="{{ '#recent-posts' | prepend: page.url | absolute_url }}" title="Recent Posts">
+	<a href="{{ '#recent-posts' | prepend: page.url | absolute_url }}" title="Recent Posts" class="color-inherit">
 		{% include icon.html icon='#recent' %}
 		<span class="mobile-hidden">Recent Posts</span>
 	</a>
 	{% else %}
-		<a href="{{ '/posts/' | absolute_url }}">Posts</a>
-		<a href="{{ '/posts/javascript/' | absolute_url }}">JavaScript</a>
-		<a href="{{ '/posts/php/' | absolute_url }}">PHP</a>
+		<a href="{{ '/posts/' | absolute_url }}" class="color-inherit">Posts</a>
+		<a href="{{ '/posts/javascript/' | absolute_url }}" class="color-inherit">JavaScript</a>
+		<a href="{{ '/posts/php/' | absolute_url }}" class="color-inherit">PHP</a>
 	{% endif %}
 </nav>
