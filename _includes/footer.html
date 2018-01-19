@@ -1,31 +1,22 @@
 <footer id="contact" class="color-alt no-text-decoration optimize-speed" role="contentinfo">
-	{% if site.github %}
-		<a href="https://github.com/{{ site.github.username }}" title="My GitHub Profile" target="_blank" rel="noopener external" class="inline-block">
-			<svg class="icon big icon-twirl transition-speed-normal transition-overshoot transition-transform">
-				<use xlink:href="{{ site.icons | absolute_url | append: '#mark-github' }}" />
-			</svg>
+	{% if site.repository %}
+		{% assign octo-class="icon current-color filter-shadow-dark big icon-twirl transition-speed-normal transition-overshoot transition-transform" %}
+		<a href="https://github.com/{{ site.repository.username }}" title="{{ site.repository.username }}'s GitHub" target="_blank" rel="noopener external" class="inline-block">
+			{% include icon.html icon="#mark-github" class=octo-class %}
 		</a>
-		<a href="https://github.com/{{ site.github.username }}/{{ site.github.repo }}" title="The GitHub Repository for this Page" target="_blank" rel="noopener external" class="inline-block">
-			<svg class="icon big icon-twirl transition-speed-normal transition-overshoot transition-transform">
-				<use xlink:href="{{ site.icons | absolute_url | append: '#repo' }}" />
-			</svg>
+		<a href="{{ site.repository.url }}" title="{{ site.repository.title }} on GitHub" target="_blank" rel="noopener external" class="inline-block">
+			{% include icon.html icon="#repo" class=octo-class %}
 		</a>
-		<a href="https://github.com/{{ site.github.username }}/{{ site.github.repo }}/issues" title="Open issues for the repository on Github" target="_blank" rel="noopener external" class="inline-block">
-			<svg class="icon big icon-twirl transition-speed-normal transition-overshoot transition-transform">
-				<use xlink:href="{{ site.icons | absolute_url | append: '#issue-opened' }}" />
-			</svg>
+		<a href="{{ site.repository.url }}/issues" title="Open issues for {{ site.repository.title }} on Github" target="_blank" rel="noopener external" class="inline-block">
+			{% include icon.html icon="#issue-opened" class=octo-class %}
 		</a>
 	{% endif %}
 	<a href="{{ '/resume/' | absolute_url }}" title="My Résumé" class="inline-block">
-		<svg class="big icon icon-twirl transition-speed-normal transition-overshoot transition-transform">
-			<use xlink:href="{{ site.icons | absolute_url | append: '#documents' }}" />
-		</svg>
+		{% include icon.html icon="#documents" class=octo-class %}
 	</a>
 	{% if site.feed %}
 		<a href="{{ site.feed | absolute_url}}" title="Subscribe to feed" target="_blank" class="inline-block">
-			<svg class="icon big icon-twirl transition-speed-normal transition-overshoot transition-transform">
-				<use xlink:href="{{ site.icons | absolute_url | append: '#rss' }}" />
-			</svg>
+			{% include icon.html icon="#rss" class=octo-class %}
 		</a>
 	{% endif %}
 	<ul class="footer-links">

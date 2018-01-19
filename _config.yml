@@ -16,16 +16,15 @@ keywords:
   - javascript
   - es6
 markdown: kramdown
-respository: "shgysk8zer0/shgysk8zer0.github.io"
+repository:
+  username: shgysk8zer0
+  title: shgysk8zer0.github.io
+  url: 'https://github.com/shgysk8zer0/shgysk8zer0.github.io'
 lang: en
 dir: ltr
 feed: /feed.rss
 icons: '/img/icons.svg'
 theme-color: '#FC5B0B'
-github:
-  username: shgysk8zer0
-  repo: shgysk8zer0.github.io
-  url: "https://shgysk8zer0.github.io"
 twitter: SudoDevTeam
 gravatar: 73f08dc9b030c584e76a4c3c4e8a56c0
 webmaster-verifications:

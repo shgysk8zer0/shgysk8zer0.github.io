@@ -9,7 +9,7 @@
     "lint": "npm run lint:all",
     "lint:all": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint .",
-    "lint:css": "stylelint 'css/*.css'",
+    "lint:css": "stylelint css/",
     "test": "npm run lint",
     "build": "npm run build:icons && npm run build:css && npm run build:js",
     "build:css": "postcss -c postcss.config.json css/index.css -o css/index.min.css",
@@ -35,7 +35,7 @@
   "devDependencies": {
     "eslint": "^4.2.0",
     "eslint-plugin-async-await": "0.0.0",
-    "stylelint": "^8.1.1",
+    "stylelint": "^8.4.0",
     "stylelint-config-recommended": "^1.0.0",
     "stylelint-config-standard": "^17.0.0"
   },
