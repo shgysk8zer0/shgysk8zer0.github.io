@@ -19,7 +19,7 @@
     "build:site:dev": "bundle exec jekyll build --incremental --drafts",
     "postinstall": "npm run git:submodules && npm run build",
     "start": "npm run serve:dev",
-    "serve:production": "npm run build:all && JEKYLL_ENV=production bundle exec jekyll serve --incremental",
+    "serve:production": "npm run build && JEKYLL_ENV=production bundle exec jekyll serve --incremental",
     "serve:dev": "bundle exec jekyll serve --drafts --unpublished --future --profile --trace --strict_front_matter"
   },
   "repository": {
@@ -35,22 +35,27 @@
   "devDependencies": {
     "eslint": "^4.2.0",
     "eslint-plugin-async-await": "0.0.0",
+    "eslint-plugin-babel": "^4.1.2",
     "stylelint": "^8.4.0",
     "stylelint-config-recommended": "^1.0.0",
     "stylelint-config-standard": "^17.0.0"
   },
   "dependencies": {
-    "postcss-calc": "^6.0.1",
-    "postcss-custom-properties": "^6.2.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015-rollup": "^3.0.0",
     "cssnano": "^3.10.0",
     "postcss": "^6.0.12",
+    "postcss-calc": "^6.0.1",
     "postcss-cli": "^4.1.1",
     "postcss-cssnext": "^3.0.2",
+    "postcss-custom-properties": "^6.2.0",
     "postcss-import": "^11.0.0",
     "postcss-load-config": "^1.2.0",
     "postcss-plugin": "^1.0.0",
     "postcss-url": "^7.1.2",
-    "rollup": "^0.50.0",
+    "rollup": "^0.54.1",
     "svg-sprite-generator": "0.0.7"
   }
 }
