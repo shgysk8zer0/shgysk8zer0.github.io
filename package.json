@@ -33,7 +33,7 @@
   },
   "homepage": "https://shgysk8zer0.github.io",
   "devDependencies": {
-    "eslint": "^4.2.0",
+    "eslint": "^4.15.0",
     "eslint-plugin-async-await": "0.0.0",
     "eslint-plugin-babel": "^4.1.2",
     "stylelint": "^8.4.0",
@@ -50,7 +50,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-runtime": "^6.26.0",
     "cssnano": "^3.10.0",
-    "postcss": "^6.0.12",
+    "postcss": "^6.0.16",
     "postcss-calc": "^6.0.1",
     "postcss-cli": "^4.1.1",
     "postcss-cssnext": "^3.0.2",
@@ -59,7 +59,7 @@
     "postcss-import": "^11.0.0",
     "postcss-load-config": "^1.2.0",
     "postcss-plugin": "^1.0.0",
-    "postcss-url": "^7.1.2",
+    "postcss-url": "^7.3.0",
     "svg-sprite-generator": "0.0.7",
     "webpack": "^3.10.0"
   }
