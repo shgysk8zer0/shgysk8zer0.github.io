@@ -5,9 +5,10 @@
 }
 
 #portfolio [itemprop="screenshot"] {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
 	max-height: 12rem;
-	margin-left: 50%;
-	transform: translateX(-50%);
 }
 
 [itemprop="workExample"]:hover {
