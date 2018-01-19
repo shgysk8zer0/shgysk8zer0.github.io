@@ -5,8 +5,7 @@
     '@type': Offer
     price: 0
     priceCurrency: USD
-  screenshot: >-
-    https://media.githubusercontent.com/media/shgysk8zer0/awesome-rss/master/screenshot.png
+  screenshot: 'https://i.imgur.com/INswaGS.png'
   url: 'https://addons.mozilla.org/en-US/firefox/addon/awesome-rss/'
   description: Puts and RSS/Atom subscribe button back in the URL bar
   keywords: 'WebExtension, JavaScript, RSS'
