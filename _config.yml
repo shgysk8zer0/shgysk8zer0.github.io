@@ -67,14 +67,14 @@ plugins:
   - jekyll-gist
   - jekyll-youtube
   - jekyll-admin
-  - jekyll-avatar
+  # - jekyll-avatar
   # - jekyll-mentions
   # - jekyll-github-metadata
   - jekyll-paginate
-  - jekyll-optional-front-matter
-  - jekyll-readme-index
-  - jekyll-titles-from-headings
-  - jekyll-include-cache
+  # - jekyll-optional-front-matter
+  # - jekyll-readme-index
+  # - jekyll-titles-from-headings
+  # - jekyll-include-cache
   # - jekyll-seo-tag
   # - jemoji
   # - jekyll-octicons
