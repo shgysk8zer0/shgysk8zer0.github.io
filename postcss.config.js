@@ -1,4 +1,4 @@
-module.exports = ctx => ({
+module.exports = {
 	"map": {inline: false},
 	"plugins": [
 		require("postcss-cssnext"),
@@ -6,6 +6,7 @@ module.exports = ctx => ({
 		require("postcss-url"),
 		require("postcss-calc"),
 		require("postcss-custom-properties"),
+		require("postcss-discard-comments")({removeAll: true}),
 		require("cssnano"),
 	]
-});
+};

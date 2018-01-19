@@ -55,6 +55,7 @@
     "postcss-cli": "^4.1.1",
     "postcss-cssnext": "^3.0.2",
     "postcss-custom-properties": "^6.2.0",
+    "postcss-discard-comments": "^2.0.4",
     "postcss-import": "^11.0.0",
     "postcss-load-config": "^1.2.0",
     "postcss-plugin": "^1.0.0",
