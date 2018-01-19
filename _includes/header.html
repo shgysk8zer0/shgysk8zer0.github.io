@@ -27,7 +27,7 @@
 		<h2 class="capitalize">
 			<span itemprop="jobTitle">{{ site.data.person.jobTitle }}</span> |
 			<span itemprop="worksFor" itemtype="http://schema.org/Organization" itemscope="">
-				<a href="{{ site.data.person.worksFor.url }}" rel="noopener external">
+				<a href="{{ site.data.person.worksFor.url }}" class="color-inherit" rel="noopener external">
 					<span itemprop="name">{{ site.data.person.worksFor.name }}</span>
 					<img src="{{ site.data.person.worksFor.logo.contentUrl | absolute_url }}" width="32" height="32" alt="{{ site.data.person.worksFor.name }}" />
 				</a>
