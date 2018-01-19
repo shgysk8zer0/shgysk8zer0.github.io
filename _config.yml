@@ -66,8 +66,8 @@ plugins:
   - jekyll-gist
   - jekyll-youtube
   - jekyll-admin
-  - jekyll-avatar
-  - jekyll-mentions
+  # - jekyll-avatar
+  # - jekyll-mentions
   # - jekyll-github-metadata
   - jekyll-paginate
   # - jekyll-optional-front-matter
@@ -76,7 +76,7 @@ plugins:
   # - jekyll-include-cache
   # - jekyll-seo-tag
   # - jemoji
-  - jekyll-octicons
+  # - jekyll-octicons
 exclude:
 - "*.rb"
 - "*.gemspec"
