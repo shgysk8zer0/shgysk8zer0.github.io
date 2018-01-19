@@ -3,7 +3,7 @@
 			{% include icon.html icon='#recent' %}
 			<span>Recent Posts</span>
 		</h4>
-		{% for post in site.posts limit: 10 %}
+		{% for post in site.posts limit: include.count %}
 			{% include post-preview.html post=post %}
 		{% endfor %}
 </aside>
