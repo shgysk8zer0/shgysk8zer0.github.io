@@ -82,7 +82,7 @@
 		<script type="{{ script.type }}" src="{{ script.src | absolute_url }}"{% if script.async %} async=""{% endif %}{% if script.defer %} defer=""{% endif %}{% if script.nomodule %} nomodule=""{% endif %}{% if script.crossorigin %} crossorigin="{{ script.crossorigin }}"{% endif %}{% if script.integrity %} integrity="{{ script.integrity }}"{% endif %}></script>
 	{% endfor %}
 	{% for stylesheet in site.data.head.stylesheets[jekyll.environment] %}
-		<link rel="stylesheet" href="{{ stylesheet.href | absolute_url }}" media="{{ stylesheet.media }}"{% if stylesheet.crossorigin %} crossorigin="{{ stylesheet.crossorigin }}"{% endif %}{% if stylesheet.integrity %} integrity="{{ stylesheet.integrity }}"{% endif %} />
+		<link rel="stylesheet" href="{{ stylesheet.href | absolute_url }}" media="{{ stylesheet.media | default: 'all' }}"{% if stylesheet.crossorigin %} crossorigin="{{ stylesheet.crossorigin }}"{% endif %}{% if stylesheet.integrity %} integrity="{{ stylesheet.integrity }}"{% endif %} />
 	{% endfor %}
 	{% if  site.data.head.canonical %}<link rel="canonical" href="{{ site.data.head.canonical }}{{ page.url }}"/>{% endif %}
 	{% if site.data.head.icons %}{% for icon in site.data.head.icons %}
