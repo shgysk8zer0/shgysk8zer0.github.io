@@ -3,7 +3,7 @@ title: The Future of Web Apps
 author: Chris Zuber
 date: 2017-11-08 13:18:00 -0700
 pinned: true
-image: /img/uploads/code-design.png
+image: 'https://i.imgur.com/ie51PySh.jpg'
 description: Some thoughts on the advantages and potential of building progressive web apps
 keywords:
 - pwa
@@ -18,7 +18,7 @@ category: javascript
   <i>The Web as the Ultimate Platform</i>
 </h2>
 <figure class="right">
-<img src="https://shgysk8zer0.github.io/img/uploads/code-design.png" alt="Building Modern Web Apps" />
+<img src="https://i.imgur.com/ie51PySh.jpg" alt="Building Modern Web Apps" />
 </figure>
 
 ### What are they?
