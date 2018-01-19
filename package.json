@@ -13,7 +13,7 @@
     "test": "npm run lint",
     "build": "npm run build:icons && npm run build:css && npm run build:js",
     "build:css": "postcss -c postcss.config.json css/index.css -o css/index.min.css",
-    "build:js": "rollup --config rollup.config.js",
+    "build:js": "webpack",
     "build:icons": "svg-sprite-generate -c img/icons.csv -o img/icons.svg",
     "build:site": "npm run build:all && JEKYLL_ENV=production bundle exec jekyll build",
     "build:site:dev": "bundle exec jekyll build --incremental --drafts",
@@ -42,9 +42,13 @@
   },
   "dependencies": {
     "babel-core": "^6.26.0",
+    "babel-helpers": "^6.24.1",
+    "babel-loader": "^7.1.2",
     "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-es2015-rollup": "^3.0.0",
+    "babel-runtime": "^6.26.0",
     "cssnano": "^3.10.0",
     "postcss": "^6.0.12",
     "postcss-calc": "^6.0.1",
@@ -55,7 +59,7 @@
     "postcss-load-config": "^1.2.0",
     "postcss-plugin": "^1.0.0",
     "postcss-url": "^7.1.2",
-    "rollup": "^0.54.1",
-    "svg-sprite-generator": "0.0.7"
+    "svg-sprite-generator": "0.0.7",
+    "webpack": "^3.10.0"
   }
 }

@@ -44,13 +44,13 @@
 				</address>
 			</h4>
 			<div class="contact-links flex row container bigger">
-				<a href="tel:{{ site.data.person.telephone }}" itemprop="telephone" content="{{ site.data.person.telephone }}" title="{{ site.data.person.telephone }}">
+				<a href="tel:{{ site.data.person.telephone }}" itemprop="telephone" content="{{ site.data.person.telephone }}" title="{{ site.data.person.telephone }}" class="color-inherit">
 					{% include icon.html icon='#call-start' class='current-color icon transition-transform contact-icon transition-speed-normal transition-ease-in-out bounceInDown animation-ease-in animation-fill-backwards animation-speed-crawl animation-paused' %}
 				</a>
-				<a href="mailto:{{ site.data.person.email }}" itemprop="email" content="{{ site.data.person.email }}" title="{{ site.data.person.email }}">
+				<a href="mailto:{{ site.data.person.email }}" itemprop="email" content="{{ site.data.person.email }}" title="{{ site.data.person.email }}" class="color-inherit">
 					{% include icon.html icon='#mail-unread' class='current-color icon transition-transform contact-icon transition-speed-normal transition-ease-in-out bounceInDown animation-ease-in animation-fill-backwards animation-speed-crawl animation-paused' %}
 				</a>
-				<a href="{{ site.data.person.homeLocation.geo.url }}" title="Geo">
+				<a href="{{ site.data.person.homeLocation.geo.url }}" title="Geo" class="color-inherit">
 					{% include icon.html icon='#location' class='current-color icon transition-transform contact-icon transition-speed-normal transition-ease-in-out bounceInDown animation-ease-in animation-fill-backwards animation-speed-crawl animation-paused' %}
 				</a>
 			</div>
