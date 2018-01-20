@@ -22,6 +22,6 @@ dialog > header {
 	box-shadow: 0 2px 2px rgba(0,0,0,.8);
 }
 
-dialog > *:not(header) {
+dialog > *:not(header):not(footer) {
 	margin: 0.8em;
 }

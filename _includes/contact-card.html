@@ -16,13 +16,13 @@
 			<span itemprop="familyName">{{ include.person.familyName }}</span>
 		</h1>
 		{% if include.person.worksFor %}
-			<dialog id="org-info-dialog" itemprop="worksFor" itemtype="http://schema.org/Organization" itemscope="">
+			<dialog id="org-info-dialog" class="background-primary" itemprop="worksFor" itemtype="http://schema.org/Organization" itemscope="">
 				<header class="sticky top background-primary color-alt clearfix">
 					<button data-close="#org-info-dialog" class="font-main filter-shadow float-right">
 						{% include icon.html icon='#close' %}
 					</button>
 				</header>
-				<div>
+				<div class="card shadow">
 					<h2 class="center" itemprop="name">{{ include.person.worksFor.name }}</h2>
 					{% if include.person.worksFor.logo %}
 						<img
@@ -70,7 +70,7 @@
 					{% endif %}
 				</div>
 				{% if include.person.worksFor.sameAs %}
-					<footer class="flex row big social-icons">
+					<footer class="flex row big social-icons card shadow">
 						{% if include.person.worksFor.sameAs.github %}
 							<a href="https://github.com/{{ include.person.worksFor.sameAs.github }}" rel="noopener external" title="GitHub" itemprop="sameAs">
 								{% include icon.html icon='#mark-github' class='icon' %}
