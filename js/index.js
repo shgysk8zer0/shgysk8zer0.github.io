@@ -6,9 +6,24 @@ import {supportsAsClasses} from './std-js/supports.js';
 import webShareApi from './std-js/webShareApi.js';
 import * as shares from './share-config.js';
 
+async function supportsWebP() {
+	return new Promise((resolve, reject) => {
+		const img = new Image();
+		img.addEventListener('load', resolve);
+		img.addEventListener('error', reject);
+		img.src = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAQAAAAfQ//73v/+BiOh/AAA=';
+	});
+}
+
 webShareApi(...Object.values(shares));
 
 ready().then(async () => {
+	supportsWebP().then(() =>
+		document.documentElement.classList.add('webp')
+	).catch(() =>
+		document.documentElement.classList.add('no-webp')
+	);
+
 	const $doc = $(document.documentElement);
 	$('[data-service-worker]').each(el => registerServiceWorker(el.dataset.serviceWorker));
 
