@@ -82,6 +82,11 @@ pre.highlight, code.highlight {
 	cursor: not-allowed;
 }
 
+.article-preview img, .article-preview picture {
+	display: block;
+	margin: auto;
+}
+
 @media (max-width: 800px) {
 	.mobile-hidden {
 		display: none;
