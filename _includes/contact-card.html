@@ -16,89 +16,6 @@
 			<span itemprop="familyName">{{ include.person.familyName }}</span>
 		</h1>
 		{% if include.person.worksFor %}
-			<dialog id="org-info-dialog" itemprop="worksFor" itemtype="http://schema.org/Organization" itemscope="">
-				<header class="sticky top background-primary color-alt clearfix">
-					<button data-close="#org-info-dialog" class="font-main filter-shadow float-right">
-						{% include icon.html icon='#close' %}
-					</button>
-				</header>
-				<div>
-					<h2 class="center" itemprop="name">{{ include.person.worksFor.name }}</h2>
-					{% if include.person.worksFor.logo %}
-						<img
-							itemprop="logo"
-							alt="Logo"
-							crossorigin="anonymous"
-							src="{{ include.person.worksFor.logo.contentUrl | absolute_url }}"
-							width="{{ include.person.worksFor.logo.width | default: 64 }}"
-							height="{{ include.person.worksFor.logo.height | default: 64 }}" />
-							<hr />
-					{% endif %}
-					{% if include.person.worksFor.address %}
-						<address class="clearfix" itemprop="address" itemtype="http://schema.org/PostalAddress" itemscope="">
-							{% include icon.html icon='#location' %}
-							<span>
-								<span itemprop="addressLocality">{{ include.person.worksFor.address.addressLocality }}</span>,
-								<span itemprop="addressRegion">{{ include.person.worksFor.address.addressRegion }}</span>
-							</span>
-						</address>
-						<hr />
-					{% endif %}
-					{% if include.person.worksFor.description %}
-						<blockquote itemprop="description">{{ include.person.worksFor.description }}</blockquote>
-					{% endif %}
-					{% if include.person.url %}
-						<a href="{{ include.person.url }}" itemprop="url">
-							{% include icon.html icon='#web-browser' %}
-							<span>{{ include.person.worksFor.url | replace: 'https://', '' }}</span>
-						</a>
-						<hr />
-					{% endif %}
-					{% if include.person.worksFor.email %}
-						<a href="mailto:{{ include.person.worksFor.email }}" content="{{ include.person.email }}" itemprop="email">
-							{% include icon.html icon='#mail-unread' %}
-							<span>{{ include.person.worksFor.email }}</span>
-						</a>
-						<hr />
-					{% endif %}
-					{% if include.person.worksFor.telephone %}
-						<a href="tel:{{ include.person.worksFor.telephone }}" content="{{ site.date.person.telephone }}" itemprop="telephone">
-							{% include icon.html icon='#call-start' %}
-							<span>{{ include.person.worksFor.telephone | replace: '+', '' }}</span>
-						</a>
-					<hr />
-					{% endif %}
-				</div>
-				{% if include.person.worksFor.sameAs %}
-					<footer class="flex row big social-icons">
-						{% if include.person.worksFor.sameAs.github %}
-							<a href="https://github.com/{{ include.person.worksFor.sameAs.github }}" rel="noopener external" title="GitHub" itemprop="sameAs">
-								{% include icon.html icon='#mark-github' class='icon' %}
-							</a>
-						{% endif %}
-						{% if include.person.worksFor.sameAs.twitter %}
-							<a href="https://twitter.com/{{ include.person.worksFor.sameAs.twitter }}" rel="noopener external" title="Twitter" itemprop="sameAs">
-								{% include icon.html icon='#twitter' class='icon' %}
-							</a>
-						{% endif %}
-						{% if include.person.worksFor.sameAs.linkedin %}
-							<a href="https://www.linkedin.com/company/{{ include.person.worksFor.sameAs.linkedin }}/" title="LinkedIn" rel="noopener external" itemprop="sameAs">
-								{% include icon.html icon='#linkedin' class='icon' %}
-							</a>
-						{% endif %}
-						{% if include.person.worksFor.sameAs.google_plus %}
-							<a href="https://plus.google.com/{{ include.person.worksFor.sameAs.google_plus }}" rel="noopener external" title="Google+" itemprop="sameAs">
-								{% include icon.html icon='#google+' class='icon' %}
-							</a>
-						{% endif %}
-						{% if include.person.worksFor.sameAs.youtube %}
-							<a href="https://youtube.com/{{ include.person.worksFor.sameAs.youtube }}" rel="noopener external" title="YouTube" itemprop="sameAs">
-								{% include icon.html icon='#youtube' class='icon' %}
-							</a>
-						{% endif %}
-					</footer>
-					{% endif %}
-			</dialog>
 			<h3>
 				{% include icon.html icon='#network-workgroup' %}
 				<span itemprop="jobTitle">{{ include.person.jobTitle }}</span>
@@ -183,3 +100,88 @@
 		{% endif %}
 	</section>
 </div>
+{% if include.person.worksFor %}
+	<dialog id="org-info-dialog" itemprop="worksFor" itemtype="http://schema.org/Organization" itemscope="">
+		<header class="sticky top background-primary color-alt clearfix">
+			<button data-close="#org-info-dialog" class="font-main filter-shadow float-right">
+				{% include icon.html icon='#close' %}
+			</button>
+		</header>
+		<div>
+			<h2 class="center" itemprop="name">{{ include.person.worksFor.name }}</h2>
+			{% if include.person.worksFor.logo %}
+				<img
+					itemprop="logo"
+					alt="Logo"
+					crossorigin="anonymous"
+					src="{{ include.person.worksFor.logo.contentUrl | absolute_url }}"
+					width="{{ include.person.worksFor.logo.width | default: 64 }}"
+					height="{{ include.person.worksFor.logo.height | default: 64 }}" />
+					<hr />
+			{% endif %}
+			{% if include.person.worksFor.address %}
+				<address class="clearfix" itemprop="address" itemtype="http://schema.org/PostalAddress" itemscope="">
+					{% include icon.html icon='#location' %}
+					<span>
+						<span itemprop="addressLocality">{{ include.person.worksFor.address.addressLocality }}</span>,
+						<span itemprop="addressRegion">{{ include.person.worksFor.address.addressRegion }}</span>
+					</span>
+				</address>
+				<hr />
+			{% endif %}
+			{% if include.person.worksFor.description %}
+				<blockquote itemprop="description">{{ include.person.worksFor.description }}</blockquote>
+			{% endif %}
+			{% if include.person.url %}
+				<a href="{{ include.person.url }}" itemprop="url">
+					{% include icon.html icon='#web-browser' %}
+					<span>{{ include.person.worksFor.url | replace: 'https://', '' }}</span>
+				</a>
+				<hr />
+			{% endif %}
+			{% if include.person.worksFor.email %}
+				<a href="mailto:{{ include.person.worksFor.email }}" content="{{ include.person.email }}" itemprop="email">
+					{% include icon.html icon='#mail-unread' %}
+					<span>{{ include.person.worksFor.email }}</span>
+				</a>
+				<hr />
+			{% endif %}
+			{% if include.person.worksFor.telephone %}
+				<a href="tel:{{ include.person.worksFor.telephone }}" content="{{ site.date.person.telephone }}" itemprop="telephone">
+					{% include icon.html icon='#call-start' %}
+					<span>{{ include.person.worksFor.telephone | replace: '+', '' }}</span>
+				</a>
+			<hr />
+			{% endif %}
+		</div>
+		{% if include.person.worksFor.sameAs %}
+			<footer class="flex row big social-icons">
+				{% if include.person.worksFor.sameAs.github %}
+					<a href="https://github.com/{{ include.person.worksFor.sameAs.github }}" rel="noopener external" title="GitHub" itemprop="sameAs">
+						{% include icon.html icon='#mark-github' class='icon' %}
+					</a>
+				{% endif %}
+				{% if include.person.worksFor.sameAs.twitter %}
+					<a href="https://twitter.com/{{ include.person.worksFor.sameAs.twitter }}" rel="noopener external" title="Twitter" itemprop="sameAs">
+						{% include icon.html icon='#twitter' class='icon' %}
+					</a>
+				{% endif %}
+				{% if include.person.worksFor.sameAs.linkedin %}
+					<a href="https://www.linkedin.com/company/{{ include.person.worksFor.sameAs.linkedin }}/" title="LinkedIn" rel="noopener external" itemprop="sameAs">
+						{% include icon.html icon='#linkedin' class='icon' %}
+					</a>
+				{% endif %}
+				{% if include.person.worksFor.sameAs.google_plus %}
+					<a href="https://plus.google.com/{{ include.person.worksFor.sameAs.google_plus }}" rel="noopener external" title="Google+" itemprop="sameAs">
+						{% include icon.html icon='#google+' class='icon' %}
+					</a>
+				{% endif %}
+				{% if include.person.worksFor.sameAs.youtube %}
+					<a href="https://youtube.com/{{ include.person.worksFor.sameAs.youtube }}" rel="noopener external" title="YouTube" itemprop="sameAs">
+						{% include icon.html icon='#youtube' class='icon' %}
+					</a>
+				{% endif %}
+			</footer>
+			{% endif %}
+	</dialog>
+{% endif %}
