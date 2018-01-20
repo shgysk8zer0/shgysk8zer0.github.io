@@ -1,6 +1,9 @@
 <dialog id="about-dialog" class="fadeInUp animation-speed-normal animation-ease-in animation-fill-backwards">
 	<header class="sticky top background-primary">
 		<span class="clearfix">
+			<a href="{{ '/contact/' | absolute_url  }}" class="color-inherit left center" role="button" title="Contact Page">
+				{% include icon.html icon='#address-book' %}
+			</a>
 			<button data-close="#about-dialog" class="font-main filter-shadow right">X</button>
 		</span>
 	</header>
