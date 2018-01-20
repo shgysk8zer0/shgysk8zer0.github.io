@@ -25,28 +25,44 @@ body > header > [itemtype="http://schema.org/Person"] {
 
 @media (orientation: portrait) and (min-height: 901px),
 	(orientation: landscape) and (min-width: 1201px) {
-	body > header {
+	:root.webp body > header {
+		background-image: var(--header-background-chrome-full);
+	}
+
+	:root.no-webp body > header {
 		background-image: var(--header-background-full);
 	}
 }
 
 @media (orientation: portrait) and (min-height: 601px) and (max-height: 900px),
 	(orientation: landscape) and (min-width: 801px) and (max-width: 1200px) {
-	body > header {
+	:root.webp > body > header {
+		background-image: var(--header-background-chrome-l);
+	}
+
+	:root.no-webp > body > header {
 		background-image: var(--header-background-l);
 	}
 }
 
 @media (orientation: portrait) and (min-height: 316px) and (max-height: 600px),
 	(orientation: landscape) and (min-width: 421px) and (max-width: 800px) {
-	body > header {
+	:root.webp > body > header {
+		background-image: var(--header-background-chrome-m);
+	}
+
+	:root.no-webp > body > header {
 		background-image: var(--header-background-m);
 	}
 }
 
 @media (orientation: portrait) and (max-height: 315px),
 	(orientation: landscape) and (max-width: 420px) {
-	body > header {
+	:root.webp > body > header {
+		background-image: var(--header-background-chrome-s);
+	}
+
+	:root.no-webp > body > header {
 		background-image: var(--header-background-s);
 	}
 }

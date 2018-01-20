@@ -29,6 +29,10 @@
 	--header-background-l: url("/img/background-1200.jpg");
 	--header-background-m: url("/img/background-800.jpg");
 	--header-background-s: url("/img/background-420.jpg");
+	--header-background-chrome-full : url("/img/background.webp");
+	--header-background-chrome-l: url("/img/background-1200.webp");
+	--header-background-chrome-m: url("/img/background-800.webp");
+	--header-background-chroome-s: url("/img/background-420.webp");
 	--nav-height: 2.5rem;
 
 	/*==================== Set fonts here ====================*/

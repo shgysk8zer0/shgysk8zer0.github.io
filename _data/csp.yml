@@ -2,6 +2,7 @@ default:
 - '''self'''
 img:
 - '*'
+- 'data:'
 script:
 - '''self'''
 - 'https://cdn.polyfill.io'
