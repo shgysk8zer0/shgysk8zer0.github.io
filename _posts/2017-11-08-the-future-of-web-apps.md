@@ -17,7 +17,7 @@ category: javascript
 <h2 class="center" itemprop="alternativeHeadline">
   <i>The Web as the Ultimate Platform</i>
 </h2>
-{% include imgur.html class='right' imgur=page.imgur sizes='(min-width: 800px) 60vw, 100vw' alt='Code screenshot' %}
+{% include imgur.html class='float-right card shadow' imgur=page.imgur sizes='(min-width: 800px) 60vw, 100vw' alt='Code screenshot' %}
 
 ### What are they?
 As described on [MDN](https://developer.mozilla.org/en-US/Apps "App Center | MDN"):

@@ -5,13 +5,13 @@ date: "2017-12-10 14:01:00 -0700"
 keywords:
 - Facebook
 description: 'Facebook has been disabling accounts without reason'
-image: 'https://i.imgur.com/qIrdoQC.png'
-imgur: qIrdoQC
+image: 'https://i.imgur.com/NlTzX7c.png'
+imgur: NlTzX7c
 category: life
 ---
 # I think Facebook hates me
 
-![Facebook Account Disabled](https://i.imgur.com/qIrdoQC.png)
+{% include imgur.html imgur=page.imgur alt='Facebook account disabled' sizes='(min-width: 700px) 50vw, 100vw' %}
 
 They have disabled my account about a dozen times now without stating any reason
 for doing so. They seem to believe, for some strange reason, that I am not me. This,
