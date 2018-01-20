@@ -58,7 +58,7 @@
 			{% if author.sameAs %}
 				<hr />
 				<div class="social-links no-text-decoration optimize-speed flex row container bigger animaion-stagger">
-					{% assign icon-class='icon' %}
+					{% assign icon-class='icon bounceInDown animation-ease-in animation-fill-backwards animation-speed-crawl animation-paused' %}
 					{% assign link-class = 'icon-twirl transition-transform transition-speed-normal transform-origin-center transition-ease-in-out' %}
 					{% if author.sameAs.github %}
 						<a href="https://github.com/{{ author.sameAs.github }}" class="{{ link-class }}" title="GitHub" target="_blank" rel="noopener external" itemprop="sameAs">
