@@ -11,7 +11,7 @@
 	flex-direction: column;
 }
 
-#contact-section .icon {
+#contact-section a .icon {
 	margin-right: 1.3em;
 }
 
