@@ -15,6 +15,10 @@
 	margin-right: 1.3em;
 }
 
+#contact-section button .icon {
+	margin-right: 0;
+}
+
 @media (min-aspect-ratio: 3/2) {
 	#contact-section .contact-info-card {
 		max-width: calc(100vw - 100vh);
