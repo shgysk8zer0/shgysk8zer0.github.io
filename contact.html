@@ -11,19 +11,11 @@ keywords:
 ---
 <div id="contact-section" class="clearfix font-article background-primary color-default" itemtype="http://schema.org/Person" itemscope="">
 	<figure itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="" class="left">
-		<img
-			itemprop="url"
-			srcset="
-				https://secure.gravatar.com/avatar/43578597e449298f5488c2407c8a8ae5?s=1400 1400w,
-				https://secure.gravatar.com/avatar/43578597e449298f5488c2407c8a8ae5?s=1200 1200w,
-				https://secure.gravatar.com/avatar/43578597e449298f5488c2407c8a8ae5?s=1000 1000w,
-				https://secure.gravatar.com/avatar/43578597e449298f5488c2407c8a8ae5?s=800 800w,
-				https://secure.gravatar.com/avatar/43578597e449298f5488c2407c8a8ae5?s=600 600w,
-				https://secure.gravatar.com/avatar/43578597e449298f5488c2407c8a8ae5?s=300 300w"
-			sizes="(min-aspect-ratio: 3/2) 100vh, 100vw"
-			src="https://secure.gravatar.com/avatar/43578597e449298f5488c2407c8a8ae5?s=800"
-			alt="Gravatar Image"
-		/>
+		{% include gravatar.html
+			gravatar='43578597e449298f5488c2407c8a8ae5'
+			sizes='min-aspect-ratio: 3/2) 100vh, 100vw'
+			itemprop='url'
+		%}
 	</figure>
 	<section class="contact-info-card inline-block">
 		<a href="{{ site.url | absolute|url }}" title="Home" class="fixed top left color-alt filter-shadow-dark">

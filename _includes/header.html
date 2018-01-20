@@ -1,22 +1,13 @@
 <header id="about" class="center background-fixed background-no-repeat overflow-hidden background-cover color-alt optimize-speed transition-speed-slow" role="banner">
 	<div itemtype="http://schema.org/Person" itemprop="about" itemscope="" class="flex column wrap transform-origin-bottom transition-ease-in-out">
 		<figure itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="">
-			<img
-				srcset="
-					https://secure.gravatar.com/avatar/{{ site.gravatar }}?s=512&d=mm 512w,
-					https://secure.gravatar.com/avatar/{{ site.gravatar }}?s=400&d=mm 400w,
-					https://secure.gravatar.com/avatar/{{ site.gravatar }}?s=300&d=mm 300w,
-					https://secure.gravatar.com/avatar/{{ site.gravatar }}?s=256&d=mm 256w,
-					https://secure.gravatar.com/avatar/{{ site.gravatar }}?s=180&d=mm 180w,
-					https://secure.gravatar.com/avatar/{{ site.gravatar }}?s=128&d=mm 128w,
-					https://secure.gravatar.com/avatar/{{ site.gravatar }}?s=64&d=mm 64w"
-				sizes="(orientation: portrait) 30vw, 15vw"
-				src="https://secure.gravatar.com/avatar/{{ site.gravatar }}?s=256&d=mm"
-				alt="Gravatar"
-				itemprop="url"
-				class="round shadow-dark cursor-pointer"
-				data-show-modal="#about-dialog"
-				crossorigin="anonymous" />
+			{% include gravatar.html
+				gravatar=site.gravatar
+				sizes='(orientation: portrait) 30vw, 15vw'
+				class='round shadow-dark cursor-pointer'
+				itemprop='url'
+				attrs='data-show-modal="#about-dialog"'
+			%}
 		</figure>
 		<h1 class="capitalize">
 			{% if site.data.person.url %}<a href="{{ site.data.person.url }}" rel="noopener external" title="Personal Blog">{% endif %}

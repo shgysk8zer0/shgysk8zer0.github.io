@@ -8,20 +8,13 @@
 		</span>
 	</header>
 	<figure class="clearfix">
-		<img
-			srcset="
-				https://secure.gravatar.com/avatar/{{ site.gravatar }}?s=512&d=mm 512w,
-				https://secure.gravatar.com/avatar/{{ site.gravatar }}?s=400&d=mm 400w,
-				https://secure.gravatar.com/avatar/{{ site.gravatar }}?s=300&d=mm 300w,
-				https://secure.gravatar.com/avatar/{{ site.gravatar }}?s=256&d=mm 256w,
-				https://secure.gravatar.com/avatar/{{ site.gravatar }}?s=180&d=mm 180w,
-				https://secure.gravatar.com/avatar/{{ site.gravatar }}?s=128&d=mm 128w,
-				https://secure.gravatar.com/avatar/{{ site.gravatar }}?s=64&d=mm 64w"
-			sizes="(orientation: portrait) 15vw, 12vw"
-			src="https://secure.gravatar.com/avatar/{{ site.gravatar }}?s=256&d=mm"
-			alt="Gravatar"
-			class="round shadow-dark left"
-			crossorigin="anonymous" />
+		{% include gravatar.html
+			attrs='data-foo="bar"'
+			gravatar=site.gravatar
+			sizes='(orientation: portrait) 15vw, 12vw'
+			default_size=256
+			class='round shadow-dark left'
+		%}
 		<blockquote class="left">
 				{{ site.data.person.description }}
 			<cite>{{ site.data.person.givenName }} {{ site.data.person.familyName }}</cite>

@@ -17,18 +17,12 @@
 		<div class="big meta-author-links flex row">
 			{% if include.author.gravatar %}
 				<a href="https://secure.gravatar.com/{{ include.author.gravatar }}" title="Gravatar" rel="noopener external">
-					<img
-						itemprop="image"
-						alt="Gravatar"
-						srcset="
-							https://secure.gravatar.com/avatar/{{ include.author.gravatar }}?s=64&d=mm 64w,
-							https://secure.gravatar.com/avatar/{{ include.author.gravatar }}?s=32&d=mm 32w
-							https://secure.gravatar.com/avatar/{{ include.author.gravatar }}?s=24&d=mm 24w,"
-						sizes="(min-width: 1000px) 2.6vmax, (min-width: 500px) 3vmax, 4.6vmax"
-						src="https://secure.gravatar.com/avatar/{{ include.author.gravatar }}?s=32&d=mm"
-						class="round {{ include.animation | default: 'jackInTheBox' }} animation-speed-normal animation-ease-out"
-						crossorigin="anonymous"
-					/>
+					{% include gravatar.html
+						gravatar=include.author.gravatar
+						class='jackInTheBox round animation-speed-normal animation-ease-out'
+						sizes='(min-width: 1000px) 2.6vmax, (min-width: 500px) 3vmax, 4.6vmax'
+						itemprop='image'
+					%}
 				</a>
 			{% elsif include.author.image %}
 				<img itemprop="image" src="{{ include.author.image | absolute_url }}" class="round {{ include.animation | default: 'jackInTheBox' }} animation-speed-normal animation-ease-out" />

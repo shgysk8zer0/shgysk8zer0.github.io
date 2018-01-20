@@ -21,6 +21,7 @@
 		alt="{{ include.alt | default: '' }}"
 		crossorigin="{{ include.crossorigin | default: 'anonymous' }}"
 		title="{{ include.alt | default: '' }}"
+		{% if include.itemprop %}itemprop="{{ include.itemprop }}"{% endif %}
 		{% if include.id %} id="{{ include.id }}"{% endif %}
 		{% if include.width %}width="{{ include.width }}"{% endif %}
 		{% if include.height %}height="{{ include.height %}}"{% endif %} />
