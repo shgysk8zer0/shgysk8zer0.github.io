@@ -8,6 +8,11 @@ const config = {
 		'/css/index.min.css',
 		'/img/icons.svg',
 		'/img/favicon.svg',
+		// contact page and resume
+		'/contact/',
+		'/resume/',
+		'/js/resume.js',
+		'/css/resume.css',
 
 		// Nav menu icons
 		'/img/adwaita-icons/actions/document-open-recent.svg',
