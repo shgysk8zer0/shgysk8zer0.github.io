@@ -1,4 +1,4 @@
-<picture class="{{ include.class | default: 'card shadow' }}">
+<picture>
 	<source
 		srcset="
 			https://i.imgur.com/{{ include.imgur }}h.webp 1024w,
@@ -17,8 +17,11 @@
 		type="image/png"/>
 	<img
 		src="https://i.imgur.com/{{ include.imgur }}{{ include.default_size : default: 'h'}}.png"
+		class="{{ include.class | default: 'card shadow imgur' }}"
 		alt="{{ include.alt | default: '' }}"
 		crossorigin="{{ include.crossorigin | default: 'anonymous' }}"
+		title="{{ include.alt | default: '' }}"
+		{% if include.id %} id="{{ include.id }}"{% endif %}
 		{% if include.width %}width="{{ include.width }}"{% endif %}
 		{% if include.height %}height="{{ include.height %}}"{% endif %} />
 </picture>

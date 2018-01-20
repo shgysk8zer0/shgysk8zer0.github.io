@@ -23,6 +23,14 @@ article header a:hover {
 	margin: .7em;
 }
 
+[itemprop~="articleBody"] img.left, [itemprop~="articleBody"] picture.left {
+	margin: 1.5em 1.5em 1.5em 0.5em;
+}
+
+[itemprop~="articleBody"] img.right, [itemprop~="articleBody"] picture.right {
+	margin: 1.5em 0.5em 1.5em 1.5em;
+}
+
 [itemprop~="articleBody"] table td, [itemprop~="articleBody"] table th {
 	border: 1px solid #d4d7d9;
 	padding: .4em;

@@ -5,8 +5,8 @@ author: "Chris Zuber"
 pinned: true
 date: "2017-10-19 15:13:28 -0700"
 updated: "2017-10-20 10:12:00 -0700"
-image: https://i.imgur.com/3YHRZq3m.png
-imgur: 3YHRZq3
+image: https://i.imgur.com/9YiwoFg.png
+imgur: 2FRmKSn
 description: "A Gist demonstrating a polyfill for the new Web Share API"
 category: javascript
 tags:
@@ -85,8 +85,16 @@ $('[data-share]').click(shareHandler);
 Then, I made a [polyfill]({{ '#polyfill-gist' | prepend: page.url | absolute_url }}) of sorts for
 everything that's not Chrome on Android using the [`<dialog>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
 element and the [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL) API.
-
-<img src="https://i.imgur.com/3YHRZq3.png" alt="Web Share API polyfill using &lt;dialog&gt;" title="Web Share API polyfill using &lt;dialog&gt;" id="share-api-demo-target" />
+<figure class="card shadow">
+{% include imgur.html
+  imgur='9YiwoFg'
+  id='share-api-demo-target'
+  class='imgur'
+  alt='Web Share API polyfill using &lt;dialog&gt;'
+  sizes='(min-width: 800px) 45vw, 100vw'
+%}
+<figcaption>Web Share API polyfill using &lt;dialog&gt;</figcaption>
+</figure>
 
 ### Test it out
 <button type="button" data-share="">Share Page</button>

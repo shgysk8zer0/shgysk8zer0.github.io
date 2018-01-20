@@ -31,6 +31,23 @@ svg {
 	max-height: 4em;
 }
 
+aside picture > img {
+	width: 100%;
+}
+
+header a, header a:hover, nav a, nav a:hover, footer a, footer a:hover {
+	color: inherit;
+}
+
+figure, figcaption {
+	display: block;
+}
+
+figure picture, figure img {
+	margin: auto;
+	display: block;
+}
+
 .social-icons {
 	justify-content: space-around;
 }

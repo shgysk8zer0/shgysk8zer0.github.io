@@ -2,3 +2,8 @@
 	grid-area: pinned-posts;
 	margin: 0.8rem;
 }
+
+#pinned-posts img, #pinned-posts picture {
+	min-width: 90%;
+	height: auto;
+}
