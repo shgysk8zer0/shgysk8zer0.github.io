@@ -1,13 +1,25 @@
 {% assign posts = site.posts | where: 'category', include.category %}
-<header class="background-accent color-alt">
-	<h2 class="center">
-		<a href="{{ site.url }}">
-			{% include icon.html icon='#home' %}
-		</a>
-		<span>/</span>
-		<a href="{{ '/posts' | absolute_url}}">Posts</a>
-		<span>/</span>
-		<a href="{{ page.url | absolute_url }}">{{ page.title }}</a>
+<header class="background-accent color-alt shadow category-header">
+	<h2 class="center" itemprop="breadcrumb" itemtype="http://schema.org/BreadcrumbList" itemscope="">
+		<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
+			<a href="{{ site.url }}" itemprop="item" title="Home" aria-label="Home">
+				{% include icon.html icon='#home' %}
+			</a>
+			<meta itemprop="name" content="Home"/>
+			<meta itemprop="position" content="1" />
+		</span>
+		<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
+			<a href="{{ '/posts' | absolute_url}}" itemprop="item">
+				<span itemprop="name">Posts</span>
+			</a>
+			<meta itemprop="position" content="2" />
+		</span>
+		<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
+			<a href="{{ page.url | absolute_url }}" itemprop="item">
+				<span itemprop="name">{{ page.title }}</span>
+			</a>
+			<meta itemprop="position" content="3" />
+		</span>
 	</h2>
 </header>
 <div class="grid grid-gallery">

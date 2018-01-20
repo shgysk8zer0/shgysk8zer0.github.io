@@ -1,7 +1,43 @@
+<div itemprop="breadcrumb" itemtype="http://schema.org/BreadcrumbList" itemscope="" hidden="">
+	<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
+		<a href="{{ site.url }}" itemprop="item" title="Home" aria-label="Home">
+			{% include icon.html icon='#home' %}
+		</a>
+		<meta itemprop="name" content="Home"/>
+		<meta itemprop="position" content="1" />
+	</span>
+	<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
+		<a href="{{ '/posts' | absolute_url }}" class="color-inherit no-text-decoration" itemprop="item">
+			<span itemprop="name">Posts</span>
+			<meta itemprop="position" content="3" />
+		</a>
+	</span>
+	{% if page.category %}
+		<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
+			<a href="{{ '/posts/' | append: page.category | absolute_url }}" class="color-inherit no-text-decoration" itemprop="item">
+				<span itemprop="name">{{ page.category | capitalize }}</span>
+				<meta itemprop="position" content="3" />
+			</a>
+		</span>
+		<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
+			<meta itemprop="item" content="{{ page.url | absolute_url }}" />
+			<b itemprop="name">{{ page.title }}</b>
+			<meta itemprop="position" content="4" />
+		</span>
+	{% else %}
+		<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
+			<meta itemprop="item" content="{{ page.url | absolute_url }}" />
+			<b itemprop="name">{{ page.title }}</b>
+			<meta itemprop="position" content="3" />
+		</span>
+	{% endif %}
+</div>
 <article itemtype="http://schema.org/BlogPosting" itemscope="" itemprop="mainEntityOfPage" role="article" class="font-article">
 	<header class="article-meta sticky-desktop shadow-dark z-2">
 		{% if page.tags %}<meta itemprop="keywords" content="{{ page.tags | join: ', '}}" />{% endif %}
-		{% if page.image %}
+		{% if page.imgur %}
+			<meta itemprop="image" content="https://i.imgur.com/{{ page.imgur }}m.png" />
+		{% elsif page.image %}
 			<meta itemprop="image" content="{{ page.image | absolute_url }}" />
 		{% endif %}
 		{% if page.description %}
@@ -12,15 +48,18 @@
 		{% endif %}
 		<meta itemptop="wordCount" content="{{ content | number_of_words }}" />
 		<meta itemprop="url" content="{{ page.url | absolute_url }}" />
-		<h2 class="font-title">
-			<a href="{{ '/posts' | absolute_url }}" class="color-inherit no-text-decoration">Posts /</a>
-			{% if page.category %}
-				<a href="{{ '/posts/' | append: page.category | absolute_url }}"  class="color-inherit no-text-decoration">
-					{{ page.category | capitalize }} /
-				</a>
-			{% endif %}
-			<b itemprop="headline">{{ page.title }}</b>
-		</h2>
+		<h1>
+			<a href="{{ site.url }}" title="Home" aria-label="Home" class="color-inherit breadcrumb">
+				{% include icon.html icon='#home' %}
+			</a>
+			<a href="{{ '/posts' | absolute_url }}" class="color-inherit breadcrumb">
+				Posts
+			</a>
+			<a href="{{ '/posts/' | append: page.category | absolute_url }}" class="color-inherit breadcrumb">
+				{{ page.category | capitalize }}
+			</a>
+			<span class="breadcrumb" itemprop="headline">{{ page.title }}</span>
+		</h1>
 		{% if page.date %}
 			<b class="meta-date-posted">
 				<span>Posted on</span>

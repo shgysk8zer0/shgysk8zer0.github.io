@@ -48,6 +48,14 @@ figure picture, figure img {
 	display: block;
 }
 
+.breadcrumb:not(:last-child)::after {
+	content: ' / ';
+}
+
+.category-header {
+	padding: 0.3rem;
+}
+
 .social-icons {
 	justify-content: space-around;
 }
