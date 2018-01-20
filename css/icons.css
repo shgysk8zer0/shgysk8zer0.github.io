@@ -5,8 +5,10 @@
 [data-share] {
 	bottom: 0.5rem;
 	right: 0.5rem;
-	min-height: 2.3em;
-	min-width: 2.3em;
+	height: 2.3em;
+	width: 2.3em;
+	min-height: 40px;
+	min-width: 40px;
 	padding: 0em;
 	opacity: 0.8;
 	transition: opacity 400ms ease-in-out, transform 400ms ease-in-out;
