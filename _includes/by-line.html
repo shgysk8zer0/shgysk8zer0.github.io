@@ -1,83 +1,84 @@
 <div itemtype="http://schema.org/Person" itemprop="author" itemscope="" class="author-info clearfix">
+	{% assign author = site.data.authors[include.author] %}
 	<details>
 		<summary>
 			<b>By</b>
 			<b itemprop="name">
-				{% if include.author.givenName != null %}
-					<span itemprop="givenName">{{ include.author.givenName }}</span>
+				{% if author.givenName %}
+					<span itemprop="givenName">{{ author.givenName }}</span>
 				{% endif %}
-				{% if include.author.additionalName != null %}
-					<span itemprop="additionalName">{{ include.author.additionalName }}</span>
+				{% if author.additionalName %}
+					<meta itemprop="additionalName" content="{{ author.additionalName }}" />
 				{% endif %}
-				{% if include.author.familyName != null %}
-					<span itemprop="familyName">{{ include.author.familyName }}</span>
+				{% if author.familyName %}
+					<span itemprop="familyName">{{ author.familyName }}</span>
 				{% endif %}
 			</b>
 		</summary>
 		<div class="big meta-author-links flex row">
-			{% if include.author.gravatar %}
-				<a href="https://secure.gravatar.com/{{ include.author.gravatar }}" title="Gravatar" rel="noopener external">
+			{% if author.image.gravatar %}
+				<a href="https://secure.gravatar.com/{{ author.image.gravatar }}" title="Gravatar" rel="noopener external">
 					{% include gravatar.html
-						gravatar=include.author.gravatar
+						gravatar=author.image.gravatar
 						class='jackInTheBox round animation-speed-normal animation-ease-out'
 						sizes='(min-width: 1000px) 2.6vmax, (min-width: 500px) 3vmax, 4.6vmax'
 						itemprop='image'
 					%}
 				</a>
-			{% elsif include.author.image %}
-				<img itemprop="image" src="{{ include.author.image | absolute_url }}" class="round {{ include.animation | default: 'jackInTheBox' }} animation-speed-normal animation-ease-out" />
+			{% elsif author.image %}
+				<img itemprop="image" src="{{ author.image | absolute_url }}" class="round {{ include.animation | default: 'jackInTheBox' }} animation-speed-normal animation-ease-out" />
 			{% endif %}
-			{% if include.author.url != null %}
-			<a itemprop="url" href="{{ include.author.url | absolute_url }}" rel="external noopener" class="no-text-decoration">
+			{% if author.url %}
+			<a itemprop="url" href="{{ author.url | absolute_url }}" rel="external noopener" class="no-text-decoration">
 				<svg class="icon {{ include.animation | default: 'jackInTheBox' }} animation-speed-normal animation-ease-out">
 					<use xlink:href="{{ site.icons | absolute_url | append: '#web-browser' }}" />
 				</svg>
 			</a>
 			{% endif %}
-			{% if include.author.github != null %}
-				<a itemprop="sameAs" href="https://github.com/{{ include.author.github }}" rel="external noopener" title="GitHub" class="no-text-decoration">
+			{% if author.sameAs.github %}
+				<a itemprop="sameAs" href="https://github.com/{{ author.github }}" rel="external noopener" title="GitHub" class="no-text-decoration">
 					<svg class="icon {{ include.animation | default: 'jackInTheBox' }} animation-speed-normal animation-ease-out">
 						<use xlink:href="{{ site.icons | absolute_url | append: '#mark-github' }}" />
 					</svg>
 				</a>
 			{% endif %}
-			{% if include.author.twitter != null %}
-			<a itemprop="sameAs" href="https://twitter.com/{{ include.author.twitter }}" rel="external noopener" title="Twitter" class="no-text-decoration">
+			{% if author.sameAs.twitter %}
+			<a itemprop="sameAs" href="https://twitter.com/{{ author.twitter }}" rel="external noopener" title="Twitter" class="no-text-decoration">
 				<svg class="icon {{ include.animation | default: 'jackInTheBox' }} animation-speed-normal animation-ease-out">
 					<use xlink:href="{{ site.icons | absolute_url | append: '#twitter' }}" />
 				</svg>
 			</a>
 			{% endif %}
-			{% if include.author.linkedin != null %}
-				<a itemprop="sameAs" href="https://www.linkedin.com/in/{{ include.author.linkedin }}/" rel="noopener external" title="LinkedIn" class="no-text-decoration">
+			{% if author.sameAs.linkedin %}
+				<a itemprop="sameAs" href="https://www.linkedin.com/in/{{ author.linkedin }}/" rel="noopener external" title="LinkedIn" class="no-text-decoration">
 					<svg class="icon {{ include.animation | default: 'jackInTheBox' }} animation-speed-normal animation-ease-out">
 						<use xlink:href="{{ site.icons | absolute_url | append: '#linkedin' }}" />
 					</svg>
 				</a>
 			{% endif %}
-			{% if include.author.googlePlus != null %}
-				<a itemprop="sameAs" href="https://plus.google.com/{{ include.author.googlePlus }}" rel="noopener external" title="Google+" class="no-text-decoration">
+			{% if author.sameAs.google_plus %}
+				<a itemprop="sameAs" href="https://plus.google.com/{{ author.googlePlus }}" rel="noopener external" title="Google+" class="no-text-decoration">
 					<svg class="icon {{ include.animation | default: 'jackInTheBox' }} animation-speed-normal animation-ease-out">
 						<use xlink:href="{{ site.icons | absolute_url | append: '#google+' }}" />
 					</svg>
 				</a>
 			{% endif %}
-			{% if include.author.youtube != null %}
-				<a itemprop="sameAs" href="https://youtube/com/channel/{{ include.author.youtube }}" rel="noopener external" title="YouTube" class="no-text-decoration">
+			{% if author.sameAs.youtube %}
+				<a itemprop="sameAs" href="https://youtube/com/channel/{{ author.youtube }}" rel="noopener external" title="YouTube" class="no-text-decoration">
 					<svg class="icon {{ include.animation | default: 'jackInTheBox' }} animation-speed-normal animation-ease-out">
 						<use xlink:href="{{ site.icons | absolute_url | append: '#youtube' }}" />
 					</svg>
 				</a>
 			{% endif %}
-			{% if include.author.stackoverflow != null %}
-				<a itemprop="sameAs" href="https://stackoverflow.com/users/{{ include.author.stackoverflow }}" rel="noopener external" title="YouTube" class="no-text-decoration">
+			{% if author.sameAs.stackoverflow %}
+				<a itemprop="sameAs" href="https://stackoverflow.com/users/{{ author.stackoverflow }}" rel="noopener external" title="YouTube" class="no-text-decoration">
 					<svg class="icon {{ include.animation | default: 'jackInTheBox' }} animation-speed-normal animation-ease-out">
 						<use xlink:href="{{ site.icons | absolute_url | append: '#stackoverflow' }}" />
 					</svg>
 				</a>
 			{% endif %}
-			{% if include.author.email != null %}
-				<a itemprop="email" content="{{ include.author.email }}" href="mailto:{{ include.author.email }}" title="Email" class="no-text-decoration">
+			{% if author.email %}
+				<a itemprop="email" content="{{ author.email }}" href="mailto:{{ author.email }}" title="Email" class="no-text-decoration">
 					<svg class="icon {{ include.animation | default: 'jackInTheBox' }} animation-speed-normal animation-ease-out">
 						<use xlink:href="{{ site.icons | absolute_url | append: '#mail-unread' | absolute_url }}" />
 					</svg>

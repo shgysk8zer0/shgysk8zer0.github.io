@@ -21,8 +21,11 @@
 	{% if site.twitter %}
 		<meta name="twitter:site" content="@{{ site.twitter }}" />
 	{% endif %}
-	{% if page.author and site.data.authors[page.author] and site.data.authors[page.author].twitter %}
-		<meta name="twitter:creator" content="@{{ site.data.authors[page.author].twitter }}" />
+	{% if page.author %}
+		{% assign author = page.author | downcase | replace: ' ', '-' %}
+		{% if site.data.authors contains author and site.data.authors[author].sameAs.twitter %}
+			<meta name="twitter:creator" content="@{{ site.data.authors[author].sameAs.twitter }}" />
+		{% endif %}
 	{% endif %}
 	<meta itemprop="url" content="{{ page.url | absolute_url }}" />
 	<meta name="twitter:url" content="{{ page.url | absolute_url }}" />

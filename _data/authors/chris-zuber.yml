@@ -3,13 +3,15 @@
 givenName: Christopher
 additionalName: Wayne
 familyName: Zuber
-# url: 'https://chriszuber.com'
+url: 'https://shgysk8zer0.github.io'
 sameAs:
-  - 'https://twitter.com/shgysk8zer0'
-  - 'https://plus.google.com/+ChrisZuber'
-  - 'https://www.linkedin.com/in/chris-zuber-455346141/'
-  - 'https://www.youtube.com/user/shgysk8zer0/feed'
-  - 'https://github.com/shgysk8zer0'
+  twitter: shgysk8zer0
+  github: shgysk8zer0
+  google_plus: +ChrisZuber
+  youtube: shgysk8zer0
+  linkedin: chris-zuber-455346141
+  stackoverflow: 2573566
+  upwork: _~01568b211423f33d85
 birthDate: '1985-03-26'
 telephone: +1-661-619-6712
 email: chris@chriszuber.com
@@ -24,30 +26,26 @@ worksFor:
   url: 'https://superuserdev.github.io/'
   logo:
     '@type': ImageObject
-    contentUrl: /img/logos/super-user.svg
+    contentUrl: '/img/logos/super-user.svg'
     width: 48
     height: 48
     encodingFormat: svg
 image:
-  '@context': 'http://schema.org'
   '@type': ImageObject
-  contentUrl: 'https://gravatar.com/avatar/43578597e449298f5488c2407c8a8ae5?s=256'
+  gravatar: 43578597e449298f5488c2407c8a8ae5
   width: 256
   height: 256
   encodingFormat: png
 homeLocation:
   '@type': Place
-  '@context': 'http://schema.org'
   address:
     '@type': PostalAddress
-    '@context': 'http://schema.org'
     addressLocality: Mount Vernon
     addressRegion: Washington
     postalCode: 98274
     addressCountry: United States
   geo:
     '@type': GeoCoordinates
-    '@context': 'http://schema.org'
     latitude: 48.420059
     longitude: -122.326431
     url: 'geo:48.420059,-122.326431;crs=wgs84;u=0'

@@ -1,8 +1,10 @@
 <header id="about" class="center background-fixed background-no-repeat overflow-hidden background-cover color-alt optimize-speed transition-speed-slow" role="banner">
+	{% assign name = site.author | downcase | replace: ' ', '-' %}
+	{% assign author = site.data.authors[name] %}
 	<div itemtype="http://schema.org/Person" itemprop="about" itemscope="" class="flex column wrap transform-origin-bottom transition-ease-in-out">
 		<figure itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="">
 			{% include gravatar.html
-				gravatar=site.gravatar
+				gravatar=author.image.gravatar
 				sizes='(orientation: portrait) 30vw, 15vw'
 				class='round shadow-dark cursor-pointer'
 				itemprop='url'
@@ -10,51 +12,91 @@
 			%}
 		</figure>
 		<h1 class="capitalize">
-			{% if site.data.person.url %}<a href="{{ site.data.person.url }}" rel="noopener external" title="Personal Blog">{% endif %}
-				<span itemprop="givenName">{{ site.data.person.givenName }}</span>
-				<span itemprop="familyName">{{ site.data.person.familyName }}</span>
-			{% if site.data.person.url %}</a>{% endif %}
+			{% if author.url %}<a href="{{ author.url }}" rel="noopener external" title="Personal Blog">{% endif %}
+				<span itemprop="givenName">{{ author.givenName }}</span>
+				<span itemprop="familyName">{{author.familyName }}</span>
+			{% if author.url %}</a>{% endif %}
 		</h1>
 		<h2 class="capitalize">
-			<span itemprop="jobTitle">{{ site.data.person.jobTitle }}</span> |
+			<span itemprop="jobTitle">{{ author.jobTitle }}</span> |
 			<span itemprop="worksFor" itemtype="http://schema.org/Organization" itemscope="">
-				<a href="{{ site.data.person.worksFor.url }}" class="color-inherit" rel="noopener external">
-					<span itemprop="name">{{ site.data.person.worksFor.name }}</span>
-					<img src="{{ site.data.person.worksFor.logo.contentUrl | absolute_url }}" width="32" height="32" alt="{{ site.data.person.worksFor.name }}" />
+				<a href="{{ author.worksFor.url }}" class="color-inherit" rel="noopener external">
+					<span itemprop="name">{{ author.worksFor.name }}</span>
+					<img src="{{ author.worksFor.logo.contentUrl | absolute_url }}" width="32" height="32" alt="{{ author.worksFor.name }}" />
 				</a>
 			</span>
 		</h2>
 		{% if include.extended %}
 			<hr />
-			<h4>
-				<address itemprop="homeLocation" itemtype="http://schema.org/PostalAddress" itemscope="">
-					<span itemprop="streetAddress">{{ site.data.person.homeLocation.address.streetAddress }}</span>
-					<br />
-					<span itemprop="addressLocality">{{ site.data.person.homeLocation.address.addressLocality }}</span>,
-					<span itemprop="addressRegion">{{ site.data.person.homeLocation.address.addressRegion }}</span>
-				</address>
-			</h4>
+			{% if author.homeLocation %}
+				<h4>
+					<address itemprop="homeLocation" itemtype="http://schema.org/PostalAddress" itemscope="">
+						<span itemprop="streetAddress">{{ author.homeLocation.address.streetAddress }}</span>
+						<br />
+						<span itemprop="addressLocality">{{ author.homeLocation.address.addressLocality }}</span>,
+						<span itemprop="addressRegion">{{ author.homeLocation.address.addressRegion }}</span>
+					</address>
+				</h4>
+			{% endif %}
 			<div class="contact-links flex row container bigger">
-				<a href="tel:{{ site.data.person.telephone }}" itemprop="telephone" content="{{ site.data.person.telephone }}" title="{{ site.data.person.telephone }}" class="color-inherit">
-					{% include icon.html icon='#call-start' class='current-color icon transition-transform contact-icon transition-speed-normal transition-ease-in-out bounceInDown animation-ease-in animation-fill-backwards animation-speed-crawl animation-paused' %}
-				</a>
-				<a href="mailto:{{ site.data.person.email }}" itemprop="email" content="{{ site.data.person.email }}" title="{{ site.data.person.email }}" class="color-inherit">
-					{% include icon.html icon='#mail-unread' class='current-color icon transition-transform contact-icon transition-speed-normal transition-ease-in-out bounceInDown animation-ease-in animation-fill-backwards animation-speed-crawl animation-paused' %}
-				</a>
-				<a href="{{ site.data.person.homeLocation.geo.url }}" title="Geo" class="color-inherit">
-					{% include icon.html icon='#location' class='current-color icon transition-transform contact-icon transition-speed-normal transition-ease-in-out bounceInDown animation-ease-in animation-fill-backwards animation-speed-crawl animation-paused' %}
-				</a>
+				{% if author.telephone %}
+					<a href="tel:{{ author.telephone }}" itemprop="telephone" content="{{ author.telephone }}" title="{{ author.telephone }}" class="color-inherit">
+						{% include icon.html icon='#call-start' class='current-color icon transition-transform contact-icon transition-speed-normal transition-ease-in-out bounceInDown animation-ease-in animation-fill-backwards animation-speed-crawl animation-paused' %}
+					</a>
+				{% endif %}
+				{% if author.email %}
+					<a href="mailto:{{ author.email }}" itemprop="email" content="{{ author.email }}" title="{{ author.email }}" class="color-inherit">
+						{% include icon.html icon='#mail-unread' class='current-color icon transition-transform contact-icon transition-speed-normal transition-ease-in-out bounceInDown animation-ease-in animation-fill-backwards animation-speed-crawl animation-paused' %}
+					</a>
+				{% endif %}
+				{% if author.homeLocation.geo %}
+					<a href="geo:{{ author.homeLocation.geo.latitude }},{{ author.homeLocation.geo.longiture }};crs=wgs84;u=0" title="Geo" class="color-inherit">
+						{% include icon.html icon='#location' class='current-color icon transition-transform contact-icon transition-speed-normal transition-ease-in-out bounceInDown animation-ease-in animation-fill-backwards animation-speed-crawl animation-paused' %}
+					</a>
+				{% endif %}
 			</div>
-			<hr />
-			<div class="social-links no-text-decoration optimize-speed flex row container bigger animaion-stagger">
-				{% for link in site.data.links.social %}
-				<a href="{{ link.url }}" class="icon-twirl transition-transform transition-speed-normal transform-origin-center transition-ease-in-out" title="{{ link.title }}" target="_blank" rel="noopener external" itemprop="sameAs">
-					<svg class="icon bounceInDown animation-ease-in animation-fill-backwards animation-speed-crawl animation-paused{% if link.classes %} {{ link.classes | join: ' '}}{% endif %}">
-						<use xlink:href=" {{ site.icons | absolute_url | append: link.icon }}" />
-					</svg>
-				</a>
-				{% endfor %}
-			</div>
+			{% if author.sameAs %}
+				<hr />
+				<div class="social-links no-text-decoration optimize-speed flex row container bigger animaion-stagger">
+					{% assign icon-class='icon' %}
+					{% assign link-class = 'icon-twirl transition-transform transition-speed-normal transform-origin-center transition-ease-in-out' %}
+					{% if author.sameAs.github %}
+						<a href="https://github.com/{{ author.sameAs.github }}" class="{{ link-class }}" title="GitHub" target="_blank" rel="noopener external" itemprop="sameAs">
+							{% include icon.html icon='#mark-github' class=icon-class %}
+						</a>
+					{% endif %}
+					{% if author.sameAs.twitter %}
+						<a href="https://twitter.com/{{ author.sameAs.twitter }}" class="{{ link-class }}" title="Twitter" target="_blank" rel="noopener external" itemprop="sameAs">
+							{% include icon.html icon='#twitter' class=icon-class %}
+						</a>
+					{% endif %}
+					{% if author.sameAs.linkedin %}
+						<a href="https://www.linkedin.com/in/{{ author.sameAs.linkedin }}/" class="{{ link-class }}" title="LinkedIn" target="_blank" rel="noopener external" itemprop="sameAs">
+							{% include icon.html icon='#linkedin' class=icon-class %}
+						</a>
+					{% endif %}
+					{% if author.sameAs.github %}
+						<a href="https://plus.google.com/{{ author.sameAs.google_plus }}" class="{{ link-class }}" title="Google+" target="_blank" rel="noopener external" itemprop="sameAs">
+							{% include icon.html icon='#google+' class=icon-class %}
+						</a>
+					{% endif %}
+					{% if author.sameAs.youtube %}
+						<a href="https://youtube.com/user/{{ author.sameAs.youtube }}" class="{{ link-class }}" title="YouTube" target="_blank" rel="noopener external" itemprop="sameAs">
+							{% include icon.html icon='#youtube' class=icon-class %}
+						</a>
+					{% endif %}
+					{% if author.sameAs.stackoverflow %}
+						<a href="https://stackoverflow.com/users/{{ author.sameAs.stackoverflow }}" class="{{ link-class }}" title="StackOverflow" target="_blank" rel="noopener external" itemprop="sameAs">
+							{% include icon.html icon='#stackoverflow' class=icon-class %}
+						</a>
+					{% endif %}
+					{% if author.sameAs.upwork %}
+						<a href="https://www.upwork.com/o/profiles/users/{{ author.sameAs.upwork }}" class="{{ link-class }}" title="Upwork" target="_blank" rel="noopener external" itemprop="sameAs">
+							{% include icon.html icon='#upwork' class=icon-class %}
+						</a>
+					{% endif %}
+				</div>
+			{% endif %}
 		{% endif %}
 	</div>
 </header>
