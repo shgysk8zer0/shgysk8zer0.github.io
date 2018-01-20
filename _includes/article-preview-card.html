@@ -2,7 +2,16 @@
 	<a href="{{ include.post.url | absolute_url }}">
 		<h3>{{ include.post.title }}</h3>
 	</a>
-	{% if include.post.image != null %}
+	{% if include.post.imgur %}
+		<a href="{{ include.post.url | absolute_url }}" title="{{ include.post.title }}">
+			{% include imgur.html
+				imgur=include.post.imgur
+				sizes='(min-width: 700px) 75vw, 100vw'
+				class='post-img'
+				alt='Article thumbnail'
+			%}
+		</a>
+	{% elsif include.post.image %}
 		<a href="{{ include.post.url | absolute_url }}" title="{{ include.post.title }}">
 			<img src="{{ include.post.image | absolute_url }}"{% if post.srcset %} srcset="{{ post.srcset | join: ', '}}" sizes="(min-width: 700px) 75vw, 100vw"{% endif %} class="post-img" alt="Article thumbnail" crossorigin="anonymous" />
 		</a>
