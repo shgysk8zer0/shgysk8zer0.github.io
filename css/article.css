@@ -22,11 +22,11 @@ article header a:hover {
 	margin: .7em;
 }
 
-[itemprop~="articleBody"] img.left, [itemprop~="articleBody"] picture.left {
+[itemprop~="articleBody"] img.float-left, [itemprop~="articleBody"] picture.float-left {
 	margin: 1.5em 1.5em 1.5em 0.5em;
 }
 
-[itemprop~="articleBody"] img.right, [itemprop~="articleBody"] picture.right {
+[itemprop~="articleBody"] img.float-right, [itemprop~="articleBody"] picture.float-right {
 	margin: 1.5em 0.5em 1.5em 1.5em;
 }
 

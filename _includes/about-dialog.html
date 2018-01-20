@@ -1,10 +1,10 @@
 <dialog id="about-dialog" class="fadeInUp animation-speed-normal animation-ease-in animation-fill-backwards">
-	<header class="sticky top background-primary">
+	<header class="sticky top background-primary color-alt">
 		<span class="clearfix">
-			<a href="{{ '/contact/' | absolute_url  }}" class="color-inherit left center" role="button" title="Contact Page">
+			<a href="{{ '/contact/' | absolute_url  }}" class="color-inherit float-left center" role="button" title="Contact Page">
 				{% include icon.html icon='#address-book' %}
 			</a>
-			<button data-close="#about-dialog" class="font-main filter-shadow right">X</button>
+			<button data-close="#about-dialog" class="font-main filter-shadow float-right">X</button>
 		</span>
 	</header>
 	<figure class="clearfix">
@@ -13,9 +13,9 @@
 			gravatar=site.gravatar
 			sizes='(orientation: portrait) 15vw, 12vw'
 			default_size=256
-			class='round shadow-dark left'
+			class='round shadow-dark float-left'
 		%}
-		<blockquote class="left">
+		<blockquote class="float-left">
 				{{ site.data.person.description }}
 			<cite>{{ site.data.person.givenName }} {{ site.data.person.familyName }}</cite>
 		</blockquote>
