@@ -10,26 +10,122 @@
 		<a href="{{ site.url | absolute | url }}" title="Home" class="fixed top left color-alt filter-shadow-dark">
 			{% include icon.html icon='#home' %}
 		</a>
-		<h3 class="center font-title">
+		<h1 class="center font-title">
 			<span itemprop="givenName">{{ include.person.givenName }}</span>
 			{% if include.person.additionalName %}<span itemprop="additionalName">{{ include.person.additionalName }}</span>{% endif %}
 			<span itemprop="familyName">{{ include.person.familyName }}</span>
-		</h3>
-		<hr />
+		</h1>
 		{% if include.person.worksFor %}
-			<h5>
+			<dialog id="org-info-dialog" itemprop="worksFor" itemtype="http://schema.org/Organization" itemscope="">
+				<header class="sticky top background-primary color-alt clearfix">
+					<button data-close="#org-info-dialog" class="font-main filter-shadow float-right">
+						{% include icon.html icon='#close' %}
+					</button>
+				</header>
+				<div>
+					<h2 class="center" itemprop="name">{{ include.person.worksFor.name }}</h2>
+					{% if include.person.worksFor.logo %}
+						<img
+							itemprop="logo"
+							alt="Logo"
+							crossorigin="anonymous"
+							src="{{ include.person.worksFor.logo.contentUrl | absolute_url }}"
+							width="{{ include.person.worksFor.logo.width | default: 64 }}"
+							height="{{ include.person.worksFor.logo.height | default: 64 }}" />
+							<hr />
+					{% endif %}
+					{% if include.person.worksFor.address %}
+						<address class="clearfix" itemprop="address" itemtype="http://schema.org/PostalAddress" itemscope="">
+							{% include icon.html icon='#location' %}
+							<span>
+								<span itemprop="addressLocality">{{ include.person.worksFor.address.addressLocality }}</span>,
+								<span itemprop="addressRegion">{{ include.person.worksFor.address.addressRegion }}</span>
+							</span>
+						</address>
+						<hr />
+					{% endif %}
+					{% if include.person.worksFor.description %}
+						<blockquote itemprop="description">{{ include.person.worksFor.description }}</blockquote>
+					{% endif %}
+					{% if include.person.url %}
+						<a href="{{ include.person.url }}" itemprop="url">
+							{% include icon.html icon='#web-browser' %}
+							<span>{{ include.person.worksFor.url | replace: 'https://', '' }}</span>
+						</a>
+						<hr />
+					{% endif %}
+					{% if include.person.worksFor.email %}
+						<a href="mailto:{{ include.person.worksFor.email }}" content="{{ include.person.email }}" itemprop="email">
+							{% include icon.html icon='#mail-unread' %}
+							<span>{{ include.person.worksFor.email }}</span>
+						</a>
+						<hr />
+					{% endif %}
+					{% if include.person.worksFor.telephone %}
+						<a href="tel:{{ include.person.worksFor.telephone }}" content="{{ site.date.person.telephone }}" itemprop="telephone">
+							{% include icon.html icon='#call-start' %}
+							<span>{{ include.person.worksFor.telephone | replace: '+', '' }}</span>
+						</a>
+					<hr />
+					{% endif %}
+				</div>
+				{% if include.person.worksFor.sameAs %}
+					<footer class="flex row big social-icons">
+						{% if include.person.worksFor.sameAs.github %}
+							<a href="https://github.com/{{ include.person.worksFor.sameAs.github }}" rel="noopener external" title="GitHub" itemprop="sameAs">
+								{% include icon.html icon='#mark-github' class='icon' %}
+							</a>
+						{% endif %}
+						{% if include.person.worksFor.sameAs.twitter %}
+							<a href="https://twitter.com/{{ include.person.worksFor.sameAs.twitter }}" rel="noopener external" title="Twitter" itemprop="sameAs">
+								{% include icon.html icon='#twitter' class='icon' %}
+							</a>
+						{% endif %}
+						{% if include.person.worksFor.sameAs.linkedin %}
+							<a href="https://www.linkedin.com/company/{{ include.person.worksFor.sameAs.linkedin }}/" title="LinkedIn" rel="noopener external" itemprop="sameAs">
+								{% include icon.html icon='#linkedin' class='icon' %}
+							</a>
+						{% endif %}
+						{% if include.person.worksFor.sameAs.google_plus %}
+							<a href="https://plus.google.com/{{ include.person.worksFor.sameAs.google_plus }}" rel="noopener external" title="Google+" itemprop="sameAs">
+								{% include icon.html icon='#google+' class='icon' %}
+							</a>
+						{% endif %}
+						{% if include.person.worksFor.sameAs.youtube %}
+							<a href="https://youtube.com/{{ include.person.worksFor.sameAs.youtube }}" rel="noopener external" title="YouTube" itemprop="sameAs">
+								{% include icon.html icon='#youtube' class='icon' %}
+							</a>
+						{% endif %}
+					</footer>
+					{% endif %}
+			</dialog>
+			<h3>
 				{% include icon.html icon='#network-workgroup' %}
-				<span itemprop="jobTitle" data-after=" | ">{{ include.person.worksFor.name }}</span>
-				{% if include.person.jobTitle %}<span itemprop="worksFor">{{ include.person.jobTitle }}</span>{% endif %}
-				<br /><br />
-				{% if include.person.worksFor.url %}
-					<a href="{{ include.person.worksFor.url }}" rel="noopener external">
-						<img src="{{ include.person.worksFor.logo.contentUrl | absolute_url }}" width="128" height="128" alt="Logo" />
-					</a>
-				{% endif %}
-			</h5>
+				<span itemprop="jobTitle">{{ include.person.jobTitle }}</span>
+				<span> @ </span>
+				<span data-show-modal="#org-info-dialog" class="cursor-pointer underline">{{ include.person.worksFor.name }}</span>
+			</h3>
+			<hr />
+		{% elsif include.person.jobTitle %}
+			<h3>
+				{% include icon.html icon='#network-workgroup' %}
+				<span itemprop="jobTitle">{{ include.person.jobTitle }}</span>
+			</h3>
 		{% endif %}
-		<hr />
+		{% if include.person.homeLocation %}
+			<address class="clearfix" itemprop="address" itemtype="http://schema.org/PostalAddress" itemscope="">
+				{% include icon.html icon='#location' %}
+				<span>
+					<span itemprop="addressLocality">{{ include.person.homeLocation.address.addressLocality }}</span>,
+					<span itemprop="addressRegion">{{ include.person.homeLocation.address.addressRegion }}</span>
+				</span>
+			</address>
+		{% endif %}
+		{% if include.person.description %}
+			<hr />
+			<blockquote itemprop="description">{{ include.person.description }}</blockquote>
+			<hr />
+		{% endif %}
 		{% if include.person.telephone %}
 			<a href="tel:{{ include.person.telephone }}" content="{{ site.date.person.telephone }}" itemprop="telephone">
 				{% include icon.html icon='#call-start' %}
@@ -47,26 +143,12 @@
 		{% if include.person.url %}
 			<a href="{{ include.person.url }}" itemprop="url">
 				{% include icon.html icon='#web-browser' %}
-				<span>{{ include.person.url }}</span>
+				<span>{{ include.person.url | replace: 'https://', '' }}</span>
 			</a>
 			<hr />
 		{% endif %}
-		{% if include.person.homeLocation %}
-			<address class="clearfix" itemprop="address" itemtype="http://schema.org/PostalAddress" itemscope="">
-				{% include icon.html icon='#location' %}
-				<span>
-					<span itemprop="addressLocality">{{ include.person.homeLocation.address.addressLocality }}</span>,
-					<span itemprop="addressRegion">{{ include.person.homeLocation.address.addressRegion }}</span>
-				</span>
-			</address>
-		{% endif %}
-		{% if include.person.description %}
-			<hr />
-			<blockquote itemprop="description">{{ include.person.description }}</blockquote>
-		{% endif %}
-		<hr />
 		{% if include.person.sameAs %}
-			<div class="flex row big social-icons">
+			<footer class="flex row big social-icons">
 				{% if include.person.sameAs.github %}
 					<a href="https://github.com/{{ include.person.sameAs.github }}" rel="noopener external" title="GitHub" itemprop="sameAs">
 						{% include icon.html icon='#mark-github' class='icon' %}
@@ -97,7 +179,7 @@
 						{% include icon.html icon='#upwork' class='icon' %}
 					</a>
 				{% endif %}
-			</div>
+			</footer>
 		{% endif %}
 	</section>
 </div>

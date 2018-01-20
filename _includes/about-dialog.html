@@ -1,13 +1,13 @@
 <dialog id="about-dialog" class="fadeInUp animation-speed-normal animation-ease-in animation-fill-backwards">
 	{% assign name = site.author | downcase | replace: ' ', '-' %}
 	{% assign about = site.data.authors[name] %}
-	<header class="sticky top background-primary color-alt">
-		<span class="clearfix">
-			<a href="{{ '/contact/' | absolute_url  }}" class="color-inherit float-left center" role="button" title="Contact Page">
-				{% include icon.html icon='#address-book' %}
-			</a>
-			<button data-close="#about-dialog" class="font-main filter-shadow float-right">X</button>
-		</span>
+	<header class="sticky top background-primary color-alt clearfix">
+		<a href="{{ '/contact/' | absolute_url  }}" class="color-inherit float-left center" role="button" title="Contact Page">
+			{% include icon.html icon='#address-book' %}
+		</a>
+		<button data-close="#about-dialog" class="font-main filter-shadow float-right">
+			{% include icon.html icon='#close' %}
+		</button>
 	</header>
 	<figure class="clearfix">
 		{% include gravatar.html

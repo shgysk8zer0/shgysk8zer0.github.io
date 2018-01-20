@@ -23,13 +23,23 @@ jobTitle: Full Stack Web Developer
 worksFor:
   '@type': Organization
   name: SuperUserDev
-  url: 'https://superuserdev.github.io/'
+  url: 'https://superuserdev.github.io'
+  email: chris@chriszuber.com
+  telephone: +1-661-619-6712
+  address:
+    addressLocality: Mount Vernon
+    addressRegion: Washington
   logo:
     '@type': ImageObject
     contentUrl: '/img/logos/super-user.svg'
-    width: 48
-    height: 48
+    width: 128
+    height: 128
     encodingFormat: svg
+  sameAs:
+    twitter: SudoDevTeam
+    linkedin: superuserdev
+    github: superuserdev
+    google_plus: 113117303106986445610
 image:
   '@type': ImageObject
   gravatar: 43578597e449298f5488c2407c8a8ae5
