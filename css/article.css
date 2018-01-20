@@ -12,7 +12,6 @@ article header {
 	color: var(--alt-color);
 	background-color: var(--accent-color);
 	padding: 0.2em 2em 1em 2em;
-	top: var(--nav-height);
 }
 
 article header a:hover {

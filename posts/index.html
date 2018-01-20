@@ -3,38 +3,38 @@ title: Home
 layout: full-width
 ---
 <section class="pagination">
-	{% for post in paginator.posts %}
-		<div class="card clearfix post">
-			{% if post.image %}
-				<a href="{{ post.url | absolute_url }}"  class="left">
-					<img src="{{ post.image | absolute_url }}" height="64" alt="{{ post.title }}" />
-				</a>
-			{% endif %}
-			<a href="{{ post.url | absolute_url }}">
-				<h3>{{ post.title }}</h3>
+	<nav class="sticky card under-nav background-accent color-alt z-2 shadow-dark" itemprop="breadcrumb" itemtype="http://schema.org/BreadcrumbList" itemscope="">
+		<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
+			<a href="{{ site.url }}" itemprop="item" title="Home" aria-label="Home">
+				{% include icon.html icon='#home' %}
 			</a>
-			<div>
-				<span>By {{ post.author }}</span>
-				<span>on {{ post.date | date: '%a, %B %e, %Y'}}</span>
-			</div>
-			<blockquote>{{ post.description }}</blockquote>
-		</div>
-	{% endfor %}
-	<footer>
+			<meta itemprop="name" content="Home"/>
+			<meta itemprop="position" content="1" />
+		</span>
+		<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
+			<a href="{{ '/posts/' | absolute_url }}" itemprop="item">
+				<span itemprop="name">Posts</span>
+				<meta itemprop="position" content="2" />
+			</a>
+		</span>
 		<hr />
 		{% if paginator.previous_page %}
-		<a href="{{ paginator.previous_page_path | absolute_url }}" role="button" title="Previous page">
-			<svg class="current-color icon">
-				<use xlink:href="{{ site.icons | absolute_url | append: '#prev' }}" />
-			</svg>
-		</a>
+			<a href="{{ paginator.previous_page_path | absolute_url }}" role="button" title="Previous page" class="background-compliment">
+				{% include icon.html icon='#prev' %}
+			</a>
 		{% endif %}
 		{% if paginator.next_page %}
-		<a href="{{ paginator.next_page_path | absolute_url }}" role="button" title="Next page">
-			<svg class="current-color icon">
-				<use xlink:href="{{ site.icons | absolute_url | append: '#next' }}" />
-			</svg>
-		</a>
+			<a href="{{ paginator.next_page_path | absolute_url }}" role="button" title="Next page" class="background-compliment">
+				{% include icon.html icon='#next' %}
+			</a>
 		{% endif %}
+	</nav>
+	<div class="grid grid-gallery">
+		{% for post in paginator.posts %}
+			{% include article-preview-card.html post=post %}
+		{% endfor %}
+	</div>
+	<footer>
+		<hr />
 	</footer>
 </section>
