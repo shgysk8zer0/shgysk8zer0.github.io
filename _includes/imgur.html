@@ -1,0 +1,24 @@
+<picture class="{{ include.class | default: 'card shadow' }}">
+	<source
+		srcset="
+			https://i.imgur.com/{{ include.imgur }}h.webp 1024w,
+			https://i.imgur.com/{{ include.imgur }}l.webp 640w,
+			https://i.imgur.com/{{ include.imgur }}m.webp 320w,
+			https://i.imgur.com/{{ include.imgur }}t.webp 160w"
+		sizes="{{ include.sizes | default: '(min-width: 700px) 75vw, 100vw' }}"
+		type="image/webp"/>
+	<source
+		srcset="
+			https://i.imgur.com/{{ include.imgur }}h.png 1024w,
+			https://i.imgur.com/{{ include.imgur }}l.png 640w,
+			https://i.imgur.com/{{ include.imgur }}m.png 320w,
+			https://i.imgur.com/{{ include.imgur }}t.png 160w"
+		sizes="{{ include.sizes | default: '(min-width: 700px) 75vw, 100vw' }}"
+		type="image/png"/>
+	<img
+		src="https://i.imgur.com/{{ include.imgur }}{{ include.default_size : default: 'h'}}.png"
+		alt="{{ include.alt | default: '' }}"
+		crossorigin="{{ include.crossorigin | default: 'anonymous' }}"
+		{% if include.width %}width="{{ include.width }}"{% endif %}
+		{% if include.height %}height="{{ include.height %}}"{% endif %} />
+</picture>

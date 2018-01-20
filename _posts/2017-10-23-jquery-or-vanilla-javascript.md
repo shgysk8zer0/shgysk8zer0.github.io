@@ -13,11 +13,7 @@ tags:
 date: '2017-10-23 00:00:00'
 updated: '2017-10-27 12:15:00'
 pinned: true
-image: "https://i.imgur.com/IOLu7fzm.png"
-srcset:
-  - 'https://i.imgur.com/IOLu7fzh.png 794w'
-  - 'https://i.imgur.com/IOLu7fzm.png 293w'
-  - 'https://i.imgur.com/IOLu7fzt.png 146w'
+imgur: IOLu7fz
 category: javascript
 ---
 

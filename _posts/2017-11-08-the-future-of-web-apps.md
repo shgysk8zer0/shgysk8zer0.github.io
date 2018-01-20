@@ -3,11 +3,7 @@ title: The Future of Web Apps
 author: Chris Zuber
 date: 2017-11-08 13:18:00 -0700
 pinned: true
-image: 'https://i.imgur.com/mdhC9mVh.jpg'
-srcset:
-  - 'https://i.imgur.com/mdhC9mVh.png 385w'
-  - 'https://i.imgur.com/mdhC9mVm.png 257w'
-  - 'https://i.imgur.com/mdhC9mVt.png 128w'
+imgur: mdhC9mV
 description: Some thoughts on the advantages and potential of building progressive web apps
 keywords:
 - pwa
@@ -21,9 +17,7 @@ category: javascript
 <h2 class="center" itemprop="alternativeHeadline">
   <i>The Web as the Ultimate Platform</i>
 </h2>
-<figure class="right">
-<img src="{{ page.image }}" alt="Building Modern Web Apps" />
-</figure>
+{% include imgur.html class='right' imgur=page.imgur sizes='(min-width: 800px) 60vw, 100vw' alt='Code screenshot' %}
 
 ### What are they?
 As described on [MDN](https://developer.mozilla.org/en-US/Apps "App Center | MDN"):

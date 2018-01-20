@@ -6,10 +6,7 @@ pinned: true
 date: "2017-10-19 15:13:28 -0700"
 updated: "2017-10-20 10:12:00 -0700"
 image: https://i.imgur.com/3YHRZq3m.png
-srcset:
-  - 'https://i.imgur.com/3YHRZq3t.png 160w'
-  - 'https://i.imgur.com/3YHRZq3m.png 320w'
-  - 'https://i.imgur.com/3YHRZq3l.png 640w'
+imgur: 3YHRZq3
 description: "A Gist demonstrating a polyfill for the new Web Share API"
 category: javascript
 tags:
@@ -19,7 +16,12 @@ tags:
 - javascript
 - js
 ---
-<img class="right shadow-dark clearfix" src="https://i.imgur.com/9AZcG7R.png" alt="Native Web Share API on Chrome for Android" title="Native Web Share API on Chrome for Android" style="margin: 1.2em" />
+{% include imgur.html
+  imgur=page.imgur
+  class='right shadow-dark clearfix'
+  alt='Native Web Share API on Chrome for Android'
+  sizes='(min-width: 800px) 45vw, 100vw'
+%}
 
 ### Web Share API
 Soon, there will be little need to add those bloated scripts from half a dozen

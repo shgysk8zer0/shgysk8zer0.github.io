@@ -6,6 +6,7 @@ keywords:
 - Facebook
 description: 'Facebook has been disabling accounts without reason'
 image: 'https://i.imgur.com/qIrdoQC.png'
+imgur: qIrdoQC
 category: life
 ---
 # I think Facebook hates me

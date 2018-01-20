@@ -6,11 +6,7 @@ author: Chris Zuber
 description: "An old gist I made for generating crazy images in PHP. Now I get to use it in my Jekyll site"
 category: php
 image: "https://i.imgur.com/itQlAQ2m.png"
-srcset:
-  - 'https://i.imgur.com/itQlAQ2t.png 160w'
-  - 'https://i.imgur.com/itQlAQ2m.png 320w'
-  - 'https://i.imgur.com/itQlAQ2l.png 640w'
-  - 'https://i.imgur.com/itQlAQ2h.png 1024w'
+imgur: 'itQlAQ2'
 tags:
 - php
 - gist
