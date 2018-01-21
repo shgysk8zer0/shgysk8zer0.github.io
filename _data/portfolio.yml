@@ -25,9 +25,9 @@
   target: self
   description: 'A resume for Chris Zuber, written in HTML and CSS'
   applicationCategory: Office
-  browserRequirements: 'fetch, template'
+  browserRequirements: 'css-sticky'
   keywords: 'JavaScript, Resume'
-  screenshot: 'https://i.imgur.com/TiSApf8m.png'
+  screenshot: 'https://i.imgur.com/anlsRnFm.png'
 - name: Contact Page
   url: /contact/
   target: self
@@ -35,7 +35,7 @@
   applicationCategory: Office
   browserRequirements: 'picture, media queries'
   keywords: 'SVG, CSS3, Responsive Images'
-  screenshot: 'https://i.imgur.com/RU3Mqrhm.png'
+  screenshot: 'https://i.imgur.com/jvEOuy1m.png'
 # - '@type': WebApplication
 #   '@context': 'http://schema.org'
 #   name: Super User Blog
