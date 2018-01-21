@@ -47,19 +47,17 @@ screenshots:
 paginate: 5
 paginate_path: "/posts/page-:num/"
 defaults:
-  -
-    scope:
-      path: "_posts"
+  - scope:
+      path: _posts
     values:
-      layout: "post"
-      author: "Chris Zuber"
+      layout: post
+      author: Chris Zuber
       permalink: /posts/:categories/:year/:month/:day/:title/
-  -
-    scope:
-      path: "_drafts"
+  - scope:
+      path: _drafts
     values:
-      layout: "post"
-      author: "Chris Zuber"
+      layout: post
+      author: Chris Zuber
       permalink: /posts/:categories/:year/:month/:day/:title/
 plugins:
   - jekyll-gist
@@ -94,12 +92,12 @@ exclude:
 - "/img/*.md"
 - "/fonts/*.md"
 - "/js/*.json"
+- docs/
 - "/css/*.json"
 - "/img/*.json"
 - "/js/*.html"
 - Gemfile
 - node_modules/
-- docs
 - palette.xml
 - postcss.config.js
 - postcss.config.json
