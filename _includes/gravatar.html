@@ -1,18 +1,18 @@
 <img
 	srcset="
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=1024&d=mm 1024w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=80&d=mm 800w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=512&d=mm 512w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=400&d=mm 400w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=300&d=mm 300w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=256&d=mm 256w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=180&d=mm 180w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=128&d=mm 128w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=98&d=mm 98w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=64&d=mm 64w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=32&d=mm 32w"
+		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=1024&d={{ include.fallback | default: 'mm'}} 1024w,
+		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=800&d={{ include.fallback | default: 'mm'}} 800w,
+		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=512&d={{ include.fallback | default: 'mm'}} 512w,
+		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=400&d={{ include.fallback | default: 'mm'}} 400w,
+		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=300&d={{ include.fallback | default: 'mm'}} 300w,
+		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=256&d={{ include.fallback | default: 'mm'}} 256w,
+		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=180&d={{ include.fallback | default: 'mm'}} 180w,
+		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=128&d={{ include.fallback | default: 'mm'}} 128w,
+		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=98&d={{ include.fallback | default: 'mm'}} 98w,
+		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=64&d={{ include.fallback | default: 'mm'}} 64w,
+		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=32&d={{ include.fallback | default: 'mm'}} 32w"
 	sizes="{{ include.sizes | default: '(orientation: portrait) 15vw, 12vw' }}"
-	src="https://secure.gravatar.com/avatar/{{ include.gravatar }}?s={{ include.default_size | default: 256 }}&d=mm"
+	src="https://secure.gravatar.com/avatar/{{ include.gravatar }}?s={{ include.default_size | default: 256 }}&d={{ include.fallback | default: 'mm'}}"
 	alt="{{ include.class | default: 'Gravatar' }}"
 	class="{{ include.class | default: 'gravatar'}}"
 	crossorigin="{{ include.crossorigin | default: 'anonymous' }}"
