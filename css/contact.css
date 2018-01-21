@@ -3,6 +3,19 @@
 	width: 100vw;
 }
 
+#org-info-dialog {
+	max-height: 90vh;
+	min-width: 65vw;
+	background: darkgray;
+}
+
+@media screen and (min-width: 1000px) {
+	#org-info-dialog > .org-info {
+		margin: 1% 20% 1% 20%;
+		width: 60%
+	}
+}
+
 #contact-section .contact-info-card {
 	padding: 1em;
 	display: inline-block;
