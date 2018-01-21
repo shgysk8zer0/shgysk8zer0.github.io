@@ -3,32 +3,7 @@ title: Home
 layout: full-width
 ---
 <section class="pagination">
-	<nav class="sticky card under-nav background-accent color-alt z-2 shadow-dark" itemprop="breadcrumb" itemtype="http://schema.org/BreadcrumbList" itemscope="">
-		<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
-			<a href="{{ site.url }}" itemprop="item" title="Home" aria-label="Home">
-				{% include icon.html icon='#home' %}
-			</a>
-			<meta itemprop="name" content="Home"/>
-			<meta itemprop="position" content="1" />
-		</span>
-		<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
-			<a href="{{ '/posts/' | absolute_url }}" itemprop="item">
-				<span itemprop="name">Posts</span>
-				<meta itemprop="position" content="2" />
-			</a>
-		</span>
-		<hr />
-		{% if paginator.previous_page %}
-			<a href="{{ paginator.previous_page_path | absolute_url }}" role="button" title="Previous page" class="background-compliment">
-				{% include icon.html icon='#prev' %}
-			</a>
-		{% endif %}
-		{% if paginator.next_page %}
-			<a href="{{ paginator.next_page_path | absolute_url }}" role="button" title="Next page" class="background-compliment">
-				{% include icon.html icon='#next' %}
-			</a>
-		{% endif %}
-	</nav>
+	{% include breadcrumb-nav.html %}
 	<div class="grid grid-gallery">
 		{% for post in paginator.posts %}
 			{% include article-preview-card.html post=post %}

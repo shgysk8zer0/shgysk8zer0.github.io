@@ -1,39 +1,8 @@
-<div itemprop="breadcrumb" itemtype="http://schema.org/BreadcrumbList" itemscope="" hidden="">
-	<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
-		<a href="{{ site.url }}" itemprop="item" title="Home" aria-label="Home">
-			{% include icon.html icon='#home' %}
-		</a>
-		<meta itemprop="name" content="Home"/>
-		<meta itemprop="position" content="1" />
-	</span>
-	<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
-		<a href="{{ '/posts' | absolute_url }}" class="color-inherit no-text-decoration" itemprop="item">
-			<span itemprop="name">Posts</span>
-			<meta itemprop="position" content="3" />
-		</a>
-	</span>
-	{% if page.category %}
-		<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
-			<a href="{{ '/posts/' | append: page.category | absolute_url }}" class="color-inherit no-text-decoration" itemprop="item">
-				<span itemprop="name">{{ page.category | capitalize }}</span>
-				<meta itemprop="position" content="3" />
-			</a>
-		</span>
-		<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
-			<meta itemprop="item" content="{{ page.url | absolute_url }}" />
-			<b itemprop="name">{{ page.title }}</b>
-			<meta itemprop="position" content="4" />
-		</span>
-	{% else %}
-		<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
-			<meta itemprop="item" content="{{ page.url | absolute_url }}" />
-			<b itemprop="name">{{ page.title }}</b>
-			<meta itemprop="position" content="3" />
-		</span>
-	{% endif %}
-</div>
+<span hidden="">
+	{% include breadcrumb-nav.html category=page.category post=page %}
+</span>
 <article itemtype="http://schema.org/BlogPosting" itemscope="" itemprop="mainEntityOfPage" role="article" class="font-article">
-	<header class="article-meta sticky-desktop shadow-dark under-nav z-2">
+	<header class="article-meta shadow-dark sticky-desktop under-nav z-2">
 		{% if page.tags %}<meta itemprop="keywords" content="{{ page.tags | join: ', '}}" />{% endif %}
 		{% if page.imgur %}
 			<meta itemprop="image" content="https://i.imgur.com/{{ page.imgur }}m.png" />
@@ -48,61 +17,70 @@
 		{% endif %}
 		<meta itemptop="wordCount" content="{{ content | number_of_words }}" />
 		<meta itemprop="url" content="{{ page.url | absolute_url }}" />
-		<h1>
-			<a href="{{ site.url }}" title="Home" aria-label="Home" class="color-inherit breadcrumb">
-				{% include icon.html icon='#home' %}
-			</a>
-			<a href="{{ '/posts' | absolute_url }}" class="color-inherit breadcrumb">
-				Posts
-			</a>
-			<a href="{{ '/posts/' | append: page.category | absolute_url }}" class="color-inherit breadcrumb">
-				{{ page.category | capitalize }}
-			</a>
-			<span class="breadcrumb" itemprop="headline">{{ page.title }}</span>
-		</h1>
-		{% if page.date %}
-			<b class="meta-date-posted">
-				<span>Posted on</span>
-				<time itemprop="datePublished" datetime="{{ page.date | date: data_to_xmlschema }}">
-					{{ page.date | date: '%a, %B %e, %Y' }}
-				</time>
-			</b>
-		{% endif %}
-		{% if page.updated %}
-			<b class="meta-date-updated">
-				<span>Updated on</span>
-				<time itemprop="dateModified" datetime="{{ page.updated | date: data_to_xmlschema }}">
-					{{ page.updated | date: '%a, %B %e, %Y' }}
-				</time>
-			</b>
-		{% else %}
-			<meta itemprop="dateModified" content="{{ page.date | date: data_to_xmlschema }}" />
-		{% endif %}
-		{% if page.author %}
-			{% assign author = page.author | downcase | replace: ' ', '-'  %}
-			{% if site.data.authors contains author %}
-				{% include by-line.html author=author %}
-			{% else %}
-				<div>
-					<b>By <span itemprop="author">{{ page.author }}</span></b>
-				</div>
-				<br />
-			{% endif %}
-		{% endif %}
-		{% if site.data.publisher %}
-			{% assign publisher = site.data.publisher %}
-			<div itemprop="publisher" itemtype="{{ publisher['@context'] }}/{{ publisher['@type'] }}" itemscope="" hidden="">
-				<meta itemprop="name" content="{{publisher.name }}" />
-				<meta itemprop="url" content="{{ publisher.url }}" />
-				<meta itemprop="email" content="{{ publisher.email }}" />
-				<div itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
-					<meta itemprop="url" content="{{ publisher.logo.url }}" />
-				</div>
-				{% if publisher.sameAs %}{% for link in publisher.sameAs %}
-					<meta itemprop="sameAs" content="{{ link }}" />
-				{% endfor %}{% endif %}
+		<details open="">
+			<summary class="block">
+				<h1 class="inline-block">
+					{% include icon.html icon='#view-more' %}
+					<span itemprop="headline">{{ page.title }}</span>
+				</h1>
+			</summary>
+			<div class="font-main post-details">
+				{% if page.category %}
+					<div class="tags">
+						<a href="{{ site.url }}/posts/{{ page.category | downcase }}">
+							{% include icon.html icon='#tag' %}
+							<b>{{ page.category | capitalize }}</b>
+						</a>
+					</div>
+					<hr />
+				{% endif %}
+				{% if page.author %}
+					{% assign author = page.author | downcase | replace: ' ', '-'  %}
+					{% if site.data.authors contains author %}
+						{% include by-line.html author=author %}
+					{% else %}
+						<div>
+							<b>By <span itemprop="author">{{ page.author }}</span></b>
+						</div>
+						<br />
+					{% endif %}
+				{% endif %}
+				{% if page.date %}
+					<b class="meta-date-posted">
+						<span>Posted on</span>
+						<time itemprop="datePublished" datetime="{{ page.date | date: data_to_xmlschema }}">
+							{{ page.date | date: '%a, %B %e, %Y' }}
+						</time>
+					</b>
+				{% endif %}
+				{% if page.updated %}
+					<b class="meta-date-updated">
+						<span>Updated on</span>
+						<time itemprop="dateModified" datetime="{{ page.updated | date: data_to_xmlschema }}">
+							{{ page.updated | date: '%a, %B %e, %Y' }}
+						</time>
+					</b>
+				{% else %}
+					<meta itemprop="dateModified" content="{{ page.date | date: data_to_xmlschema }}" />
+				{% endif %}
+				{% if site.data.publisher %}
+					{% assign publisher = site.data.publisher %}
+					<div itemprop="publisher" itemtype="{{ publisher['@context'] | default: 'http://schema.org' }}/{{ publisher['@type'] | default: 'Organization' }}" itemscope="" hidden="">
+						<meta itemprop="name" content="{{ publisher.name }}" />
+						{% if publisher.url %}<meta itemprop="url" content="{{ publisher.url }}" />{% endif %}
+						{% if publisher.email %}<meta itemprop="email" content="{{ publisher.email }}" />{% endif %}
+						{% if publisher.logo %}
+							<div itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
+								<meta itemprop="url" content="{{ publisher.logo.url }}" />
+							</div>
+						{% endif %}
+						{% if publisher.sameAs %}{% for link in publisher.sameAs %}
+							<meta itemprop="sameAs" content="{{ link }}" />
+						{% endfor %}{% endif %}
+					</div>
+				{% endif %}
 			</div>
-		{% endif %}
+		</details>
 	</header>
 	<div itemprop="articleBody mainEntityOfPage" class="optimize-legibility">{{ content }}</div>
 	<footer class="clearfix relative">

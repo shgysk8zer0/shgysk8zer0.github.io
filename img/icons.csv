@@ -27,6 +27,8 @@ mail-send,img/adwaita-icons/actions/mail-send.svg
 mail-unread,img/adwaita-icons/status/mail-unread.svg
 home,img/adwaita-icons/places/user-home.svg
 menu,img/adwaita-icons/actions/open-menu.svg
+view-more,img/adwaita-icons/actions/view-more.svg
+tag,img/octicons/lib/svg/tag.svg
 preferences,img/adwaita-icons/categories/preferences-system.svg
 web-browser,img/adwaita-icons/apps/web-browser.svg
 rss,img/adwaita-icons/mimetypes/application-rss+xml.svg
