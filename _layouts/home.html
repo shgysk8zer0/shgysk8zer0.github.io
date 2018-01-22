@@ -3,13 +3,22 @@
 	lang="{{ site.lang | default: 'en' }}"
 	dir="{{ site.dir | default: 'ltr' }}"
 	class="no-js scroll-smooth"
-	itemtype="http://schema.org/WebPage"
+	itemtype="{{ page.itemtype | default: 'http://schema.org/WebPage' }}"
 	itemscope=""
-	{% if site.data.head.service_worker %}data-service-worker="{{site.data.head.service_worker | absolute_url }}"{% endif %}
+	{% if site.service_worker %}data-service-worker="{{ site.service_worker | absolute_url }}"{% endif %}
 	data-support-test="details, dialog, cssvars"
 >
 	{% include head.html %}
-	<body class="layout-{{ page.layout }} background-primary grid border-box cursor-default font-main" contextmenu="nav-menu" id="top">
+	<body
+		id="top"
+		class="layout-{{ page.layout }} {{ site.body-class }}"
+		contextmenu="{{ page.contextmenu | default: site.contextmenu }}"
+		{% if page.itemprop and page.itemtype %}
+			itemprop="{{ page.itemprop }}"
+			itemtype="{{ page.itemtype }}"
+			itemscope=""
+		{% endif %}
+	>
 		{% include share-button.html %}
 		{% include header.html extended=true %}
 		{% include nav.html %}

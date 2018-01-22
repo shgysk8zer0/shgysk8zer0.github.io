@@ -1,38 +1,48 @@
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="{% if site.data.head.meta.viewport %}{{ site.data.head.meta.viewport}}{% else %}width=device-width,initial-scale=1{% endif %}" />
+	<meta charset="{{ page.charset | default: site.charset }}" />
+	<meta name="viewport" content="{{ page.viewport | default: site.viewport }}" />
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
 	<title itemprop="headline">{{ page.title }} | {{ site.title }}</title>
+	<base href="{{ page.base_uri | default: site.url }}" />
 	{% if page.fb-og-type %}
 		<meta property="og:type" content="{{ page.fb-og-type }}" />
 	{% elsif page.layout == 'post' %}
 		<meta property="og:type" content="article" />
 	{% else %}
-		<meta property="og:type" content="website" />
+		<meta property="og:type" content="{{ page.og-type | default: site.og-type }}" />
 	{% endif %}
 	<meta property="og:url" content="{{ page.url | absolute_url }}" />
 	<meta property="og:title" content="{{ page.title }} | {{ site.title }}" />
 	<meta property="og:site_name" content="{{ site.title }}" />
-	<meta property="og:locale" content="{{ site.lang }}" />
+	<meta property="og:locale" content="{{ site.lang | default: 'en' }}" />
 	{% if site.facebook-id %}
 		<meta property="og:app_id" content="{{ site.facebook-id }}" />
 	{% endif %}
 	<meta name="twitter:card" content="summary">
 	{% if site.twitter %}
-		<meta name="twitter:site" content="@{{ site.twitter }}" />
+		<meta name="twitter:site" content="@{{ site.twitter | replace: '@', '' }}" />
 	{% endif %}
 	{% if page.author %}
+		<meta name="author" content="{{ page.author | capitalize }}"/>
 		{% assign author = page.author | downcase | replace: ' ', '-' %}
-		{% if site.data.authors contains author and site.data.authors[author].sameAs.twitter %}
-			<meta name="twitter:creator" content="@{{ site.data.authors[author].sameAs.twitter }}" />
+		{% if site.data.authors contains author %}
+			{% if site.data.authors[author].sameAs.twitter %}
+				<meta name="twitter:creator" content="@{{ site.data.authors[author].sameAs.twitter | replace: '@', '' }}" />
+			{% endif %}
+			{% if site.data.authors[author].sameAs.google_plus %}
+				<link rel="author" href="https://plus.google.com/{{ site.data.authors[author].sameAs.google_plus }}" />
+			{% endif %}
 		{% endif %}
+	{% endif %}
+	{% if site.publisher %}
+		<link rel="publisher" href="{{ site.publisher }}" />
 	{% endif %}
 	<meta itemprop="url" content="{{ page.url | absolute_url }}" />
 	<meta name="twitter:url" content="{{ page.url | absolute_url }}" />
 	<meta name="twitter:title" content="{{ page.title }} | {{ site.title }}" />
-	{% if site.data.head.meta.referrer %}<meta name="referrer" content="{{ site.data.head.meta.referrer }}"/>{% endif %}
+	<meta name="referrer" content="{{ site.referrer | default: 'no-referrer-when-downgrade' }}"/>
 	<meta name="robots" content="{{ page.robots | default: site.robots }}" />
-	{% if site.data.head.meta.mobile-web-app-capable %}<meta name="mobile-web-app-capable" content="yes" />{% endif %}
+	{% if site.mobile-web-app-capable %}<meta name="mobile-web-app-capable" content="yes" />{% endif %}
 	<meta name="description" content="{{ page.description | default: site.description }}" />
 	<meta itemprop="description" content="{{ page.description | default: site.description }}" />
 	<meta property="og:description" content="{{ page.description | default: site.description }}" />
@@ -40,22 +50,20 @@
 	{% if page.tags %}
 		<meta name="keywords" content="{{ page.tags | join: ', ' }}" />
 		<meta itemprop="keywords" content="{{ page.tags | join: ', ' }}" />
-	{% elsif site.data.head.meta.keywords %}
+	{% else %}
 		<meta name="keywords" content="{{ site.keywords | join: ', ' }}" />
 		<meta itemprop="keywords" content="{{ site.keywords | join: ', ' }}" />
 	{% endif %}
-	{% if page.author %}
-		<meta name="author" content="{{ page.author }}"/>
-	{% elsif site.data.head.meta.author %}<meta name="author" content="{{ site.author }}"/>{% endif %}
 	{% if page.image %}
+		<meta itemprop="thumbnailUrl" content="{{ page.image | absolute_url }}" />
 		<meta property="og:image" content="{{ page.image | absolute_url }}" />
-		<meta name="twitter:image" content="{{ page.image | absolute_url }}">
-	{% elsif site.data.head.meta.thumbnail %}
-		<meta property="og:image" content="{{ site.data.head.meta.thumbnail | absolute_url }}" />
-		<meta name="twitter:image" content="{{ site.data.head.meta.thumbnail | absolute_url }}">
-	{% endif %}
-	{% if site.data.head.meta.thumbnail %}
-			<meta itemprop="thumbnailUrl" content="{{ site.data.head.meta.thumbnail }}" />
+		<meta name="twitter:image" content="{{ page.image | absolute_url }}" />
+	{% elsif site.screenshots %}
+		<meta itemprop="thumbnailUrl" content="{{ screenshot.src }}" />
+		{% for screenshot in site.screenshots %}
+			<meta property="og:image" content="{{ screenshot.src | absolute_url }}" />
+			<meta name="twitter:image" content="{{ screenshot.src | absolute_url }}" />
+		{% endfor %}
 	{% endif %}
 	{% if site.theme-color %}
 		<meta name="theme-color" content="{{ site.theme-color }}" />
@@ -80,38 +88,47 @@
 	{% if site.webmaster-verifications.bing %}
 		<meta name="msvalidate.01" content="{{ site.webmaster-verifications.bing }}" />
 	{% endif %}
-	<base href="{{ site.url }}" />
-	{% for script in site.data.head.scripts[jekyll.environment] %}
-		<script type="{{ script.type }}" src="{{ script.src | absolute_url }}"{% if script.async %} async=""{% endif %}{% if script.defer %} defer=""{% endif %}{% if script.nomodule %} nomodule=""{% endif %}{% if script.crossorigin %} crossorigin="{{ script.crossorigin }}"{% endif %}{% if script.integrity %} integrity="{{ script.integrity }}"{% endif %}></script>
-	{% endfor %}
-	{% for stylesheet in site.data.head.stylesheets[jekyll.environment] %}
-		<link rel="stylesheet" href="{{ stylesheet.href | absolute_url }}" media="{{ stylesheet.media | default: 'all' }}"{% if stylesheet.crossorigin %} crossorigin="{{ stylesheet.crossorigin }}"{% endif %}{% if stylesheet.integrity %} integrity="{{ stylesheet.integrity }}"{% endif %} />
-	{% endfor %}
-	{% if  site.data.head.canonical %}<link rel="canonical" href="{{ site.data.head.canonical }}{{ page.url }}"/>{% endif %}
-	{% if site.data.head.icons %}{% for icon in site.data.head.icons %}
+	{% if page.scripts %}
+		{% for script in page.scripts %}
+			<script type="{{ script.type | default: 'application/javascript' }}" src="{{ script.src | absolute_url }}"{% if script.async %} async=""{% endif %}{% if script.defer %} defer=""{% endif %}{% if script.nomodule %} nomodule=""{% endif %}{% if script.crossorigin %} crossorigin="{{ script.crossorigin }}"{% endif %}{% if script.integrity %} integrity="{{ script.integrity }}"{% endif %}></script>
+		{% endfor %}
+	{% else %}
+		{% for script in site.scripts[jekyll.environment] %}
+			<script type="{{ script.type | default: 'application/javascript' }}" src="{{ script.src | absolute_url }}" crossorigin="{{ script.crossorigin | default: 'anonymous' }}"{% if script.async %} async=""{% endif %}{% if script.defer %} defer=""{% endif %}{% if script.nomodule %} nomodule=""{% endif %}{% if script.integrity %} integrity="{{ script.integrity }}"{% endif %}{% if script.nonce %} nonce="{{ script.nonce }}"{% endif %}></script>
+		{% endfor %}
+	{% endif %}
+	{% if page.stylesheets %}
+		{% for stylesheet in page.stylesheets %}
+			<link rel="stylesheet" href="{{ stylesheet.href | absolute_url }}" media="{{ stylesheet.media | default: 'all' }}" crossorigin="{{ stylesheet.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ stylesheet.referrerpolicy | default: 'origin-when-cross-origin' }}"{% if stylesheet.integrity %} integrity="{{ stylesheet.integrity }}"{% endif %} />
+		{% endfor %}
+	{% else %}
+		{% for stylesheet in site.stylesheets[jekyll.environment] %}
+			<link rel="stylesheet" href="{{ stylesheet.href | absolute_url }}" media="{{ stylesheet.media | default: 'all' }}" crossorigin="{{ stylesheet.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ stylesheet.referrerpolicy | default: 'origin-when-cross-origin' }}"{% if stylesheet.integrity %} integrity="{{ stylesheet.integrity }}"{% endif %} />
+		{% endfor %}
+	{% endif %}
+	{% if  site.canonical %}<link rel="canonical" href="{{ site.canonical append: page.url }}" />{% endif %}
+	{% if site.data.icons.icons %}{% for icon in site.data.icons.icons %}
 		<link rel="icon" href="{{ icon.href | absolute_url }}" type="{{ icon.type }}" sizes="{{ icon.sizes }}" />
 	{% endfor %}{% endif %}
-	{% if site.data.head.touch-icons %}{% for icon in site.data.head.touch-icons %}
+	{% if site.data.icons.touch-icons %}{% for icon in site.data.icons.touch-icons %}
 		<link rel="apple-touch-icon" href="{{ icon.href | absolute_url }}" sizes="{{ icon.sizes }}" />
 	{% endfor %}{% endif %}
-	{% if site.data.head.mask-icon %}
-		<link rel="mask-icon" href="{{ site.data.head.mask-icon.href | absolute_url }}" color="{{ site.data.head.mask-icon.color }}"/>
+	{% if site.data.icons.mask-icon %}
+		<link rel="mask-icon" href="{{ site.data.icons.mask-icon.href | absolute_url }}" color="{{ site.data.icons.mask-icon.color }}"/>
 	{% endif %}
-	{% if site.data.head.tiles %}
-		<meta name="msapplication-config" content="{{ 'browserconfig.xml' | absolute_url }}" />
+	{% if site.tiles-config %}
+		<meta name="msapplication-config" content="{{ site.tiles-config | absolute_url }}" />
 	{% endif %}
-	{% if site.data.head.windows-tile %}
-		<meta name="msapplication-TileImage" content="{{ site.data.head.windows-tile | absolute_url }}" />
+	{% if site.data.icons.windows-tile %}
+		<meta name="msapplication-TileImage" content="{{ site.data.icons.windows-tile | absolute_url }}" />
 	{% endif %}
-	{% if site.data.head.preload %}{% for preload in site.data.head.preload %}
-	<link rel="preload" href="{{ preload.href | absolute_url }}" as="{{ preload.as }}" type="{{ preload.type }}" name="{{ preload.name }}" />
+	{% if page.preload %}{% for preload in page.preload %}
+		<link rel="preload" href="{{ preload.href | absolute_url }}" as="{{ preload.as }}" type="{{ preload.type }}" name="{{ preload.name }}" />
+	{% endfor %}
+	{% elsif site.preload %}{% for preload in site.preload %}
+		<link rel="preload" href="{{ preload.href | absolute_url }}" as="{{ preload.as }}" type="{{ preload.type }}" name="{{ preload.name }}" />
 	{% endfor %}{% endif %}
-	{% if site.feed %}<link rel="alternate" href="{{ site.feed | absolute_url }}" type="application/rss+xml" />{% endif %}
-	{% if site.data.head.meta.publisher %}
-		<link rel="publisher" href="{{ site.data.head.meta.publisher }}" />
-	{% endif %}
-	{% if site.data.authors[page.author] and site.data.authors[page.author].googlePlus %}
-		<link rel="author" href="https://plus.google.com/{{ site.data.authors[page.author].googlePlus }}" />
-	{% endif %}
-	{% if site.data.head.manifest %}<link rel="manifest" href="{{ site.data.head.manifest | absolute_url }}" />{% endif %}
+	{% if site.feed %}<link rel="alternate" href="{{ site.feed.url | absolute_url }}" type="{{ site.feed.type | default: 'application/rss+xml' }}" title="{{ page.feed.title | default: 'Feed' }}" />{% endif %}
+	{% if page.feed %}<link rel="alternate" href="{{ page.feed.url | absolute_url }}" type="{{ page.feed.type | default: 'application/rss+xml' }}" title="{{ page.feed.title | default: 'Page Feed' }}" />{% endif %}
+	{% if site.manifest %}<link rel="manifest" href="{{ site.manifest | absolute_url }}" />{% endif %}
 </head>

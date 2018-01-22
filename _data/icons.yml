@@ -1,0 +1,22 @@
+icons:
+  - href: /img/favicon.svg
+    type: image/svg+xml
+    sizes: any
+  - href: /img/icon-32.png
+    type: image/png
+    sizes: 32x32
+  - href: /img/icon-16.png
+    type: image/png
+    sizes: 16x16
+touch-icons:
+  - href: /img/apple-touch-icon.png
+    sizes: 180x180
+windows-tile: /img/mstile-150x150.png
+mask-icon:
+  href: /img/safari-pinned-tab.svg
+  color: '#ff5722'
+titles:
+  70x70: /img/mstile-70x70.png
+  150x150: /img/mstile-150x150.png
+  310x310: /img/mstile-310x310.png
+  310x150: /img/mstile-310x150.png

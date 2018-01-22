@@ -25,8 +25,6 @@
 	}
 
 	ready().then(() => {
-		$('section').forEach(section => section.hidden = false);
-		$('section:empty').forEach(section => section.remove());
 		if (document.body.contextMenu instanceof HTMLMenuElement) {
 			$('section').forEach(section => {
 				const heading = section.querySelector('.section-heading');
@@ -39,6 +37,7 @@
 				}
 			});
 		}
+
 		if (window.print instanceof Function) {
 			$('[data-action="print"]').forEach(btn => {
 				btn.addEventListener('click', () => print());

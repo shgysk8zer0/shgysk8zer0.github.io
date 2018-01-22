@@ -58,7 +58,7 @@
 		position: fixed;
 	}
 
-	body > button {
+	[data-share], [data-action="print"] {
 		position: fixed;
 		bottom: 1rem;
 		width: 3.3rem;
@@ -284,4 +284,3 @@ blockquote {
 	font-display: fallback;
 	src: local('Roboto'), local('Roboto-Regular'), url('/fonts/roboto.woff2') format('woff2'), url('/fonts/roboto.woff') format('woff'), url('/fonts/roboto.ttf') format('truetype');
 }
-

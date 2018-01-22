@@ -14,7 +14,7 @@
 	</span>
 	{% if include.category %}
 		<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
-			<a href="{{ include.category | downcase | prepend: '/posts/' | append: '/' | absolute_url }}" itemprop="item">
+			<a href="{{ include.category | downcase | prepend: '/posts/' | append: '/' | absolute_url }}" rel="tag" itemprop="item">
 				<span itemprop="name">{{ include.category | capitalize }}</span>
 				<meta itemprop="position" content="3" />
 			</a>
@@ -31,12 +31,12 @@
 	{% if paginator.previous_page or paginator.next_page %}
 		<hr />
 		{% if paginator.previous_page %}
-			<a href="{{ paginator.previous_page_path | absolute_url }}" role="button" title="Previous page" class="background-compliment">
+			<a href="{{ paginator.previous_page_path | absolute_url }}" rel="prev" role="button" title="Previous page">
 				{% include icon.html icon='#prev' %}
 			</a>
 		{% endif %}
 		{% if paginator.next_page %}
-			<a href="{{ paginator.next_page_path | absolute_url }}" role="button" title="Next page" class="background-compliment">
+			<a href="{{ paginator.next_page_path | absolute_url }}" role="button" rel="next" title="Next page">
 				{% include icon.html icon='#next' %}
 			</a>
 		{% endif %}
