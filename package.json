@@ -15,12 +15,12 @@
     "build:css": "postcss -c postcss.config.json css/index.css -o css/index.min.css",
     "build:js": "webpack",
     "build:icons": "svg-sprite-generate -c img/icons.csv -o img/icons.svg",
-    "build:site": "npm run build:all && JEKYLL_ENV=production bundle exec jekyll build",
-    "build:site:dev": "bundle exec jekyll build --incremental --drafts",
+    "build:site": "npm run build:all && JEKYLL_ENV=production bundle exec jekyll build --incremental",
+    "build:site:dev": "bundle exec jekyll build --drafts --unpublished --future --profile --trace --incremental --strict_front_matter",
     "postinstall": "npm run git:submodules && npm run build",
     "start": "npm run serve:dev",
     "serve:production": "npm run build && JEKYLL_ENV=production bundle exec jekyll serve --incremental",
-    "serve:dev": "bundle exec jekyll serve --drafts --unpublished --future --profile --trace --strict_front_matter"
+    "serve:dev": "bundle exec jekyll serve --drafts --unpublished --future --profile --trace --incremental --strict_front_matter"
   },
   "repository": {
     "type": "git",
