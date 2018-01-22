@@ -33,3 +33,9 @@ export const gmail = {
 	icon: new URL('img/logos/gmail.svg', document.baseURI),
 	label: 'Gmail',
 };
+
+export const email = {
+	url: new URL('mailto:?subject&body'),
+	icon: new URL('img/adwaita-icons/actions/mail-send.svg', document.baseURI),
+	label: 'Email',
+};
