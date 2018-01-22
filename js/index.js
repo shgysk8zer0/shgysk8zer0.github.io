@@ -14,24 +14,9 @@ import {
 	email,
 } from './std-js/share-config.js';
 
-async function supportsWebP() {
-	return new Promise((resolve, reject) => {
-		const img = new Image();
-		img.addEventListener('load', resolve);
-		img.addEventListener('error', reject);
-		img.src = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAQAAAAfQ//73v/+BiOh/AAA=';
-	});
-}
-
 webShareApi(facebook, twitter, googlePlus, linkedIn, reddit, gmail, email);
 
 ready().then(async () => {
-	supportsWebP().then(() =>
-		document.documentElement.classList.add('webp')
-	).catch(() =>
-		document.documentElement.classList.add('no-webp')
-	);
-
 	const $doc = $(document.documentElement);
 	$('[data-service-worker]').each(el => registerServiceWorker(el.dataset.serviceWorker));
 
