@@ -4,7 +4,6 @@ header {
 
 body > header {
 	grid-area: header;
-	background-image: var(--header-background-l);
 	background-color: var(--header-bg-color);
 	background-position: bottom right;
 	text-shadow: 0.4em 0.4em 0.4em black;
