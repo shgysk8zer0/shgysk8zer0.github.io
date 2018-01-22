@@ -68,6 +68,10 @@ preload:
     as: image
     type: image/svg+xml
     name: LinkedIn
+  - href: /img/logos/gmail.svg
+    as: image
+    type: image/svg+xml
+    name: Gmail
 icons:
   - href: /img/favicon.svg
     type: image/svg+xml

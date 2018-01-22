@@ -30,6 +30,7 @@ const config = {
 		'/img/logos/linkedin.svg',
 		'/img/logos/Google_plus.svg',
 		'/img/logos/Reddit.svg',
+		'/img/logos/gmail.svg',
 
 		// Fonts
 		'/fonts/acme.woff',
