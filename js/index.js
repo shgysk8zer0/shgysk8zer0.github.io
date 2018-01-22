@@ -4,7 +4,15 @@ import {$, wait, ready, registerServiceWorker} from './std-js/functions.js';
 import * as Mutations from './std-js/mutations.js';
 import {supportsAsClasses} from './std-js/supports.js';
 import webShareApi from './std-js/webShareApi.js';
-import * as shares from './share-config.js';
+import {
+	facebook,
+	twitter,
+	googlePlus,
+	linkedIn,
+	reddit,
+	gmail,
+	email,
+} from './std-js/share-config.js';
 
 async function supportsWebP() {
 	return new Promise((resolve, reject) => {
@@ -15,7 +23,7 @@ async function supportsWebP() {
 	});
 }
 
-webShareApi(...Object.values(shares));
+webShareApi(facebook, twitter, googlePlus, linkedIn, reddit, gmail, email);
 
 ready().then(async () => {
 	supportsWebP().then(() =>
