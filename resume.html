@@ -47,7 +47,7 @@ keywords:
 		</div>
 		<div class="right">
 			<a href="{{ site.data.resume.contact.url }}" itemprop="url">
-				{% include icon.html icon='#web-browser' %}
+				{% include icon.html icon='#link' %}
 				{{ site.data.resume.contact.url | remove: 'http://' | remove: 'https://'}}
 			</a>
 			<br />
@@ -62,7 +62,7 @@ keywords:
 			</a>
 		</div>
 	</div>
-	{% if site.data.resume.gravatar %}
+	{% if site.data.resume.contact.gravatar %}
 		{% include gravatar.html
 			gravatar=site.data.resume.contact.gravatar
 			class='avatar'
