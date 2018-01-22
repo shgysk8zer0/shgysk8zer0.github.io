@@ -46,6 +46,7 @@ feed:
   type: application/rss+xml
 icons: '/img/icons.svg'
 theme-color: '#FC5B0B'
+google-analytics: UA-112855471-1
 webmaster-verifications:
   google: 0cMX_-aKH-pe1wQXGDlK833KE3-kN5V7y3eaywoCXdk
   bing: D0C151304642EDCA64F73FE5C4B43D7A

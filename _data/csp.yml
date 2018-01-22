@@ -9,6 +9,7 @@ script:
 - 'https://gist.github.com'
 - 'https://production-assets.codepen.io'
 - 'https://codepen.io/'
+- 'https://www.googletagmanager.com'
 style:
 - '''self'''
 - '''unsafe-inline'''

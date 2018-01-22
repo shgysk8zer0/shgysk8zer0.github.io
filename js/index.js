@@ -17,6 +17,15 @@ import {
 webShareApi(facebook, twitter, googlePlus, linkedIn, reddit, gmail, email);
 
 ready().then(async () => {
+	if (document.head.dataset.hasOwnProperty('googleAnalytics')) {
+		window.dataLayer = window.dataLayer || [];
+		window.gtag = function () {
+			window.dataLayer.push(arguments);
+		};
+
+		window.gtag('js', new Date());
+		window.gtag('config', document.head.dataset.googleAnalytics);
+	}
 	const $doc = $(document.documentElement);
 	$('[data-service-worker]').each(el => registerServiceWorker(el.dataset.serviceWorker));
 

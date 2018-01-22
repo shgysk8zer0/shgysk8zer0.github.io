@@ -1,4 +1,4 @@
-<head>
+<head{% if site.google-analytics %} data-google-analytics="{{ site.google-analytics }}"{% endif %}>
 	<meta charset="{{ page.charset | default: site.charset }}" />
 	<meta name="viewport" content="{{ page.viewport | default: site.viewport }}" />
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -96,6 +96,9 @@
 		{% for script in site.scripts[jekyll.environment] %}
 			<script type="{{ script.type | default: 'application/javascript' }}" src="{{ script.src | absolute_url }}" crossorigin="{{ script.crossorigin | default: 'anonymous' }}"{% if script.async %} async=""{% endif %}{% if script.defer %} defer=""{% endif %}{% if script.nomodule %} nomodule=""{% endif %}{% if script.integrity %} integrity="{{ script.integrity }}"{% endif %}{% if script.nonce %} nonce="{{ script.nonce }}"{% endif %}></script>
 		{% endfor %}
+	{% endif %}
+	{% if site.google-analytics %}
+		<script src="https://www.googletagmanager.com/gtag/js?id={{ site.google-analytics }}" async=""></script>
 	{% endif %}
 	{% if page.stylesheets %}
 		{% for stylesheet in page.stylesheets %}
