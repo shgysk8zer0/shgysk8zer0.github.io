@@ -15,7 +15,7 @@
 		{% include icon.html icon="#documents" class=octo-class %}
 	</a>
 	{% if site.feed %}
-		<a href="{{ site.feed | absolute_url}}" title="Subscribe to feed" target="_blank" class="inline-block color-inherit">
+		<a href="{{ site.feed.url | absolute_url}}" title="Subscribe to feed" target="_blank" class="inline-block color-inherit">
 			{% include icon.html icon="#rss" class=octo-class %}
 		</a>
 	{% endif %}
