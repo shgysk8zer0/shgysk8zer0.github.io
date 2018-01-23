@@ -31,6 +31,7 @@ mail-send,img/adwaita-icons/actions/mail-send.svg
 mail-unread,img/adwaita-icons/status/mail-unread.svg
 home,img/adwaita-icons/places/user-home.svg
 menu,img/adwaita-icons/actions/open-menu.svg
+comments,img/octicons/lib/svg/comment-discussion.svg
 view-more,img/adwaita-icons/actions/view-more.svg
 tag,img/octicons/lib/svg/tag.svg
 preferences,img/adwaita-icons/categories/preferences-system.svg

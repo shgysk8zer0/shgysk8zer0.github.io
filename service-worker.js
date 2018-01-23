@@ -19,6 +19,7 @@ const config = {
 		'/img/adwaita-icons/actions/go-top.svg',
 		'/img/adwaita-icons/actions/view-pin.svg',
 		'/img/adwaita-icons/places/folder-publicshare.svg',
+		'/img/octicons/lib/svg/comment-discussion.svg',
 
 		// Logos
 		'/img/logos/super-user.svg',

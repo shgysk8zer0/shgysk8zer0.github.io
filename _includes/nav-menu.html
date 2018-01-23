@@ -1,8 +1,15 @@
 <menu type="context" id="nav-menu">
-	<menuitem data-scroll-to="#top" label="Top" icon="{{ 'img/adwaita-icons/actions/go-top.svg' | absolute_url }}"></menuitem>
-	<menuitem data-scroll-to="#pinned-posts" label="Pinned Posts" icon="{{ 'img/adwaita-icons/actions/view-pin.svg' | absolute_url }}"></menuitem>
-	<menuitem data-scroll-to="#recent-posts" label="Recent Posts" icon="{{ 'img/adwaita-icons/actions/document-open-recent.svg' | absolute_url }}"></menuitem>
-	<menuitem data-share="article" label="Share via" icon="{{ 'img/adwaita-icons/places/folder-publicshare.svg' | absolute_url }}"></menuitem>
+	<menuitem label="Back" icon="{{ '/img/adwaita-icons/actions/go-previous.svg' | absolute_url }}" data-click="back"></menuitem>
+	<menuitem label="Forward" icon="{{ '/img/adwaita-icons/actions/go-next.svg' | absolute_url }}" data-click="forward"></menuitem>
+	<menuitem label="Reload" icon="{{ '/img/adwaita-icons/actions/view-refresh.svg' | absolute_url }}" data-click="reload"></menuitem>
+	<menuitem label="Top" icon="{{ 'img/adwaita-icons/actions/go-top.svg' | absolute_url }}" data-scroll-to="#top"></menuitem>
+	{% if page.comments %}
+		<menuitem label="Comments" icon="{{ 'img/octicons/lib/svg/comment-discussion.svg' | absolute_url }}" data-scroll-to="#disqus_thread"></menuitem>
+	{% endif %}
+	<menuitem label="Pinned Posts" icon="{{ 'img/adwaita-icons/actions/view-pin.svg' | absolute_url }}" data-scroll-to="#pinned-posts"></menuitem>
+	<menuitem label="Recent Posts" icon="{{ 'img/adwaita-icons/actions/document-open-recent.svg' | absolute_url }}" data-scroll-to="#recent-posts"></menuitem>
+	<menuitem label="Share via" icon="{{ 'img/adwaita-icons/places/folder-publicshare.svg' | absolute_url }}" data-share=""></menuitem>
+	<menuitem label="Print" icon="{{ '/img/adwaita-icons/actions/document-print.svg' | absolute_url }}" data-click="print"></menuitem>
 	{% if jekyll.environment == 'development' %}
 		<menuitem data-open="/admin" label="Admin" icon="{{ '/img/adwaita-icons/categories/preferences-system.svg' | absolute_url }}"></menuitem>
 	{% endif %}

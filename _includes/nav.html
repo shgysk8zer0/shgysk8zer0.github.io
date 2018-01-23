@@ -9,6 +9,12 @@
 		{% include icon.html icon='#top' %}
 		<span class="mobile-hidden">Top</span>
 	</a>
+	{% if page.comments %}
+		<a href="{{ page.url | append: '#disqus_thread' | absolute_url }}" title="Comments">
+			{% include icon.html icon='#comments' %}
+			<span class="mobile-hidden">Comments</span>
+		</a>
+	{% endif %}
 	<span data-show-modal="#about-dialog" class="cursor-pointer" title="About">
 		{% include icon.html icon='#avatar-default' %}
 		<span class="mobile-hidden">About</span>
