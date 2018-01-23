@@ -88,6 +88,10 @@
 	{% if site.webmaster-verifications.bing %}
 		<meta name="msvalidate.01" content="{{ site.webmaster-verifications.bing }}" />
 	{% endif %}
+	<!--[if IE]>
+		<script src="{{ '/js/svg4everybody/dist/svg4everybody.min.js' | absolute_url }}"></script>
+		<script>svg4everybody();</script>
+	<![endif]-->
 	{% if page.scripts %}
 		{% for script in page.scripts %}
 			<script type="{{ script.type | default: 'application/javascript' }}" src="{{ script.src | absolute_url }}"{% if script.async %} async=""{% endif %}{% if script.defer %} defer=""{% endif %}{% if script.nomodule %} nomodule=""{% endif %}{% if script.crossorigin %} crossorigin="{{ script.crossorigin }}"{% endif %}{% if script.integrity %} integrity="{{ script.integrity }}"{% endif %}></script>

@@ -22,3 +22,6 @@
 [submodule "css/animate.css"]
 	path = css/animate.css
 	url = https://github.com/daneden/animate.css.git
+[submodule "js/svg4everybody"]
+	path = js/svg4everybody
+	url = https://github.com/jonathantneal/svg4everybody.git
