@@ -102,7 +102,7 @@
 			<script type="{{ script.type | default: 'application/javascript' }}" src="{{ script.src | absolute_url }}" crossorigin="{{ script.crossorigin | default: 'anonymous' }}"{% if script.async %} async=""{% endif %}{% if script.defer %} defer=""{% endif %}{% if script.nomodule %} nomodule=""{% endif %}{% if script.integrity %} integrity="{{ script.integrity }}"{% endif %}{% if script.nonce %} nonce="{{ script.nonce }}"{% endif %}></script>
 		{% endfor %}
 	{% endif %}
-	{% if site.google-analytics %}
+	{% if site.google-analytics and jekyll.environment != 'development' %}
 		{% include google-analytics.html id=site.google-analytics %}
 	{% endif %}
 	{% if page.stylesheets %}

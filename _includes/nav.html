@@ -9,7 +9,7 @@
 		{% include icon.html icon='#top' %}
 		<span class="mobile-hidden">Top</span>
 	</a>
-	{% if page.comments %}
+	{% if page.comments and jekyll.environment != 'development' %}
 		<a href="{{ page.url | append: '#disqus_thread' | absolute_url }}" title="Comments">
 			{% include icon.html icon='#comments' %}
 			<span class="mobile-hidden">Comments</span>
