@@ -36,4 +36,5 @@ font:
 - '''self'''
 media:
 - '*'
+report-uri: 'https://superuser.report-uri.com/r/d/csp/enforce'
 block-mixed-content: true

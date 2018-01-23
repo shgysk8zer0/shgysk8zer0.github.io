@@ -79,6 +79,7 @@
 				{% if site.data.csp.font %}font-src {{ site.data.csp.font | join: ' ' }};{% endif %}
 				{% if site.data.csp.media %}media-src {{ site.data.csp.media | join: ' ' }};{% endif %}
 				{% if site.data.csp.child %}child-src {{ site.data.csp.child | join: ' ' }};{% endif %}
+				{% if site.data.csp.report-uri %}report-uri {{ site.data.csp.report-uri }};{% endif %}
 				{% if site.data.csp.block-mixed-content %}block-all-mixed-content;{% endif %}
 		" />
 	{% endif %}
