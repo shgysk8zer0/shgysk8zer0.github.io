@@ -14,8 +14,12 @@
 	sizes="{{ include.sizes | default: '(orientation: portrait) 15vw, 12vw' }}"
 	src="https://secure.gravatar.com/avatar/{{ include.gravatar }}?s={{ include.default_size | default: 256 }}&d={{ include.fallback | default: 'mm'}}"
 	alt="{{ include.class | default: 'Gravatar' }}"
-	class="{{ include.class | default: 'gravatar'}}"
+	title="{{ include.title | default: include.alt }}"
 	crossorigin="{{ include.crossorigin | default: 'anonymous' }}"
+	referrerpolicy="{{ include.referrerpolicy | default: 'origin-when-cross-origin' }}"
+	decoding="{{ include.decoding | default: 'auto' }}"
+	class="{{ include.class | default: 'gravatar'}}"
+	{% if include.id %}id="{{ include.id }}"{% endif %}
 	{% if include.width %}width="{{ include.width }}"{% endif %}
 	{% if include.height %}height="{{ include.height }}"{% endif %}
 	{% if include.itemprop %}itemprop="{{ include.itemprop }}"{% endif %}

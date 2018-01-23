@@ -19,8 +19,10 @@
 		src="https://i.imgur.com/{{ include.imgur }}{{ include.default_size : default: 'h'}}.png"
 		class="{{ include.class | default: 'card shadow imgur' }}"
 		alt="{{ include.alt | default: '' }}"
+		title="{{ include.title | default: include.alt }}"
 		crossorigin="{{ include.crossorigin | default: 'anonymous' }}"
-		title="{{ include.alt | default: '' }}"
+		referrerpolicy="{{ include.referrerpolicy | default: 'origin-when-cross-origin' }}"
+		decoding="{{ include.decoding | default: 'auto' }}"
 		{% if include.itemprop %}itemprop="{{ include.itemprop }}"{% endif %}
 		{% if include.id %} id="{{ include.id }}"{% endif %}
 		{% if include.width %}width="{{ include.width }}"{% endif %}

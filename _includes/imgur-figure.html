@@ -1,0 +1,16 @@
+<figure
+	itemprop="{{ include.itemprop | default: 'image'}}"
+	itemtype="http://schema.org/ImageObject"
+	itemscope=""
+	class="{{ include.class | default: 'card background-default shadow-dark' }}"
+	{% if include.id %}id="{{ include.id }}"{% endif %}
+>
+	{% include imgur.html
+		imgur=include.imgur
+		sizes=include.sizes
+		alt=include.alt
+		itemprop='contentUrl'
+		decoding=include.decoding
+	%}
+	{% if include.caption %}<figcaption itemprop="caption">{{ include.caption }}</figcaption>{% endif %}
+</figure>
