@@ -1,4 +1,4 @@
-<head{% if site.google-analytics %} data-google-analytics="{{ site.google-analytics }}"{% endif %}>
+<head>
 	<meta charset="{{ page.charset | default: site.charset }}" />
 	<meta name="viewport" content="{{ page.viewport | default: site.viewport }}" />
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -70,7 +70,7 @@
 		<meta name="msapplication-TileColor" content="{{ site.theme-color }}" />
 	{% endif %}
 	{% if site.data.csp %}
-		<meta http-equiv="{% if jekyll.environment == 'production'%}Content-Security-Policy{% else %}Content-Security-Policy-Report-Only{% endif %}" content="
+		<meta http-equiv="Content-Security-Policy" content="
 				{% if site.data.csp.default %}default-src {{ site.data.csp.default | join: ' ' }};{% endif %}
 				{% if site.data.csp.img %}img-src {{ site.data.csp.img | join: ' ' }};{% endif %}
 				{% if site.data.csp.script %}script-src {{ site.data.csp.script | join: ' ' }};{% endif %}
@@ -102,7 +102,7 @@
 		{% endfor %}
 	{% endif %}
 	{% if site.google-analytics %}
-		<script src="https://www.googletagmanager.com/gtag/js?id={{ site.google-analytics }}" async=""></script>
+		{% include google-analytics.html id=site.google-analytics %}
 	{% endif %}
 	{% if page.stylesheets %}
 		{% for stylesheet in page.stylesheets %}

@@ -10,6 +10,8 @@ script:
 - 'https://production-assets.codepen.io'
 - 'https://codepen.io/'
 - 'https://www.googletagmanager.com'
+- 'https://www.google-analytics.com/analytics.js'
+- '''sha256-9SnVQSUgyu0x3RjcQbSK+0DzJdS2uV0NKAWfcrj5Gxc='''
 style:
 - '''self'''
 - '''unsafe-inline'''
@@ -19,8 +21,8 @@ connect:
 - '*'
 child:
 - '''self'''
-- 'http://www.youtube.com'
-- 'http://www.youtube-nocookie.com'
+- 'https://www.youtube.com'
+- 'https://www.youtube-nocookie.com'
 font:
 - '''self'''
 media:
