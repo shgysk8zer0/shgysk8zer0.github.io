@@ -73,7 +73,7 @@
 		<meta http-equiv="Content-Security-Policy" content="
 				{% if site.data.csp.default %}default-src {{ site.data.csp.default | join: ' ' }};{% endif %}
 				{% if site.data.csp.img %}img-src {{ site.data.csp.img | join: ' ' }};{% endif %}
-				{% if site.data.csp.script %}script-src {{ site.data.csp.script | join: ' ' }};{% endif %}
+				{% if site.data.csp.script %}script-src {{ site.data.csp.script | join: ' ' | replace: 'DISQUS_URL', site.discus-identifier }};{% endif %}
 				{% if site.data.csp.style %}style-src {{ site.data.csp.style | join: ' ' }};{% endif %}
 				{% if site.data.csp.connect %}connect-src {{ site.data.csp.connect | join: ' ' }};{% endif %}
 				{% if site.data.csp.font %}font-src {{ site.data.csp.font | join: ' ' }};{% endif %}

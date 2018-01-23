@@ -84,6 +84,9 @@
 	</header>
 	<div itemprop="articleBody mainEntityOfPage" class="optimize-legibility">{{ content }}</div>
 	<footer class="clearfix relative">
+		{% if page.comments %}
+			{% include disqus.html %}
+		{% endif %}
 		<hr />
 		{% include license.html %}
 	</footer>
