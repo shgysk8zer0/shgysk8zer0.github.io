@@ -9,16 +9,15 @@ script:
 - 'https://gist.github.com'
 - 'https://production-assets.codepen.io'
 - 'https://codepen.io/'
-- 'https://DISQUS_URL.disqus.com/embed.js'
+- 'https://*.disqus.com/embed.js'
 - 'https://disqus.com/'
 - 'https://c.disquscdn.com/'
 - 'https://www.googletagmanager.com'
 - 'https://www.google-analytics.com/analytics.js'
-- '''sha256-9SnVQSUgyu0x3RjcQbSK+0DzJdS2uV0NKAWfcrj5Gxc='''
+# Google Analytics script hash
+- '''sha256-qlev233W0WjthlK15TmbH0lVg2G2Wtv5ABDEiB2iDnE='''
+# Disqus script hash
 - '''sha256-YmEu57ZRfDpDDhMApyHsyE3PA6DSf2V+9bIVooFPFHw='''
-# - '''unsafe-inline'''
-# - '''unsafe-eval'''
-# - 'data:'
 style:
 - '''self'''
 - '''unsafe-inline'''

@@ -7,6 +7,7 @@
 	itemscope=""
 	{% if site.service_worker %}data-service-worker="{{site.service_worker | absolute_url }}"{% endif %}
 	data-support-test="{{ site.feature-detect | join: ','}}"
+	{% if site.google-analytics %}data-google-analytics="{{ site.google-analytics }}"{% endif %}
 >
 {% include head.html %}
 <body

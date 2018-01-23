@@ -1,10 +1,14 @@
-<script src="https://www.googletagmanager.com/gtag/js?id={{ include.id }}" async=""></script>
 <script>
+	var script = document.createElement('script')
+	var src = new URL('https://www.googletagmanager.com/gtag/js');
+	src.searchParams.set('id', document.documentElement.dataset.googleAnalytics);
+	script.src = src;
+	document.head.appendChild(script);
 	window.dataLayer = window.dataLayer || [];
 	window.gtag = function () {
 		window.dataLayer.push(arguments);
 	};
 
 	window.gtag('js', new Date());
-	window.gtag('config', '{{ include.id }}');
+	window.gtag('config', document.documentElement.dataset.googleAnalytics);
 </script>
