@@ -50,7 +50,7 @@ discus-identifier: chris-zuber
 google-analytics: UA-112855471-1
 webmaster-verifications:
   google: 0cMX_-aKH-pe1wQXGDlK833KE3-kN5V7y3eaywoCXdk
-  bing: D0C151304642EDCA64F73FE5C4B43D7A
+  bing: B4BA0BE1916BB0AE8AFAC3ACC826DF57
 scripts:
   development:
     - src: 'https://cdn.polyfill.io/v2/polyfill.min.js?unknown=polyfill&features=es6,MutationObserver,IntersectionObserver,IntersectionObserverEntry,Object.values,Object.entries,NodeList.prototype.@@iterator,Array.prototype.@@iterator&flags=gated'
