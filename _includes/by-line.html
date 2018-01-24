@@ -77,6 +77,13 @@
 					</svg>
 				</a>
 			{% endif %}
+			{% if author.sameAs.reddit %}
+				<a itemprop="sameAs" href="https://www.reddit.com/user/{{ author.reddit }}" rel="noopener external" title="YouTube" class="no-text-decoration">
+					<svg class="icon {{ include.animation | default: 'jackInTheBox' }} animation-speed-normal animation-ease-out">
+						<use xlink:href="{{ site.icons | absolute_url | append: '#reddit' }}" />
+					</svg>
+				</a>
+			{% endif %}
 			{% if author.email %}
 				<a itemprop="email" content="{{ author.email }}" href="mailto:{{ author.email }}" title="Email" class="no-text-decoration">
 					<svg class="icon {{ include.animation | default: 'jackInTheBox' }} animation-speed-normal animation-ease-out">
