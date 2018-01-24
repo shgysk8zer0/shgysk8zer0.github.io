@@ -13,7 +13,7 @@
 		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=32&d={{ include.fallback | default: 'mm'}} 32w"
 	sizes="{{ include.sizes | default: '(orientation: portrait) 15vw, 12vw' }}"
 	src="https://secure.gravatar.com/avatar/{{ include.gravatar }}?s={{ include.default_size | default: 256 }}&d={{ include.fallback | default: 'mm'}}"
-	alt="{{ include.class | default: 'Gravatar' }}"
+	alt="{{ include.alt | default: 'Gravatar' }}"
 	title="{{ include.title | default: include.alt }}"
 	crossorigin="{{ include.crossorigin | default: 'anonymous' }}"
 	referrerpolicy="{{ include.referrerpolicy | default: 'origin-when-cross-origin' }}"
