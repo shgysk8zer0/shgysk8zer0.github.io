@@ -14,7 +14,7 @@ touch-icons:
 windows-tile: /img/mstile-150x150.png
 mask-icon:
   href: /img/safari-pinned-tab.svg
-  color: '#ff5722'
+  color: '#009688'
 titles:
   70x70: /img/mstile-70x70.png
   150x150: /img/mstile-150x150.png

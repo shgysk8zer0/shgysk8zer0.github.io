@@ -45,7 +45,8 @@ feed:
   url: /feed.rss
   type: application/rss+xml
 icons: '/img/icons.svg'
-theme-color: '#FC5B0B'
+theme-color: '#009688'
+background-color: '#242424'
 discus-identifier: chris-zuber
 google-analytics: UA-112855471-1
 webmaster-verifications:
