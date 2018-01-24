@@ -2,7 +2,7 @@
 	{% include breadcrumb-nav.html category=page.category post=page %}
 </span>
 <article itemtype="http://schema.org/BlogPosting" itemscope="" itemprop="mainEntityOfPage" role="article" class="font-article">
-	<header class="article-meta shadow-dark sticky-desktop under-nav z-2">
+	<header class="article-meta shadow-dark">
 		{% if page.tags %}<meta itemprop="keywords" content="{{ page.tags | join: ', '}}" />{% endif %}
 		{% if page.imgur %}
 			<meta itemprop="image" content="https://i.imgur.com/{{ page.imgur }}m.png" />
