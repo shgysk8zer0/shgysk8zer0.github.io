@@ -22,7 +22,7 @@
 	--button-border: 0.1rem outset var(--border-color);
 	--button-disabled-border: 0.1rem inset var(--border-color);
 	--button-active-border: var(--button-disabled-border);
-	--button-color: var(--primary-color);
+	--button-color: var(--accent-color);
 
 	/*========== Set background images, etc here ==========*/
 	--header-background-full : url("/img/background.jpg");
