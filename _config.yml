@@ -140,6 +140,7 @@ plugins:
   - jekyll-gist
   - jekyll-youtube
   - jekyll-admin
+  - jekyll-watch
   # - jekyll-avatar
   # - jekyll-mentions
   # - jekyll-github-metadata

@@ -41,3 +41,6 @@ gem "jekyll-admin", "~> 0.7.0"
 
 # Added at 2018-01-18 19:41:32 -0800 by shgysk8zer0:
 gem "jekyll-avatar", "~> 0.5.0"
+
+# Added at 2018-01-25 13:37:57 -0800 by shgysk8zer0:
+gem "jekyll-watch", "~> 1.5"
