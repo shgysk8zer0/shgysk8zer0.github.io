@@ -48,6 +48,10 @@ figure picture, figure img {
 	display: block;
 }
 
+figcaption {
+	margin: 1em;
+}
+
 .breadcrumb:not(:last-child)::after {
 	content: ' / ';
 }
