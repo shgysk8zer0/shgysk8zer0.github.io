@@ -4,19 +4,19 @@
 
 [data-share] {
 	bottom: 0.5rem;
-	right: 0.5rem;
-	height: 2.3em;
-	width: 2.3em;
-	min-height: 40px;
-	min-width: 40px;
-	padding: 0em;
-	opacity: 0.8;
-	transition: opacity 400ms ease-in-out, transform 400ms ease-in-out;
+	right: 0.2rem;
+	width: 2.7rem;
+	height: 2.7rem;
+	font-size: 2rem;
+	border: none;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	transition: transform 400ms ease-in-out;
 }
 
 [data-share]:hover {
-	opacity: 1;
-	transform: scale(1.1);
+	transform: scale(1.2);
 }
 
 [data-share] > svg {

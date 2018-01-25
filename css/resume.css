@@ -58,7 +58,7 @@
 		position: fixed;
 	}
 
-	[data-share], [data-action="print"] {
+	[data-share], [data-click="print"] {
 		position: fixed;
 		bottom: 1rem;
 		width: 3.3rem;
@@ -66,13 +66,13 @@
 		font-size: 2rem;
 		border: none;
 		border-radius: 50%;
-		background-color: rgb(0, 150, 136);
 		display: flex;
 		justify-content: center;
 		transition: transform 400ms ease-in-out;
+		filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.7));
 	}
 
-	.floating:hover {
+	[data-share]:hover, [data-click]:hover {
 		transform: scale(1.2);
 	}
 
@@ -87,17 +87,11 @@
 
 	[data-share] {
 		right: 5rem;
-		color: white;
-		filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.7));
 	}
 
-	[data-action] {
-		color: white;
+	[data-click] {
 		right: 1rem;
-		filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.7));
 	}
-
-
 }
 
 @media screen and (min-width: 1000px) {
@@ -171,6 +165,8 @@ nav {
 
 button {
 	cursor: pointer;
+	background-color: rgb(0, 150, 136);
+	color: white;
 }
 
 blockquote {
