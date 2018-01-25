@@ -103,7 +103,7 @@
 				{% include icon.html icon='#organization' %}
 				<span itemprop="jobTitle">{{ include.person.jobTitle }}</span>
 				<span> @ </span>
-				<span data-show-modal="#org-info-dialog" class="cursor-pointer underline">{{ include.person.worksFor.name }}</span>
+				<a href="{{ page.url | append: '#org-info-dialog' | absolute_url }}" class="color-inherit">{{ include.person.worksFor.name }}</a>
 			</h3>
 			<hr />
 		{% elsif include.person.jobTitle %}

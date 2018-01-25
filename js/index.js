@@ -14,9 +14,41 @@ import {
 	email,
 } from './std-js/share-config.js';
 
+function hashChangeHandler(event) {
+	if (event.oldURL) {
+		const oldURL = new URL(event.oldURL);
+		if (location.pathname === oldURL.pathname && oldURL.hash.startsWith('#')) {
+			const oldTarget = document.getElementById(oldURL.hash.substr(1));
+			if (oldTarget instanceof Element && oldTarget.tagName === 'DIALOG') {
+				oldTarget.close();
+			}
+		}
+	}
+
+	if (event.newURL) {
+		const newURL = new URL(event.newURL);
+		if (location.pathname === newURL.pathname && newURL.hash.startsWith('#')) {
+			const newTarget = document.getElementById(newURL.hash.substr(1));
+			if (newTarget instanceof Element && newTarget.tagName === 'DIALOG') {
+				newTarget.showModal();
+			}
+		}
+	}
+}
+
 webShareApi(facebook, twitter, googlePlus, linkedIn, reddit, gmail, email);
 
 ready().then(async () => {
+	const url = new URL(location.href);
+	if (url.hash.startsWith('#')) {
+		const target = document.getElementById(url.hash.substr(1));
+		if (target instanceof Element && target.tagName === 'DIALOG') {
+			target.showModal();
+		}
+	}
+
+	window.addEventListener('hashchange', hashChangeHandler);
+
 	const $doc = $(document.documentElement);
 	$('[data-service-worker]').each(el => registerServiceWorker(el.dataset.serviceWorker));
 
@@ -34,6 +66,12 @@ ready().then(async () => {
 		event.preventDefault();
 		const url = new URL(event.target.dataset.open, location.origin);
 		window.open(url);
+	});
+
+	$('dialog').on('close', event => {
+		if (location.hash.substr(1) === event.target.id) {
+			location.hash = '';
+		}
 	});
 
 	supportsAsClasses(...document.documentElement.dataset.supportTest.split(',').map(test => test.trim()));

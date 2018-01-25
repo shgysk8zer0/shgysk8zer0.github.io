@@ -15,7 +15,7 @@
 			<span class="mobile-hidden">Comments</span>
 		</a>
 	{% endif %}
-	<span data-show-modal="#about-dialog" class="cursor-pointer" title="About">
+	<a href="{{ page.url | append: '#about-dialog' | absolute_url }}" class="color-inherit" title="About">
 		{% include icon.html icon='#avatar-default' %}
 		<span class="mobile-hidden">About</span>
 	</span>

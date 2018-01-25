@@ -2,15 +2,16 @@
 	{% assign name = site.author | downcase | replace: ' ', '-' %}
 	{% assign author = site.data.authors[name] %}
 	<div itemtype="http://schema.org/Person" itemprop="about" itemscope="" class="flex column wrap transform-origin-bottom transition-ease-in-out">
-		<figure itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="">
-			{% include gravatar.html
-				gravatar=author.image.gravatar
-				sizes='(orientation: portrait) 30vw, 15vw'
-				class='round shadow-dark cursor-pointer'
-				itemprop='url'
-				attrs='data-show-modal="#about-dialog"'
-			%}
-		</figure>
+		<a href="{{ page.url | append: '#about-dialog' | absolute_url }}">
+			<figure itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="">
+				{% include gravatar.html
+					gravatar=author.image.gravatar
+					sizes='(orientation: portrait) 30vw, 15vw'
+					class='round shadow-dark cursor-pointer'
+					itemprop='url'
+				%}
+			</figure>
+		</a>
 		<h1 class="capitalize">
 			{% if author.url %}<a href="{{ author.url }}" rel="noopener external" title="Personal Blog">{% endif %}
 				<span itemprop="givenName">{{ author.givenName }}</span>
