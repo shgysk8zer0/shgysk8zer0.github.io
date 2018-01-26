@@ -27,8 +27,8 @@ function hashChangeHandler(event) {
 
 	if (event.newURL) {
 		if (location.hash.length !== 0) {
-			const target = document.querySelector(':target');
-			if (target instanceof Element && target.tagName === 'DIALOG') {
+			const target = document.querySelector('dialog:target');
+			if (target instanceof Element) {
 				target.showModal();
 			}
 		}
@@ -38,14 +38,14 @@ function hashChangeHandler(event) {
 webShareApi(facebook, twitter, googlePlus, linkedIn, reddit, gmail, email);
 
 ready().then(async () => {
+	window.addEventListener('hashchange', hashChangeHandler);
+
 	if (location.hash.length !== 0) {
-		const target = document.querySelector(':target');
-		if (target instanceof Element && target.tagName === 'DIALOG') {
+		const target = document.querySelector('dialog:target');
+		if (target instanceof Element) {
 			target.showModal();
 		}
 	}
-
-	window.addEventListener('hashchange', hashChangeHandler);
 
 	const $doc = $(document.documentElement);
 	$('[data-service-worker]').each(el => registerServiceWorker(el.dataset.serviceWorker));
@@ -68,7 +68,6 @@ ready().then(async () => {
 
 	$('dialog').on('close', event => {
 		const target = document.querySelector(':target');
-		console.log(event);
 		if (event.target === target) {
 			if (history.length !== 1) {
 				history.back();
