@@ -1,5 +1,6 @@
 ---
 title: The Future of Web Apps
+subheading: The Web as the Ultimate Platform
 author: Chris Zuber
 date: 2017-11-08 13:18:00 -0700
 pinned: true
@@ -13,10 +14,6 @@ keywords:
 - progressive enhancement
 category: javascript
 ---
-<h1 class="center">The Future of Web Apps</h1>
-<h2 class="center" itemprop="alternativeHeadline">
-  <i>The Web as the Ultimate Platform</i>
-</h2>
 {% include imgur.html class='float-right card shadow' imgur=page.imgur sizes='(min-width: 800px) 60vw, 100vw' alt='Code screenshot' %}
 
 ### What are they?
