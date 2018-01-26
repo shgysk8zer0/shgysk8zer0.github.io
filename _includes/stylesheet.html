@@ -1,0 +1,7 @@
+<link
+	rel="stylesheet"
+	href="{{ include.href | absolute_url }}"
+	media="{{ include.media | default: 'all' }}"
+	crossorigin="{{ include.crossorigin | default: 'anonymous' }}"
+	referrerpolicy="{{ include.referrerpolicy | default: 'origin-when-cross-origin' }}"
+	{% if stylesheet.integrity %}integrity="{{ include.integrity }}"{% endif %} />

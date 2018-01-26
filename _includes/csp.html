@@ -1,0 +1,12 @@
+<meta http-equiv="Content-Security-Policy" content="
+	{% if include.csp.default %}default-src {{ include.csp.default | join: ' ' }};{% endif %}
+	{% if include.csp.img %}img-src {{ include.csp.img | join: ' ' }};{% endif %}
+	{% if include.csp.script %}script-src {{ include.csp.script | join: ' ' | replace: 'DISQUS_URL', site.discus-identifier }};{% endif %}
+	{% if include.csp.style %}style-src {{ include.csp.style | join: ' ' }};{% endif %}
+	{% if include.csp.connect %}connect-src {{ include.csp.connect | join: ' ' }};{% endif %}
+	{% if include.csp.font %}font-src {{ include.csp.font | join: ' ' }};{% endif %}
+	{% if include.csp.media %}media-src {{ include.csp.media | join: ' ' }};{% endif %}
+	{% if include.csp.child %}child-src {{ include.csp.child | join: ' ' }};{% endif %}
+	{% if include.csp.report-uri %}report-uri {{ include.csp.report-uri }};{% endif %}
+	{% if include.csp.block-mixed-content %}block-all-mixed-content;{% endif %}
+" />

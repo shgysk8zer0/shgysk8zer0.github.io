@@ -69,20 +69,7 @@
 		<meta name="theme-color" content="{{ site.theme-color }}" />
 		<meta name="msapplication-TileColor" content="{{ site.theme-color }}" />
 	{% endif %}
-	{% if site.data.csp %}
-		<meta http-equiv="Content-Security-Policy" content="
-				{% if site.data.csp.default %}default-src {{ site.data.csp.default | join: ' ' }};{% endif %}
-				{% if site.data.csp.img %}img-src {{ site.data.csp.img | join: ' ' }};{% endif %}
-				{% if site.data.csp.script %}script-src {{ site.data.csp.script | join: ' ' | replace: 'DISQUS_URL', site.discus-identifier }};{% endif %}
-				{% if site.data.csp.style %}style-src {{ site.data.csp.style | join: ' ' }};{% endif %}
-				{% if site.data.csp.connect %}connect-src {{ site.data.csp.connect | join: ' ' }};{% endif %}
-				{% if site.data.csp.font %}font-src {{ site.data.csp.font | join: ' ' }};{% endif %}
-				{% if site.data.csp.media %}media-src {{ site.data.csp.media | join: ' ' }};{% endif %}
-				{% if site.data.csp.child %}child-src {{ site.data.csp.child | join: ' ' }};{% endif %}
-				{% if site.data.csp.report-uri %}report-uri {{ site.data.csp.report-uri }};{% endif %}
-				{% if site.data.csp.block-mixed-content %}block-all-mixed-content;{% endif %}
-		" />
-	{% endif %}
+	{% if site.data.csp %}{% include csp.html csp=site.data.csp %}{% endif %}
 	{% if site.webmaster-verifications.google %}
 		<meta name="google-site-verification" content="{{ site.webmaster-verifications.google }}" />
 	{% endif %}
@@ -95,11 +82,25 @@
 	<![endif]-->
 	{% if page.scripts %}
 		{% for script in page.scripts %}
-			<script type="{{ script.type | default: 'application/javascript' }}" src="{{ script.src | absolute_url }}"{% if script.async %} async=""{% endif %}{% if script.defer %} defer=""{% endif %}{% if script.nomodule %} nomodule=""{% endif %}{% if script.crossorigin %} crossorigin="{{ script.crossorigin }}"{% endif %}{% if script.integrity %} integrity="{{ script.integrity }}"{% endif %}></script>
+			{% include script.html
+				type=script.type
+				src=script.src
+				async=script.async
+				defer=script.defer
+				crossorigin=script.crossorigin
+				integrity=script.integrity
+			%}
 		{% endfor %}
 	{% else %}
 		{% for script in site.scripts[jekyll.environment] %}
-			<script type="{{ script.type | default: 'application/javascript' }}" src="{{ script.src | absolute_url }}" crossorigin="{{ script.crossorigin | default: 'anonymous' }}"{% if script.async %} async=""{% endif %}{% if script.defer %} defer=""{% endif %}{% if script.nomodule %} nomodule=""{% endif %}{% if script.integrity %} integrity="{{ script.integrity }}"{% endif %}{% if script.nonce %} nonce="{{ script.nonce }}"{% endif %}></script>
+			{% include script.html
+				type=script.type
+				src=script.src
+				async=script.async
+				defer=script.defer
+				crossorigin=script.crossorigin
+				integrity=script.integrity
+			%}
 		{% endfor %}
 	{% endif %}
 	{% if site.google-analytics and jekyll.environment != 'development' %}
@@ -110,11 +111,23 @@
 	{% endif %}
 	{% if page.stylesheets %}
 		{% for stylesheet in page.stylesheets %}
-			<link rel="stylesheet" href="{{ stylesheet.href | absolute_url }}" media="{{ stylesheet.media | default: 'all' }}" crossorigin="{{ stylesheet.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ stylesheet.referrerpolicy | default: 'origin-when-cross-origin' }}"{% if stylesheet.integrity %} integrity="{{ stylesheet.integrity }}"{% endif %} />
+			{% include stylesheet.html
+				href=stylesheet.href
+				media=stylesheet.media
+				crossorigin=styleshseet.crossorigin
+				referrerpolicy=stylesheet.referrerpolicy
+				integrity=stylesheet.integrity
+			%}
 		{% endfor %}
 	{% else %}
 		{% for stylesheet in site.stylesheets[jekyll.environment] %}
-			<link rel="stylesheet" href="{{ stylesheet.href | absolute_url }}" media="{{ stylesheet.media | default: 'all' }}" crossorigin="{{ stylesheet.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ stylesheet.referrerpolicy | default: 'origin-when-cross-origin' }}"{% if stylesheet.integrity %} integrity="{{ stylesheet.integrity }}"{% endif %} />
+			{% include stylesheet.html
+				href=stylesheet.href
+				media=stylesheet.media
+				crossorigin=styleshseet.crossorigin
+				referrerpolicy=stylesheet.referrerpolicy
+				integrity=stylesheet.integrity
+			%}
 		{% endfor %}
 	{% endif %}
 	{% if  site.canonical %}<link rel="canonical" href="{{ site.canonical append: page.url }}" />{% endif %}
