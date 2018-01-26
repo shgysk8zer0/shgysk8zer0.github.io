@@ -105,7 +105,7 @@
 	{% if site.google-analytics and jekyll.environment != 'development' %}
 		{% include google-analytics.html id=site.google-analytics %}
 	{% endif %}
-	{% if page.ads and site.ad-sense %}
+	{% if page.ads and site.ad-sense and jekyll.environment != 'development' %}
 		{% include adsense.html %}
 	{% endif %}
 	{% if page.stylesheets %}
