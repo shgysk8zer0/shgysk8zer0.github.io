@@ -4,6 +4,7 @@
 /npm-debug.log
 /_site/
 /.jekyll-metadata
+.buildconfig
 #################
 ## Eclipse
 #################
