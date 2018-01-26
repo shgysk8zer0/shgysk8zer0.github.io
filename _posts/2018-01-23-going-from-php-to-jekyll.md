@@ -2,7 +2,7 @@
 title: Going from PHP to Jekyll
 author: Chris Zuber
 date: 2018-01-23 03:27
-imgur: U6hfm0d
+imgur: CbFnOO9
 comments: true
 category: frontend
 description: >-
