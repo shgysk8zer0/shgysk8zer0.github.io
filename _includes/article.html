@@ -82,6 +82,7 @@
 			</div>
 		</details>
 	</header>
+	{% if page.subheading %}{% include subheading.html subheading=page.subheading %}{% endif %}
 	<div itemprop="articleBody mainEntityOfPage" class="optimize-legibility">{{ content }}</div>
 	<footer class="clearfix relative">
 		{% if page.ads %}{% include ad.html %}{% endif %}
