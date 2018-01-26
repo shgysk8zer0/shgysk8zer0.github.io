@@ -36,7 +36,7 @@ child:
 - '''self'''
 - 'https://www.youtube.com'
 - 'https://www.youtube-nocookie.com'
-- 'https://disqus.com/embed/comments/'
+- 'https://disqus.com/'
 font:
 - '''self'''
 media:
