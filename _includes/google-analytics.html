@@ -3,6 +3,7 @@
 	var src = new URL('https://www.googletagmanager.com/gtag/js');
 	src.searchParams.set('id', document.documentElement.dataset.googleAnalytics);
 	script.src = src;
+	script.async = true;
 	document.head.appendChild(script);
 	window.dataLayer = window.dataLayer || [];
 	window.gtag = function () {
