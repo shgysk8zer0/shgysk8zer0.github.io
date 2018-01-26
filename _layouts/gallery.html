@@ -8,6 +8,8 @@
 	{% if site.service_worker %}data-service-worker="{{site.service_worker | absolute_url }}"{% endif %}
 	data-support-test="details, dialog, cssvars"
 	{% if site.google-analytics %}data-google-analytics="{{ site.google-analytics }}"{% endif %}
+	{% if page.ads %}data-ad-sense-id="{{ site.ad-sense }}"{% endif %}
+	{% if page.pageLevelAds %}data-page-level-ads="{{ page.pageLevelAds }}"{% endif %}
 >
 	{% include head.html %}
 	<body

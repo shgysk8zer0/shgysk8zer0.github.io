@@ -14,8 +14,12 @@ script:
 - 'https://c.disquscdn.com/'
 - 'https://www.googletagmanager.com'
 - 'https://www.google-analytics.com/analytics.js'
+- 'pagead2.googlesyndication.com'
+- 'https://adservice.google.com/'
 # Google Analytics script hash
 - '''sha256-qlev233W0WjthlK15TmbH0lVg2G2Wtv5ABDEiB2iDnE='''
+# Google AdSense script hash
+- '''sha256-YCSlybv0BJeWnGWF8JCyQMs1TUOxVjFyr5upfHiDysc='''
 # Disqus script hash
 - '''sha256-YmEu57ZRfDpDDhMApyHsyE3PA6DSf2V+9bIVooFPFHw='''
 style:

@@ -105,6 +105,9 @@
 	{% if site.google-analytics and jekyll.environment != 'development' %}
 		{% include google-analytics.html id=site.google-analytics %}
 	{% endif %}
+	{% if page.ads and site.ad-sense %}
+		{% include adsense.html %}
+	{% endif %}
 	{% if page.stylesheets %}
 		{% for stylesheet in page.stylesheets %}
 			<link rel="stylesheet" href="{{ stylesheet.href | absolute_url }}" media="{{ stylesheet.media | default: 'all' }}" crossorigin="{{ stylesheet.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ stylesheet.referrerpolicy | default: 'origin-when-cross-origin' }}"{% if stylesheet.integrity %} integrity="{{ stylesheet.integrity }}"{% endif %} />

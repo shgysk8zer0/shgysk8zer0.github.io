@@ -49,6 +49,7 @@ theme-color: '#009688'
 background-color: '#242424'
 discus-identifier: chris-zuber
 google-analytics: UA-112855471-1
+ad-sense: ca-pub-7757418455191610
 webmaster-verifications:
   google: 0cMX_-aKH-pe1wQXGDlK833KE3-kN5V7y3eaywoCXdk
   bing: B4BA0BE1916BB0AE8AFAC3ACC826DF57
@@ -129,6 +130,7 @@ defaults:
       author: Chris Zuber
       permalink: /posts/:categories/:year/:month/:day/:title/
       comments: true
+      ads: true
   - scope:
       path: _drafts
     values:
@@ -136,6 +138,7 @@ defaults:
       author: Chris Zuber
       permalink: /posts/:categories/:year/:month/:day/:title/
       comments: false
+      ads: false
 plugins:
   - jekyll-gist
   - jekyll-youtube
