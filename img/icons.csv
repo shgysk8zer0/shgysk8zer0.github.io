@@ -2,14 +2,14 @@ mark-github,img/octicons/lib/svg/mark-github.svg
 repo,img/octicons/lib/svg/repo.svg
 issue-opened,img/octicons/lib/svg/issue-opened.svg
 linkedin,img/logos/linkedin.svg
-facebook,img/logos/Facebook.svg
+facebook,img/logos/facebook.svg
 twitter,img/logos/twitter.svg
-google+,img/logos/Google_plus.svg
-youtube,img/logos/YouTube.svg
-reddit,img/logos/Reddit.svg
+google+,img/logos/google-plus.svg
+youtube,img/logos/youtube.svg
+reddit,img/logos/reddit.svg
 stackoverflow,img/logos/stackoverflow.svg
 upwork,img/logos/upwork.svg
-creative-commons,img/logos/CreativeCommons.svg
+creative-commons,img/logos/creative-commons-by-sa.svg
 location,img/adwaita-icons/actions/mark-location.svg
 call-start,img/adwaita-icons/actions/call-start.svg
 network-workgroup,img/adwaita-icons/places/network-workgroup.svg
@@ -47,5 +47,5 @@ git,img/logos/git.svg
 html5,img/logos/html5.svg
 css3,img/logos/css3.svg
 javascript,img/logos/javascript.svg
-mysql,img/logos/MySQL.svg
+mysql,img/logos/mysql.svg
 freecodecamp,img/logos/freecodecamp.svg

@@ -24,13 +24,13 @@ const config = {
 		// Logos
 		'/img/logos/super-user.svg',
 		'/img/logos/css3.svg',
-		'/img/logos/PHP.svg',
+		'/img/logos/php.svg',
 		'/img/logos/svg.svg',
-		'/img/logos/Facebook.svg',
+		'/img/logos/facebook.svg',
 		'/img/logos/twitter.svg',
 		'/img/logos/linkedin.svg',
-		'/img/logos/Google_plus.svg',
-		'/img/logos/Reddit.svg',
+		'/img/logos/google-plus.svg',
+		'/img/logos/reddit.svg',
 		'/img/logos/gmail.svg',
 
 		// Fonts
