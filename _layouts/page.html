@@ -27,6 +27,7 @@
 		{% include nav.html %}
 		<main class="color-default font-article card shadow-dark" role="main" itemprop="mainContentOfPage">
 			{{ content }}
+			{% if page.ads %}{% include ad.html %}{% endif %}
 		</main>
 		{% include pinned-posts.html count=3 %}
 		{% include recent-posts.html count=5 %}
