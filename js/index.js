@@ -26,11 +26,10 @@ function hashChangeHandler(event) {
 	}
 
 	if (event.newURL) {
-		const newURL = new URL(event.newURL);
-		if (location.pathname === newURL.pathname && newURL.hash.startsWith('#')) {
-			const newTarget = document.getElementById(newURL.hash.substr(1));
-			if (newTarget instanceof Element && newTarget.tagName === 'DIALOG') {
-				newTarget.showModal();
+		if (location.hash.length !== 0) {
+			const target = document.querySelector(':target');
+			if (target instanceof Element && target.tagName === 'DIALOG') {
+				target.showModal();
 			}
 		}
 	}
@@ -39,9 +38,8 @@ function hashChangeHandler(event) {
 webShareApi(facebook, twitter, googlePlus, linkedIn, reddit, gmail, email);
 
 ready().then(async () => {
-	const url = new URL(location.href);
-	if (url.hash.startsWith('#')) {
-		const target = document.getElementById(url.hash.substr(1));
+	if (location.hash.length !== 0) {
+		const target = document.querySelector(':target');
 		if (target instanceof Element && target.tagName === 'DIALOG') {
 			target.showModal();
 		}
@@ -69,8 +67,14 @@ ready().then(async () => {
 	});
 
 	$('dialog').on('close', event => {
-		if (location.hash.substr(1) === event.target.id) {
-			location.hash = '';
+		const target = document.querySelector(':target');
+		console.log(event);
+		if (event.target === target) {
+			if (history.length !== 1) {
+				history.back();
+			} else {
+				location.hash = '';
+			}
 		}
 	});
 
