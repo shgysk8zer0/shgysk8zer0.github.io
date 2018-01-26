@@ -1,0 +1,8 @@
+<{{ include.tag | default: 'div' }}
+	class="adsbygoogle"
+	itemtype="http://schema.org/WPAdBlock"
+	itemscope=""
+	data-ad-client="{{ include.client | default: site.ad-sense }}"
+	data-ad-slot="{{ include.slot | default: '' }}"
+	data-ad-format="{{ include.format | default: 'auto' }}">
+</{{ include.tag | default: 'div' }}>

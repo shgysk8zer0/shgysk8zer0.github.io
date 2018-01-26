@@ -84,6 +84,7 @@
 	</header>
 	<div itemprop="articleBody mainEntityOfPage" class="optimize-legibility">{{ content }}</div>
 	<footer class="clearfix relative">
+		{% if page.ads %}{% include ad.html %}{% endif %}
 		{% if page.comments and jekyll.environment != 'development' %}
 			{% include disqus.html %}
 		{% endif %}
