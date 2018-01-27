@@ -27,16 +27,16 @@ style:
 - '''unsafe-inline'''
 - 'https://assets-cdn.github.com'
 - 'https://www.youtube.com'
-- 'https://c.disquscdn.com/'
+- 'https://c.disquscdn.com'
 connect:
 - '*'
 - 'wss://realtime.services.disqus.com'
-- 'https://disqus.com/home'
+- 'https://disqus.com'
 child:
 - '''self'''
 - 'https://www.youtube.com'
 - 'https://www.youtube-nocookie.com'
-- 'https://disqus.com/'
+- 'https://disqus.com'
 font:
 - '''self'''
 media:
