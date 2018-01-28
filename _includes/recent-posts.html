@@ -1,7 +1,7 @@
 <aside role="complementary" itemtype="http://schema.org/WPSideBar" itemscope="" class="card shadow-dark" id="recent-posts">
 		<h4 class="color-accent underline center">
 			{% include icon.html icon='#recent' %}
-			<a href="{{ '/posts/' | absolute_url }}">Recent Posts</span>
+			<a href="{{ '/posts/' | absolute_url }}">Recent Posts</a>
 		</h4>
 		{% for post in site.posts limit: include.count %}
 			{% include post-preview.html post=post %}
