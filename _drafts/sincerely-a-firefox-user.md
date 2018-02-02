@@ -3,7 +3,7 @@ title: Sincerely, a Firefox User
 author: Chris Zuber
 category: rants
 description: A letter to developers and users from a Firefox user
-keywords:
+tags:
 - Firefox
 - Quantum
 - web standards
