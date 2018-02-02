@@ -2,7 +2,7 @@
 title: Facebook Account Disabled
 author: Chris Zuber
 date: "2017-12-10 14:01:00 -0700"
-keywords:
+tags:
 - Facebook
 description: 'Facebook has been disabling accounts without reason'
 image: 'https://i.imgur.com/NlTzX7c.png'

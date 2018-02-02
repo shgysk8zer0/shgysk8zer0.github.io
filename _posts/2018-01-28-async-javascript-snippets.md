@@ -6,7 +6,7 @@ category: javascript
 date: '2018-01-27 03:17'
 imgur: XPOSonM
 description: Here are a few snippets I came up with for easy event-driven async code.
-keywords:
+tags:
 - JavaScript
 - async
 - events

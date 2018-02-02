@@ -8,7 +8,7 @@ category: frontend
 description: >-
   A few months ago I started learning Jekyll and GitHub Pages. This was a severe
   limitation for me due to lack of database, ability to set headers, etc.
-keywords:
+tags:
 - jekyll
 - GitHub Pages
 - CSP

@@ -4,7 +4,7 @@ subheading: Why the web is still dangerous
 category: security
 date: '2018-01-26 02:15'
 imgur: HclGzrT
-keywords:
+tags:
 - analytics
 - third-party resouces
 - csp

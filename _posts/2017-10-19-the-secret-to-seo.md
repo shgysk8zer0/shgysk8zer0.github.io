@@ -8,7 +8,7 @@ author_url: https://chriszuber.com
 image: https://i.imgur.com/cFKqWym.png
 pinned: true
 description: "You've seen the emails of supposed SEO experts, but the secret to SEO is that there is no secret"
-keywords:
+tags:
 - seo
 - microdata
 - schema.org

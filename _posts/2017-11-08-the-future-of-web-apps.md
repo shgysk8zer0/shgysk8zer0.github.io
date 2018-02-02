@@ -6,7 +6,7 @@ date: 2017-11-08 13:18:00 -0700
 pinned: true
 imgur: mdhC9mV
 description: Some thoughts on the advantages and potential of building progressive web apps
-keywords:
+tags:
 - pwa
 - progressive web apps
 - front-end
