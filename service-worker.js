@@ -5,7 +5,7 @@ const config = {
 		// Main assets
 		'/',
 		'/js/index.min.js',
-		'/css/index.min.css',
+		'/css/styles/index.min.css',
 		'/img/icons.svg',
 		'/img/favicon.svg',
 		// contact page and resume
