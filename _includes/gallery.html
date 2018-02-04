@@ -10,6 +10,12 @@
 		<button type="button" class="no-border background-primary absolute bottom right" data-click="fullscreen" hidden="">
 			{% include icon.html icon='fullscreen' %}
 		</button>
+		<button type="button" class="prev big filter-shadow-dark background-none no-border color-alt absolute bottom left">
+			{% include icon.html icon='prev' %}
+		</button>
+		<button type="button" class="next big filter-shadow-dark background-none no-border color-alt absolute bottom right">
+			{% include icon.html icon='next' %}
+		</button>
 	</figure>
 	<div class="thumbnails">
 		{% for image in include.images %}
