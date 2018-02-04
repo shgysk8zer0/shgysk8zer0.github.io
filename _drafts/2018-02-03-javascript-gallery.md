@@ -4,6 +4,7 @@ author: Chris Zuber
 category: javascript
 date: '2018-02-03 20:46'
 description: A photo gallery written in pure JavaScript
+imgur: 'https://imgur.com/y8TBVud'
 
 tags:
 - javascript
