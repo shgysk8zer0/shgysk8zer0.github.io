@@ -1,5 +1,6 @@
-{% capture imgur %}{{ include.url | replace: 'https://i.imgur.com/', '' | replace: 'https://imgur.com/', '' | replace: '.png', '' | replace: 'jpg', '' | prepend: 'https://i.imgur.com/' }}{% endcapture %}
-<picture>
+{% capture hash %}{{ include.url | replace: 'https://i.imgur.com/', '' | replace: 'https://imgur.com/', '' | replace: '.png', '' | replace: '.jpg', '' }}{% endcapture %}
+{% capture imgur %}{{ hash | prepend: 'https://i.imgur.com/' }}{% endcapture %}
+<picture data-imgur="{{ hash }}">
 	<source
 		srcset="{{ imgur }}h.webp 1024w, {{ imgur }}l.webp 640w, {{ imgur }}m.webp 320w, {{ imgur }}t.webp 160w"
 		sizes="{{ include.sizes | default: '(min-width: 700px) 75vw, 100vw' }}"

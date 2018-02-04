@@ -19,6 +19,7 @@
 @import url("./footer.css");
 @import url("./dialog.css");
 @import url("./contact.css");
+@import url("./imgur-gallery.css");
 
 hr {
 	max-width: calc(100vw - 100px);

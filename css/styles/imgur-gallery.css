@@ -1,0 +1,44 @@
+.gallery {
+	background: #4e4e4e;
+}
+
+.gallery [data-click="fullscreen"] {
+	opacity: 0.1;
+	transition: opacity 800ms ease-in-out;
+}
+
+.gallery:hover [data-click="fullscreen"] {
+	opacity: 1;
+}
+
+.thumbnails {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.thumbnails .thumbnail {
+	cursor: pointer;
+	margin: 0.5em;
+	perspective: 100vmin;
+	transform-style: preserve-3d;
+	transition: transform 400ms ease-in-out, box-shadow 400ms ease;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	background: white;
+	padding: 0.1em;
+}
+
+.current-thumb {
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+.thumbnails .thumbnail:hover, .thumbnails .current-thumb img {
+	transform: scale(1.2);
+	box-shadow: .2em .2em .1em rgba(0,0,0,0.9);
+	z-index: 3;
+}

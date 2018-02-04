@@ -1,5 +1,6 @@
 import './std-js/deprefixer.js';
 import './std-js/shims.js';
+import './gallery.js';
 import {$, wait, ready, registerServiceWorker} from './std-js/functions.js';
 import * as Mutations from './std-js/mutations.js';
 import {supportsAsClasses} from './std-js/supports.js';
