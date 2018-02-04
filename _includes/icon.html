@@ -1,3 +1,3 @@
-<svg class="{{ include.class | default: 'icon current-color' }}"{% if include.width %} width="{{ include.width}}"{% endif %}{% if include.height %} height="{{ include.height }}"{% endif %} role="presentation">
-	<use xlink:href="{{ site.icons | absolute_url | append: include.icon }}" />
+<svg class="{{ include.class | default: 'icon current-color' }}"{% if include.width %} width="{{ include.width}}"{% endif %}{% if include.height %} height="{{ include.height }}"{% endif %} role="{{ include.role | default: 'presentation' }}">
+	<use xlink:href="{{ '#' | prepend: site.icons | append: include.icon | absolute_url }}" />
 </svg>

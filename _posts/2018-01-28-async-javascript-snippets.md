@@ -15,7 +15,7 @@ tags:
 - DOMContentLoaded
 ---
 
-{% include imgur.html imgur=page.imgur %}
+{% include imgur.html url=page.imgur %}
 
 ```js
 async function wait(ms) {

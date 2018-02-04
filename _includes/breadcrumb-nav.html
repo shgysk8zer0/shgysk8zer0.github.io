@@ -1,7 +1,7 @@
 <nav class="sticky card under-nav background-accent color-alt z-2 shadow-dark" itemprop="breadcrumb" itemtype="http://schema.org/BreadcrumbList" itemscope="">
 	<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
 		<a href="{{ site.url }}" itemprop="item" title="Home" aria-label="Home">
-			{% include icon.html icon='#home' %}
+			{% include icon.html icon='home' %}
 		</a>
 		<meta itemprop="name" content="Home"/>
 		<meta itemprop="position" content="1" />
@@ -32,12 +32,12 @@
 		<hr />
 		{% if paginator.previous_page %}
 			<a href="{{ paginator.previous_page_path | absolute_url }}" rel="prev" role="button" title="Previous page">
-				{% include icon.html icon='#prev' %}
+				{% include icon.html icon='prev' %}
 			</a>
 		{% endif %}
 		{% if paginator.next_page %}
 			<a href="{{ paginator.next_page_path | absolute_url }}" role="button" rel="next" title="Next page">
-				{% include icon.html icon='#next' %}
+				{% include icon.html icon='next' %}
 			</a>
 		{% endif %}
 	{% endif %}

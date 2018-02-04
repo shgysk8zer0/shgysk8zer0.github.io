@@ -16,7 +16,7 @@ description: The best security developers can provide their users and why it's s
 I recently added comments via Disqus as well as Google Analytics. I also use
 some external JavaScript from the amazing [Polyfill.io](https://polyfill.io/v2/docs/).
 
-{% include imgur.html imgur=page.imgur %}
+{% include imgur.html url=page.imgur %}
 
 Lots of websites use third-party scripts carelessly, but I try my best to provide
 a very secure website, even if I'm not taking credit card info or logins. I have

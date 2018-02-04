@@ -45,17 +45,17 @@
 			<div class="contact-links flex row container bigger">
 				{% if author.telephone %}
 					<a href="tel:{{ author.telephone }}" itemprop="telephone" content="{{ author.telephone }}" title="{{ author.telephone }}" class="{{ link-class }}">
-						{% include icon.html icon='#call-start' class=contact-icon-class %}
+						{% include icon.html icon='call-start' class=contact-icon-class %}
 					</a>
 				{% endif %}
 				{% if author.email %}
 					<a href="mailto:{{ author.email }}" itemprop="email" content="{{ author.email }}" title="{{ author.email }}" class="{{ link-class }}">
-						{% include icon.html icon='#mail-unread' class=contact-icon-class %}
+						{% include icon.html icon='mail-unread' class=contact-icon-class %}
 					</a>
 				{% endif %}
 				{% if author.homeLocation.geo %}
 					<a href="geo:{{ author.homeLocation.geo.latitude }},{{ author.homeLocation.geo.longiture }};crs=wgs84;u=0" title="Geo" class="{{ link-class }}">
-						{% include icon.html icon='#location' class=contact-icon-class %}
+						{% include icon.html icon='location' class=contact-icon-class %}
 					</a>
 				{% endif %}
 			</div>
@@ -64,37 +64,37 @@
 				<div class="social-links no-text-decoration optimize-speed flex row container bigger animaion-stagger">
 					{% if author.sameAs.github %}
 						<a href="https://github.com/{{ author.sameAs.github }}" class="{{ link-class }}" title="GitHub" target="_blank" rel="noopener external" itemprop="sameAs">
-							{% include icon.html icon='#mark-github' class=social-icon-class %}
+							{% include icon.html icon='mark-github' class=social-icon-class %}
 						</a>
 					{% endif %}
 					{% if author.sameAs.twitter %}
 						<a href="https://twitter.com/{{ author.sameAs.twitter }}" class="{{ link-class }}" title="Twitter" target="_blank" rel="noopener external" itemprop="sameAs">
-							{% include icon.html icon='#twitter' class=social-icon-class %}
+							{% include icon.html icon='twitter' class=social-icon-class %}
 						</a>
 					{% endif %}
 					{% if author.sameAs.linkedin %}
 						<a href="https://www.linkedin.com/in/{{ author.sameAs.linkedin }}/" class="{{ link-class }}" title="LinkedIn" target="_blank" rel="noopener external" itemprop="sameAs">
-							{% include icon.html icon='#linkedin' class=social-icon-class %}
+							{% include icon.html icon='linkedin' class=social-icon-class %}
 						</a>
 					{% endif %}
 					{% if author.sameAs.github %}
 						<a href="https://plus.google.com/{{ author.sameAs.google_plus }}" class="{{ link-class }}" title="Google+" target="_blank" rel="noopener external" itemprop="sameAs">
-							{% include icon.html icon='#google+' class=social-icon-class %}
+							{% include icon.html icon='google+' class=social-icon-class %}
 						</a>
 					{% endif %}
 					{% if author.sameAs.youtube %}
 						<a href="https://youtube.com/user/{{ author.sameAs.youtube }}" class="{{ link-class }}" title="YouTube" target="_blank" rel="noopener external" itemprop="sameAs">
-							{% include icon.html icon='#youtube' class=social-icon-class %}
+							{% include icon.html icon='youtube' class=social-icon-class %}
 						</a>
 					{% endif %}
 					{% if author.sameAs.stackoverflow %}
 						<a href="https://stackoverflow.com/users/{{ author.sameAs.stackoverflow }}" class="{{ link-class }}" title="StackOverflow" target="_blank" rel="noopener external" itemprop="sameAs">
-							{% include icon.html icon='#stackoverflow' class=social-icon-class %}
+							{% include icon.html icon='stackoverflow' class=social-icon-class %}
 						</a>
 					{% endif %}
 					{% if author.sameAs.upwork %}
 						<a href="https://www.upwork.com/o/profiles/users/{{ author.sameAs.upwork }}" class="{{ link-class }}" title="Upwork" target="_blank" rel="noopener external" itemprop="sameAs">
-							{% include icon.html icon='#upwork' class=social-icon-class %}
+							{% include icon.html icon='upwork' class=social-icon-class %}
 						</a>
 					{% endif %}
 				</div>

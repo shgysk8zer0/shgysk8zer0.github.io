@@ -47,17 +47,17 @@ keywords:
 		</div>
 		<div class="right">
 			<a href="{{ site.data.resume.contact.url }}" itemprop="url">
-				{% include icon.html icon='#link' %}
+				{% include icon.html icon='link' %}
 				{{ site.data.resume.contact.url | remove: 'http://' | remove: 'https://'}}
 			</a>
 			<br />
 			<a href="mailto:{{ site.data.resume.contact.email }}" itemprop="email" content="{{ site.data.resume.contact.email }}">
-				{% include icon.html icon='#mail-unread' %}
+				{% include icon.html icon='mail-unread' %}
 				{{ site.data.resume.contact.email }}
 			</a>
 			<br />
 			<a href="tel:{{ site.data.resume.contact.telephone }}" itemprop="telephone" content="{{ site.data.resume.contact.telephone }}">
-				{% include icon.html icon='#call-start' %}
+				{% include icon.html icon='call-start' %}
 				{{ site.data.resume.contact.telephone | remove: '+' }}
 			</a>
 		</div>
@@ -160,6 +160,6 @@ keywords:
 </main>
 {% include share-button.html class='floating' %}
 <button type="button" class="floating" data-click="print">
-	{% include icon.html icon='#print' %}
+	{% include icon.html icon='print' %}
 </button>
 <menu type="context" id="nav-menu"></menu>

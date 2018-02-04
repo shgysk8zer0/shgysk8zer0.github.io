@@ -2,21 +2,21 @@
 	{% if site.repository %}
 		{% assign octo-class="icon current-color filter-shadow-dark big icon-twirl transition-speed-normal transition-overshoot transition-transform" %}
 		<a href="https://github.com/{{ site.repository.username }}" title="{{ site.repository.username }}'s GitHub" target="_blank" rel="noopener external" class="inline-block color-inherit">
-			{% include icon.html icon="#mark-github" class=octo-class %}
+			{% include icon.html icon="mark-github" class=octo-class %}
 		</a>
 		<a href="{{ site.repository.url }}" title="{{ site.repository.title }} on GitHub" target="_blank" rel="noopener external" class="inline-block color-inherit">
-			{% include icon.html icon="#repo" class=octo-class %}
+			{% include icon.html icon="repo" class=octo-class %}
 		</a>
 		<a href="{{ site.repository.url }}/issues" title="Open issues for {{ site.repository.title }} on Github" target="_blank" rel="noopener external" class="inline-block color-inherit">
-			{% include icon.html icon="#issue-opened" class=octo-class %}
+			{% include icon.html icon="issue-opened" class=octo-class %}
 		</a>
 	{% endif %}
 	<a href="{{ '/resume/' | absolute_url }}" title="My Résumé" class="inline-block color-inherit">
-		{% include icon.html icon="#documents" class=octo-class %}
+		{% include icon.html icon="documents" class=octo-class %}
 	</a>
 	{% if site.feed %}
 		<a href="{{ site.feed.url | absolute_url}}" title="Subscribe to feed" target="_blank" class="inline-block color-inherit">
-			{% include icon.html icon="#rss" class=octo-class %}
+			{% include icon.html icon="rss" class=octo-class %}
 		</a>
 	{% endif %}
 	<ul class="footer-links">

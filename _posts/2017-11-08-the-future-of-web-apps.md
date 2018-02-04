@@ -14,7 +14,7 @@ tags:
 - progressive enhancement
 category: javascript
 ---
-{% include imgur.html class='float-right card shadow' imgur=page.imgur sizes='(min-width: 800px) 60vw, 100vw' alt='Code screenshot' %}
+{% include imgur.html class='float-right card shadow' url=page.imgur sizes='(min-width: 800px) 60vw, 100vw' alt='Code screenshot' %}
 
 ### What are they?
 As described on [MDN](https://developer.mozilla.org/en-US/Apps "App Center | MDN"):

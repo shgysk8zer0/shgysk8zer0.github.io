@@ -17,7 +17,7 @@ tags:
 - js
 ---
 {% include imgur.html
-  imgur=page.imgur
+  url=page.imgur
   class='float-right card shadow-dark clearfix'
   alt='Native Web Share API on Chrome for Android'
   sizes='(min-width: 800px) 45vw, 100vw'

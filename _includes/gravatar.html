@@ -1,18 +1,19 @@
 <img
+	{% capture gravatar %}https://secure.gravatar.com/avatar/{{ include.gravatar | replace: 'https://secure.gravatar.com/avatar/', '' }}{% endcapture %}
 	srcset="
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=1024&d={{ include.fallback | default: 'mm'}} 1024w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=800&d={{ include.fallback | default: 'mm'}} 800w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=512&d={{ include.fallback | default: 'mm'}} 512w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=400&d={{ include.fallback | default: 'mm'}} 400w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=300&d={{ include.fallback | default: 'mm'}} 300w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=256&d={{ include.fallback | default: 'mm'}} 256w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=180&d={{ include.fallback | default: 'mm'}} 180w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=128&d={{ include.fallback | default: 'mm'}} 128w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=98&d={{ include.fallback | default: 'mm'}} 98w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=64&d={{ include.fallback | default: 'mm'}} 64w,
-		https://secure.gravatar.com/avatar/{{ include.gravatar }}?s=32&d={{ include.fallback | default: 'mm'}} 32w"
-	sizes="{{ include.sizes | default: '(orientation: portrait) 15vw, 12vw' }}"
-	src="https://secure.gravatar.com/avatar/{{ include.gravatar }}?s={{ include.default_size | default: 256 }}&d={{ include.fallback | default: 'mm'}}"
+		{{ gravatar }}?s=1024&d={{ include.fallback | default: 'mm'}} 1024w,
+		{{ gravatar }}?s=800&d={{ include.fallback | default: 'mm'}} 800w,
+		{{ gravatar }}?s=512&d={{ include.fallback | default: 'mm'}} 512w,
+		{{ gravatar }}?s=400&d={{ include.fallback | default: 'mm'}} 400w,
+		{{ gravatar }}?s=300&d={{ include.fallback | default: 'mm'}} 300w,
+		{{ gravatar }}?s=256&d={{ include.fallback | default: 'mm'}} 256w,
+		{{ gravatar }}?s=180&d={{ include.fallback | default: 'mm'}} 180w,
+		{{ gravatar }}?s=128&d={{ include.fallback | default: 'mm'}} 128w,
+		{{ gravatar }}?s=98&d={{ include.fallback | default: 'mm'}} 98w,
+		{{ gravatar }}?s=64&d={{ include.fallback | default: 'mm'}} 64w,
+		{{ gravatar }}?s=32&d={{ include.fallback | default: 'mm'}} 32w"
+	sizes="{{ include.sizes | default: '(min-width: 1000px) 2.6vmax, (min-width 500px) 3vmax, 4.6vmax }}"
+	src="{{ gravatar }}?s={{ include.default_size | default: 256 }}&d={{ include.fallback | default: 'mm'}}"
 	alt="{{ include.alt | default: 'Gravatar' }}"
 	title="{{ include.title | default: include.alt }}"
 	crossorigin="{{ include.crossorigin | default: 'anonymous' }}"

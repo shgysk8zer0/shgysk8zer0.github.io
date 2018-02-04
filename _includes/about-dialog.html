@@ -3,10 +3,10 @@
 	{% assign about = site.data.authors[name] %}
 	<header class="sticky top background-primary color-alt clearfix">
 		<a href="{{ '/contact/' | absolute_url  }}" class="color-inherit float-left center" role="button" title="Contact Page">
-			{% include icon.html icon='#address-book' %}
+			{% include icon.html icon='address-book' %}
 		</a>
 		<button data-close="#about-dialog" class="font-main filter-shadow float-right">
-			{% include icon.html icon='#close' %}
+			{% include icon.html icon='close' %}
 		</button>
 	</header>
 	<figure class="clearfix">
@@ -24,12 +24,12 @@
 	</figure>
 	<div class="skills center animation-stagger">
 		{% assign className = 'trampoline animation-ease-in-out animation-infinite animation-speed-normal animation-overshoot animation-alternate'}
-		{% include icon.html icon='#html5' class=className width='48' height='48' %}
-		{% include icon.html icon='#css3' class=className width='48' height='48' %}
-		{% include icon.html icon='#javascript' class=className width='48' height='48' %}
+		{% include icon.html icon='html5' class=className width='48' height='48' %}
+		{% include icon.html icon='css3' class=className width='48' height='48' %}
+		{% include icon.html icon='javascript' class=className width='48' height='48' %}
 		<img src="{{ '/img/logos/svg.svg' | absolute_url }}" width="48" height="48" alt="MySQL" class="{{ className }}" />
-		{% include icon.html icon='#git' class=className width='48' height='48' %}
+		{% include icon.html icon='git' class=className width='48' height='48' %}
 		<img src="{{ '/img/logos/php.svg' | absolute_url }}" width="48" height="48" alt="PHP" class="{{ className }}" />
-		{% include icon.html icon='#mysql' class=className width='48' height='48' %}
+		{% include icon.html icon='mysql' class=className width='48' height='48' %}
 	</div>
 </dialog>

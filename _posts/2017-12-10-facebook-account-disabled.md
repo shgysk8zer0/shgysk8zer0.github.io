@@ -11,7 +11,7 @@ category: life
 ---
 # I think Facebook hates me
 
-{% include imgur.html imgur=page.imgur alt='Facebook account disabled' sizes='(min-width: 700px) 50vw, 100vw' %}
+{% include imgur.html url=page.imgur alt='Facebook account disabled' sizes='(min-width: 700px) 50vw, 100vw' %}
 
 They have disabled my account about a dozen times now without stating any reason
 for doing so. They seem to believe, for some strange reason, that I am not me. This,
