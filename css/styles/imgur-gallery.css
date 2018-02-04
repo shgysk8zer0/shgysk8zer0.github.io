@@ -2,6 +2,10 @@
 	background: #4e4e4e;
 }
 
+.gallery figure {
+	margin: auto;
+}
+
 .gallery [data-click="fullscreen"] {
 	opacity: 0.1;
 	transition: opacity 800ms ease-in-out;
