@@ -12,7 +12,7 @@
     "lint:css": "stylelint css/",
     "test": "npm run lint",
     "build": "npm run build:icons && npm run build:css && npm run build:js",
-    "build:css": "postcss -c postcss.config.json css/index.css -o css/index.min.css",
+    "build:css": "postcss -c postcss.config.json css/styles/index.css -o css/styles/index.min.css",
     "build:js": "webpack",
     "build:icons": "svg-sprite-generate -c img/icons.csv -o img/icons.svg",
     "build:site": "npm run build:all && JEKYLL_ENV=production bundle exec jekyll build",
