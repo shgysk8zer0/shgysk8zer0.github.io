@@ -54,7 +54,7 @@
 					</a>
 				{% endif %}
 				{% if author.homeLocation.geo %}
-					<a href="geo:{{ author.homeLocation.geo.latitude }},{{ author.homeLocation.geo.longiture }};crs=wgs84;u=0" title="Geo" class="{{ link-class }}">
+					<a href="geo:{{ author.homeLocation.geo.latitude }},{{ author.homeLocation.geo.longitude }};crs=wgs84;u=0" title="Geo" class="{{ link-class }}">
 						{% include icon.html icon='location' class=contact-icon-class %}
 					</a>
 				{% endif %}
