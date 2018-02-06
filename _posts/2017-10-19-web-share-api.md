@@ -4,8 +4,7 @@ title: "Web Share API"
 author: "Chris Zuber"
 pinned: true
 date: "2017-10-19 15:13:28 -0700"
-updated: "2017-10-20 10:12:00 -0700"
-image: https://i.imgur.com/9YiwoFg.png
+updated: "2018-02-06 05:20:00 -0700"
 imgur: 2FRmKSn
 description: "A Gist demonstrating a polyfill for the new Web Share API"
 category: javascript
@@ -68,26 +67,26 @@ together info from the embedded data
 - If it is an `<a>`, share that link with title taken from `title` and text
 taken from the link's text content
 
-#### Just create some `<button>`s with `data-share`
+### Just create some `<button>`s with `data-share`
 ```html
 <button data-share="">Share Page</button>
 <button data-share="article">Share Article</button>
 <button data-share="#share-api-demo-target">Share Image</button>
 ```
 
-#### Import and use
+### Import and use
 ```javascript
 import {$, shareHandler} from './my-script.js';
 
 $('[data-share]').click(shareHandler);
 ```
-#### The Hacking for other browsers
+### The Hacking for other browsers
 Then, I made a [polyfill]({{ '#polyfill-gist' | prepend: page.url | absolute_url }}) of sorts for
 everything that's not Chrome on Android using the [`<dialog>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
 element and the [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL) API.
 <figure class="card shadow">
 {% include imgur.html
-  imgur='9YiwoFg'
+  url='9YiwoFg'
   id='share-api-demo-target'
   class='imgur'
   alt='Web Share API polyfill using &lt;dialog&gt;'
@@ -97,9 +96,11 @@ element and the [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL) AP
 </figure>
 
 ### Test it out
-<button type="button" data-share="">Share Page</button>
-<button type="button" data-share="article">Share Article</button>
-<button type="button" data-share="#share-api-demo-target">Share Image</button>
+<button type="button" data-share="" title="Share Page" class="color-alt background-accent">{% include icon.html icon='share' %}</button>
+
+<button type="button" data-share="article" title="Share Article" class="color-alt background-accent">{% include icon.html icon='share' %}</button>
+
+<button type="button" data-share="#share-api-demo-target" title="Share Image" class="color-alt background-accent">{% include icon.html icon='share' %}</button>
 
 ### Polyfill Gist
 {% gist 'shgysk8zer0/9d3923d2949fd66233e10ce4ca1d98f6' %}
