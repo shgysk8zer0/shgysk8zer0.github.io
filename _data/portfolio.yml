@@ -52,6 +52,20 @@
 #   browserRequirements: 'flex, fetch, SVG'
 - '@type': WebApplication
   '@context': 'http://schema.org'
+  name: Bakery Demo Page
+  offers:
+    '@type': Offer
+    price: 0
+    priceCurrency: USD
+  screenshot: 'https://i.imgur.com/W1ocd4Am.png'
+  url: 'https://acme-barker.netlify.com'
+  description: 'A demo site for small businesses'
+  keywords: 'HTML5, JavaScript, appCache'
+  applicationCategory: Web App
+  operatingSystem: 'Windows, OSX, Linux'
+  browserRequirements: 'CSS-grid'
+- '@type': WebApplication
+  '@context': 'http://schema.org'
   name: HTML5 WYSIWYG-Editor
   offers:
     '@type': Offer
