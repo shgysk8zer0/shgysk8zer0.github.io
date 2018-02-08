@@ -58,7 +58,7 @@
     price: 0
     priceCurrency: USD
   screenshot: 'https://i.imgur.com/W1ocd4Am.png'
-  url: 'https://acme-barker.netlify.com'
+  url: 'https://acme-barkery.netlify.com'
   description: 'A demo site for small businesses'
   keywords: 'HTML5, JavaScript, appCache'
   applicationCategory: Web App
