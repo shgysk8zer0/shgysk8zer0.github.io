@@ -2,6 +2,7 @@ import {$, ready, imgur, wait} from './std-js/functions.js';
 
 ready().then(async () => {
 	function* getThumbs(gallery) {
+		/*eslint no-constant-condition: "off" */
 		while(true) {
 			for (const thumb of $('.thumbnails [data-imgur]', gallery)) {
 				yield thumb;
@@ -13,21 +14,25 @@ ready().then(async () => {
 		gallery.classList.add('cursor-wait', 'no-pointer-events');
 		const thumbnails = thumb.closest('.thumbnails');
 		const current = gallery.querySelector('.current');
-		$('picture', thumbnails).toggleClass('current-thumb', thumbnail => thumbnail === thumb);
-
-		gallery.querySelector('figcaption').textContent = thumb.dataset.caption;
 		const pic = await imgur(thumb.dataset.imgur, {
 			sizes: ['(min-width: 700px) 75vw', '100vw'],
+			alt: thumb.alt,
 		});
-		pic.dataset.imgur = thumb.dataset.imgur;
-		pic.classList.add('current', 'animation-fill-both', 'animation-speed-normal', 'animation-ease-in-out', 'fadeIn');
-		gallery.classList.remove('cursor-wait', 'no-pointer-events');
 
-		current.classList.add('animation-fill-both', 'animation-speed-normal', 'animation-ease-in-out');
-		current.classList.remove('fadeIn');
-		current.classList.add('fadeOut');
-		await wait(400);
-		current.replaceWith(pic);
+		pic.dataset.imgur = thumb.dataset.imgur;
+		pic.classList.add('current');
+
+		if (Element.prototype.hasOwnProperty('animate')) {
+			await $(current).fadeOut();
+			current.replaceWith(pic);
+			$(pic).fadeIn();
+		} else {
+			current.replaceWith(pic);
+		}
+
+		gallery.classList.remove('cursor-wait', 'no-pointer-events');
+		gallery.querySelector('figcaption').textContent = thumb.dataset.caption;
+		$('picture', thumbnails).toggleClass('current-thumb', el => el === thumb);
 	}
 
 	$('.gallery').each(async gallery => {
@@ -49,7 +54,7 @@ ready().then(async () => {
 			}
 		});
 
-		$('.thumbnails picture:first-of-type').addClass('current-thumb');
+		$('.thumbnails picture:first-of-type', gallery).addClass('current-thumb');
 		$('.thumbnails [data-imgur] img', gallery).click(event => {
 			const clicked = event.target.closest('.thumbnails [data-imgur]');
 			setGalleryImage(clicked, gallery);
