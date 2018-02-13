@@ -39,6 +39,7 @@
 .current-thumb {
 	cursor: not-allowed;
 	pointer-events: none;
+	z-index: 2;
 }
 
 .thumbnails .thumbnail:hover, .thumbnails .current-thumb img {
