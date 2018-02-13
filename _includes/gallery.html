@@ -1,4 +1,4 @@
-<div class="gallery card color-alt" id="gallery-{{ include.images | first }}">
+<div class="gallery card color-alt" id="gallery-{{ include.images | first }}" data-delay="{{ include.delay | default: 6000 }}">
 	<figure class="relative">
 		{% assign current = include.images | first %}
 		{% include imgur.html
