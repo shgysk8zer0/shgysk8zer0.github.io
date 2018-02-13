@@ -38,6 +38,7 @@ ready().then(async () => {
 	$('.gallery').each(async gallery => {
 		const thumbs = getThumbs(gallery);
 		let thumb = thumbs.next().value;
+		const delay = gallery.dataset.hasOwnProperty('delay') ? parseInt(gallery.dataset.delay) : 6000;
 
 		$('button.next', gallery).click(() => {
 			thumb = thumbs.next().value;
@@ -65,7 +66,7 @@ ready().then(async () => {
 
 		/*eslint no-constant-condition: "off" */
 		while(true) {
-			await wait(6000);
+			await wait(delay);
 			if (document.visibilityState !== 'hidden') {
 				thumb = thumbs.next().value;
 				await setGalleryImage(thumb, gallery);
