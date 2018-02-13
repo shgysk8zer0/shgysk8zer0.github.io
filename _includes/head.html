@@ -55,9 +55,10 @@
 		<meta itemprop="keywords" content="{{ site.keywords | join: ', ' }}" />
 	{% endif %}
 	{% if page.imgur %}
-		<meta itemprop="thumbnailUrl" content="{{ page.imgur | prepend: 'https://i.imgur.com/' | append: 'l.png' }}" />
-		<meta property="og:image" content="{{ page.imgur | prepend: 'https://i.imgur.com/' | append: 'l.png' }}" />
-		<meta name="twitter:image" content="{{ page.imgur | prepend: 'https://i.imgur.com/' | append: 'l.png' }}" />
+		{% capture hash %}{{ page.imgur | replace: 'https://i.imgur.com/', '' | replace: 'https://imgur.com/', '' | replace: '.png', '' | replace: '.jpg', '' }}{% endcapture %}
+		<meta itemprop="thumbnailUrl" content="{{ hash | prepend: 'https://i.imgur.com/' | append: 'l.png' }}" />
+		<meta property="og:image" content="{{ hash | prepend: 'https://i.imgur.com/' | append: 'l.png' }}" />
+		<meta name="twitter:image" content="{{ hash | prepend: 'https://i.imgur.com/' | append: 'l.png' }}" />
 	{% elsif page.image %}
 		<meta itemprop="thumbnailUrl" content="{{ page.image | absolute_url }}" />
 		<meta property="og:image" content="{{ page.image | absolute_url }}" />
