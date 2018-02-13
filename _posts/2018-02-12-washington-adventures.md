@@ -2,7 +2,7 @@
 title: Washington Adventures Gallery
 author: Chris Zuber
 date: '2018-02-12 18:15'
-category: life
+category: hiking
 description: |-
   In addition to web development, I also enjoy hiking and photography.
   Here are some pictures I've taken
