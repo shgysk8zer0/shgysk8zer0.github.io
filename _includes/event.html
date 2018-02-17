@@ -58,7 +58,7 @@
 		{% endif %}
 		{% if include.event.organizer %}
 			<hr />
-			<div class="event-organizer" itemprop="organizer" itemtype="{{ include.event.organizer.[@context] | default: 'http://schema.org'}}/{{ include.event.[@type] | default: 'Organization'}}" itemscope="">
+			<div class="event-organizer" itemprop="organizer" itemtype="{{ include.event.organizer['@context'] | default: 'http://schema.org'}}/{{ include.event.organizer['@type'] | default: 'Organization'}}" itemscope="">
 				<h5>
 					</span>Organized by</span>
 					<span itemprop="name">{{ include.event.organizer.name }}</span>
