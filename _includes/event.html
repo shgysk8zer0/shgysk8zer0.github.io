@@ -1,4 +1,4 @@
-<div class="event card" data-event-data="{{ include.event | jsonify | smartify }}" itemtype="http://schema.org/Event" itemscope="">
+<div class="event" data-event-data="{{ include.event | jsonify | smartify }}" itemtype="http://schema.org/Event" itemscope="">
 	<div>
 		{% include imgur.html
 			url=include.event.image
@@ -61,7 +61,15 @@
 			<div class="event-organizer" itemprop="organizer" itemtype="{{ include.event.organizer['@context'] | default: 'http://schema.org'}}/{{ include.event.organizer['@type'] | default: 'Organization'}}" itemscope="">
 				<h5>
 					</span>Organized by</span>
-					<span itemprop="name">{{ include.event.organizer.name }}</span>
+					<span itemprop="name">
+						{% if include.event.organizer.url %}
+							<a href="{{ include.event.organizer.url | absolute_url }}" class="event-organizer-url underline" target="_blank" rel="noopener external">
+								{{ include.event.organizer.name }}
+							</a>
+						{% else %}
+							{{ include.event.organizer.name }}
+						{% endif %}
+					</span>
 				</h5>
 			</div>
 		{% endif %}
