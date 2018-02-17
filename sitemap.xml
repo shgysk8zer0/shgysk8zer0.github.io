@@ -1,5 +1,6 @@
 ---
 layout: null
+index: false
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -7,7 +8,7 @@ layout: null
 		<loc>{{ site.url }}</loc>
 		<lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
 	</url>
-	{% for post in site.posts limit: 10 %}
+	{% for post in site.posts limit: 10 %}{% if post.index %}
 	<url>
 		<loc>{{ post.url | absolute_url }}</loc>
 		{% if post.updated %}
@@ -16,8 +17,8 @@ layout: null
 			<lastmod>{{ post.date | date: '%Y-%m-%d' }}</lastmod>
 		{% endif %}
 	</url>
-	{% endfor %}
-	{% for page in site.pages %}{% if page.title and page.url != '/' %}
+	{% endif %}{% endfor %}
+	{% for page in site.pages %}{% if page.index %}
 	<url>
 		<loc>{{ page.url | absolute_url }}</loc>
 		<lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>

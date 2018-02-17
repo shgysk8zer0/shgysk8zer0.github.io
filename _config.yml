@@ -131,7 +131,7 @@ defaults:
       author: Chris Zuber
       permalink: /posts/:categories/:year/:month/:day/:title/
       comments: true
-      ads: true
+      ads: false
   - scope:
       path: _drafts
     values:
