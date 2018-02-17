@@ -34,7 +34,7 @@
 		{% include icon.html icon='recent' %}
 		<span class="mobile-hidden">Recent Posts</span>
 	</a>
-	<a href="{{ '#calendar' | absolute_url }}" title="Calendar" class="color-inherit">
+	<a href="{{ '#calendar' | prepend: page.url | absolute_url }}" title="Calendar" class="color-inherit">
 		{% include icon.html icon='calendar' %}
 		<span class="mobile-hidden">Calendar</span>
 	</a>
