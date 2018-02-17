@@ -4,8 +4,7 @@
 		<span>Upcoming Events</span>
 	</h4>
 	{% for event in site.data.events %}
-		{% assign data=event[1] %}
-		{% include event.html event=data %}
+		{% include event.html event=event.last %}
 		<hr />
 	{% endfor %}
 </aside>
