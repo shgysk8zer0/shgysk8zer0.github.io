@@ -1,0 +1,10 @@
+<aside role="complementary" itemtype="http://schema.org/WPSideBar" itemscope="" class="card shadow-dark" id="calendar">
+	<h4 class="color-accent underline center">
+		{% include icon.html icon='calendar' %}
+		<span>Upcoming Events</span>
+	</h4>
+	{% for event in site.data.events %}
+		{% assign data=event[1] %}
+		{% include event.html event=data %}
+	{% endfor %}
+</aside>
