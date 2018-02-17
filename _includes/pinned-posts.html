@@ -1,10 +1,10 @@
 <aside role="complementary" itemtype="http://schema.org/WPSideBar" itemscope="" class="card shadow-dark" id="pinned-posts">
-		<h4 class="color-accent underline center">
-			{% include icon.html icon='pin' %}
-			<span>Pinned Posts</span>
-		</h4>
-		{% assign posts = site.posts | where: 'pinned', true %}
-		{% for post in posts limit: include.count %}
-			{% include post-preview.html post=post %}
-		{% endfor %}
+	<h4 class="color-accent underline center">
+		{% include icon.html icon='pin' %}
+		<span>Pinned Posts</span>
+	</h4>
+	{% assign posts = site.posts | where: 'pinned', true %}
+	{% for post in posts limit: include.count %}
+		{% include post-preview.html post=post %}
+	{% endfor %}
 </aside>
