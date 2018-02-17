@@ -10,6 +10,19 @@ body > nav {
 
 body > nav > * {
 	flex: 2 0 auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-items: center;
+}
+
+body > nav a > * {
+	margin: auto;
+}
+
+body > nav .mobile-hidden {
+	margin-left: 0.6rem;
 }
 
 body > nav > *:first-child {
