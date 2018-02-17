@@ -34,6 +34,10 @@
 		{% include icon.html icon='recent' %}
 		<span class="mobile-hidden">Recent Posts</span>
 	</a>
+	<a href="{{ '#calendar' | absolute_url }}" title="Calendar" class="color-inherit">
+		{% include icon.html icon='calendar' %}
+		<span class="mobile-hidden">Calendar</span>
+	</a>
 	{% else %}
 		<a href="{{ '/posts/' | absolute_url }}" class="color-inherit">Posts</a>
 		<a href="{{ '/posts/javascript/' | absolute_url }}" class="color-inherit">JavaScript</a>
