@@ -93,6 +93,10 @@ pre.highlight, code.highlight {
 	margin: auto;
 }
 
+.background-accent {
+	background: var(--accent-color);
+}
+
 @media (max-width: 800px) {
 	.mobile-hidden {
 		display: none;
