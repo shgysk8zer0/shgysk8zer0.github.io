@@ -115,7 +115,6 @@ addEventListener('fetch', async event => {
 	}
 
 	if (isValid(event.request)) {
-		// console.log(event.request.url);
 		event.respondWith(get(event.request));
 	}
 });
