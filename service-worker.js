@@ -20,6 +20,7 @@ const config = {
 		'/img/adwaita-icons/actions/view-pin.svg',
 		'/img/adwaita-icons/places/folder-publicshare.svg',
 		'/img/octicons/lib/svg/comment-discussion.svg',
+		'/img/octicons/lib/svg/calendar.svg',
 
 		// Logos
 		'/img/logos/super-user.svg',
