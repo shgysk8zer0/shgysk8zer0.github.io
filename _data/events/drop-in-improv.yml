@@ -1,0 +1,15 @@
+name: Drop In Improv Class
+startDate: 2018-03-03 12:00
+endDate: 2018-03-03 13:00
+url: 'https://theupfront.com/classes/drop-in/'
+image: 'https://i.imgur.com/3gozQEz.png'
+description: Ever wanted to try improv? Now’s your chance! Each month, The Upfront Theatre offers a FREE drop-in improv class that’s open to all ages and experience levels.
+location:
+  name: The Upfront Theatre
+  streetAddress: 1208 Bay St
+  addressLocality: Bellingham
+  addressRegion: WA
+  postalCode: 98225
+organizer:
+  name: The Upfront Theatre
+  url: 'https://theupfront.com/'
