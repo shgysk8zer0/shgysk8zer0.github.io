@@ -72,7 +72,7 @@
 						{% if publisher.email %}<meta itemprop="email" content="{{ publisher.email }}" />{% endif %}
 						{% if publisher.logo %}
 							<div itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
-								<meta itemprop="url" content="{{ publisher.logo.url }}" />
+								<meta itemprop="url" content="{{ publisher.logo.url | absolute_url }}" />
 							</div>
 						{% endif %}
 						{% if publisher.sameAs %}{% for link in publisher.sameAs %}
