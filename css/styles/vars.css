@@ -38,7 +38,7 @@
 
 	/*==================== Set fonts here ====================*/
 	--main-font: 'Roboto';
-	--title-font: 'Acme';
+	--title-font: 'Ubuntu';
 	--header-font: 'Alice';
 	--article-font: 'Ubuntu';
 	--article-header-font: var(--header-font);
