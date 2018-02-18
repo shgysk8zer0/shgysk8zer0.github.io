@@ -24,6 +24,7 @@
 			{{ include.event.endDate | date: '%a %b %-d, %Y %l:%M %p' }}
 		</time>
 		<hr />
+		{% if include.event.location.url %}<a href="{{ include.event.location.url }}" target="_blank" rel="noopener external">{% endif %}
 		<address class="event-location" itemprop="location" itemtype="http://schema.org/Place" itemscope="">
 			{% include icon.html icon='location' %}
 			{% if include.event.location.name %}<b itemprop="name">{{ include.event.location.name }}</b>{% endif %}
@@ -35,6 +36,7 @@
 				<meta itemprop="addressCountry" content="{{ include.event.location.addressCountry | default: 'United States' }}" />
 			</div>
 		</address>
+		{% if include.event.location.url %}</a>{% endif %}
 		<hr />
 		<div class="event-description" itemprop="description">
 			{% include icon.html icon='note' %}{{ include.event.description }}
