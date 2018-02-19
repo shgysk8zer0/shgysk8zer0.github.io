@@ -20,9 +20,8 @@ body {
 	grid-template-areas: 'header header header'
 	'nav nav nav'
 	'. main pinned-posts'
-	' . main calendar'
-	'. main recent-posts'
-	' . main .'
+	'. main calendar'
+	'. main .'
 	'footer footer footer';
 }
 
@@ -41,7 +40,7 @@ body {
 @media (max-width: 700px) {
 	body {
 		grid-template-columns: 100vw;
-		grid-template-areas: 'header' 'nav' 'main' 'pinned-posts' 'calendar' 'recent-posts' 'footer';
+		grid-template-areas: 'header' 'nav' 'main' 'pinned-posts' 'calendar' 'footer';
 	}
 
 	.gist {
