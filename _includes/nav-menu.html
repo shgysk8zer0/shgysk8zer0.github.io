@@ -6,11 +6,13 @@
 	{% if page.comments %}
 		<menuitem label="Comments" icon="{{ '/img/octicons/lib/svg/comment-discussion.svg' | absolute_url }}" data-scroll-to="#disqus_thread"></menuitem>
 	{% endif %}
-	<menuitem label="Pinned Posts" icon="{{ '/img/adwaita-icons/actions/view-pin.svg' | absolute_url }}" data-scroll-to="#pinned-posts"></menuitem>
-	<menuitem label="Calendar" icon="{{ '/img/octicons/lib/svg/calendar.svg' | absolute_url }}" data-scroll-to="#calendar"></menuitem>
-	<menuitem label="Recent Posts" icon="{{ '/img/adwaita-icons/actions/document-open-recent.svg' | absolute_url }}" data-scroll-to="#recent-posts"></menuitem>
-	<menuitem label="Share via" icon="{{ '/img/adwaita-icons/places/folder-publicshare.svg' | absolute_url }}" data-share=""></menuitem>
-	<menuitem label="Print" icon="{{ '/img/adwaita-icons/actions/document-print.svg' | absolute_url }}" data-click="print"></menuitem>
+	{% if page.layout != 'full-width' %}
+		<menuitem label="Pinned Posts" icon="{{ '/img/adwaita-icons/actions/view-pin.svg' | absolute_url }}" data-scroll-to="#pinned-posts"></menuitem>
+		<menuitem label="Calendar" icon="{{ '/img/octicons/lib/svg/calendar.svg' | absolute_url }}" data-scroll-to="#calendar"></menuitem>
+		<menuitem label="Recent Posts" icon="{{ '/img/adwaita-icons/actions/document-open-recent.svg' | absolute_url }}" data-scroll-to="#recent-posts"></menuitem>
+		<menuitem label="Share via" icon="{{ '/img/adwaita-icons/places/folder-publicshare.svg' | absolute_url }}" data-share=""></menuitem>
+		<menuitem label="Print" icon="{{ '/img/adwaita-icons/actions/document-print.svg' | absolute_url }}" data-click="print"></menuitem>
+	{% endif %}
 	{% if jekyll.environment == 'development' %}
 		<menuitem data-open="/admin" label="Admin" icon="{{ '/img/adwaita-icons/categories/preferences-system.svg' | absolute_url }}"></menuitem>
 	{% endif %}

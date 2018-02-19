@@ -6,8 +6,8 @@ version: 3.2.15
 lang: en
 dir: ltr
 charset: utf-8
-paginate: 5
-paginate_path: "/posts/page-:num/"
+paginate: 8
+paginate_path: "/page-:num/"
 viewport: width=device-width
 robots: 'follow,index'
 referrer: origin-when-cross-origin

@@ -1,10 +1,15 @@
 ---
-title: Portfolio
+title: Home
 layout: home
-index: true
 ---
-<section id="portfolio" class="grid grid-gallery overflow-visible animation-ease-in animation-fill-both background-fixed background-no-repeat background-cover">
-	{% for project in site.data.portfolio %}
-		{% include project.html project=project %}
-	{% endfor %}
+<section class="pagination">
+	{% include breadcrumb-nav.html %}
+	<div class="grid grid-gallery">
+		{% for post in paginator.posts %}
+			{% include article-preview-card.html post=post %}
+		{% endfor %}
+	</div>
+	<footer>
+		<hr />
+	</footer>
 </section>

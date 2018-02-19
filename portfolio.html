@@ -1,0 +1,11 @@
+---
+title: Portfolio
+layout: full-width
+index: true
+permalink: /portfolio/
+---
+<section id="portfolio" class="grid grid-gallery overflow-visible animation-ease-in animation-fill-both background-fixed background-no-repeat background-cover">
+	{% for project in site.data.portfolio %}
+		{% include project.html project=project %}
+	{% endfor %}
+</section>

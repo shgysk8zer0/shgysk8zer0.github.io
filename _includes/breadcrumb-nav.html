@@ -6,17 +6,11 @@
 		<meta itemprop="name" content="Home"/>
 		<meta itemprop="position" content="1" />
 	</span>
-	<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
-		<a href="{{ '/posts/' | absolute_url }}" itemprop="item">
-			<span itemprop="name">Posts</span>
-			<meta itemprop="position" content="2" />
-		</a>
-	</span>
 	{% if include.category %}
 		<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
 			<a href="{{ include.category | downcase | prepend: '/posts/' | append: '/' | absolute_url }}" rel="tag" itemprop="item">
 				<span itemprop="name">{{ include.category | capitalize }}</span>
-				<meta itemprop="position" content="3" />
+				<meta itemprop="position" content="2" />
 			</a>
 		</span>
 	{% endif %}
@@ -24,7 +18,7 @@
 		<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
 			<a href="{{ include.post.url | absolute_url }}" itemprop="item">
 				<span itemprop="name">{{ include.post.title | capitalize }}</span>
-				<meta itemprop="position" content="{% if include.category %}4{% else %}3{% endif %}" />
+				<meta itemprop="position" content="{% if include.category %}3{% else %}2{% endif %}" />
 			</a>
 		</span>
 	{% endif %}
