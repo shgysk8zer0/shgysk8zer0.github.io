@@ -1,27 +1,131 @@
+{% assign footer-icon-class="icon current-color icon-twirl transition-speed-normal transition-overshoot transition-transform" %}
+{% assign name = site.author | downcase | replace: ' ', '-' %}
+{% assign author = site.data.authors[name] %}
 <footer id="contact" class="color-alt no-text-decoration optimize-speed" role="contentinfo">
-	{% if site.repository %}
-		{% assign octo-class="icon current-color filter-shadow-dark big icon-twirl transition-speed-normal transition-overshoot transition-transform" %}
-		<a href="https://github.com/{{ site.repository.username }}" title="{{ site.repository.username }}'s GitHub" target="_blank" rel="noopener external" class="inline-block color-inherit">
-			{% include icon.html icon="mark-github" class=octo-class %}
-		</a>
-		<a href="{{ site.repository.url }}" title="{{ site.repository.title }} on GitHub" target="_blank" rel="noopener external" class="inline-block color-inherit">
-			{% include icon.html icon="repo" class=octo-class %}
-		</a>
-		<a href="{{ site.repository.url }}/issues" title="Open issues for {{ site.repository.title }} on Github" target="_blank" rel="noopener external" class="inline-block color-inherit">
-			{% include icon.html icon="issue-opened" class=octo-class %}
-		</a>
-	{% endif %}
-	<a href="{{ '/resume/' | absolute_url }}" title="My Résumé" class="inline-block color-inherit">
-		{% include icon.html icon="documents" class=octo-class %}
-	</a>
-	{% if site.feed %}
-		<a href="{{ site.feed.url | absolute_url}}" title="Subscribe to feed" target="_blank" class="inline-block color-inherit">
-			{% include icon.html icon="rss" class=octo-class %}
-		</a>
-	{% endif %}
-	<ul class="footer-links">
-		<li><a href="{{ '/contact/' | absolute_url }}" class="color-inherit">Contact</a></li>
-	</ul>
+	<div class="flex row wrap">
+		<ul>
+			<li>
+				<a href="{{ '/contact/' | absolute_url }}" class="color-inherit">
+					{% include icon.html icon='address-book' class=footer-icon-class %}
+					Contact
+				</a>
+			</li>
+			<li>
+				<a href="{{ '/resume/' | absolute_url }}" title="My Résumé" class="inline-block color-inherit">
+					{% include icon.html icon="documents" class=footer-icon-class %}
+					Resume
+				</a>
+			</li>
+			<li>
+				<a href="{{ '/portfolio/' | absolute_url }}" title="My Résumé" class="inline-block color-inherit">
+					{% include icon.html icon='engineering' class=footer-icon-class %}
+					Portfolio
+				</a>
+			</li>
+			{% if site.feed %}
+				<li>
+					<a href="{{ site.feed.url | absolute_url}}" title="Subscribe to feed" target="_blank" class="inline-block color-inherit">
+						{% include icon.html icon="rss" class=footer-icon-class %}
+						RSS Feed
+					</a>
+				</li>
+			{% endif %}
+		</ul>
+		<ul>
+			{% if author.url %}
+				<li>
+					<a href="{{ author.url }}" title="Website" itemprop="url">
+						{% include icon.html icon='web-browser' class=footer-icon-class %}
+						{{ author.url | replace: 'https://', '' | replace: 'http://', '' }}
+					</a>
+				</li>
+			{% endif %}{% if author.email %}
+				<li>
+					<a href="mailto:{{ author.email }}" title="Email" itemprop="email">
+						{% include icon.html icon='mail-unread' class=footer-icon-class %}
+						{{ author.email }}
+					</a>
+				</li>
+			{% endif %}{% if author.telephone %}
+				<li>
+					<a href="tel:{{ author.telephone }}" title="Phone" itemprop="telephone">
+						{% include icon.html icon='call-start' class=footer-icon-class %}
+						{{ author.telephone | replace: '+', '' }}
+					</a>
+				</li>
+			{% endif %}
+		</ul>
+		<ul>
+			{% if author.sameAs.twitter %}
+				<li>
+					<a href="https://twitter.com/{{ author.sameAs.twitter }}" class="{{ link-class }}" title="Twitter" target="_blank" rel="noopener external" itemprop="sameAs">
+						{% include icon.html icon='twitter' class=footer-icon-class %}
+						Twitter
+					</a>
+				</li>
+			{% endif %}
+			{% if author.sameAs.google_plus %}
+				<li>
+					<a href="https://plus.google.com/{{ author.sameAs.google_plus }}/" class="{{ link-class }}" title="Google+" target="_blank" rel="noopener external" itemprop="sameAs">
+						{% include icon.html icon='google+' class=footer-icon-class %}
+						Google+
+					</a>
+				</li>
+			{% endif %}
+			{% if author.sameAs.linkedin %}
+				<li>
+					<a href="https://www.linkedin.com/in/{{ author.sameAs.linkedin }}/" class="{{ link-class }}" title="LinkedIn" target="_blank" rel="noopener external" itemprop="sameAs">
+						{% include icon.html icon='linkedin' class=footer-icon-class %}
+						LinkedIn
+					</a>
+				</li>
+			{% endif %}
+			{% if author.sameAs.youtube %}
+				<li>
+					<a href="https://youtube.com/user/{{ author.sameAs.youtube }}" class="{{ link-class }}" title="YouTube" target="_blank" rel="noopener external" itemprop="sameAs">
+						{% include icon.html icon='youtube' class=footer-icon-class %}
+						YouTube
+					</a>
+				</li>
+			{% endif %}
+			{% if author.sameAs.stackoverflow %}
+				<li>
+					<a href="https://stackoverflow.com/users/{{ author.sameAs.stackoverflow }}" class="{{ link-class }}" title="StackOverflow" target="_blank" rel="noopener external" itemprop="sameAs">
+						{% include icon.html icon='stackoverflow' class=footer-icon-class %}
+						StackOverflow
+					</a>
+				</li>
+			{% endif %}
+			{% if author.sameAs.upwork %}
+				<li>
+					<a href="https://www.upwork.com/o/profiles/users/{{ author.sameAs.upwork }}" class="{{ link-class }}" title="Upwork" target="_blank" rel="noopener external" itemprop="sameAs">
+						{% include icon.html icon='upwork' class=footer-icon-class %}
+						Upwork
+					</a>
+				</li>
+			{% endif %}
+		</ul>
+		<ul>
+			<li>
+				<a href="https://github.com/{{ site.repository.username }}" title="{{ site.repository.username }}'s GitHub" target="_blank" rel="noopener external" class="inline-block color-inherit">
+					{% include icon.html icon="mark-github" class=footer-icon-class %}
+					GitHub Profile
+				</a>
+			</li>
+			<li>
+				<a href="{{ site.repository.url }}" title="{{ site.repository.title }} on GitHub" target="_blank" rel="noopener external" class="inline-block color-inherit">
+					{% include icon.html icon="repo" class=footer-icon-class %}
+					Repo on GitHub
+				</a>
+			</li>
+			<li>
+				<a href="{{ site.repository.url }}/issues" title="Open issues for {{ site.repository.title }} on Github" target="_blank" rel="noopener external" class="inline-block color-inherit">
+					{% include icon.html icon="issue-opened" class=footer-icon-class %}
+					Issues on GitHub
+				</a>
+			</li>
+		</ul>
+	</div>
 	<hr />
-	<p>©<time itemprop="copyrightYear"> {{ 'now' | date: "%Y" }}</time></p>
+	<p>&copy;<time itemprop="copyrightYear"> {{ 'now' | date: "%Y" }}</time> <a href="{{ site.url | absolute_url }}">{{ site.author }}</a></p>
 </footer>
