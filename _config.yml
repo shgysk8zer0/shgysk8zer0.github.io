@@ -132,6 +132,7 @@ defaults:
       permalink: /posts/:categories/:year/:month/:day/:title/
       comments: true
       ads: false
+      index: true
   - scope:
       path: _drafts
     values:
