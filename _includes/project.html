@@ -1,4 +1,4 @@
-<div class="{{ include.animation | default: 'jackInTheBox' }} project card shadow optimize-legibility animation-paused animation-overshoot animation-speed-crawl animation-fill-forwards relative transition-all transition-speed-normal transition-ease-in-out" itemprop="workExample" itemtype="http://schema.org/WebApplication" itemscope="">
+<div id="project-{{ include.project.name | slugify }}" class="{{ include.animation | default: 'jackInTheBox' }} project card shadow optimize-legibility animation-paused animation-overshoot animation-speed-crawl animation-fill-forwards relative transition-all transition-speed-normal transition-ease-in-out" itemprop="workExample" itemtype="http://schema.org/WebApplication" itemscope="">
 	<h3 itemprop="name" class="center font-title color-accent">{{ include.project.name }}</h3>
 	<img src="{{ include.project.screenshot }}" class="filter-shadow" itemprop="screenshot" alt="{{ include.project.name }} image" crossorigin="anonymous" />
 	<br />
