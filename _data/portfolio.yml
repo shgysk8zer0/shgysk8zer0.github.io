@@ -52,14 +52,14 @@
 #   browserRequirements: 'flex, fetch, SVG'
 - '@type': WebApplication
   '@context': 'http://schema.org'
-  name: Bakery Demo Page
+  name: 20 &amp; 30 Somethings Doing Some Things
   offers:
     '@type': Offer
     price: 0
     priceCurrency: USD
-  screenshot: 'https://i.imgur.com/W1ocd4Am.png'
-  url: 'https://acme-bakery.netlify.com'
-  description: 'A demo site for small businesses'
+  screenshot: 'https://i.imgur.com/PpaFZCHm.png'
+  url: 'https://20and30.netlify.com'
+  description: 'A blog and events site for a Meetup group'
   keywords: 'HTML5, JavaScript, appCache'
   applicationCategory: Web App
   operatingSystem: 'Windows, OSX, Linux'
