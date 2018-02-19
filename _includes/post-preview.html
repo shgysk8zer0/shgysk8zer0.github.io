@@ -17,7 +17,24 @@
 {% if include.post.description != null %}
 	<details>
 		<summary role="button">More Info</summary>
-		<p>{{ include.post.description }}</p>
+		<hr />
+		<div>
+			{% include icon.html icon='avatar-default' %}
+			{{ include.post.author }}
+		</div>
+		<time datetime="{{ include.post.date | date: data_to_xmlschema }}" class="block">
+			{% include icon.html icon='recent' %}
+			{{ include.post.date | date: '%a, %B %e, %Y' }}
+		</time>
+		{% if include.post.category %}
+			<div>
+				{% include icon.html icon='tag' %}
+				{{ include.post.category }}
+			</div>
+		{% endif %}
+		<blockquote>
+			{{ include.post.description }}
+		</blockquote>
 	</details>
 {% endif %}
 <hr />
