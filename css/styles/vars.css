@@ -9,7 +9,7 @@
 	--default-color: #010101;
 	--alt-color: #FAFAFA;
 	--primary-color: #E0E0E0;
-	--link-color: auto;
+	--link-color: var(--accent-color);
 	--accent-color: #009688;
 	--accent-color-2: #004A43;
 	--border-color: #2D2D2D;
