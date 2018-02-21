@@ -4,25 +4,23 @@ layout: home
 ---
 <section class="pagination">
 	{% include breadcrumb-nav.html %}
-	{% if paginator.previous_page or paginator.next_page %}
-		{% if paginator.previous_page %}
-			<a href="{{ paginator.previous_page_path | absolute_url }}" rel="prev" role="button" title="Previous page">
-				{% include icon.html icon='prev' %}
-			</a>
-		{% endif %}
-		{% if paginator.next_page %}
-			<a href="{{ paginator.next_page_path | absolute_url }}" role="button" rel="next" title="Next page">
-				{% include icon.html icon='next' %}
-			</a>
-		{% endif %}
-		</hr />
-	{% endif %}
 	<div class="grid grid-gallery">
 		{% for post in paginator.posts %}
 			{% include article-preview-card.html post=post %}
 		{% endfor %}
 	</div>
-	<footer>
-		<hr />
+	<footer class="paginate-nav">
+		{% if paginator.previous_page or paginator.next_page %}
+			{% if paginator.previous_page %}
+				<a href="{{ paginator.previous_page_path | absolute_url }}" rel="prev" role="button" title="Previous page">
+					{% include icon.html icon='prev' %}
+				</a>
+			{% endif %}
+			{% if paginator.next_page %}
+				<a href="{{ paginator.next_page_path | absolute_url }}" role="button" rel="next" title="Next page">
+					{% include icon.html icon='next' %}
+				</a>
+			{% endif %}
+		{% endif %}
 	</footer>
 </section>

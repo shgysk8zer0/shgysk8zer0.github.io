@@ -92,6 +92,12 @@ pre.highlight, code.highlight {
 	margin: auto;
 }
 
+.paginate-nav {
+	position: sticky;
+	bottom: 0.7rem;
+	font-size: 1.1rem;
+}
+
 .background-accent {
 	background: var(--accent-color);
 }
