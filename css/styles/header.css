@@ -14,7 +14,7 @@ body.layout-home > header {
 
 body > header > [itemtype="http://schema.org/Person"] {
 	height: 100%;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .social-links {
