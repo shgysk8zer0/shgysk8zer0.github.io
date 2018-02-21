@@ -1,0 +1,23 @@
+.about-section {
+	padding: 2em;
+}
+
+.about-section .card:hover img {
+	animation-name: rubberBand;
+}
+
+#skills-section .grid {
+	grid-template-columns: repeat(auto-fill, minmax(270px, 400px));
+	grid-gap: 0.8em;
+	justify-content: center;
+}
+
+#skills-section .grid .card {
+	transition: transform 400ms, box-shadow 400ms;
+	text-align: center;
+}
+
+#skills-section .grid .card:hover {
+	transform: scale(1.1);
+	box-shadow: 6px 6px 8px var(--accent-color);
+}
