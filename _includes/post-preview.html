@@ -23,7 +23,7 @@
 			{{ include.post.author }}
 		</div>
 		<time datetime="{{ include.post.date | date: data_to_xmlschema }}" class="block">
-			{% include icon.html icon='recent' %}
+			{% include icon.html icon='calendar' %}
 			{{ include.post.date | date: '%a, %B %e, %Y' }}
 		</time>
 		{% if include.post.category %}
