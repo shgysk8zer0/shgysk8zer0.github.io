@@ -9,6 +9,8 @@ tags:
 - Chris Zuber
 - Christopher Zuber
 - web developer
+gallery:
+- 'https://imgur.com/dJdfnVm'
 icon-size: 64
 logo-class: 'animation-speed-crawl animation-ease-in-out'
 ---
@@ -23,16 +25,53 @@ logo-class: 'animation-speed-crawl animation-ease-in-out'
 <section id="background-section" class="about-section">
 	<h2>Background</h2>
 	<p><q>A long time ago in a small town far away...</q></p>
-
+	{% include imgur.html url='https://imgur.com/975r1K6' %}
+	<br />
+	<p>...I was born. What? Were you expecting something epic or even out of the ordinary?</p>
+	<p>
+		I'm a full-stack web developer from <a href="https://en.wikipedia.org/wiki/Lake_Isabella,_California" rel="noopener external" target="_blank" title="Lake Isabella, California - Wikiedia">Lake Isabella, CA</a>.
+		It's a small, rural area with a population of around 3,000 people &mdash;
+		most of whom are retired.
+	</p>
+	<p>
+		As you might be able to guess, that wasn't the best area for anything relating
+		to technology, so in late 2017 I moved to Mount Vernon, WA.
+	</p>
+	<p>
+		I was first introduced to programming in an introductory C++ course at
+		Bakersfield Community College when I was studying mechanical and electrical
+		engineering. The use of logic to solve problems in pieces really appealed to me.
+	</p>
+	<p>
+		But it was web development that really caught my attention. The web is
+		a universal platform with a global reach that allows anyone to be a creator
+		and a publisher. The web can be used to build communities of people who
+		have never met, and it can allow a small business in the middle of nowhere
+		to be found by customers on the other side of the country.
+	</p>
+	<p>
+		I began teaching myself JavaScript in mid-2012 and got my first job as a
+		developer only a week later. In the months that followed, I learned a lot
+		by being <q>thrown in the deep end.</q> I learned about Linux, databases,
+		PHP, and as much as I could take in.
+	</p>
 </section>
 <section id="hobbies-section" class="about-section">
 	<h2>Hobbies</h2>
+	{% include imgur-figure.html imgur='https://imgur.com/dJdfnVm' caption='Me on a mountain somewhere in the Pacific Northwest' %}
+	<p>
+		Although programming is a logical process that usually involves being
+		indoors sitting at a computer, I am very much so an active, outdoors kind
+		of guy. I'm known to hike directly up a mountain in 100&deg;+ weather
+		just because I got tired of sitting.
+	</p>
 	<ul>
 		<li>Hiking</li>
 		<li>Backpacking</li>
 		<li>Mountain biking</li>
 		<li>Photography</li>
 		<li>Board and card games</li>
+		<li>Cooking good food<i>(if only so I can eat it)</i></li>
 		<li>Mines and sudoku</li>
 		<li>Riddles</li>
 	</ul>
@@ -93,6 +132,11 @@ logo-class: 'animation-speed-crawl animation-ease-in-out'
 	<a href="mailto:chris@chriszuber.com">
 		{% include icon.html icon='mail-send' %}
 		chris@chriszuber.com
+	</a>
+	<br />
+	<a href="https://github.com/shgysk8zer0" rel="noopener external">
+		{% include icon.html icon='mark-github' %}
+		GitHub/shgysk8zer0
 	</a>
 	<br />
 	<a href="{{ '/contact/' | absolute_url }}">
