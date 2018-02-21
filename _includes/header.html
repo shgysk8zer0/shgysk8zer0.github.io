@@ -3,7 +3,7 @@
 	{% assign author = site.data.authors[name] %}
 	<div itemtype="http://schema.org/Person" itemprop="about" itemscope="" class="flex column wrap transform-origin-bottom transition-ease-in-out">
 		<a href="{{ page.url | append: '#about-dialog' | absolute_url }}">
-			<figure itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="">
+			<figure class="inline-block" itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="">
 				{% include gravatar.html
 					gravatar=author.image.gravatar
 					sizes='(orientation: portrait) 30vw, 15vw'
@@ -19,13 +19,13 @@
 			{% if author.url %}</a>{% endif %}
 		</h1>
 		<h2 class="capitalize">
-			<span itemprop="jobTitle">{{ author.jobTitle }}</span> |
+			<span itemprop="jobTitle">{{ author.jobTitle }}</span>{% if include.worksFor %} |
 			<span itemprop="worksFor" itemtype="http://schema.org/Organization" itemscope="">
 				<a href="{{ author.worksFor.url }}" class="color-inherit" rel="noopener external">
 					<span itemprop="name">{{ author.worksFor.name }}</span>
-					<img src="{{ author.worksFor.logo.contentUrl | absolute_url }}" width="32" height="32" alt="{{ author.worksFor.name }}" />
+					{% if include.workLogo %}<img src="{{ author.worksFor.logo.contentUrl | absolute_url }}" width="32" height="32" alt="{{ author.worksFor.name }}" />{% endif %}
 				</a>
-			</span>
+			</span>{% endif %}
 		</h2>
 		{% if include.contact or include.social %}
 			{% assign social-icon-class='icon bounceInDown animation-ease-in animation-fill-backwards animation-speed-crawl animation-paused' %}
@@ -33,7 +33,6 @@
 			{% assign link-class = 'icon-twirl transition-transform transition-speed-normal transform-origin-center transition-ease-in-out' %}
 		{% endif %}
 		{% if include.contact %}
-			<hr />
 			{% if author.homeLocation %}
 				<h4>
 					<address itemprop="homeLocation" itemtype="http://schema.org/PostalAddress" itemscope="">
@@ -63,7 +62,6 @@
 			</div>
 		{% endif %}
 		{% if include.social and author.sameAs %}
-			<hr />
 			<div class="social-links no-text-decoration optimize-speed flex row container bigger animaion-stagger">
 				{% if author.sameAs.github %}
 					<a href="https://github.com/{{ author.sameAs.github }}" class="{{ link-class }}" title="GitHub" target="_blank" rel="noopener external" itemprop="sameAs">
