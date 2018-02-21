@@ -5,6 +5,12 @@
 	<div class="flex row wrap">
 		<ul>
 			<li>
+				<a href="{{ '/about/' | absolute_url }}" class="color-inherit">
+					{% include icon.html icon='avatar-default' class=footer-icon-class %}
+					Contact
+				</a>
+			</li>
+			<li>
 				<a href="{{ '/contact/' | absolute_url }}" class="color-inherit">
 					{% include icon.html icon='address-book' class=footer-icon-class %}
 					Contact
