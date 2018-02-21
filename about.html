@@ -1,0 +1,151 @@
+---
+title: About
+layout: page
+permalink: /about/
+index: true
+image: 'https://secure.gravatar.com/avatar/43578597e449298f5488c2407c8a8ae5?s=256&d=mm'
+description: About Chris Zuber
+tags:
+- Chris Zuber
+- Christopher Zuber
+- web developer
+gallery:
+- 'https://imgur.com/dJdfnVm'
+icon-size: 64
+logo-class: 'animation-speed-crawl animation-ease-in-out'
+---
+<header class="center">
+	<h1 class="center">About Chris Zuber</h1>
+	{% include gravatar.html
+		gravatar='43578597e449298f5488c2407c8a8ae5'
+		sizes='(max-width: 700px) 100vw, 30vw'
+		class='round center'
+	%}
+</header>
+<section id="background-section" class="about-section">
+	<h2>Background</h2>
+	<p><q>A long time ago in a small town far away...</q></p>
+	{% include imgur.html url='https://imgur.com/975r1K6' %}
+	<br />
+	<p>...I was born. What? Were you expecting something epic or even out of the ordinary?</p>
+	<p>
+		I'm a full-stack web developer from <a href="https://en.wikipedia.org/wiki/Lake_Isabella,_California" rel="noopener external" target="_blank" title="Lake Isabella, California - Wikiedia">Lake Isabella, CA</a>.
+		It's a small, rural area with a population of around 3,000 people &mdash;
+		most of whom are retired.
+	</p>
+	<p>
+		As you might be able to guess, that wasn't the best area for anything relating
+		to technology, so in late 2017 I moved to Mount Vernon, WA.
+	</p>
+	<p>
+		I was first introduced to programming in an introductory C++ course at
+		Bakersfield Community College when I was studying mechanical and electrical
+		engineering. The use of logic to solve problems in pieces really appealed to me.
+	</p>
+	<p>
+		But it was web development that really caught my attention. The web is
+		a universal platform with a global reach that allows anyone to be a creator
+		and a publisher. The web can be used to build communities of people who
+		have never met, and it can allow a small business in the middle of nowhere
+		to be found by customers on the other side of the country.
+	</p>
+	<p>
+		I began teaching myself JavaScript in mid-2012 and got my first job as a
+		developer only a week later. In the months that followed, I learned a lot
+		by being <q>thrown in the deep end.</q> I learned about Linux, databases,
+		PHP, and as much as I could take in.
+	</p>
+</section>
+<section id="hobbies-section" class="about-section">
+	<h2>Hobbies</h2>
+	{% include imgur-figure.html imgur='https://imgur.com/dJdfnVm' caption='Me on a mountain somewhere in the Pacific Northwest' %}
+	<p>
+		Although programming is a logical process that usually involves being
+		indoors sitting at a computer, I am very much so an active, outdoors kind
+		of guy. I'm known to hike directly up a mountain in 100&deg;+ weather
+		just because I got tired of sitting.
+	</p>
+	<ul>
+		<li>Hiking</li>
+		<li>Backpacking</li>
+		<li>Mountain biking</li>
+		<li>Photography</li>
+		<li>Board and card games</li>
+		<li>Cooking good food<i>(if only so I can eat it)</i></li>
+		<li>Mines and sudoku</li>
+		<li>Riddles</li>
+	</ul>
+</section>
+<section id="skills-section" class="clearfix about-section">
+	<h2>Skills</h2>
+	<div class="grid">
+		<div class="card shadow">
+			<h3>Front-end</h3>
+			<div class="logos center animation-stagger">
+				<img class="{{ page.logo-class }}" title="HTML5" alt="HTML5" src="{{ 'img/logos/html5.svg' | absolute_url }}" width="{{ page.icon-size }}" />
+				<img class="{{ page.logo-class }}" title="CSS3" alt="CSS3" src="{{ 'img/logos/css3.svg' | absolute_url }}" width="{{ page.icon-size }}" />
+				<img class="{{ page.logo-class }}" title="JavaScript" alt="JavaScript" src="{{ 'img/logos/javascript.svg' | absolute_url }}" width="{{ page.icon-size }}" />
+				<img class="{{ page.logo-class }}" title="SVG" alt="SVG" src="{{ 'img/logos/svg.svg' | absolute_url }}" width="{{ page.icon-size }}" />
+			</div>
+		</div>
+		<div class="card shadow">
+			<h3>Back-end</h3>
+			<div class="logos center animation-stagger">
+				<img class="{{ page.logo-class }}" title="PHP 7" alt="PHP" src="{{ 'img/logos/php.svg' | absolute_url }}" width="{{ page.icon-size }}" />
+				<img class="{{ page.logo-class }}" title="Jekyll" alt="Jekyll" src="{{ 'img/logos/jekyll.svg' | absolute_url }}" width="{{ page.icon-size }}" />
+				<img class="{{ page.logo-class }}" title="MySQL" alt="MySQL" src="{{ 'img/logos/mysql.svg' | absolute_url }}" width="{{ page.icon-size }}" />
+				<img class="{{ page.logo-class }}" title="Sqlite" alt="Sqlite3" src="{{ 'img/logos/sqlite.svg' | absolute_url }}" width="{{ page.icon-size }}" />
+			</div>
+		</div>
+		<div class="card shadow">
+			<h3>Other</h3>
+			<div class="logos center animation-stagger">
+				<img class="{{ page.logo-class }}" title="Git" alt="Git" src="{{ 'img/logos/git.svg' | absolute_url }}" width="{{ page.icon-size }}" />
+				<img class="{{ page.logo-class }}" title="GitHub" alt="GitHub" src="{{ 'img/logos/github.svg' | absolute_url }}" width="{{ page.icon-size }}" />
+				<img class="{{ page.logo-class }}" title="NPM" alt="NPM" src="{{ 'img/logos/npm.svg' | absolute_url }}" width="{{ page.icon-size }}" />
+				<br />
+				<img class="{{ page.logo-class }}" title="Webpack" alt="Webpack" src="{{ 'img/logos/webpack.svg' | absolute_url }}" width="{{ page.icon-size }}" />
+				<img class="{{ page.logo-class }}" title="eslint" alt="eslint" src="{{ 'img/logos/eslint.svg' | absolute_url }}" width="{{ page.icon-size }}" />
+				<img class="{{ page.logo-class }}" title="stylelint" alt="stylelint" src="{{ 'img/logos/stylelint.svg' | absolute_url }}" width="{{ page.icon-size }}" />
+			</div>
+		</div>
+		<div class="card shadow">
+			<h3>Tools and software</h3>
+			<div class="logos center animation-stagger">
+				<img class="{{ page.logo-class }}" title="Atom" alt="Atom" src="{{ 'img/logos/atom.svg' | absolute_url }}" width="{{ page.icon-size }}" />
+				<img class="{{ page.logo-class }}" title="Inkscape" alt="Inkscape" src="{{ 'img/logos/inkscape.svg' | absolute_url }}" width="{{ page.icon-size }}" />
+				<br />
+				<img class="{{ page.logo-class }}" title="Gimp" alt="Gimp" src="{{ 'img/logos/gimp.svg' | absolute_url }}" width="{{ page.icon-size }}" />
+				<img class="{{ page.logo-class }}" title="Ubuntu" alt="Ubuntu" src="{{ 'img/logos/ubuntu.svg' | absolute_url }}" width="{{ page.icon-size }}" />
+				<img class="{{ page.logo-class }}" title="Fedora" alt="Fedora" src="{{ 'img/logos/fedora.svg' | absolute_url }}" width="{{ page.icon-size }}" />
+			</div>
+		</div>
+	</div>
+</section>
+<section id="contact-section" class="about-section">
+	<h2>Contact</h2>
+	<a href="tel:+1-661-619-6712">
+		{% include icon.html icon='call-start' %}
+		1-661-619-6712
+	</a>
+	<br />
+	<a href="mailto:chris@chriszuber.com">
+		{% include icon.html icon='mail-send' %}
+		chris@chriszuber.com
+	</a>
+	<br />
+	<a href="https://github.com/shgysk8zer0" rel="noopener external">
+		{% include icon.html icon='mark-github' %}
+		GitHub/shgysk8zer0
+	</a>
+	<br />
+	<a href="{{ '/contact/' | absolute_url }}">
+		{% include icon.html icon='address-book' %}
+		Contact
+	</a>
+	<br />
+	<a href="{{ '/portfolio/' | absolute_url }}">
+		{% include icon.html icon='engineering' %}
+		Portfolio
+	</a>
+</section>
