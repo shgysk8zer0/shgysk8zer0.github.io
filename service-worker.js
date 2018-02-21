@@ -11,6 +11,8 @@ const config = {
 		// contact page and resume
 		'/contact/',
 		'/resume/',
+		'/about/',
+		'/portfolio/',
 		'/js/resume.js',
 		'/css/resume.css',
 
