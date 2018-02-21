@@ -10,6 +10,7 @@ location:
   addressLocality: Bellingham
   addressRegion: WA
   postalCode: 98225
+  url: 'https://www.google.com/maps/search/?api=1&query=1208+Bay+Street%2C+Bellingham%2C+WA%2C+98225%2C+US'
 organizer:
   name: The Upfront Theatre
   url: 'https://theupfront.com/'
