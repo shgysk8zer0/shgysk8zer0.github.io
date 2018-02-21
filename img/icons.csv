@@ -40,6 +40,7 @@ calendar,img/octicons/lib/svg/calendar.svg
 note,img/octicons/lib/svg/note.svg
 rss,img/adwaita-icons/mimetypes/application-rss+xml.svg
 documents,img/adwaita-icons/emblems/emblem-documents.svg
+pdf,img/octicons/lib/svg/file-pdf.svg
 address-book,img/adwaita-icons/mimetypes/x-office-address-book.svg
 print,img/adwaita-icons/actions/document-print.svg
 pause,img/adwaita-icons/actions/media-playback-pause.svg
