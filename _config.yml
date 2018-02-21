@@ -85,7 +85,7 @@ preload:
     as: image
     type: image/svg+xml
     name: icons
-  - href: /img/logos/Facebook.svg
+  - href: /img/logos/facebook.svg
     as: image
     type: image/svg+xml
     name: Facebook
@@ -93,11 +93,11 @@ preload:
     as: image
     type: image/svg+xml
     name: Twitter
-  - href: /img/logos/Google_plus.svg
+  - href: /img/logos/google-plus.svg
     as: image
     type: image/svg+xml
     name: Google+
-  - href: /img/logos/Reddit.svg
+  - href: /img/logos/reddit.svg
     as: image
     type: image/svg+xml
     name: Reddit
