@@ -17,5 +17,26 @@
 			<img src="{{ include.post.image | absolute_url }}"{% if post.srcset %} srcset="{{ post.srcset | join: ', '}}" sizes="(min-width: 700px) 75vw, 100vw"{% endif %} class="post-img" alt="Article thumbnail" crossorigin="anonymous" />
 		</a>
 	{% endif %}
-	<blockquote class="post-excert">{{ include.post.content | strip_html | truncatewords: 20 }}</blockquote>
+	<br />
+	<details>
+		<summary role="button">Post Info</summary>
+		<hr />
+		<div>
+			{% include icon.html icon='avatar-default' %}
+			{{ include.post.author }}
+		</div>
+		<time datetime="{{ include.post.date | date: data_to_xmlschema }}" class="block">
+			{% include icon.html icon='recent' %}
+			{{ include.post.date | date: '%a, %B %e, %Y' }}
+		</time>
+		{% if include.post.category %}
+			<a href="{{ include.post.category | slugify | prepend: '/posts/' | absolute_url }}" class="block">
+				{% include icon.html icon='tag' %}
+				{{ include.post.category }}
+			</a>
+		{% endif %}
+		<blockquote class="post-excerpt clearfix">
+			{{ include.post.content | strip_html | truncatewords: 20 }}
+		</blockquote>
+	</details>
 </div>
