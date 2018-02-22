@@ -22,21 +22,21 @@ canonical: 'https://shgysk8zer0.github.io'
 contextmenu: nav-menu
 body-class: 'background-primary grid border-box cursor-default font-main'
 feature-detect:
-  - details
-  - dialog
+- details
+- dialog
 keywords:
-  - jekyll
-  - Chris Zuber
-  - Web Developer
-  - portfolio
-  - CSS3
-  - HTML5
-  - responsive design
-  - progressive web app
-  - pwa
-  - ecmascript
-  - javascript
-  - es6
+- jekyll
+- Chris Zuber
+- Web Developer
+- portfolio
+- CSS3
+- HTML5
+- responsive design
+- progressive web app
+- pwa
+- ecmascript
+- javascript
+- es6
 repository:
   username: shgysk8zer0
   title: shgysk8zer0.github.io
@@ -56,73 +56,73 @@ webmaster-verifications:
   bing: B4BA0BE1916BB0AE8AFAC3ACC826DF57
 scripts:
   development:
-    - src: 'https://cdn.polyfill.io/v2/polyfill.min.js?unknown=polyfill&features=es6,MutationObserver,IntersectionObserver,IntersectionObserverEntry,Object.values,Object.entries,NodeList.prototype.@@iterator,Array.prototype.@@iterator&flags=gated'
-      type: application/javascript
-      crossorigin: anonymous
-    - src: /js/index.js
-      type: module
-      async: true
-    - src: /js/index.min.js
-      type: application/javascript
-      async: true
-      nomodule: true
+  - src: 'https://cdn.polyfill.io/v2/polyfill.min.js?unknown=polyfill&features=es6,MutationObserver,IntersectionObserver,IntersectionObserverEntry,Object.values,Object.entries,NodeList.prototype.@@iterator,Array.prototype.@@iterator&flags=gated'
+    type: application/javascript
+    crossorigin: anonymous
+  - src: /js/index.js
+    type: module
+    async: true
+  - src: /js/index.min.js
+    type: application/javascript
+    async: true
+    nomodule: true
   production:
-    - src: 'https://cdn.polyfill.io/v2/polyfill.min.js?unknown=polyfill&features=es6,MutationObserver,IntersectionObserver,IntersectionObserverEntry,Object.values,Object.entries,NodeList.prototype.@@iterator,Array.prototype.@@iterator&flags=gated'
-      type: application/javascript
-      crossorigin: anonymous
-    - src: /js/index.min.js
-      type: application/javascript
-      async: true
+  - src: 'https://cdn.polyfill.io/v2/polyfill.min.js?unknown=polyfill&features=es6,MutationObserver,IntersectionObserver,IntersectionObserverEntry,Object.values,Object.entries,NodeList.prototype.@@iterator,Array.prototype.@@iterator&flags=gated'
+    type: application/javascript
+    crossorigin: anonymous
+  - src: /js/index.min.js
+    type: application/javascript
+    async: true
 stylesheets:
   development:
-    - href: /css/styles/index.css
-      media: all
+  - href: /css/styles/index.css
+    media: all
   production:
-    - href: /css/styles/index.min.css
-      media: all
+  - href: /css/styles/index.min.css
+    media: all
 preload:
-  - href: /img/icons.svg
-    as: image
-    type: image/svg+xml
-    name: icons
-  - href: /img/logos/facebook.svg
-    as: image
-    type: image/svg+xml
-    name: Facebook
-  - href: /img/logos/twitter.svg
-    as: image
-    type: image/svg+xml
-    name: Twitter
-  - href: /img/logos/google-plus.svg
-    as: image
-    type: image/svg+xml
-    name: Google+
-  - href: /img/logos/reddit.svg
-    as: image
-    type: image/svg+xml
-    name: Reddit
-  - href: /img/logos/linkedin.svg
-    as: image
-    type: image/svg+xml
-    name: LinkedIn
-  - href: /img/logos/gmail.svg
-    as: image
-    type: image/svg+xml
-    name: Gmail
+- href: /img/icons.svg
+  as: image
+  type: image/svg+xml
+  name: icons
+- href: /img/logos/facebook.svg
+  as: image
+  type: image/svg+xml
+  name: Facebook
+- href: /img/logos/twitter.svg
+  as: image
+  type: image/svg+xml
+  name: Twitter
+- href: /img/logos/google-plus.svg
+  as: image
+  type: image/svg+xml
+  name: Google+
+- href: /img/logos/reddit.svg
+  as: image
+  type: image/svg+xml
+  name: Reddit
+- href: /img/logos/linkedin.svg
+  as: image
+  type: image/svg+xml
+  name: LinkedIn
+- href: /img/logos/gmail.svg
+  as: image
+  type: image/svg+xml
+  name: Gmail
 appicons:
-  - src: /img/favicon.svg
-    sizes: any
-    type: image/svg+xml
-  - src: /img/icon-512.png
-    sizes: 512x512
-    type: image/png
-  - src: /img/icon-192.png
-    sizes: 192x192
-    type: image/png
+- src: /img/favicon.svg
+  sizes: any
+  type: image/svg+xml
+- src: /img/icon-512.png
+  sizes: 512x512
+  type: image/png
+- src: /img/icon-192.png
+  sizes: 192x192
+  type: image/png
 screenshots:
-  - src: 'https://i.imgur.com/Ers0Xql.png'
-    sizes: 649x604
-    type: image/png
+- src: 'https://i.imgur.com/Ers0Xql.png'
+  sizes: 649x604
+  type: image/png
 defaults:
 - scope:
     path: _posts
@@ -142,21 +142,21 @@ defaults:
     comments: false
     ads: false
 plugins:
-  - jekyll-gist
-  - jekyll-youtube
-  - jekyll-admin
-  - jekyll-watch
-  # - jekyll-avatar
-  # - jekyll-mentions
-  # - jekyll-github-metadata
-  - jekyll-paginate
-  # - jekyll-optional-front-matter
-  # - jekyll-readme-index
-  # - jekyll-titles-from-headings
-  # - jekyll-include-cache
-  # - jekyll-seo-tag
-  # - jemoji
-  # - jekyll-octicons
+- jekyll-gist
+- jekyll-youtube
+- jekyll-admin
+- jekyll-watch
+# - jekyll-avatar
+# - jekyll-mentions
+# - jekyll-github-metadata
+- jekyll-paginate
+# - jekyll-optional-front-matter
+# - jekyll-readme-index
+# - jekyll-titles-from-headings
+# - jekyll-include-cache
+# - jekyll-seo-tag
+# - jemoji
+# - jekyll-octicons
 exclude:
 - "*.rb"
 - "*.gemspec"
