@@ -6,7 +6,9 @@ layout: home
 	{% include breadcrumb-nav.html %}
 	<div class="grid grid-gallery">
 		{% for post in paginator.posts %}
-			{% include article-preview-card.html post=post %}
+			<div class="article-preview card shadow-dark">
+				{% include post-preview.html post=post %}
+			</div>
 		{% endfor %}
 	</div>
 	<footer class="paginate-nav">
