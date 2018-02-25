@@ -15,7 +15,7 @@ A responsive, progressive about / portfolio & blog page built using Jekyll
 [![Twitter Follow](https://img.shields.io/twitter/follow/shgysk8zer0.svg?style=social&label=Follow)](https://twitter.com/shgysk8zer0)
 [![Tweet](https://img.shields.io/twitter/url/https/github.com/shgysk8zer0/shgysk8zer0.github.io.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fshgysk8zer0.github.io)
 
-[![Screenshot](https://i.imgur.com/Ers0Xql.png)](https://shgysk8zer0.github.io)
+[![Screenshot](https://i.imgur.com/uRKaQQQl.png)](https://shgysk8zer0.github.io)
 
 ## Features
 - [Progressive Web App](https://developer.mozilla.org/en-US/Apps/Progressive)
