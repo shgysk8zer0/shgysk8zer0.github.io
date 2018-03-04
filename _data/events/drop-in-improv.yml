@@ -1,9 +1,11 @@
+# See https://schema.org/Event
 name: Drop In Improv Class
-startDate: 2018-03-03 12:00
-endDate: 2018-03-03 13:00
-url: 'https://theupfront.com/classes/drop-in/'
 image: 'https://i.imgur.com/3gozQEz.png'
-description: Ever wanted to try improv? Now’s your chance! Each month, The Upfront Theatre offers a FREE drop-in improv class that’s open to all ages and experience levels.
+url: 'https://www.meetup.com/20-30-Somethings-Doing-Some-Things/events/wdztsnyxgbkb/'
+description: |-
+  Ever wanted to try improv? Now’s your chance! Each month, The Upfront Theatre offers a FREE drop-in improv class that’s open to all ages and experience levels.
+startDate: 2018-04-07 12:00
+endDate: 2018-04-07 13:00
 location:
   name: The Upfront Theatre
   streetAddress: 1208 Bay St
@@ -12,5 +14,6 @@ location:
   postalCode: 98225
   url: 'https://www.google.com/maps/search/?api=1&query=1208+Bay+Street%2C+Bellingham%2C+WA%2C+98225%2C+US'
 organizer:
-  name: The Upfront Theatre
-  url: 'https://theupfront.com/'
+  '@type': 'Person'
+  name: Chris Zuber
+  url: 'https://www.meetup.com/20-30-Somethings-Doing-Some-Things/'
