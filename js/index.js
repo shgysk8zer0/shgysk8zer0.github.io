@@ -80,6 +80,22 @@ ready().then(async () => {
 
 	supportsAsClasses(...document.documentElement.dataset.supportTest.split(',').map(test => test.trim()));
 
+	const post = document.querySelector('[itemprop~="articleBody"]');
+	if (post instanceof HTMLElement && document.createElement('menuitem') instanceof HTMLMenuItemElement) {
+		const menu = document.createElement('menu');
+		menu.type = 'context';
+		menu.id = 'post-nav';
+		$('h1[id], h2[id], h3[id]', post).each(item => {
+			const menuitem = document.createElement('menuitem');
+			menuitem.dataset.scrollTo = `#${item.id}`;
+			menuitem.textContent = item.textContent.length < 20 ? item.textContent : `${item.textContent.substring(0, 20)}...`;
+			menu.append(menuitem);
+		}).then(() => {
+			document.body.append(menu);
+			post.setAttribute('contextmenu', menu.id);
+		});
+	}
+
 	if (document.head.dataset.hasOwnProperty('jekyllData')) {
 		console.log(JSON.parse(decodeURIComponent(document.head.dataset.jekyllData)));
 	}
