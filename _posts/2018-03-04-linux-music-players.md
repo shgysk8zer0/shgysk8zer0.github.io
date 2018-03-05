@@ -19,7 +19,7 @@ imgur: 'https://imgur.com/c2jUYGe'
 *This is not sponsored in any way. These are just my opinions of different music
 players and services for various Linux distros (namely, Fedora and Ubuntu).*
 
-### Jump-to
+**Jump-to**
 - [Spotify]({{ page.url | append: '#spotify' | absolute_url }})
 - [Pithos (Pandora)]({{ page.url | append: '#pithos-pandora' | absolute_url }})
 - [Google Play Music Desktop Player]({{ page.url | append: '#google-play-music-desktop-player' | absolute_url }})
