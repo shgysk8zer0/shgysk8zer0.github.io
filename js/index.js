@@ -87,7 +87,11 @@ ready().then(async () => {
 		menu.id = 'post-nav';
 		$('h1[id], h2[id], h3[id]', post).each(item => {
 			const menuitem = document.createElement('menuitem');
-			menuitem.dataset.scrollTo = `#${item.id}`;
+			menuitem.addEventListener('click', () => {
+				const url = new URL(location.href);
+				url.hash = item.id;
+				location.href = url;
+			});
 			menuitem.textContent = item.textContent.length < 20 ? item.textContent : `${item.textContent.substring(0, 20)}...`;
 			menu.append(menuitem);
 		}).then(() => {
