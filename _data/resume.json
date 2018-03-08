@@ -30,6 +30,8 @@
 			"employedTo": null,
 			"duties": [
 				"Create libraries, frameworks and modules for use in arbitrary projects",
+				"Implement srever-side handler for Payment Request API data",
+				"Add support to older browsers for new APIs, such as <code><a href=\"https://developers.google.com/web/updates/2016/09/navigator-share\">navigator.share</a></code>",
 				"Enhance JavaScript library with asynchronous DOM operations and animations",
 				"Collect & optimize SVGs for icon system (featured on <a href=\"https://instantlogosearch.com/\">instantlogosearch.com/</a>)",
 				"Utilize new technologies like Progressive Web Apps & CSS grid",
@@ -42,7 +44,7 @@
 			"employedFrom": "Oct., 2015",
 			"employedTo": "April, 2017",
 			"duties": [
-				"Implement creative solutions for publishing content, such as synchronizing through Owncloud",
+				"Implement creative solutions for publishing content, such as synchronizing through ownCloud",
 				"Improve communication and organization using Slack and Wunderlist",
 				"Organize with freelance writers",
 				"Maintain master calendar of events",
