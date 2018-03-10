@@ -94,6 +94,14 @@
 					</a>
 				</li>
 			{% endif %}
+			{% if author.sameAs.codepen %}
+				<li>
+					<a href="https://codepen.io/{{ author.sameAs.codepen }}" class="{{ link-class }}" title="CodePen" target="_blank" rel="noopener external" itemprop="sameAs">
+						{% include icon.html icon='codepen' class=footer-icon-class %}
+						CodePen
+					</a>
+				</li>
+			{% endif %}
 			{% if author.sameAs.stackoverflow %}
 				<li>
 					<a href="https://stackoverflow.com/users/{{ author.sameAs.stackoverflow }}" class="{{ link-class }}" title="StackOverflow" target="_blank" rel="noopener external" itemprop="sameAs">
