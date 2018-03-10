@@ -66,6 +66,20 @@
   browserRequirements: 'CSS-grid'
 - '@type': WebApplication
   '@context': 'http://schema.org'
+  name: Generic Company
+  offers:
+    '@type': Offer
+    price: 0
+    priceCurrency: USD
+  screenshot: 'https://i.imgur.com/84lF3oom.png'
+  url: 'https://generic-store.netlify.com/'
+  description: 'A demo eCommerce store featuring Payment Request API'
+  keywords: 'HTML5, JavaScript, appCache, PaymentRequest'
+  applicationCategory: Web App
+  operatingSystem: 'Windows, OSX, Linux'
+  browserRequirements: 'CSS-grid, PaymentRequest'
+- '@type': WebApplication
+  '@context': 'http://schema.org'
   name: HTML5 WYSIWYG-Editor
   offers:
     '@type': Offer
@@ -146,3 +160,11 @@
   applicationCategory: Icon package
   operatingSystem: all
   browserRequirements: 'SVG, SVG symbols, SVG use'
+- name: GitHub Desktop layout Pen
+  url: 'https://codepen.io/shgysk8zer0/full/zWxpwJ/'
+  description: 'A Pen by Chris Zuber re-creating the layout of GitHub Desktop'
+  screenshot: 'https://i.imgur.com/MWHfmM8m.png'
+  keywords: 'flexbox, css-grid'
+  applicationCategory: Firefox Add-on
+  operatingSystem: 'Windows, OSX, Linux, Android'
+  browserRequirements: 'async / await, es6 modules, css grid'
