@@ -1,21 +1,21 @@
-<div id="project-{{ include.project.name | slugify }}" class="{{ include.animation | default: 'jackInTheBox' }} project card shadow optimize-legibility animation-paused animation-overshoot animation-speed-crawl animation-fill-forwards relative transition-all transition-speed-normal transition-ease-in-out" itemprop="workExample" itemtype="http://schema.org/WebApplication" itemscope="">
-	<h3 itemprop="name" class="center font-title color-accent">{{ include.project.name }}</h3>
-	<img src="{{ include.project.screenshot }}" class="filter-shadow" itemprop="screenshot" alt="{{ include.project.name }} image" crossorigin="anonymous" />
+<div id="project-{{ include.project.name | slugify }}" class="{{ include.animation | default: 'jackInTheBox' }} project card shadow optimize-legibility animation-paused animation-overshoot animation-speed-crawl animation-fill-forwards relative transition-all transition-speed-normal transition-ease-in-out">
+	<h3 class="center font-title color-accent">{{ include.project.name }}</h3>
+	<img src="{{ include.project.screenshot }}" class="filter-shadow" alt="{{ include.project.name }} image" crossorigin="anonymous" />
 	<br />
 	<details>
 		<summary role="button">More Info</summary>
-		<span class="underline color-accent" itemprop="keywords">{{ include.project.keywords }}</span>
-		<blockquote class="text-align-right block font-article" itemprop="description">{{ include.project.description }}</blockquote>
-		<a href="{{ include.project.url }}" itemprop="url" target="_{{ include.project.target | default: 'blank' }}" class="underline" rel="noopener external" title="{{ include.project.name }}">
+		<span class="underline color-accent">{{ include.project.keywords }}</span>
+		<blockquote class="text-align-right block font-article">{{ include.project.description }}</blockquote>
+		<a href="{{ include.project.url }}" target="_{{ include.project.target | default: 'blank' }}" class="underline" rel="noopener external" title="{{ include.project.name }}">
 			{% include icon.html icon='link' %}
 			<span>Link</span>
 		</a>
 	</details>
-	<div itemprop="offers" itemtype="https://schema.org/Offer" itemscope="" hidden="">
-		<meta itemprop="price" content="{{ include.project.offers.price | default: '0' }}" />
-		<meta itemprop="priceCurrency" content="{{ include.project.offers.priceCurrency | default: 'USD' }}" />
+	<div itemscope="" hidden="">
+		<meta content="{{ include.project.offers.price | default: '0' }}" />
+		<meta content="{{ include.project.offers.priceCurrency | default: 'USD' }}" />
 	</div>
-	<meta itemprop="operatingSystem" content="{{ include.project.operatingSystem | default: 'Windows, Mac, Linux, Android, iOS' }}" />
-	<meta itemprop="applicationCategory" content="{{ include.project.applicationCategory }}" />
-	<meta itemprop="browserRequirements" content="{{ include.project.browserRequirements }}" />
+	<meta content="{{ include.project.operatingSystem | default: 'Windows, Mac, Linux, Android, iOS' }}" />
+	<meta content="{{ include.project.applicationCategory }}" />
+	<meta content="{{ include.project.browserRequirements }}" />
 </div>
