@@ -4,17 +4,17 @@
 	justify-content: center;
 }
 
-#portfolio [itemprop="screenshot"] {
+#portfolio .project-screenshot {
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
 	max-height: 12rem;
 }
 
-[itemprop="workExample"]:hover {
+.project:hover {
 	box-shadow: 0 0 0.8em var(--accent-color);
 }
 
-[itemprop="workExample"] [itemprop="keywords"] {
+.project .project-keywords {
 	font-size: 0.7em;
 }
