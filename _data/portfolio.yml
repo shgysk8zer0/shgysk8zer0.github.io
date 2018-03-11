@@ -118,6 +118,14 @@
   applicationCategory: Weather
   operatingSystem: 'Windows, OSX, Linux, Android, iOS'
   browserRequirements: 'fetch, GeoLocation'
+- name: FreeCodeCamp Pomodoro
+  url: 'https://shgysk8zer0.github.io/freecodecamp-pomodoro/'
+  description: 'A Pen by Chris Zuber re-creating the layout of GitHub Desktop'
+  screenshot: 'https://i.imgur.com/DUbH8hul.png'
+  keywords: 'pomodoro'
+  applicationCategory: Office
+  operatingSystem: 'Windows, OSX, Linux, Android'
+  browserRequirements: 'flexbox, notification'
 - '@type': WebApplication
   '@context': 'http://schema.org'
   name: std-js
@@ -160,19 +168,11 @@
   applicationCategory: Icon package
   operatingSystem: all
   browserRequirements: 'SVG, SVG symbols, SVG use'
-- name: GitHub Desktop layout Pen
-  url: 'https://codepen.io/shgysk8zer0/full/zWxpwJ/'
-  description: 'A Pen by Chris Zuber re-creating the layout of GitHub Desktop'
-  screenshot: 'https://i.imgur.com/MWHfmM8m.png'
-  keywords: 'flexbox, css-grid'
-  applicationCategory: Firefox Add-on
-  operatingSystem: 'Windows, OSX, Linux, Android'
-  browserRequirements: 'async / await, es6 modules, css grid'
-- name: FreeCodeCamp Pomodoro
-  url: 'https://shgysk8zer0.github.io/freecodecamp-pomodoro/'
-  description: 'A Pen by Chris Zuber re-creating the layout of GitHub Desktop'
-  screenshot: 'https://i.imgur.com/DUbH8hul.png'
-  keywords: 'pomodoro'
-  applicationCategory: Office
-  operatingSystem: 'Windows, OSX, Linux, Android'
-  browserRequirements: 'flexbox, notification'
+# - name: GitHub Desktop layout Pen
+#   url: 'https://codepen.io/shgysk8zer0/full/zWxpwJ/'
+#   description: 'A Pen by Chris Zuber re-creating the layout of GitHub Desktop'
+#   screenshot: 'https://i.imgur.com/MWHfmM8m.png'
+#   keywords: 'flexbox, css-grid'
+#   applicationCategory: Firefox Add-on
+#   operatingSystem: 'Windows, OSX, Linux, Android'
+#   browserRequirements: 'async / await, es6 modules, css grid'
