@@ -5,7 +5,7 @@
     '@type': Offer
     price: 0
     priceCurrency: USD
-  screenshot: 'https://i.imgur.com/WIaJgfxm.png'
+  screenshot: '/img/logos/javascript.svg'
   url: 'https://github.com/shgysk8zer0/std-js/'
   description: A JavaScript library for making front-end development sane!
   keywords: 'JavaScript, async/await, Animations API'
@@ -47,7 +47,7 @@
     '@type': Offer
     price: 0
     priceCurrency: USD
-  screenshot: 'https://i.imgur.com/c1hLkNjm.png'
+  screenshot: '/img/logos/svg.svg'
   url: 'https://github.com/shgysk8zer0/logos/'
   description: A collection of SVG logos &mdash; featured on <a href="http://instantlogosearch.com/" target="_blank">Instant Logo Search</a>
   keywords: 'SVG, icons'
