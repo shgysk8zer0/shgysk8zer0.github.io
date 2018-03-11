@@ -64,8 +64,8 @@
 		<meta property="og:image" content="{{ page.image | absolute_url }}" />
 		<meta name="twitter:image" content="{{ page.image | absolute_url }}" />
 	{% elsif site.screenshots %}
-		<meta itemprop="thumbnailUrl" content="{{ screenshot.src }}" />
 		{% for screenshot in site.screenshots %}
+			<meta itemprop="thumbnailUrl" content="{{ screenshot.src }}" />
 			<meta property="og:image" content="{{ screenshot.src | absolute_url }}" />
 			<meta name="twitter:image" content="{{ screenshot.src | absolute_url }}" />
 		{% endfor %}
