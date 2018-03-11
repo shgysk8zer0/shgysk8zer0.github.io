@@ -30,7 +30,7 @@
 			"employedTo": null,
 			"duties": [
 				"Create libraries, frameworks and modules for use in arbitrary projects",
-				"Implement srever-side handler for Payment Request API data",
+				"Implement server-side handler for Payment Request API data",
 				"Add support to older browsers for new APIs, such as <code><a href=\"https://developers.google.com/web/updates/2016/09/navigator-share\">navigator.share</a></code>",
 				"Enhance JavaScript library with asynchronous DOM operations and animations",
 				"Collect & optimize SVGs for icon system (featured on <a href=\"https://instantlogosearch.com/\">instantlogosearch.com/</a>)",
