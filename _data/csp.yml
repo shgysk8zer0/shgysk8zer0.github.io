@@ -28,6 +28,8 @@ style:
 - 'https://assets-cdn.github.com'
 - 'https://www.youtube.com'
 - 'https://c.disquscdn.com'
+- 'https://fontlibrary.org/face/'
+- 'https://fonts.googleapis.com/css'
 connect:
 - '*'
 - 'wss://realtime.services.disqus.com'
@@ -39,6 +41,8 @@ child:
 - 'https://disqus.com'
 font:
 - '''self'''
+- 'https://fontlibrary.org/assets/'
+- 'https://fonts.gstatic.com/'
 media:
 - '*'
 # report-uri: 'https://superuser.report-uri.com/r/d/csp/enforce'
