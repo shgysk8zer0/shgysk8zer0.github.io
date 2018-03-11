@@ -78,20 +78,20 @@
   applicationCategory: Web App
   operatingSystem: 'Windows, OSX, Linux'
   browserRequirements: 'CSS-grid, PaymentRequest'
-- '@type': WebApplication
-  '@context': 'http://schema.org'
-  name: HTML5 WYSIWYG-Editor
-  offers:
-    '@type': Offer
-    price: 0
-    priceCurrency: USD
-  screenshot: 'https://i.imgur.com/qdnVcJAm.png'
-  url: 'https://shgysk8zer0.github.io/wysiwyg/'
-  description: 'An all HTML, CSS, & JavaScript HTML5 WYSIWYG Editor'
-  keywords: 'HTML5, JavaScript, appCache'
-  applicationCategory: Web App
-  operatingSystem: 'Windows, OSX, Linux'
-  browserRequirements: 'contentEditable, addEventListener, localStorage'
+# - '@type': WebApplication
+#   '@context': 'http://schema.org'
+#   name: HTML5 WYSIWYG-Editor
+#   offers:
+#     '@type': Offer
+#     price: 0
+#     priceCurrency: USD
+#   screenshot: 'https://i.imgur.com/qdnVcJAm.png'
+#   url: 'https://shgysk8zer0.github.io/wysiwyg/'
+#   description: 'An all HTML, CSS, & JavaScript HTML5 WYSIWYG Editor'
+#   keywords: 'HTML5, JavaScript, appCache'
+#   applicationCategory: Web App
+#   operatingSystem: 'Windows, OSX, Linux'
+#   browserRequirements: 'contentEditable, addEventListener, localStorage'
 - '@type': WebApplication
   name: FreeCodeCamp Twitch JSON API
   offers:
