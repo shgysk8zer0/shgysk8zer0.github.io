@@ -168,3 +168,11 @@
   applicationCategory: Firefox Add-on
   operatingSystem: 'Windows, OSX, Linux, Android'
   browserRequirements: 'async / await, es6 modules, css grid'
+- name: FreeCodeCamp Pomodoro
+  url: 'https://shgysk8zer0.github.io/freecodecamp-pomodoro/'
+  description: 'A Pen by Chris Zuber re-creating the layout of GitHub Desktop'
+  screenshot: 'https://i.imgur.com/DUbH8hul.png'
+  keywords: 'pomodoro'
+  applicationCategory: Office
+  operatingSystem: 'Windows, OSX, Linux, Android'
+  browserRequirements: 'flexbox, notification'
