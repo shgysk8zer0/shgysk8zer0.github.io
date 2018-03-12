@@ -1,6 +1,6 @@
 {
   "name": "chriszuber-portfolio",
-  "version": "3.2.15",
+  "version": "3.3.0",
   "description": "A responsive, progressive about / portfolio & blog page built using Jekyll",
   "private": true,
   "scripts": {
