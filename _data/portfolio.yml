@@ -182,7 +182,7 @@
   applicationCategory: Office
   operatingSystem: 'Windows, OSX, Linux, Android'
   browserRequirements: 'flexbox, notification'
-- name: GitHub Desktop layout Pen
+- name: GitHub Desktop Pen
   url: 'https://codepen.io/shgysk8zer0/full/zWxpwJ/'
   description: 'Re-creates the layout and some functionality of GitHub Desktop. Requires JavaScript modeules and CSS grid'
   screenshot: 'https://i.imgur.com/tsuq64wm.png'
