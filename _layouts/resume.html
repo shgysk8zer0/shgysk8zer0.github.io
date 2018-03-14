@@ -8,12 +8,121 @@
 	{% if site.service_worker %}data-service-worker="{{site.service_worker | absolute_url }}"{% endif %}
 	data-support-test="{{ site.feature-detect | join: ','}}"
 	{% if site.google-analytics %}data-google-analytics="{{ site.google-analytics }}"{% endif %}
-	{% if page.ads %}data-ad-sense-id="{{ site.ad-sense }}"{% endif %}
-	{% if page.pageLevelAds %}data-page-level-ads="{{ page.pageLevelAds }}"{% endif %}
 >
-
-{% assign resume=site.data[page.resume] %}
-{% include head.html %}
+<head{% assign resume=site.data[page.resume] %}>
+	<meta charset="{{ page.charset | default: site.charset }}" />
+	<meta name="viewport" content="{{ page.viewport | default: site.viewport }}" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title itemprop="headline">{{ page.title }}</title>
+	<base href="{{ page.base_uri | default: site.url }}" />
+	{% if page.fb-og-type %}
+		<meta property="og:type" content="{{ page.fb-og-type }}" />
+	{% elsif page.layout == 'post' %}
+		<meta property="og:type" content="article" />
+	{% else %}
+		<meta property="og:type" content="{{ page.og-type | default: site.og-type }}" />
+	{% endif %}
+	<meta property="og:url" content="{{ page.url | absolute_url }}" />
+	<meta property="og:title" content="{{ page.title }}" />
+	<meta property="og:site_name" content="{{ site.title }}" />
+	<meta property="og:locale" content="{{ site.lang | default: 'en' }}" />
+	{% if site.facebook-id %}
+		<meta property="og:app_id" content="{{ site.facebook-id }}" />
+	{% endif %}
+	<meta name="twitter:card" content="summary">
+	{% if site.twitter %}
+		<meta name="twitter:site" content="@{{ site.twitter | replace: '@', '' }}" />
+	{% endif %}
+	{% if page.author %}
+		<meta name="author" content="{{ page.author | capitalize }}"/>
+		{% assign author = page.author | downcase | replace: ' ', '-' %}
+		{% if site.data.authors contains author %}
+			{% if site.data.authors[author].sameAs.twitter %}
+				<meta name="twitter:creator" content="@{{ site.data.authors[author].sameAs.twitter | replace: '@', '' }}" />
+			{% endif %}
+			{% if site.data.authors[author].sameAs.google_plus %}
+				<link rel="author" href="https://plus.google.com/{{ site.data.authors[author].sameAs.google_plus }}" />
+			{% endif %}
+		{% endif %}
+	{% endif %}
+	{% if site.publisher %}
+		<link rel="publisher" href="{{ site.publisher }}" />
+	{% endif %}
+	<meta itemprop="url" content="{{ page.url | absolute_url }}" />
+	<meta name="twitter:url" content="{{ page.url | absolute_url }}" />
+	<meta name="twitter:title" content="{{ page.title }}" />
+	<meta name="referrer" content="{{ site.referrer | default: 'no-referrer-when-downgrade' }}"/>
+	<meta name="robots" content="{{ page.robots | default: site.robots }}" />
+	{% if site.mobile-web-app-capable %}<meta name="mobile-web-app-capable" content="yes" />{% endif %}
+	<meta name="description" content="{{ page.description | default: site.description }}" />
+	<meta itemprop="description" content="{{ page.description | default: site.description }}" />
+	<meta property="og:description" content="{{ page.description | default: site.description }}" />
+	<meta name="twitter:description" content="{{ page.description | default: site.description }}" />
+	{% if page.tags %}
+		<meta name="keywords" content="{{ page.tags | join: ', ' }}" />
+		<meta itemprop="keywords" content="{{ page.tags | join: ', ' }}" />
+	{% else %}
+		<meta name="keywords" content="{{ site.keywords | join: ', ' }}" />
+		<meta itemprop="keywords" content="{{ site.keywords | join: ', ' }}" />
+	{% endif %}
+	{% if page.imgur %}
+		{% capture hash %}{{ page.imgur | replace: 'https://i.imgur.com/', '' | replace: 'https://imgur.com/', '' | replace: '.png', '' | replace: '.jpg', '' }}{% endcapture %}
+		<meta itemprop="thumbnailUrl" content="{{ hash | prepend: 'https://i.imgur.com/' | append: 'l.png' }}" />
+		<meta property="og:image" content="{{ hash | prepend: 'https://i.imgur.com/' | append: 'l.png' }}" />
+		<meta name="twitter:image" content="{{ hash | prepend: 'https://i.imgur.com/' | append: 'l.png' }}" />
+	{% elsif page.image %}
+		<meta itemprop="thumbnailUrl" content="{{ page.image | absolute_url }}" />
+		<meta property="og:image" content="{{ page.image | absolute_url }}" />
+		<meta name="twitter:image" content="{{ page.image | absolute_url }}" />
+	{% elsif site.screenshots %}
+		{% for screenshot in site.screenshots %}
+			<meta itemprop="thumbnailUrl" content="{{ screenshot.src }}" />
+			<meta property="og:image" content="{{ screenshot.src | absolute_url }}" />
+			<meta name="twitter:image" content="{{ screenshot.src | absolute_url }}" />
+		{% endfor %}
+	{% endif %}
+	{% if site.theme-color %}
+		<meta name="theme-color" content="{{ site.theme-color }}" />
+		<meta name="msapplication-TileColor" content="{{ site.theme-color }}" />
+	{% endif %}
+	{% if site.data.csp %}{% include csp.html csp=site.data.csp %}{% endif %}
+	{% if site.webmaster-verifications.google %}
+		<meta name="google-site-verification" content="{{ site.webmaster-verifications.google }}" />
+	{% endif %}
+	{% if site.webmaster-verifications.bing %}
+		<meta name="msvalidate.01" content="{{ site.webmaster-verifications.bing }}" />
+	{% endif %}
+	<!--[if IE]>
+		<script src="{{ '/js/svg4everybody/dist/svg4everybody.min.js' | absolute_url }}"></script>
+		<script>svg4everybody();</script>
+	<![endif]-->
+	<script type="application/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js?unknown=polyfill&features=es6&flags=gated" crossorigin="anonymous" referrer="origin-when-crossorigin"></script>
+	<script type="application/javascript" src="{{ '/js/resume.js' | absolute_url }}" async=""></script>
+	{% if site.google-analytics %}
+		{% include google-analytics.html %}
+	{% endif %}
+	<link rel="stylesheet" href="{{ '/css/resume.css' | absolute_url }}" media="all" />
+	{% if  site.canonical %}<link rel="canonical" href="{{ site.canonical | append: page.url }}" />{% endif %}
+	{% if site.data.icons.icons %}{% for icon in site.data.icons.icons %}
+		<link rel="icon" href="{{ icon.href | absolute_url }}" type="{{ icon.type }}" sizes="{{ icon.sizes }}" />
+	{% endfor %}{% endif %}
+	{% if site.data.icons.touch-icons %}{% for icon in site.data.icons.touch-icons %}
+		<link rel="apple-touch-icon" href="{{ icon.href | absolute_url }}" sizes="{{ icon.sizes }}" />
+	{% endfor %}{% endif %}
+	{% if site.data.icons.mask-icon %}
+		<link rel="mask-icon" href="{{ site.data.icons.mask-icon.href | absolute_url }}" color="{{ site.data.icons.mask-icon.color }}"/>
+	{% endif %}
+	{% if site.tiles-config %}
+		<meta name="msapplication-config" content="{{ site.tiles-config | absolute_url }}" />
+	{% endif %}
+	{% if site.data.icons.windows-tile %}
+		<meta name="msapplication-TileImage" content="{{ site.data.icons.windows-tile | absolute_url }}" />
+	{% endif %}
+	<link rel="preload" href="{{ '/img/icons.svg' | absolute_url }}" as="image" type="image/svg+xml" name="icons" />
+	{% if site.feed %}<link rel="alternate" href="{{ site.feed.url | absolute_url }}" type="{{ site.feed.type | default: 'application/rss+xml' }}" title="{{ page.feed.title | default: 'Feed' }}" />{% endif %}
+	{% if page.feed %}<link rel="alternate" href="{{ page.feed.url | absolute_url }}" type="{{ page.feed.type | default: 'application/rss+xml' }}" title="{{ page.feed.title | default: 'Page Feed' }}" />{% endif %}
+	{% if site.manifest %}<link rel="manifest" href="{{ site.manifest | absolute_url }}" />{% endif %}
+</head>
 <body
 	id="top"
 	class="layout-{{ page.layout }} {{ page.body-class }}"

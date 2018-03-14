@@ -137,7 +137,7 @@
 			%}
 		{% endfor %}
 	{% endif %}
-	{% if  site.canonical %}<link rel="canonical" href="{{ site.canonical append: page.url }}" />{% endif %}
+	{% if  site.canonical %}<link rel="canonical" href="{{ site.canonical | append: page.url }}" />{% endif %}
 	{% if site.data.icons.icons %}{% for icon in site.data.icons.icons %}
 		<link rel="icon" href="{{ icon.href | absolute_url }}" type="{{ icon.type }}" sizes="{{ icon.sizes }}" />
 	{% endfor %}{% endif %}
