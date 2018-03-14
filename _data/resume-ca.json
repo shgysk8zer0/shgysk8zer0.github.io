@@ -1,0 +1,144 @@
+{
+	"contact": {
+		"name": {
+			"first": "Chris",
+			"last": "Zuber"
+		},
+		"address": {
+			"city": "Lake Isabella",
+			"state": "CA"
+		},
+		"gravatar": "73f08dc9b030c584e76a4c3c4e8a56c0",
+		"url": "https://shgysk8zer0.github.io",
+		"email": "cwzuber85@gmail.com",
+		"telephone": "+1-661-619-6712"
+	},
+	"highlights": [
+		"Organized",
+		"Logical",
+		"Analytical",
+		"Creative",
+		"Problem solving",
+		"Diversity of skills and experiences"
+	],
+	"summary": null,
+	"employment": [
+		{
+			"employer": "SuperUserDev",
+			"jobTitle": "Web Developer",
+			"employedFrom": "May, 2017",
+			"employedTo": null,
+			"duties": [
+				"Create libraries, frameworks and modules for use in arbitrary projects",
+				"Implement server-side handler for Payment Request API data",
+				"Add support to older browsers for new APIs, such as <code><a href=\"https://developers.google.com/web/updates/2016/09/navigator-share\">navigator.share</a></code>",
+				"Enhance JavaScript library with asynchronous DOM operations and animations",
+				"Collect & optimize SVGs for icon system (featured on <a href=\"https://instantlogosearch.com/\">instantlogosearch.com/</a>)",
+				"Utilize new technologies like Progressive Web Apps & CSS grid",
+				"Author Web Extensions, such as <a href=\"https://addons.mozilla.org/en-US/firefox/addon/awesome-rss/\">Awesome RSS</a>"
+			]
+		}, {
+			"employer": "Kern Valley Sun",
+			"jobTitle": "Editor & Developer",
+			"location": "Lake Isabella, CA",
+			"employedFrom": "Oct., 2015",
+			"employedTo": "April, 2017",
+			"duties": [
+				"Implement creative solutions for publishing content, such as synchronizing through ownCloud",
+				"Improve communication and organization using Slack and Wunderlist",
+				"Organize with freelance writers",
+				"Maintain master calendar of events",
+				"Endorse problem solving through teamwork",
+				"Negotiate placement of content",
+				"Write articles on topics ranging from local events and natural disasters to politics and philosophy",
+				"Photography and digital artwork",
+				"Maintain consistency of design through building reusable and shareable components",
+				"Layout of physical and digital versions of newspaper",
+				"Host meeting with community, law enforcement, and various organizations",
+				"Provide understanding of social network presence and utilizing algorithms",
+				"System administrator for multiple computers and up to 6 different OSs",
+				"Enable remote access to assets through VPN, RDP, WebDAV, and other technologies",
+				"Find innovative ways to provide additional value, focusing on needs of clients and advertisers",
+				"Advise on security of both tangible and digital assets"
+			]
+		}, {
+			"employer": "Outdoor Supply Inc.",
+			"jobTitle": "Project Manager",
+			"location": "Lake Isabella, CA",
+			"employedFrom": "Sep. 2012",
+			"employedTo": "May, 2015",
+			"duties": [
+				"Generate templates for eBay listings",
+				"Maintain multiple E-Commerce sites using Magento",
+				"Build custom themed rafting trip reservation sites using WordPress",
+				"Reduce cost and increase output by scripting repetitive task",
+				"Investigate systems for integrating business channels"
+			]
+		}, {
+			"employer": "McDonald's",
+			"jobTitle": "Shift Manager",
+			"location": "Lake Isabella, CA",
+			"employedFrom": "May, 2004",
+			"employedTo": "April, 2012",
+			"duties": [
+				"Oversee crew of 3 – 16 employees",
+				"Train new employees",
+				"Ensure procedures were followed and standards were met",
+				"Increase efficiency and speed through multi-tasking and use of slow time",
+				"Manage cash of registers and safe",
+				"Fill any required position for breaks / call-ins",
+				"Some IT of soda machines and POS systems"
+			]
+		}
+	],
+	"education": [
+		{
+			"name": "FreeCodeCamp",
+			"studied": "Front End Development",
+			"completed": null,
+			"studies": [
+				"jQuery",
+				"Bootstrap",
+				"React",
+				"HTML5",
+				"CSS3",
+				"JSON APIs",
+				"Responsive Design",
+				"Algorithm Scripting"
+			]
+		}, {
+			"name": "Bakersfield Community College",
+			"location": "Bakersfield, CA",
+			"studied": "Mechanical & Electrical Engineering",
+			"started": "Jan, 2009",
+			"completed": "May, 2012",
+			"studies": [
+				"Calculus",
+				"Introduction to Programming [C++]",
+				"AutoCAD",
+				"Physics",
+				"Chemistry"
+			]
+		}, {
+			"name": "Cerro Coso Community College",
+			"location": "Lake Isabella, CA",
+			"earned": "AA",
+			"studied": "Liberal Arts",
+			"started": "Sep, 2007",
+			"completed": "May, 2009",
+			"GPA": 3.54,
+			"studies": [
+				"Philosophy",
+				"Microsoft Word",
+				"Microsoft Excel",
+				"Microsoft Powerpoint"
+			],
+			"awards": [
+				{
+					"title": "President's Honor List",
+					"years": [2008, 2009]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,135 @@
+<header class="main-header">
+	<div class="cols-2 contact-info">
+		<div>
+			<div itemprop="name">
+				<span itemprop="givenName">{{ include.resume.contact.name.first }}</span>
+				<span itemprop="familyName">{{ include.resume.contact.name.last }}</span>
+			</div>
+			{% if include.resume.contact.jobTitle %}
+				<span itemprop="jobTitle"></span>
+			{% endif %}
+			<br />
+			<address itemprop="address" itemtype="http://schema.org/PostalAddress" itemscope="">
+				<span itemprop="addressRegion" data-after=",">{{ include.resume.contact.address.city }}</span>
+				<span itemprop="addressLocality">{{ include.resume.contact.address.state }}</span>
+			</address>
+		</div>
+		<div class="right">
+			<a href="{{ include.resume.contact.url }}" itemprop="url">
+				{% include icon.html icon='link' %}
+				{{ include.resume.contact.url | remove: 'http://' | remove: 'https://'}}
+			</a>
+			<br />
+			<a href="mailto:{{ include.resume.contact.email }}" itemprop="email" content="{{ include.resume.contact.email }}">
+				{% include icon.html icon='mail-unread' %}
+				{{ include.resume.contact.email }}
+			</a>
+			<br />
+			<a href="tel:{{ include.resume.contact.telephone }}" itemprop="telephone" content="{{ include.resume.contact.telephone }}">
+				{% include icon.html icon='call-start' %}
+				{{ include.resume.contact.telephone | remove: '+' }}
+			</a>
+		</div>
+	</div>
+	{% if include.resume.contact.gravatar %}
+		{% include gravatar.html
+			gravatar=include.resume.contact.gravatar
+			class='avatar'
+			decoding='async'
+			sizes='((max-width:999px) and (min-width:500px)) 9vmax, (max-width:499px) 9.6vmax, 6vmax'
+			height=96
+			width=96
+			itemprop='image'
+		%}
+	{% endif %}
+</header>
+<main>
+	{% if include.resume.summary %}
+		<section id="summary">
+			<blockquote itemprop="description">{{ include.resume.summary }}</blockquote>
+		</section>
+	{% endif %}
+	<section id="highlights">
+		<h2 class="section-heading">Highlights</h2>
+		<ul class="cols-2 highlights">
+			{% for highlight in include.resume.highlights %}<li>{{ highlight }}</li>{% endfor %}
+		</ul>
+	</section>
+	<section id="experience">
+		<h2 class="section-heading">Professional Experience</h2>
+		{% for job in include.resume.employment %}
+			<div class="employment-entry">
+				<h3 class="cols-2">
+					<div>
+						<span class="employer" data-field="employer">{{ job.employer }}</span>
+						<span class="job-title" data-field="jobTitle" data-before=" / ">{{ job.jobTitle }}</span>
+					</div>
+					<div class="right">
+						{% if job.employedFrom %}
+							<time class="employed-from" data-field="employedFrom" datetime="{{ job.employedFrom | date: date_to_xmlschema }}">{{ job.employedFrom | date: '%b, %Y' }}</time>
+						{% endif %}
+						<time class="employed-to" datetime="{{ job.employedTo | date: date_to_xmlschema }}" data-field="employedTo" data-before=" — ">{{ job.employedTo | default: 'Present' }}</time>
+					</div>
+				</h3>
+				<ul class="duties" data-list="duties">
+					{% for duty in job.duties %}<li>{{ duty }}</li>{% endfor %}
+				</ul>
+			</div>
+		{% endfor %}
+	</section>
+	<section id="education">
+		<h2 class="section-heading">Education</h2>
+		{% for education in include.resume.education %}
+			<div class="education-entry">
+				<h3 class="school cols-2">
+					<div>
+						<span data-field="name">{{ education.name }}</span>
+						{% if education.location %}
+							<span data-field="location" data-before=", ">{{ education.location }}</span>
+						{% endif %}
+					</div>
+					<div class="right">
+						{% if education.started %}
+							<time data-field="started" datetime="{{ education.started | date: date_to_xmlschema }}" data-after=" — ">{{ education.started | date: '%Y' }}</time>
+						{% endif %}
+						{% if education.completed %}
+							<time data-field="completed" datetime="{{ education.completed | date: date_to_xmlschema  }}" >{{ education.completed | date: '%Y' }}</time>
+						{% else %}
+							<time data-field="completed" datetime="{{ 'now' | date: '%Y-%m-%d'  }}">Present</time>
+						{% endif %}
+					</div>
+				</h3>
+				<p class="study">
+					{% if education.earned %}
+						<span data-field="earned" data-after=" in ">{{ education.earned }}</span>
+					{% endif %}
+					{% if education.studied %}
+						<span data-field="studied">{{ education.studied }}</span>
+					{% endif %}
+					{% if education.GPA %}
+						<i data-field="GPA" data-before=" [GPA: " data-after="]">{{ education.GPA }}</i>
+					{% endif %}
+				</p>
+				{% if education.awards %}
+					<ul class="awards">
+						{% for award in education.awards %}
+							<li>{{ award.title }} ({{ award.years | join: ', '}})</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+				{% if education.studies %}
+					<ul class="cols-2 areas-studied">
+						{% for study in education.studies %}
+							<li>{{study }}</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</div>
+		{% endfor %}
+	</section>
+</main>
+{% include share-button.html class='floating' %}
+<button type="button" class="floating" data-click="print">
+	{% include icon.html icon='print' %}
+</button>
+<menu type="context" id="nav-menu"></menu>
