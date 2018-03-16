@@ -28,8 +28,8 @@ worksFor:
   email: chris@chriszuber.com
   telephone: +1-661-619-6712
   address:
-    addressLocality: Mount Vernon
-    addressRegion: Washington
+    addressLocality: Lake Isabella
+    addressRegion: California
   logo:
     '@type': ImageObject
     contentUrl: '/img/logos/super-user.svg'
@@ -51,12 +51,12 @@ homeLocation:
   '@type': Place
   address:
     '@type': PostalAddress
-    addressLocality: Mount Vernon
-    addressRegion: Washington
-    postalCode: 98274
+    addressLocality: Lake Isabella
+    addressRegion: California
+    postalCode: 93240
     addressCountry: United States
   geo:
     '@type': GeoCoordinates
-    latitude: 48.420059
-    longitude: -122.326431
-    url: 'geo:48.420059,-122.326431;crs=wgs84;u=0'
+    latitude: 35.617475
+    longitude: -118.477462
+    url: 'geo:35.617475,-118.477462;crs=wgs84;u=0'
