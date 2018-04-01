@@ -108,3 +108,7 @@ pre.highlight, code.highlight {
 		display: none;
 	}
 }
+
+summary[role="button"] {
+	display: list-item;
+}
