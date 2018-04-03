@@ -1,7 +1,7 @@
 #portfolio.grid {
 	grid-template-columns: repeat(auto-fill, minmax(270px, 380px));
 	grid-gap: 1.3em;
-	justify-content: space-around;
+	justify-content: center;
 }
 
 #portfolio .project-screenshot {
