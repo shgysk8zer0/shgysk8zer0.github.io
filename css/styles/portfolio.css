@@ -1,14 +1,16 @@
 #portfolio.grid {
-	grid-template-columns: repeat(auto-fill, minmax(270px, 400px));
-	grid-gap: 0.6em;
-	justify-content: center;
+	grid-template-columns: repeat(auto-fill, minmax(270px, 380px));
+	grid-gap: 1.3em;
+	justify-content: space-around;
 }
 
 #portfolio .project-screenshot {
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
-	max-height: 12rem;
+	height: 12rem;
+	max-height: 350px;
+	object-fit: contain;
 }
 
 .project:hover {

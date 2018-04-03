@@ -91,6 +91,8 @@ pre.highlight, code.highlight {
 .article-preview img, .article-preview picture {
 	display: block;
 	margin: auto;
+	height: 300px;
+	object-fit: contain;
 }
 
 .paginate-nav {

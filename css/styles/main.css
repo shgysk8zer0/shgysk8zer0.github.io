@@ -8,9 +8,9 @@ main {
 }
 
 .grid.grid-gallery {
-	grid-template-columns: repeat(auto-fill, minmax(270px, 400px));
-	grid-gap: 0.6em;
-	justify-content: center;
+	grid-template-columns: repeat(auto-fill, minmax(270px, 380px));
+	grid-gap: 1.3em;
+	justify-content: space-around;
 }
 
 @media (max-width: 600px) {
