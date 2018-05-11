@@ -12,7 +12,7 @@ viewport: width=device-width
 robots: 'follow,index'
 referrer: origin-when-cross-origin
 manifest: /manifest.json
-tiles-config: /broswerconfig.xml
+tiles-config: /browserconfig.xml
 service_worker: /service-worker.js
 og-type: website
 description: "A responsive, progressive about / portfolio & blog page built using Jekyll"
