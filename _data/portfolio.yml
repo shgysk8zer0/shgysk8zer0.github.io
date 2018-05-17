@@ -87,7 +87,7 @@
 - name: Contact Page
   url: /contact/
   target: self
-  description: 'Contact info for Chris Zuber, Mount Vernon, WA'
+  description: 'Contact info for Chris Zuber, Lake Isabella, CA'
   applicationCategory: Office
   browserRequirements: 'picture, media queries'
   keywords: 'SVG, CSS3, Responsive Images'
@@ -106,6 +106,20 @@
 #   applicationCategory: Blog
 #   operatingSystem: 'Windows, OSX, Linux, Android, iOS'
 #   browserRequirements: 'flex, fetch, SVG'
+- '@type': WebApplication
+  '@context': 'http://schema.org'
+  name: Acme Cinema
+  offers:
+    '@type': Offer
+    price: 0
+    priceCurrency: USD
+  screenshot: 'https://i.imgur.com/EDRcTxgm.png'
+  url: 'https://acmecinema.netlify.com'
+  description: 'A demo site for theaters including showtimes and reviews'
+  keywords: 'HTML5, JavaScript'
+  applicationCategory: Web App
+  operatingSystem: 'Windows, OSX, Linux'
+  browserRequirements: 'CSS-grid'
 - '@type': WebApplication
   '@context': 'http://schema.org'
   name: 20 &amp; 30 Somethings Doing Some Things
