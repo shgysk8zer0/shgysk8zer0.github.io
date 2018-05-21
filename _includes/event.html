@@ -44,7 +44,9 @@
 		{% if include.event.offers %}{% for offer in include.event.offers %}
 			<hr />
 			<div itemprop="offers" itemtype="http://schema.org/Offer" itemscope="">
-				<b class="event-price" itemprop="price">{{ offer.price }}</b>
+				<b class="event-price">
+					$<span itemprop="price">{{ offer.price }}</span>
+				</b>
 				<meta itemprop="priceCurrency" content="{{ offer.eventCurrency | default: 'USD' }}" />
 			</div>
 		{% endfor %}{% else %}
