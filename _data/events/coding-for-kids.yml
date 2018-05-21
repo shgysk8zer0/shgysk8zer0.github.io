@@ -14,7 +14,9 @@ description: |-
   <ins>Please let us know ahead of time if you do not have access to a laptop</ins>
 startDate: 2018-06-11 14:00
 endDate: 2018-06-11 16:00
-price: 96
+offers:
+  - price: 96
+    currency: USD
 location:
   name: Kernville Cowork
   streetAddress: 20 Sierra Drive
