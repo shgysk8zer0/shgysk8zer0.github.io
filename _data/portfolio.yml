@@ -1,5 +1,15 @@
 - '@type': WebApplication
   '@context': 'http://schema.org'
+  name: 'KernValley.us'
+  screenshot: 'https://i.imgur.com/7Ag35D6l.png'
+  url: 'https://kernvalley.us'
+  description: Info about the Kern River Valley
+  keywords: 'Jekyll, JavaScript'
+  applicationCategory: Community website
+  operatingSystem: 'Windows, OSX, Linux, Android, iOS'
+  browserRequirements: CSS grid
+- '@type': WebApplication
+  '@context': 'http://schema.org'
   name: std-js
   offers:
     '@type': Offer
