@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /posts.json
+---
+[
+{% for post in site.posts %}
+  {
+    "title": "{{ post.title | xml_escape }}",
+    "url": "{{ post.url | absolute_url }}",
+    "author": "{{ post.author }}",
+    "date": "{{ post.date | date: '%FT%T%z' }}",
+    "categories": {{ post.categories | jsonify }},
+    "tags": {{ post.tags | jsonify }}
+  }{% if post.next %},{% endif %}
+{% endfor %}
+]
