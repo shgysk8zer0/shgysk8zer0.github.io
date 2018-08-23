@@ -1,0 +1,5 @@
+---
+layout: null
+permalink: .well-known/CloudIdVerificationCode.txt
+---
+Use my Federated Cloud ID to share with me: shgysk8zer0@cloud.chriszuber.com 9c00bab2bed71bf9c2cfa1186c698a6c
