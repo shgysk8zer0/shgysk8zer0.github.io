@@ -28,6 +28,7 @@
     },
     "globals": {
         "URLSearchParams": false,
+        "HTMLMenuItemElement": false,
         "ga": false,
         "clients": false,
         "skipWaiting": false
