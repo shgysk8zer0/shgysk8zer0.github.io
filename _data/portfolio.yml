@@ -1,10 +1,30 @@
 - '@type': WebApplication
   '@context': 'http://schema.org'
-  name: 'KernValley.us'
-  screenshot: 'https://i.imgur.com/7Ag35D6l.png'
-  url: 'https://kernvalley.us'
-  description: Info about the Kern River Valley
-  keywords: 'Jekyll, JavaScript'
+  name: 'KernValley.us Events'
+  screenshot: 'https://i.imgur.com/4B65werl.png'
+  url: 'https://events.kernvalley.us'
+  description: Calendar of events for the Kern River Valley
+  keywords: 'Jekyll, JavaScript, events, PWA'
+  applicationCategory: Community website
+  operatingSystem: 'Windows, OSX, Linux, Android, iOS'
+  browserRequirements: CSS grid
+- '@type': WebApplication
+  '@context': 'http://schema.org'
+  name: 'Rafting Demo'
+  screenshot: 'https://i.imgur.com/oeKJKPNl.jpg'
+  url: 'https://zealous-cray-ab03c3.netlify.com/'
+  description: A quick rafting demo
+  keywords: 'PWA, JavaScript, Rafting'
+  applicationCategory: Community website
+  operatingSystem: 'Windows, OSX, Linux, Android, iOS'
+  browserRequirements: CSS grid
+- '@type': WebApplication
+  '@context': 'http://schema.org'
+  name: 'Rental Demo'
+  screenshot: 'https://i.imgur.com/Hle2Dq9.jpg'
+  url: 'https://dazzling-sammet-71e49d.netlify.com/'
+  description: A quick rafting demo
+  keywords: 'PWA, JavaScript, Rentals'
   applicationCategory: Community website
   operatingSystem: 'Windows, OSX, Linux, Android, iOS'
   browserRequirements: CSS grid
@@ -94,14 +114,6 @@
   browserRequirements: 'css-sticky'
   keywords: 'JavaScript, Resume'
   screenshot: 'https://i.imgur.com/anlsRnFm.png'
-- name: Contact Page
-  url: /contact/
-  target: self
-  description: 'Contact info for Chris Zuber, Lake Isabella, CA'
-  applicationCategory: Office
-  browserRequirements: 'picture, media queries'
-  keywords: 'SVG, CSS3, Responsive Images'
-  screenshot: 'https://i.imgur.com/jvEOuy1m.png'
 # - '@type': WebApplication
 #   '@context': 'http://schema.org'
 #   name: Super User Blog
@@ -116,34 +128,6 @@
 #   applicationCategory: Blog
 #   operatingSystem: 'Windows, OSX, Linux, Android, iOS'
 #   browserRequirements: 'flex, fetch, SVG'
-- '@type': WebApplication
-  '@context': 'http://schema.org'
-  name: Acme Cinema
-  offers:
-    '@type': Offer
-    price: 0
-    priceCurrency: USD
-  screenshot: 'https://i.imgur.com/EDRcTxgm.png'
-  url: 'https://acmecinema.netlify.com'
-  description: 'A demo site for theaters including showtimes and reviews'
-  keywords: 'HTML5, JavaScript'
-  applicationCategory: Web App
-  operatingSystem: 'Windows, OSX, Linux'
-  browserRequirements: 'CSS-grid'
-- '@type': WebApplication
-  '@context': 'http://schema.org'
-  name: 20 &amp; 30 Somethings Doing Some Things
-  offers:
-    '@type': Offer
-    price: 0
-    priceCurrency: USD
-  screenshot: 'https://i.imgur.com/PpaFZCHm.png'
-  url: 'https://20and30.netlify.com'
-  description: 'A blog and events site for a Meetup group'
-  keywords: 'HTML5, JavaScript, appCache'
-  applicationCategory: Web App
-  operatingSystem: 'Windows, OSX, Linux'
-  browserRequirements: 'CSS-grid'
 - '@type': WebApplication
   '@context': 'http://schema.org'
   name: Generic Company
