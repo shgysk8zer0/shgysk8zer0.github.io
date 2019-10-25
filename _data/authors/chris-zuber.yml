@@ -28,7 +28,7 @@ worksFor:
   email: admin@kernvalley.us
   telephone: +1-661-619-6712
   address:
-    addressLocality: Lake Isabella
+    addressLocality: Kernville
     addressRegion: California
   logo:
     '@type': ImageObject
@@ -42,7 +42,7 @@ worksFor:
     github: kernvalley
 image:
   '@type': ImageObject
-  gravatar: 314fe5e355732b0a15b18053d318cf37
+  gravatar: 43578597e449298f5488c2407c8a8ae5
   width: 256
   height: 256
   encodingFormat: png
@@ -50,12 +50,12 @@ homeLocation:
   '@type': Place
   address:
     '@type': PostalAddress
-    addressLocality: Lake Isabella
+    addressLocality: Kernville
     addressRegion: California
-    postalCode: 93240
+    postalCode: 93238
     addressCountry: United States
   geo:
     '@type': GeoCoordinates
-    latitude: 35.617475
-    longitude: -118.477462
-    url: 'geo:35.617475,-118.477462;crs=wgs84;u=0'
+    latitude: 35.753003
+    longitude: -118.424572
+    url: 'geo:35.753003,-118.424572;crs=wgs84;u=0'
