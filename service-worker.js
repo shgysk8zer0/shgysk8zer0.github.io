@@ -1,4 +1,4 @@
-// 2017-11-02 16:19
+// 2019-10-25 14:00
 const config = {
 	version: 'shgysk8zer0@github.io',
 	caches: [
@@ -86,7 +86,7 @@ addEventListener('fetch', async event => {
 			const allowedPath = config.paths.some(path => url.pathname.startsWith(path));
 
 			return isGet && (allowedHost || (isHome || (allowedPath && notIgnored)));
-		} catch(err) {
+		} catch (err) {
 			console.error(err);
 			return false;
 		}
